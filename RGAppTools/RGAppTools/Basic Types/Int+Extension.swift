@@ -1,8 +1,8 @@
 //
 //  Int+Extension.swift
-//  RGCommonTools
+//  RGAppTools
 //
-//  Created by RAIN on 16/1/18.
+//  Created by RAIN on 16/2/2.
 //  Copyright © 2016年 Smartech. All rights reserved.
 //
 

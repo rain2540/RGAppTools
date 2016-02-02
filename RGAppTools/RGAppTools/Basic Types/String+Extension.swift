@@ -1,13 +1,14 @@
 //
 //  String+Extension.swift
-//  RGCommonTools
+//  RGAppTools
 //
-//  Created by RAIN on 16/1/25.
+//  Created by RAIN on 16/2/2.
 //  Copyright © 2016年 Smartech. All rights reserved.
 //
 
 import Foundation
 
+//  MARK: Clear nil
 extension String {
     /**
      清除 nil 和 NSNull 对象，并返回字符串
@@ -26,5 +27,45 @@ extension String {
         } else {
             return "\(obj)"
         }
+    }
+}
+
+//  MARK: App Infos
+extension String {
+    /**
+     获取应用版本号
+     
+     - returns: String of app version
+     */
+    static func stringOfAppVersion() -> String {
+        let infoPath = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")
+        let infoDic = NSDictionary(contentsOfFile: infoPath!)
+        let version = infoDic!["CFBundleShortVersionString"] as! String
+        let build = infoDic!["CFBundleVersion"] as! String
+        return version + " " + "(" + build + ")"
+    }
+    
+    /**
+     获取设备时间
+     
+     - returns: String of device time
+     */
+    static func stringOfDeviceTime() -> String {
+        let deviceTime = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
+        return dateFormatter.stringFromDate(deviceTime)
+    }
+}
+
+//  MARK: File Path
+extension String {
+    /**
+     获取 Main Bundle 路径
+     
+     - returns: 表示 Main Bundle 路径的字符串
+     */
+    static func pathOfMainBundle() -> String {
+        return NSBundle.mainBundle().description
     }
 }
