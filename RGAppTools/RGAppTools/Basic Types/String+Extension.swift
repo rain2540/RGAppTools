@@ -17,7 +17,7 @@ extension String {
      
      - returns: 经处理后的字符串
      */
-    static func stringWithoutNull(obj: NSObject?) -> String {
+    static func rg_stringWithoutNull(obj: NSObject?) -> String {
         guard let obj = obj else {
             return ""
         }
@@ -37,7 +37,7 @@ extension String {
      
      - returns: String of app version
      */
-    static func stringOfAppVersion() -> String {
+    static func rg_stringOfAppVersion() -> String {
         let infoPath = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
         let version = infoDic!["CFBundleShortVersionString"] as! String
@@ -50,7 +50,7 @@ extension String {
      
      - returns: String of device time
      */
-    static func stringOfDeviceTime() -> String {
+    static func rg_stringOfDeviceTime() -> String {
         let deviceTime = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
@@ -65,7 +65,7 @@ extension String {
      
      - returns: 表示 Main Bundle 路径的字符串
      */
-    static func pathOfMainBundle() -> String {
+    static func rg_pathOfMainBundle() -> String {
         return NSBundle.mainBundle().description
     }
 }

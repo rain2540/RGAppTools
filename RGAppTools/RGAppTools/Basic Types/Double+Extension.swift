@@ -14,7 +14,7 @@ extension Double {
      
      - returns: 转化完成的弧度值
      */
-    public func degreeToRadian() -> Double {
+    public func rg_degreeToRadian() -> Double {
         return (M_PI * self) / 180.0
     }
     
@@ -23,7 +23,7 @@ extension Double {
      
      - returns: 转化完成的角度值
      */
-    public func radianToDegree() -> Double {
+    public func rg_radianToDegree() -> Double {
         return (180.0 * self) / M_PI
     }
 }
@@ -36,7 +36,7 @@ extension Double {
      
      - returns: 格式化输出结果
      */
-    public func format(fmt: String) -> String {
+    public func rg_format(fmt: String) -> String {
         return String(format: "%\(fmt)f", self)
     }
 }

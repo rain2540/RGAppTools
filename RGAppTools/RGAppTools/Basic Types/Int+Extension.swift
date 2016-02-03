@@ -8,6 +8,7 @@
 
 import UIKit
 
+//  MARK: Farmat Output
 extension Int {
     /**
      格式化输出
@@ -16,14 +17,15 @@ extension Int {
      
      - returns: 格式化输出结果
      */
-    public func format(fmt: String) -> String {
+    public func rg_format(fmt: String) -> String {
         return String(format: "%\(fmt)d", self)
     }
 }
 
+//  MARK: Transfer
 extension Int {
     /// Transfer to CGFloat
-    public var CGFloatValue: CGFloat {
+    public var rg_CGFloatValue: CGFloat {
         return CGFloat(self)
     }
 }
