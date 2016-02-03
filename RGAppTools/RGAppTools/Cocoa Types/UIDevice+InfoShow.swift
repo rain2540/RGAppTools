@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIDevice {
-     /**
+    /**
      打印当前设备信息
      */
     static func rg_deviceInformations() {

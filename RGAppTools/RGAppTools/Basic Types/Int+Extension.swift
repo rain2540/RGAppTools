@@ -8,7 +8,7 @@
 
 import UIKit
 
-//  MARK: Farmat Output
+//  MARK: Farmatted Output
 extension Int {
     /**
      格式化输出
