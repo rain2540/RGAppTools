@@ -68,4 +68,16 @@ extension String {
     static func rg_pathOfMainBundle() -> String {
         return NSBundle.mainBundle().description
     }
+    
+    /**
+     获取 Main Bundle 中的文件路径
+     
+     - parameter name: 文件名
+     - parameter ext:  文件后缀名
+     
+     - returns: Main Bundle 中文件的路径
+     */
+    static func rg_pathForResourceInMainBundle(name: String?, ofType ext: String?) -> String? {
+        return NSBundle.mainBundle().pathForResource(name, ofType: ext)
+    }
 }
