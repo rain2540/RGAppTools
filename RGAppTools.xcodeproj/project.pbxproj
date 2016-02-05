@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7764DA11C643CD8007FEBD9 /* NSUserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7764DA01C643CD8007FEBD9 /* NSUserDefaults+Extension.swift */; };
+		B7764DA31C643D04007FEBD9 /* NSDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7764DA21C643D04007FEBD9 /* NSDictionary.swift */; };
 		B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D11C603837002FB62E /* AppDelegate.swift */; };
 		B79DA2D41C603837002FB62E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D31C603837002FB62E /* ViewController.swift */; };
 		B79DA2D71C603837002FB62E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79DA2D51C603837002FB62E /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B7764DA01C643CD8007FEBD9 /* NSUserDefaults+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		B7764DA21C643D04007FEBD9 /* NSDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDictionary.swift; sourceTree = "<group>"; };
 		B79DA2CE1C603836002FB62E /* RGAppTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGAppTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79DA2D11C603837002FB62E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B79DA2D31C603837002FB62E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				B79DA2EF1C60569B002FB62E /* UIDevice+InfoShow.swift */,
+				B7764DA01C643CD8007FEBD9 /* NSUserDefaults+Extension.swift */,
+				B7764DA21C643D04007FEBD9 /* NSDictionary.swift */,
 			);
 			path = "Cocoa Types";
 			sourceTree = "<group>";
@@ -192,7 +198,9 @@
 				B79DA2EC1C604D7B002FB62E /* Double+Extension.swift in Sources */,
 				B79DA2D41C603837002FB62E /* ViewController.swift in Sources */,
 				B79DA2E81C603B7F002FB62E /* AppSingleton.swift in Sources */,
+				B7764DA11C643CD8007FEBD9 /* NSUserDefaults+Extension.swift in Sources */,
 				B79DA2EE1C604D7B002FB62E /* String+Extension.swift in Sources */,
+				B7764DA31C643D04007FEBD9 /* NSDictionary.swift in Sources */,
 				B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -58,7 +58,7 @@ extension String {
     }
 }
 
-//  MARK: File Path - Main Bundle
+//  MARK: Main Bundle
 extension String {
     /**
      获取 Main Bundle 路径
@@ -96,4 +96,9 @@ extension String {
         }
         try? self.init(contentsOfFile: path)
     }
+}
+
+//  MARK: Sandbox
+extension String {
+    
 }
