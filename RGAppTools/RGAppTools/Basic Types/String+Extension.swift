@@ -58,7 +58,7 @@ extension String {
     }
 }
 
-//  MARK: File Path
+//  MARK: File Path - Main Bundle
 extension String {
     /**
      获取 Main Bundle 路径
@@ -79,5 +79,21 @@ extension String {
      */
     static func rg_pathForResourceInMainBundle(name: String?, ofType ext: String?) -> String? {
         return NSBundle.mainBundle().pathForResource(name, ofType: ext)
+    }
+    
+    /**
+     获取 Main Bundle 中文件内的字符串
+     
+     - parameter name: 文件名
+     - parameter ext:  文件后缀名
+     
+     - returns: Main Bundle 中文件内的字符串
+     */
+    public init?(pathForResource name: String?, ofType ext: String?) {
+        guard let path = NSBundle.mainBundle().pathForResource(name, ofType: ext) else {
+            print("RGBring :: String init with path for resource of type error: path is nil")
+            return nil
+        }
+        try? self.init(contentsOfFile: path)
     }
 }
