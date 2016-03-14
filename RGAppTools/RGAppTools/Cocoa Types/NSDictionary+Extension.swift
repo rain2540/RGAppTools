@@ -1,5 +1,5 @@
 //
-//  NSDictionary.swift
+//  NSDictionary+Extension.swift
 //  RGAppTools
 //
 //  Created by RAIN on 16/2/5.
