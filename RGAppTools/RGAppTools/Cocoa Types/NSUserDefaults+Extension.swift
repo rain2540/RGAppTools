@@ -9,6 +9,13 @@
 import Foundation
 
 extension NSUserDefaults {
+    /**
+     检验UserDefaults中是否存在某个key
+     
+     - parameter key: 待检验的 key
+     
+     - returns: 检验结果
+     */
     public func isHaveKey(key: String) -> Bool {
         let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
