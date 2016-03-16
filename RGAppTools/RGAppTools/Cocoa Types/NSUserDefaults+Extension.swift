@@ -29,4 +29,8 @@ extension NSUserDefaults {
         return false
     }
     
+    public func saveObject(object: AnyObject, forKey key: String) {
+        self.setObject(object, forKey: key)
+        self.synchronize()
+    }
 }
