@@ -29,6 +29,12 @@ extension NSUserDefaults {
         return false
     }
     
+    /**
+     将某个 key - Object 值存入UserDefaults中
+     
+     - parameter object: 将要存入的 object
+     - parameter key:    将要存入的 key
+     */
     public func saveObject(object: AnyObject, forKey key: String) {
         self.setObject(object, forKey: key)
         self.synchronize()
