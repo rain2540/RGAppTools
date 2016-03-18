@@ -22,8 +22,10 @@ extension String {
             return ""
         }
         
-        if obj.isKindOfClass(NSNull.classForCoder()) {
+        if obj is NSNull {
             return ""
+        } else if obj is NSNumber {
+            return "\(obj)"
         } else {
             return "\(obj)"
         }
