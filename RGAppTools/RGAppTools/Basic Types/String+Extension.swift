@@ -102,5 +102,7 @@ extension String {
 
 //  MARK: Sandbox
 extension String {
-    
+    static func pathOfHomeDirectory() -> String {
+        return NSHomeDirectory()
+    }
 }
