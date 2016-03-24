@@ -110,4 +110,8 @@ extension String {
     static func pathOfHomeDirectory() -> String {
         return NSHomeDirectory()
     }
+    
+    static func pathOfDocuments() -> String? {
+        return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.path
+    }
 }
