@@ -111,6 +111,11 @@ extension String {
         return NSHomeDirectory()
     }
     
+    /**
+     获取 Documents 文件夹的路径
+     
+     - returns: Documents 文件夹的路径
+     */
     static func pathOfDocuments() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.path
     }
