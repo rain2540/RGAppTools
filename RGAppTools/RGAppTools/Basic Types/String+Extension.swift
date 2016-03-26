@@ -120,6 +120,11 @@ extension String {
         return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.path
     }
     
+    /**
+     获取 Caches 文件夹的路径
+     
+     - returns: Caches 文件夹的路径
+     */
     static func pathOfCaches() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first?.path
     }
