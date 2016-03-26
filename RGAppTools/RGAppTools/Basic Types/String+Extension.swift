@@ -119,4 +119,8 @@ extension String {
     static func pathOfDocuments() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.path
     }
+    
+    static func pathOfCaches() -> String? {
+        return NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first?.path
+    }
 }
