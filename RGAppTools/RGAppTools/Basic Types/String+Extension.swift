@@ -128,4 +128,8 @@ extension String {
     static func pathOfCaches() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first?.path
     }
+    
+    static func pathOfTmp() -> String {
+        return NSTemporaryDirectory()
+    }
 }
