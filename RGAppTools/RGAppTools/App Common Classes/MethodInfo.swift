@@ -18,9 +18,9 @@ struct MethodInfo {
      - parameter line:    代码行数
      */
     func methodLog<T>(message: T,
-        file: String = __FILE__,
-        method: String = __FUNCTION__,
-        line: Int = __LINE__)
+        file: String = #file,
+        method: String = #function,
+        line: Int = #line)
     {
         print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
     }
