@@ -114,9 +114,9 @@
 		B79DA2E61C603AFD002FB62E /* Cocoa Types */ = {
 			isa = PBXGroup;
 			children = (
-				B79DA2EF1C60569B002FB62E /* UIDevice+InfoShow.swift */,
-				B7764DA01C643CD8007FEBD9 /* NSUserDefaults+Extension.swift */,
 				B7764DA21C643D04007FEBD9 /* NSDictionary+Extension.swift */,
+				B7764DA01C643CD8007FEBD9 /* NSUserDefaults+Extension.swift */,
+				B79DA2EF1C60569B002FB62E /* UIDevice+InfoShow.swift */,
 			);
 			path = "Cocoa Types";
 			sourceTree = "<group>";
