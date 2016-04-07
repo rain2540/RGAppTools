@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Smartech. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 //  MARK: Clear nil
 extension String {
@@ -17,7 +17,7 @@ extension String {
      
      - returns: 经处理后的字符串
      */
-    static func rg_stringWithoutNull(obj: NSObject?) -> String {
+    static func rg_stringWithoutNull(obj: AnyObject?) -> String {
         guard let obj = obj else {
             return ""
         }
@@ -30,6 +30,17 @@ extension String {
             return "\(obj)"
         }
     }
+}
+
+extension String {
+    //  TODO: Add comment
+    public func rg_sizeWithFont(font: UIFont) -> CGSize {
+        return (self as NSString).sizeWithAttributes([NSFontAttributeName: font])
+    }
+    
+//    public func rg_sizeWithAttributes(attrs: [String: AnyObject]?) -> CGSize {
+//        return (self as NSString).sizeWithAttributes(attrs)
+//    }
 }
 
 //  MARK: App Infos
