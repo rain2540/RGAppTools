@@ -38,9 +38,9 @@ extension String {
         return (self as NSString).sizeWithAttributes([NSFontAttributeName: font])
     }
     
-//    public func rg_sizeWithAttributes(attrs: [String: AnyObject]?) -> CGSize {
-//        return (self as NSString).sizeWithAttributes(attrs)
-//    }
+    public func rg_sizeWithAttributes(attrs: [String: AnyObject]?) -> CGSize {
+        return (self as NSString).sizeWithAttributes(attrs)
+    }
 }
 
 //  MARK: App Infos
