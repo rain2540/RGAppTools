@@ -39,4 +39,10 @@ extension NSUserDefaults {
         self.setObject(object, forKey: key)
         self.synchronize()
     }
+    
+    //  TODO: Add comment
+    public func saveDouble(value: Double, forKey key: String) {
+        self.setDouble(value, forKey: key)
+        self.synchronize()
+    }
 }
