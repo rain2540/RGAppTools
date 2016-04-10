@@ -10,7 +10,7 @@ import Foundation
 
 extension NSUserDefaults {
     /**
-     检验UserDefaults中是否存在某个key
+     检验 UserDefaults 中是否存在某个 key
      
      - parameter key: 待检验的 key
      
@@ -37,6 +37,12 @@ extension NSUserDefaults {
      */
     public func saveObject(object: AnyObject, forKey key: String) {
         self.setObject(object, forKey: key)
+        self.synchronize()
+    }
+    
+    //  TODO: Add comment
+    public func saveBool(value: Bool, forKey key: String) {
+        self.setBool(value, forKey: key)
         self.synchronize()
     }
     
