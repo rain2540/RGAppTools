@@ -13,7 +13,7 @@ extension String {
     /**
      清除 nil 和 NSNull 对象，并返回字符串
      
-     - parameter obj: 未经处理的对象(NSObject)
+     - parameter obj: 未经处理的对象
      
      - returns: 经处理后的字符串
      */
