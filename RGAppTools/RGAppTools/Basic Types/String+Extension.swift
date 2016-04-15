@@ -38,6 +38,13 @@ extension String {
         return (self as NSString).sizeWithAttributes([NSFontAttributeName: font])
     }
     
+    /**
+     返回按照给定属性绘制时, 字符串所占有的边界大小
+     
+     - parameter attrs: 要应用于字符串的文本属性的字典
+     
+     - returns: 按照给定属性绘制时, 字符串所占有的边界大小
+     */
     public func rg_sizeWithAttributes(attrs: [String: AnyObject]?) -> CGSize {
         return (self as NSString).sizeWithAttributes(attrs)
     }
