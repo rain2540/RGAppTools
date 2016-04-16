@@ -33,7 +33,13 @@ extension String {
 }
 
 extension String {
-    //  TODO: Add comment
+    /**
+     返回按照给定字体绘制时, 字符串所占有的边界大小
+     
+     - parameter font: 要应用于字符串的字体
+     
+     - returns: 按照给定字体绘制时, 字符串所占有的边界大小
+     */
     public func rg_sizeWithFont(font: UIFont) -> CGSize {
         return (self as NSString).sizeWithAttributes([NSFontAttributeName: font])
     }
