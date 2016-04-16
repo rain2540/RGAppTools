@@ -131,7 +131,7 @@ extension String {
      
      - returns: Home Directory 文件夹的路径
      */
-    static func pathOfHomeDirectory() -> String {
+    static func rg_pathOfHomeDirectory() -> String {
         return NSHomeDirectory()
     }
     
