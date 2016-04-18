@@ -140,7 +140,7 @@ extension String {
      
      - returns: Documents 文件夹的路径
      */
-    static func pathOfDocuments() -> String? {
+    static func rg_pathOfDocuments() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.path
     }
     
