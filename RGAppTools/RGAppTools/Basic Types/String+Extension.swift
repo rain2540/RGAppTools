@@ -32,6 +32,7 @@ extension String {
     }
 }
 
+//  MARK: Size
 extension String {
     /**
      返回按照给定字体绘制时, 字符串所占有的边界大小
@@ -53,6 +54,13 @@ extension String {
      */
     public func rg_sizeWithAttributes(attrs: [String: AnyObject]?) -> CGSize {
         return (self as NSString).sizeWithAttributes(attrs)
+    }
+}
+
+//  MARK:
+extension String {
+    public func rg_doubleValue() -> Double {
+        return (self as NSString).doubleValue
     }
 }
 
