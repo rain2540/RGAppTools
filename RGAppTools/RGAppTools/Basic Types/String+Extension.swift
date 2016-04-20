@@ -59,6 +59,19 @@ extension String {
 
 //  MARK:
 extension String {
+    /*
+    public func rg_boolValue() -> Bool {
+        return (self as NSString).boolValue
+    }
+    
+    public func rg_intValue() -> Int {
+        return (self as NSString).integerValue
+    }
+    
+    public func rg_floatValue() -> Float {
+        return (self as NSString).floatValue
+    }
+    */
     public func rg_doubleValue() -> Double {
         return (self as NSString).doubleValue
     }
@@ -157,7 +170,7 @@ extension String {
      
      - returns: Caches 文件夹的路径
      */
-    static func pathOfCaches() -> String? {
+    static func rg_pathOfCaches() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first?.path
     }
     
