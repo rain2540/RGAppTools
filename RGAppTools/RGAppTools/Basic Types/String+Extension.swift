@@ -179,7 +179,7 @@ extension String {
      
      - returns: tmp文件夹的路径
      */
-    static func pathOfTmp() -> String {
+    static func rg_pathOfTmp() -> String {
         return NSTemporaryDirectory()
     }
 }
