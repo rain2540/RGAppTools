@@ -59,7 +59,11 @@ extension String {
 
 //  MARK:
 extension String {
-    
+    /**
+     返回 String 对应的 Boolean 值
+     
+     - returns: String 对应的 Boolean 值
+     */
     public func rg_boolValue() -> Bool {
         return (self as NSString).boolValue
     }
