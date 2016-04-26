@@ -67,11 +67,11 @@ extension String {
     public func rg_boolValue() -> Bool {
         return (self as NSString).boolValue
     }
-    /*
+    
     public func rg_intValue() -> Int {
         return (self as NSString).integerValue
     }
-    
+    /*
     public func rg_floatValue() -> Float {
         return (self as NSString).floatValue
     }
