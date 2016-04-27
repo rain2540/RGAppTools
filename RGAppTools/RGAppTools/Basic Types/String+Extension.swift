@@ -68,6 +68,11 @@ extension String {
         return (self as NSString).boolValue
     }
     
+    /**
+     返回 String 对应的 Int 值
+     
+     - returns: String 对应的 Int 值
+     */
     public func rg_intValue() -> Int {
         return (self as NSString).integerValue
     }
