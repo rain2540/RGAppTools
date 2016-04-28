@@ -81,6 +81,12 @@ extension String {
         return (self as NSString).floatValue
     }
     */
+    
+    /**
+     返回 String 对应的 Double 值
+     
+     - returns: String 对应的 Double 值
+     */
     public func rg_doubleValue() -> Double {
         return (self as NSString).doubleValue
     }
