@@ -76,11 +76,10 @@ extension String {
     public func rg_intValue() -> Int {
         return (self as NSString).integerValue
     }
-    /*
+    
     public func rg_floatValue() -> Float {
         return (self as NSString).floatValue
     }
-    */
     
     /**
      返回 String 对应的 Double 值
