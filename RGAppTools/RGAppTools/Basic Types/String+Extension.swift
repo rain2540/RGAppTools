@@ -77,6 +77,11 @@ extension String {
         return (self as NSString).integerValue
     }
     
+/**
+返回 String 对应的 Float 值
+
+- returns: String 对应的Float 值
+*/
     public func rg_floatValue() -> Float {
         return (self as NSString).floatValue
     }
