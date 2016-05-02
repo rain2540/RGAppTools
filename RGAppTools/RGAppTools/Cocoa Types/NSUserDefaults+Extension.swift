@@ -30,7 +30,7 @@ extension NSUserDefaults {
     }
     
     /**
-     将某个 key - Object 值存入UserDefaults中
+     将某个 key - Object 值存入 UserDefaults 中
      
      - parameter object: 将要存入的 object
      - parameter key:    将要存入的 key
@@ -39,8 +39,13 @@ extension NSUserDefaults {
         self.setObject(object, forKey: key)
         self.synchronize()
     }
-    
-    //  TODO: Add comment
+
+    /**
+     将某个 key - Bool 值存入 UserDefaults 中
+     
+     - parameter value: 将要存入的 Bool 值
+     - parameter key:   将要存入的 key
+     */
     public func saveBool(value: Bool, forKey key: String) {
         self.setBool(value, forKey: key)
         self.synchronize()
