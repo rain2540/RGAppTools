@@ -52,6 +52,12 @@ extension NSUserDefaults {
     }
     
     //  TODO: Add comment
+    /**
+     将某个 key - Double 值存入 UserDefaults 中
+     
+     - parameter value: 将要存入的 Double 值
+     - parameter key:   将要存入的 key
+     */
     public func saveDouble(value: Double, forKey key: String) {
         self.setDouble(value, forKey: key)
         self.synchronize()
