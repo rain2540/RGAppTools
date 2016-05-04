@@ -51,7 +51,6 @@ extension NSUserDefaults {
         self.synchronize()
     }
     
-    //  TODO: Add comment
     /**
      将某个 key - Double 值存入 UserDefaults 中
      
