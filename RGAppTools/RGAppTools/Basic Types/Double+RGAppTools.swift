@@ -1,5 +1,5 @@
 //
-//  Double+Extension.swift
+//  Double+RGAppTools.swift
 //  RGAppTools
 //
 //  Created by RAIN on 16/2/2.
