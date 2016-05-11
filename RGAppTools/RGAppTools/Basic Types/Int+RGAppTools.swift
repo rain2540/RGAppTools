@@ -1,5 +1,5 @@
 //
-//  Int+Extension.swift
+//  Int+RGAppTools.swift
 //  RGAppTools
 //
 //  Created by RAIN on 16/2/2.
