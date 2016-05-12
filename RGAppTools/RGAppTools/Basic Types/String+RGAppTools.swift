@@ -1,5 +1,5 @@
 //
-//  String+Extension.swift
+//  String+RGAppTools.swift
 //  RGAppTools
 //
 //  Created by RAIN on 16/2/2.
@@ -17,7 +17,7 @@ extension String {
      
      - returns: 经处理后的字符串
      */
-    static func rg_stringWithoutNull(obj: AnyObject?) -> String {
+    public static func rg_stringWithoutNull(obj: AnyObject?) -> String {
         guard let obj = obj else {
             return ""
         }
@@ -57,7 +57,7 @@ extension String {
     }
 }
 
-//  MARK:
+//  MARK: Trans
 extension String {
     /**
      返回 String 对应的 Boolean 值
@@ -73,8 +73,8 @@ extension String {
      
      - returns: String 对应的 Int 值
      */
-    public func rg_intValue() -> Int {
-        return (self as NSString).integerValue
+    public func rg_intValue() -> Int? {
+        return Int(self)
     }
     
     /**
@@ -82,8 +82,8 @@ extension String {
      
      - returns: String 对应的 Float 值
      */
-    public func rg_floatValue() -> Float {
-        return (self as NSString).floatValue
+    public func rg_floatValue() -> Float? {
+        return Float(self)
     }
     
     /**
@@ -91,8 +91,22 @@ extension String {
      
      - returns: String 对应的 Double 值
      */
-    public func rg_doubleValue() -> Double {
-        return (self as NSString).doubleValue
+    public func rg_doubleValue() -> Double? {
+        return Double(self)
+    }
+    
+    public func rg_toObject() -> AnyObject? {
+        let string = self.stringByReplacingOccurrencesOfString("\0", withString: "")
+        guard let data = string.dataUsingEncoding(NSUTF8StringEncoding) else {
+            print("RGAppTools String to object Error:\n", "Fail to get data")
+            return nil
+        }
+        do {
+           return try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
+        } catch let error as NSError {
+            print("RGAppTools String to object Error:\n", error)
+            return nil
+        }
     }
 }
 
@@ -103,7 +117,7 @@ extension String {
      
      - returns: String of app version
      */
-    static func rg_stringOfAppVersion() -> String {
+    public static func rg_stringOfAppVersion() -> String {
         let infoPath = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
         let version = infoDic!["CFBundleShortVersionString"] as! String
@@ -116,7 +130,7 @@ extension String {
      
      - returns: String of device time
      */
-    static func rg_stringOfDeviceTime() -> String {
+    public static func rg_stringOfDeviceTime() -> String {
         let deviceTime = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
@@ -131,7 +145,7 @@ extension String {
      
      - returns: 表示 Main Bundle 路径的字符串
      */
-    static func rg_pathOfMainBundle() -> String {
+    public static func rg_pathOfMainBundle() -> String {
         return NSBundle.mainBundle().description
     }
     
@@ -143,7 +157,7 @@ extension String {
      
      - returns: Main Bundle 中文件的路径
      */
-    static func rg_pathForResourceInMainBundle(name: String?, ofType ext: String?) -> String? {
+    public static func rg_pathForResourceInMainBundle(name: String?, ofType ext: String?) -> String? {
         return NSBundle.mainBundle().pathForResource(name, ofType: ext)
     }
     
@@ -171,7 +185,7 @@ extension String {
      
      - returns: Home Directory 文件夹的路径
      */
-    static func rg_pathOfHomeDirectory() -> String {
+    public static func rg_pathOfHomeDirectory() -> String {
         return NSHomeDirectory()
     }
     
@@ -180,7 +194,7 @@ extension String {
      
      - returns: Documents 文件夹的路径
      */
-    static func rg_pathOfDocuments() -> String? {
+    public static func rg_pathOfDocuments() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.path
     }
     
@@ -189,7 +203,7 @@ extension String {
      
      - returns: Caches 文件夹的路径
      */
-    static func rg_pathOfCaches() -> String? {
+    public static func rg_pathOfCaches() -> String? {
         return NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first?.path
     }
     
@@ -198,7 +212,7 @@ extension String {
      
      - returns: tmp文件夹的路径
      */
-    static func rg_pathOfTmp() -> String {
+    public static func rg_pathOfTmp() -> String {
         return NSTemporaryDirectory()
     }
 }
