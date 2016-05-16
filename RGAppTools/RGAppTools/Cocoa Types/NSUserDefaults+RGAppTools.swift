@@ -1,5 +1,5 @@
 //
-//  NSUserDefaults+Extension.swift
+//  NSUserDefaults+RGAppTools.swift
 //  RGAppTools
 //
 //  Created by RAIN on 16/2/5.
