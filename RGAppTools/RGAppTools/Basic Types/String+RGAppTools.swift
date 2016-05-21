@@ -136,7 +136,7 @@ extension String {
      
      - returns: String of device time
      */
-    public static func rg_stringOfDeviceTime() -> String {
+    public static func rg_deviceTime() -> String {
         let deviceTime = NSDate()
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
