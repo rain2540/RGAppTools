@@ -9,6 +9,11 @@
 import Foundation
 
 extension NSObject {
+    /**
+     将 Object 转换为 JSON 字符串
+     
+     - returns: 转换得到的 JSON 字符串
+     */
     public static func rg_objectToJSONString() -> String? {
         do {
             let data = try NSJSONSerialization.dataWithJSONObject(self, options: .PrettyPrinted)
