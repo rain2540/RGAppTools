@@ -9,6 +9,11 @@
 import Foundation
 
 extension NSDate {
+    /**
+     时间转换为时间戳
+     
+     - returns: 转换得到的时间戳
+     */
     public func rg_toTimestamp() -> String {
         return String(self.timeIntervalSince1970)
     }
