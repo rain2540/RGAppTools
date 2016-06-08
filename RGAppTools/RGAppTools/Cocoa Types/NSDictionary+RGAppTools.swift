@@ -25,3 +25,15 @@ extension NSDictionary {
         self.init(contentsOfFile: path)
     }
 }
+
+extension NSDictionary {
+    func rg_isHaveKey(key: String) -> Bool {
+        let keys = self.allKeys as! [String]
+        for aKey: String in keys {
+            if key == aKey {
+                return true
+            }
+        }
+        return false
+    }
+}
