@@ -27,6 +27,13 @@ extension NSDictionary {
 }
 
 extension NSDictionary {
+    /**
+     检验 NSDictionary 中是否存在某个 key
+     
+     - parameter key: 待检验的 key
+     
+     - returns: 检验结果的布尔值
+     */
     func rg_isHaveKey(key: String) -> Bool {
         let keys = self.allKeys as! [String]
         for aKey: String in keys {
