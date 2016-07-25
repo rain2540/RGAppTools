@@ -8,7 +8,9 @@
 
 import Foundation
 
+//  TODO: Add MARK: for this extension of NSDictionary
 extension NSDictionary {
+    //  TODO: update this comment
     /**
      获取 Main Bundle 中某个文件的路径
      
@@ -26,6 +28,7 @@ extension NSDictionary {
     }
 }
 
+//  MARK: Ckeck key exist or not
 extension NSDictionary {
     /**
      检验 NSDictionary 中是否存在某个 key
