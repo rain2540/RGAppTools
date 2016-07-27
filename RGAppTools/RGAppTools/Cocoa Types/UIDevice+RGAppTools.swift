@@ -8,6 +8,7 @@
 
 import UIKit
 
+//  MARK: Device informations
 extension UIDevice {
     /**
      打印当前设备信息
