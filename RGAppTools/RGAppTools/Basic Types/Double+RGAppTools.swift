@@ -8,7 +8,7 @@
 
 import Foundation
 
-//  MARK: Angle transfer
+//  MARK: Angle transform
 extension Double {
     /**
      角度转化为弧度
