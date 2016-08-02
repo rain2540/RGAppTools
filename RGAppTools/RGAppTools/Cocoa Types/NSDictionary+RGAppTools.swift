@@ -10,9 +10,8 @@ import Foundation
 
 //  TODO: Add MARK: for this extension of NSDictionary
 extension NSDictionary {
-    //  TODO: update this comment
     /**
-     获取 Main Bundle 中某个文件的路径
+     获取 Main Bundle 中某个文件的内容, 创建为 NSDictionary
      
      - parameter name: 文件名
      - parameter ext:  文件扩展名
