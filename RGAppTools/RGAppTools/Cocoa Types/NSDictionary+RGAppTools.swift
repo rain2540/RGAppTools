@@ -8,7 +8,7 @@
 
 import Foundation
 
-//  TODO: Add MARK: for this extension of NSDictionary
+//  MARK: Main Bundle
 extension NSDictionary {
     /**
      获取 Main Bundle 中某个文件的内容, 创建为 NSDictionary
