@@ -8,6 +8,8 @@
 
 import Foundation
 
+//  TODO: Add MARK: for this extension of NSUserDefaults
+//  TODO: change this extension to "Savings"
 extension NSUserDefaults {
     /**
      检验 UserDefaults 中是否存在某个 key
@@ -16,18 +18,7 @@ extension NSUserDefaults {
      
      - returns: 检验结果
      */
-    public func isHaveKey(key: String) -> Bool {
-        let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
-        let keys = userDefaultsDic.allKeys
-        
-        for i in 0 ..< keys.count {
-            let aKey = keys[i] as? String
-            if key == aKey {
-                return true
-            }
-        }
-        return false
-    }
+
     
     /**
      将某个 key - Object 值存入 UserDefaults 中
@@ -60,5 +51,22 @@ extension NSUserDefaults {
     public func saveDouble(value: Double, forKey key: String) {
         self.setDouble(value, forKey: key)
         self.synchronize()
+    }
+}
+
+//  TODO: Add MARK: for this extension of NSUserDefaults
+//  TODO: change this extension to check key exist or not
+extension NSUserDefaults {
+    public func isHaveKey(key: String) -> Bool {
+        let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
+        let keys = userDefaultsDic.allKeys
+
+        for i in 0 ..< keys.count {
+            let aKey = keys[i] as? String
+            if key == aKey {
+                return true
+            }
+        }
+        return false
     }
 }
