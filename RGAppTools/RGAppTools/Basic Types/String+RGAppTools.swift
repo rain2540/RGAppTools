@@ -94,7 +94,12 @@ extension String {
     public func rg_doubleValue() -> Double? {
         return Double(self)
     }
-    
+
+    /**
+     将字符串转换为 JSON 对象
+
+     - returns: 转换得到的 JSON 对象
+     */
     public func rg_toObject() -> AnyObject? {
         let string = self.stringByReplacingOccurrencesOfString("\0", withString: "")
         guard let data = string.dataUsingEncoding(NSUTF8StringEncoding) else {
