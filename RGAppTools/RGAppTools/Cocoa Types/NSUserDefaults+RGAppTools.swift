@@ -12,15 +12,6 @@ import Foundation
 //  TODO: change this extension to "Savings"
 extension NSUserDefaults {
     /**
-     检验 UserDefaults 中是否存在某个 key
-     
-     - parameter key: 待检验的 key
-     
-     - returns: 检验结果
-     */
-
-    
-    /**
      将某个 key - Object 值存入 UserDefaults 中
      
      - parameter object: 将要存入的 object
@@ -57,6 +48,13 @@ extension NSUserDefaults {
 //  TODO: Add MARK: for this extension of NSUserDefaults
 //  TODO: change this extension to check key exist or not
 extension NSUserDefaults {
+    /**
+     检验 UserDefaults 中是否存在某个 key
+
+     - parameter key: 待检验的 key
+
+     - returns: 检验结果
+     */
     public func isHaveKey(key: String) -> Bool {
         let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
