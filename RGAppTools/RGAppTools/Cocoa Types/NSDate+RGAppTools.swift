@@ -10,15 +10,16 @@ import Foundation
 
 //  MARK: Transform
 extension NSDate {
+//    /**
+//     返回某个时间对应的时间戳
+//
+//     - returns: 某个时间对应的时间戳
+//     */
     public func rg_toTimestamp() -> NSTimeInterval {
         return self.timeIntervalSince1970
     }
 
-//    /**
-//     时间转换为时间戳
-//     
-//     - returns: 转换得到的时间戳
-//     */
+
 //    public func rg_timestampString() -> String {
 //        return String(self.rg_toTimestamp())
 //    }
