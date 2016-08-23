@@ -10,12 +10,24 @@ import Foundation
 
 //  MARK: Transform
 extension NSDate {
-    /**
-     时间转换为时间戳
-     
-     - returns: 转换得到的时间戳
-     */
-    public func rg_toTimestamp() -> String {
-        return String(self.timeIntervalSince1970)
+    public func rg_toTimestamp() -> NSTimeInterval {
+        return self.timeIntervalSince1970
     }
+
+//    /**
+//     时间转换为时间戳
+//     
+//     - returns: 转换得到的时间戳
+//     */
+//    public func rg_timestampString() -> String {
+//        return String(self.rg_toTimestamp())
+//    }
+//
+//    public class func rg_timestampForNow() -> NSTimeInterval {
+//        return NSDate().timeIntervalSince1970
+//    }
+//
+//    public class func rg_timestampForNowString() -> String {
+//        return String(NSDate.rg_timestampForNow())
+//    }
 }
