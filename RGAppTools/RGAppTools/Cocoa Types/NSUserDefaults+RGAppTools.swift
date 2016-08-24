@@ -8,8 +8,7 @@
 
 import Foundation
 
-//  TODO: Add MARK: for this extension of NSUserDefaults
-//  TODO: change this extension to "Savings"
+//  MARK: Savings
 extension NSUserDefaults {
     /**
      将某个 key - Object 值存入 UserDefaults 中
