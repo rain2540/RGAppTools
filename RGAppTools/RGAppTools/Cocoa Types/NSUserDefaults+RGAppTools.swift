@@ -44,8 +44,7 @@ extension NSUserDefaults {
     }
 }
 
-//  TODO: Add MARK: for this extension of NSUserDefaults
-//  TODO: change this extension to check key exist or not
+//  MARK: Check key exist or not
 extension NSUserDefaults {
     /**
      检验 UserDefaults 中是否存在某个 key
