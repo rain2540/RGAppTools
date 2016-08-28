@@ -20,10 +20,10 @@ extension NSDate {
     }
 
 
-//    public func rg_timestampString() -> String {
-//        return String(self.rg_toTimestamp())
-//    }
-//
+    public func rg_timestampString() -> String {
+        return String(self.rg_toTimestamp())
+    }
+
 //    public class func rg_timestampForNow() -> NSTimeInterval {
 //        return NSDate().timeIntervalSince1970
 //    }
