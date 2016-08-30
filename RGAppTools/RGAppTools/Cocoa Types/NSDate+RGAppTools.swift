@@ -27,8 +27,8 @@ extension NSDate {
     public class func rg_timestampForNow() -> NSTimeInterval {
         return NSDate().timeIntervalSince1970
     }
-//
-//    public class func rg_timestampForNowString() -> String {
-//        return String(NSDate.rg_timestampForNow())
-//    }
+
+    public class func rg_timestampForNowString() -> String {
+        return String(NSDate.rg_timestampForNow())
+    }
 }
