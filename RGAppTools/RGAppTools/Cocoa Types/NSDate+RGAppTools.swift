@@ -19,7 +19,11 @@ extension NSDate {
         return self.timeIntervalSince1970
     }
 
+    /**
+     返回描述某个时间对应的时间戳的字符串
 
+     - returns: 描述某个时间对应的时间戳的字符串
+     */
     public func rg_timestampString() -> String {
         return String(self.rg_toTimestamp())
     }
