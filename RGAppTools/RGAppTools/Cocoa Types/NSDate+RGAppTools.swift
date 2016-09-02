@@ -28,6 +28,11 @@ extension NSDate {
         return String(self.rg_toTimestamp())
     }
 
+    /**
+     返回实时对应的时间戳
+
+     - returns: 实时对应的时间戳
+     */
     public class func rg_timestampForNow() -> NSTimeInterval {
         return NSDate().timeIntervalSince1970
     }
