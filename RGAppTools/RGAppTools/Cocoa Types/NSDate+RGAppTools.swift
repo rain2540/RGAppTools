@@ -37,6 +37,11 @@ extension NSDate {
         return NSDate().timeIntervalSince1970
     }
 
+    /**
+     返回描述实时对应的时间戳的字符串
+
+     - returns: 描述实时对应的时间戳的字符串
+     */
     public class func rg_timestampForNowString() -> String {
         return String(NSDate.rg_timestampForNow())
     }
