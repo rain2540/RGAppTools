@@ -17,7 +17,7 @@ struct MethodInfo {
      - parameter method:  方法名
      - parameter line:    代码行数
      */
-    func methodLog<T>(message: T,
+    func methodLog<T>(_ message: T,
                    file:   String = #file,
                    method: String = #function,
                    line:   Int    = #line)
