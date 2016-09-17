@@ -17,7 +17,7 @@ extension String {
      
      - returns: 经处理后的字符串
      */
-    public static func rg_stringWithoutNull(obj: AnyObject?) -> String {
+    public static func rg_stringWithoutNull(_ obj: AnyObject?) -> String {
         guard let obj = obj else {
             return ""
         }
@@ -41,8 +41,8 @@ extension String {
      
      - returns: 按照给定字体绘制时, 字符串所占有的边界大小
      */
-    public func rg_sizeWithFont(font: UIFont) -> CGSize {
-        return (self as NSString).sizeWithAttributes([NSFontAttributeName: font])
+    public func rg_sizeWithFont(_ font: UIFont) -> CGSize {
+        return (self as NSString).size(attributes: [NSFontAttributeName: font])
     }
     
     /**
@@ -52,8 +52,8 @@ extension String {
      
      - returns: 按照给定属性绘制时, 字符串所占有的边界大小
      */
-    public func rg_sizeWithAttributes(attrs: [String: AnyObject]?) -> CGSize {
-        return (self as NSString).sizeWithAttributes(attrs)
+    public func rg_sizeWithAttributes(_ attrs: [String: AnyObject]?) -> CGSize {
+        return (self as NSString).size(attributes: attrs)
     }
 }
 
@@ -96,13 +96,13 @@ extension String {
     }
     
     public func rg_toObject() -> AnyObject? {
-        let string = self.stringByReplacingOccurrencesOfString("\0", withString: "")
-        guard let data = string.dataUsingEncoding(NSUTF8StringEncoding) else {
+        let string = self.replacingOccurrences(of: "\0", with: "")
+        guard let data = string.data(using: String.Encoding.utf8) else {
             print("RGAppTools String to object Error:\n", "Fail to get data")
             return nil
         }
         do {
-           return try NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
+           return try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? AnyObject
         } catch let error as NSError {
             print("RGAppTools String to object Error:\n", error)
             return nil
@@ -118,7 +118,7 @@ extension String {
      - returns: String of app version
      */
     public static func rg_stringOfAppVersion() -> String {
-        let infoPath = NSBundle.mainBundle().pathForResource("Info", ofType: "plist")
+        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
         let version = infoDic!["CFBundleShortVersionString"] as! String
         let build = infoDic!["CFBundleVersion"] as! String
@@ -137,10 +137,10 @@ extension String {
      - returns: String of device time
      */
     public static func rg_deviceTime() -> String {
-        let deviceTime = NSDate()
-        let dateFormatter = NSDateFormatter()
+        let deviceTime = Date()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
-        return dateFormatter.stringFromDate(deviceTime)
+        return dateFormatter.string(from: deviceTime)
     }
 }
 
@@ -152,7 +152,7 @@ extension String {
      - returns: 表示 Main Bundle 路径的字符串
      */
     public static func rg_pathOfMainBundle() -> String {
-        return NSBundle.mainBundle().description
+        return Bundle.main.description
     }
     
     /**
@@ -163,8 +163,8 @@ extension String {
      
      - returns: Main Bundle 中文件的路径
      */
-    public static func rg_pathForResourceInMainBundle(name: String?, ofType ext: String?) -> String? {
-        return NSBundle.mainBundle().pathForResource(name, ofType: ext)
+    public static func rg_pathForResourceInMainBundle(_ name: String?, ofType ext: String?) -> String? {
+        return Bundle.main.path(forResource: name, ofType: ext)
     }
     
     /**
@@ -176,7 +176,7 @@ extension String {
      - returns: Main Bundle 中文件内的字符串
      */
     public init?(pathForResource name: String?, ofType ext: String?) {
-        guard let path = NSBundle.mainBundle().pathForResource(name, ofType: ext) else {
+        guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
             print("RGBring :: String init with path for resource of type error: path is nil")
             return nil
         }
@@ -201,7 +201,7 @@ extension String {
      - returns: Documents 文件夹的路径
      */
     public static func rg_pathOfDocuments() -> String? {
-        return NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first?.path
+        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.path
     }
     
     /**
@@ -210,7 +210,7 @@ extension String {
      - returns: Caches 文件夹的路径
      */
     public static func rg_pathOfCaches() -> String? {
-        return NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask).first?.path
+        return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
     }
     
     /**
