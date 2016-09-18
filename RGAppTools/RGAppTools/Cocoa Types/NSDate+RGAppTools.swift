@@ -9,7 +9,7 @@
 import Foundation
 
 //  MARK: Transform
-extension NSDate {
+extension Date {
     /**
      时间转换为时间戳
      
