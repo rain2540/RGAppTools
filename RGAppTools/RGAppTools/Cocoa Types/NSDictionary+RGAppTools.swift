@@ -20,7 +20,7 @@ extension NSDictionary {
      - returns: 文件路径
      */
     convenience init?(mainBundlePathForResource name: String?, ofType ext: String?) {
-        guard let path = NSBundle.mainBundle().pathForResource(name, ofType: ext) else {
+        guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
             print("RGApptools: NSDictionary init with main bundle path for resource of type is nil")
             return nil
         }
@@ -37,7 +37,7 @@ extension NSDictionary {
      
      - returns: 检验结果的布尔值
      */
-    func rg_isHaveKey(key: String) -> Bool {
+    func rg_isHaveKey(_ key: String) -> Bool {
         let keys = self.allKeys as! [String]
         for aKey: String in keys {
             if key == aKey {
