@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSUserDefaults {
+extension UserDefaults {
     /**
      检验 UserDefaults 中是否存在某个 key
      
@@ -16,7 +16,7 @@ extension NSUserDefaults {
      
      - returns: 检验结果
      */
-    public func isHaveKey(key: String) -> Bool {
+    public func isHaveKey(_ key: String) -> Bool {
         let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
         
@@ -35,8 +35,8 @@ extension NSUserDefaults {
      - parameter object: 将要存入的 object
      - parameter key:    将要存入的 key
      */
-    public func saveObject(object: AnyObject, forKey key: String) {
-        self.setObject(object, forKey: key)
+    public func saveObject(_ object: AnyObject, forKey key: String) {
+        self.set(object, forKey: key)
         self.synchronize()
     }
 
@@ -46,8 +46,8 @@ extension NSUserDefaults {
      - parameter value: 将要存入的 Bool 值
      - parameter key:   将要存入的 key
      */
-    public func saveBool(value: Bool, forKey key: String) {
-        self.setBool(value, forKey: key)
+    public func saveBool(_ value: Bool, forKey key: String) {
+        self.set(value, forKey: key)
         self.synchronize()
     }
     
@@ -57,8 +57,8 @@ extension NSUserDefaults {
      - parameter value: 将要存入的 Double 值
      - parameter key:   将要存入的 key
      */
-    public func saveDouble(value: Double, forKey key: String) {
-        self.setDouble(value, forKey: key)
+    public func saveDouble(_ value: Double, forKey key: String) {
+        self.set(value, forKey: key)
         self.synchronize()
     }
 }
