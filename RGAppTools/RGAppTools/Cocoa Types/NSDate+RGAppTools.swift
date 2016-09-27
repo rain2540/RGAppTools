@@ -9,7 +9,7 @@
 import Foundation
 
 //  MARK: Transform
-extension NSDate {
+extension Date {
     /**
      返回某个时间对应的时间戳
 

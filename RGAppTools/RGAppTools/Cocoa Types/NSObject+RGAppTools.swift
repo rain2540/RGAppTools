@@ -17,8 +17,8 @@ extension NSObject {
      */
     public static func rg_objectToJSONString() -> String? {
         do {
-            let data = try NSJSONSerialization.dataWithJSONObject(self, options: .PrettyPrinted)
-            return NSString(data: data, encoding: NSUTF8StringEncoding) as? String
+            let data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            return NSString(data: data, encoding: String.Encoding.utf8.rawValue) as? String
         } catch let error as NSError {
             print("RGAppTools NSObject to JSON string Error:\n", error)
             return nil
