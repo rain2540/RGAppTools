@@ -15,7 +15,7 @@ extension Date {
 
      - returns: 某个时间对应的时间戳
      */
-    public func rg_toTimestamp() -> NSTimeInterval {
+    public func rg_toTimestamp() -> TimeInterval {
         return self.timeIntervalSince1970
     }
 
@@ -33,7 +33,7 @@ extension Date {
 
      - returns: 实时对应的时间戳
      */
-    public class func rg_timestampForNow() -> NSTimeInterval {
+    public static func rg_timestampForNow() -> TimeInterval {
         return NSDate().timeIntervalSince1970
     }
 
@@ -42,7 +42,7 @@ extension Date {
 
      - returns: 描述实时对应的时间戳的字符串
      */
-    public class func rg_timestampForNowString() -> String {
-        return String(NSDate.rg_timestampForNow())
+    public static func rg_timestampForNowString() -> String {
+        return String(Date.rg_timestampForNow())
     }
 }
