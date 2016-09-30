@@ -107,7 +107,7 @@ extension String {
             return nil
         }
         do {
-           return try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? AnyObject
+           return try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as AnyObject?
         } catch let error as NSError {
             print("RGAppTools String to object Error:\n", error)
             return nil
