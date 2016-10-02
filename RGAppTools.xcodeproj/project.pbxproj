@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */; };
-		B74E983A1CDDB7E7001A18A3 /* NSDate+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98391CDDB7E7001A18A3 /* NSDate+RGAppTools.swift */; };
-		B7764DA11C643CD8007FEBD9 /* NSUserDefaults+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7764DA01C643CD8007FEBD9 /* NSUserDefaults+RGAppTools.swift */; };
+		B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */; };
+		B7764DA11C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7764DA01C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift */; };
 		B7764DA31C643D04007FEBD9 /* NSDictionary+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7764DA21C643D04007FEBD9 /* NSDictionary+RGAppTools.swift */; };
 		B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D11C603837002FB62E /* AppDelegate.swift */; };
 		B79DA2D41C603837002FB62E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D31C603837002FB62E /* ViewController.swift */; };
@@ -26,8 +26,8 @@
 
 /* Begin PBXFileReference section */
 		B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+RGAppTools.swift"; sourceTree = "<group>"; };
-		B74E98391CDDB7E7001A18A3 /* NSDate+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+RGAppTools.swift"; sourceTree = "<group>"; };
-		B7764DA01C643CD8007FEBD9 /* NSUserDefaults+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSUserDefaults+RGAppTools.swift"; sourceTree = "<group>"; };
+		B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+RGAppTools.swift"; sourceTree = "<group>"; };
+		B7764DA01C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7764DA21C643D04007FEBD9 /* NSDictionary+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+RGAppTools.swift"; sourceTree = "<group>"; };
 		B79DA2CE1C603836002FB62E /* RGAppTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGAppTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79DA2D11C603837002FB62E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,9 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */,
-				B74E98391CDDB7E7001A18A3 /* NSDate+RGAppTools.swift */,
+				B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */,
 				B7764DA21C643D04007FEBD9 /* NSDictionary+RGAppTools.swift */,
-				B7764DA01C643CD8007FEBD9 /* NSUserDefaults+RGAppTools.swift */,
+				B7764DA01C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift */,
 				B79DA2EF1C60569B002FB62E /* UIDevice+RGAppTools.swift */,
 			);
 			path = "Cocoa Types";
@@ -206,8 +206,8 @@
 				B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */,
 				B79DA2D41C603837002FB62E /* ViewController.swift in Sources */,
 				B79DA2E81C603B7F002FB62E /* AppSingleton.swift in Sources */,
-				B74E983A1CDDB7E7001A18A3 /* NSDate+RGAppTools.swift in Sources */,
-				B7764DA11C643CD8007FEBD9 /* NSUserDefaults+RGAppTools.swift in Sources */,
+				B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */,
+				B7764DA11C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift in Sources */,
 				B79DA2EE1C604D7B002FB62E /* String+RGAppTools.swift in Sources */,
 				B7764DA31C643D04007FEBD9 /* NSDictionary+RGAppTools.swift in Sources */,
 				B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */,
