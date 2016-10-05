@@ -1,5 +1,5 @@
 //
-//  NSDate+RGAppTools.swift
+//  Date+RGAppTools.swift
 //  RGAppTools
 //
 //  Created by RAIN on 16/5/7.
