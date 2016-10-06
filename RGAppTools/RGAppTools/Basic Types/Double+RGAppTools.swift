@@ -16,7 +16,7 @@ extension Double {
      - returns: 转化完成的弧度值
      */
     public func rg_degreeToRadian() -> Double {
-        return (M_PI * self) / 180.0
+        return (Double.pi * self) / 180.0
     }
     
     /**
