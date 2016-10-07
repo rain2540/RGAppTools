@@ -25,7 +25,7 @@ extension Double {
      - returns: 转化完成的角度值
      */
     public func rg_radianToDegree() -> Double {
-        return (180.0 * self) / M_PI
+        return (180.0 * self) / Double.pi
     }
 }
 
