@@ -14,7 +14,7 @@ extension UIDevice {
      打印当前设备信息
      */
     public static func rg_deviceInformations() {
-        NSLog("currentDevice: %@", UIDevice.current)
+        print("currentDevice: ", UIDevice.current)
         
         let device = UIDevice()
         NSLog("device.name: %@", device.name)
