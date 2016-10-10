@@ -17,7 +17,7 @@ extension UIDevice {
         print("currentDevice: ", UIDevice.current)
         
         let device = UIDevice()
-        NSLog("device.name: %@", device.name)
+        print("device.name: ", device.name)
         NSLog("device.model:%@", device.model)
         NSLog("device.localizedModel: %@", device.localizedModel)
         
