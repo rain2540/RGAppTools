@@ -19,7 +19,7 @@ extension UIDevice {
         let device = UIDevice()
         print("device.name: ", device.name)
         print("device.model: ", device.model)
-        NSLog("device.localizedModel: %@", device.localizedModel)
+        print("device.localizedModel: ", device.localizedModel)
         
         NSLog("device.systemName: %@", device.systemName)
         NSLog("device.systemVersion: %@", device.systemVersion)
