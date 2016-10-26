@@ -21,7 +21,7 @@ extension UIDevice {
         print("device.model: ", device.model)
         print("device.localizedModel: ", device.localizedModel)
         
-        NSLog("device.systemName: %@", device.systemName)
+        print("device.systemName: ", device.systemName)
         NSLog("device.systemVersion: %@", device.systemVersion)
         
         print("device.identifierForVendor: ", device.identifierForVendor)
