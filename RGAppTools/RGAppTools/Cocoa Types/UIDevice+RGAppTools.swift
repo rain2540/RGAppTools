@@ -22,7 +22,7 @@ extension UIDevice {
         print("device.localizedModel: ", device.localizedModel)
         
         print("device.systemName: ", device.systemName)
-        NSLog("device.systemVersion: %@", device.systemVersion)
+        print("device.systemVersion: ", device.systemVersion)
         
         print("device.identifierForVendor: ", device.identifierForVendor)
     }
