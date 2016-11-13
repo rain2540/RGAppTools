@@ -24,6 +24,6 @@ extension UIDevice {
         print("device.systemName: ", device.systemName)
         print("device.systemVersion: ", device.systemVersion)
         
-        print("device.identifierForVendor: ", device.identifierForVendor)
+        print("device.identifierForVendor: ", device.identifierForVendor ?? "\nRGAppTools get device.identifierForVendor failed.")
     }
 }
