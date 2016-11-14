@@ -9,5 +9,5 @@
 import Foundation
 
 public extension DispatchQueue {
-    
+    private static var onceToken: [String] = []
 }
