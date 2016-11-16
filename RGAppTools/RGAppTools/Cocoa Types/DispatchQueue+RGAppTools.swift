@@ -10,4 +10,8 @@ import Foundation
 
 public extension DispatchQueue {
     private static var onceToken: [String] = []
+
+    public func once(token: String, task: () -> ()) {
+
+    }
 }
