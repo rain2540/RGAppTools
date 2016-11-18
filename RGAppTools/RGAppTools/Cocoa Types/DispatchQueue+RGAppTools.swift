@@ -13,9 +13,9 @@ public extension DispatchQueue {
 
     public class func once(token: String, task: () -> ()) {
         objc_sync_enter(self)
-//        defer {
-//            objc_sync_exit(self)
-//        }
+        defer {
+            objc_sync_exit(self)
+        }
 //
 //        if onceToken.contains(token) {
 //            return
