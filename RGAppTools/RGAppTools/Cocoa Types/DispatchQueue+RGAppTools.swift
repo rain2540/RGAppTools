@@ -16,10 +16,10 @@ public extension DispatchQueue {
         defer {
             objc_sync_exit(self)
         }
-//
-//        if onceToken.contains(token) {
-//            return
-//        }
+
+        if onceToken.contains(token) {
+            return
+        }
 //
 //        onceToken.append(token)
 //        task()
