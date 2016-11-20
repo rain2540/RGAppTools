@@ -22,6 +22,6 @@ public extension DispatchQueue {
         }
 
         onceToken.append(token)
-//        task()
+        task()
     }
 }
