@@ -20,8 +20,8 @@ public extension DispatchQueue {
         if onceToken.contains(token) {
             return
         }
-//
-//        onceToken.append(token)
+
+        onceToken.append(token)
 //        task()
     }
 }
