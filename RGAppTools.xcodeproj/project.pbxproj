@@ -57,6 +57,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B73265231DE1E1FB00CF73CE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		B79DA2C51C603836002FB62E = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +100,7 @@
 				B79DA2E41C603AFD002FB62E /* App Common Infos */,
 				B79DA2E51C603AFD002FB62E /* Basic Types */,
 				B79DA2E61C603AFD002FB62E /* Cocoa Types */,
+				B73265231DE1E1FB00CF73CE /* Protocols */,
 			);
 			path = RGAppTools;
 			sourceTree = "<group>";
