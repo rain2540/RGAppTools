@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B74476D21DE51FB600E985A4 /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */; };
 		B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */; };
 		B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */; };
 		B752D6F41DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6F31DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
 		B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+RGAppTools.swift"; sourceTree = "<group>"; };
 		B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+RGAppTools.swift"; sourceTree = "<group>"; };
 		B752D6F31DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 		B73265231DE1E1FB00CF73CE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				B79DA2E81C603B7F002FB62E /* AppSingleton.swift in Sources */,
 				B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */,
 				B7764DA11C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift in Sources */,
+				B74476D21DE51FB600E985A4 /* TopLayoutProtocols.swift in Sources */,
 				B752D6F41DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift in Sources */,
 				B79DA2EE1C604D7B002FB62E /* String+RGAppTools.swift in Sources */,
 				B7764DA31C643D04007FEBD9 /* NSDictionary+RGAppTools.swift in Sources */,
