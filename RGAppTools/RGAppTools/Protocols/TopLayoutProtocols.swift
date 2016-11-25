@@ -9,5 +9,5 @@
 import UIKit
 
 protocol TopView {
-    
+    var topColor: UIColor { get set }
 }
