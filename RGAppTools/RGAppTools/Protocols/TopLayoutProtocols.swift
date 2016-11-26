@@ -10,4 +10,5 @@ import UIKit
 
 protocol TopView {
     var topColor: UIColor { get set }
+    var statusColor: UIColor { get set }
 }
