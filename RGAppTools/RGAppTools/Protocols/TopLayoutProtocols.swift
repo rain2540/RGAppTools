@@ -13,3 +13,7 @@ protocol TopView {
     var statusColor: UIColor { get set }
     var naviColor: UIColor { get set }
 }
+
+extension TopView {
+
+}
