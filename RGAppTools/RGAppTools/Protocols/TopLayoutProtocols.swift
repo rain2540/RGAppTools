@@ -15,5 +15,7 @@ protocol TopView {
 }
 
 extension TopView {
-
+    var topColor: UIColor {
+        return UIColor.clear
+    }
 }
