@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73F878D1DF4EA9B001F4E46 /* RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F878C1DF4EA9B001F4E46 /* RGAppTools.swift */; };
 		B74476D21DE51FB600E985A4 /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */; };
 		B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */; };
 		B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B73F878C1DF4EA9B001F4E46 /* RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGAppTools.swift; sourceTree = "<group>"; };
 		B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
 		B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+RGAppTools.swift"; sourceTree = "<group>"; };
 		B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 		B79DA2E31C603AFD002FB62E /* RGAppTools */ = {
 			isa = PBXGroup;
 			children = (
+				B73F878C1DF4EA9B001F4E46 /* RGAppTools.swift */,
 				B79DA2E41C603AFD002FB62E /* App Common Infos */,
 				B79DA2E51C603AFD002FB62E /* Basic Types */,
 				B79DA2E61C603AFD002FB62E /* Cocoa Types */,
@@ -219,6 +222,7 @@
 				B79DA2F01C60569B002FB62E /* UIDevice+RGAppTools.swift in Sources */,
 				B79DA2EC1C604D7B002FB62E /* Double+RGAppTools.swift in Sources */,
 				B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */,
+				B73F878D1DF4EA9B001F4E46 /* RGAppTools.swift in Sources */,
 				B79DA2D41C603837002FB62E /* ViewController.swift in Sources */,
 				B79DA2E81C603B7F002FB62E /* AppSingleton.swift in Sources */,
 				B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */,
