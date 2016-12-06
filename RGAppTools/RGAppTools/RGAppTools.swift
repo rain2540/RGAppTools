@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+public struct RGAppTools<Base> {
+    public let base: Base
+
+    public init(_ base: Base) {
+        self.base = base
+    }
+}
