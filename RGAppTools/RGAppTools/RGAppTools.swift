@@ -15,3 +15,7 @@ public struct RGAppTools<Base> {
         self.base = base
     }
 }
+
+protocol RGAppToolsCompatible {
+    
+}
