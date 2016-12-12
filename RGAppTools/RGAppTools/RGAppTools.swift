@@ -16,6 +16,6 @@ public struct RGAppTools<Base> {
     }
 }
 
-protocol RGAppToolsCompatible {
+public protocol RGAppToolsCompatible {
     associatedtype RATCompatibleType
 }
