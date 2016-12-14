@@ -19,5 +19,5 @@ public struct RGAppTools<Base> {
 public protocol RGAppToolsCompatible {
     associatedtype RATCompatibleType
     var rat: RATCompatibleType { get }
-
+    static var rat: RATCompatibleType.Type { get }
 }
