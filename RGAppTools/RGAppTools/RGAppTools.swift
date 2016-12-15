@@ -21,3 +21,6 @@ public protocol RGAppToolsCompatible {
     var rat: RATCompatibleType { get }
     static var rat: RATCompatibleType.Type { get }
 }
+
+public extension RGAppToolsCompatible {
+}
