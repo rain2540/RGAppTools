@@ -23,4 +23,7 @@ public protocol RGAppToolsCompatible {
 }
 
 public extension RGAppToolsCompatible {
+    public var rat: RGAppTools<Self> {
+        return RGAppTools(self)
+    }
 }
