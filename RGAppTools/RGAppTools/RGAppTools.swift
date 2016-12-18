@@ -26,4 +26,8 @@ public extension RGAppToolsCompatible {
     public var rat: RGAppTools<Self> {
         return RGAppTools(self)
     }
+
+    public static var rat: RGAppTools<Self>.Type {
+        return RGAppTools.self
+    }
 }
