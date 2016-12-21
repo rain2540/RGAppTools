@@ -31,3 +31,5 @@ public extension RGAppToolsCompatible {
         return RGAppTools.self
     }
 }
+
+extension NSObject: RGAppToolsCompatible { }
