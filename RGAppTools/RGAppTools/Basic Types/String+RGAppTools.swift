@@ -8,6 +8,11 @@
 
 import UIKit
 
+infix operator >
+func > (_ lh: String, _ rh: String) -> Bool {
+    return lh.compare(rh, options: .numeric) == .orderedDescending
+}
+
 //  MARK: Clear nil
 extension String {
     /**
