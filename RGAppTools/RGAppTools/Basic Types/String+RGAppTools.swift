@@ -14,7 +14,7 @@ func > (_ lh: String, _ rh: String) -> Bool {
 }
 
 infix operator >=
-func >= (_ lh: String, rh: String) -> Bool {
+func >= (_ lh: String, _ rh: String) -> Bool {
     return lh.compare(rh, options: .numeric) != .orderedAscending
 }
 
