@@ -8,6 +8,10 @@
 
 import Foundation
 
+extension RGAppTools where Base: DispatchQueue {
+
+}
+
 public extension DispatchQueue {
     private static var onceToken: [String] = []
 
