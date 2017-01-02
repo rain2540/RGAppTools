@@ -8,6 +8,10 @@
 
 import Foundation
 
+extension RGAppTools where Base: NSDictionary {
+    
+}
+
 //  MARK: Main Bundle
 extension NSDictionary {
     /**
