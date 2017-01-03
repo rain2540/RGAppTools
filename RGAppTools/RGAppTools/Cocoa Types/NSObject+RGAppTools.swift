@@ -8,6 +8,10 @@
 
 import Foundation
 
+extension RGAppTools where Base: NSObject {
+    
+}
+
 //  MARK: Transform to JSON String
 extension NSObject {
     /**
