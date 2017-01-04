@@ -8,6 +8,10 @@
 
 import UIKit
 
+extension RGAppTools where Base: UIDevice {
+
+}
+
 //  MARK: Device informations
 extension UIDevice {
     /**
