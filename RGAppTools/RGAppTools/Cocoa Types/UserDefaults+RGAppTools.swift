@@ -8,6 +8,10 @@
 
 import Foundation
 
+extension RGAppTools where Base: UserDefaults {
+
+}
+
 //  MARK: Savings
 extension UserDefaults {
     /**
