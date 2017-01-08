@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Enum of Device Types
 enum DeviceType {
     case unknown,
     //  iPhone
