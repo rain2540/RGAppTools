@@ -54,6 +54,20 @@ enum DeviceType {
 }
 
 extension RGAppTools where Base: UIDevice {
+    public static func rg_deviceInformations() {
+        print("currentDevice: ", UIDevice.current)
+
+        let device = UIDevice()
+        print("device.name: ", device.name)
+        print("device.model: ", device.model)
+        print("device.localizedModel: ", device.localizedModel)
+
+        print("device.systemName: ", device.systemName)
+        print("device.systemVersion: ", device.systemVersion)
+
+        print("device.identifierForVendor: ", device.identifierForVendor ?? "\nRGAppTools get device.identifierForVendor failed.")
+    }
+
     static var deviceType: DeviceType {
         var systemInfo = utsname()
         uname(&systemInfo)
