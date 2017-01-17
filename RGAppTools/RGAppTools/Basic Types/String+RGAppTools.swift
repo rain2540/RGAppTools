@@ -9,7 +9,7 @@
 import UIKit
 
 public struct StringProxy {
-    
+    fileprivate let valueType: String
 }
 
 infix operator >
