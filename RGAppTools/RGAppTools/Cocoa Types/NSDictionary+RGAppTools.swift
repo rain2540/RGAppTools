@@ -9,7 +9,15 @@
 import Foundation
 
 extension RGAppTools where Base: NSDictionary {
-    
+    func isHaveKey(_ key: String) -> Bool {
+        let keys = base.allKeys as! [String]
+        for aKey: String in keys {
+            if key == aKey {
+                return true
+            }
+        }
+        return false
+    }
 }
 
 //  MARK: Main Bundle
