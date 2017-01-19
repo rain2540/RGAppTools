@@ -57,7 +57,7 @@ extension UserDefaults {
 
      - returns: 检验结果
      */
-    public func isHaveKey(key: String) -> Bool {
+    public func rat_isHaveKey(key: String) -> Bool {
         let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
 
