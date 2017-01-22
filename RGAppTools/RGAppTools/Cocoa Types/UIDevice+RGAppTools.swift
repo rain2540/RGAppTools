@@ -197,7 +197,7 @@ extension UIDevice {
     /**
      打印当前设备信息
      */
-    public static func rg_deviceInformations() {
+    public static func rat_deviceInformations() {
         print("currentDevice: ", UIDevice.current)
 
         let device = UIDevice()
