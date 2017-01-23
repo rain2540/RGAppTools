@@ -19,7 +19,7 @@ extension NSObject {
      
      - returns: 转换得到的 JSON 字符串
      */
-    public static func rg_objectToJSONString() -> String? {
+    public static func rat_objectToJSONString() -> String? {
         do {
             let data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
             return NSString(data: data, encoding: String.Encoding.utf8.rawValue) as? String
