@@ -42,7 +42,7 @@ extension UserDefaults {
      - parameter value: 将要存入的 Double 值
      - parameter key:   将要存入的 key
      */
-    public func saveDouble(_ value: Double, forKey key: String) {
+    public func rat_saveDouble(_ value: Double, forKey key: String) {
         self.set(value, forKey: key)
         self.synchronize()
     }
