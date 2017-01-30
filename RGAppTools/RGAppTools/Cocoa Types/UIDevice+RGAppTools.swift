@@ -69,6 +69,7 @@ extension RGAppTools where Base: UIDevice {
         print("device.identifierForVendor: ", device.identifierForVendor ?? "\nRGAppTools get device.identifierForVendor failed.")
     }
 
+    /// 获取设备类型
     static var deviceType: DeviceType {
         var systemInfo = utsname()
         uname(&systemInfo)
