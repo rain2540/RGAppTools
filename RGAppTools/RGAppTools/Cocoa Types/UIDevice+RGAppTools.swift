@@ -54,6 +54,7 @@ enum DeviceType {
 }
 
 extension RGAppTools where Base: UIDevice {
+    /// 打印当前设备信息
     public static func deviceInformations() {
         print("currentDevice: ", UIDevice.current)
 
