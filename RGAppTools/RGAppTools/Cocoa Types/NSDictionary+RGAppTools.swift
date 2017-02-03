@@ -9,6 +9,10 @@
 import Foundation
 
 extension RGAppTools where Base: NSDictionary {
+    /// 检验 NSDictionary 中是否存在某个 key
+    ///
+    /// - Parameter key: 待检验的 key
+    /// - Returns: 检验结果的布尔值
     func isHaveKey(_ key: String) -> Bool {
         let keys = base.allKeys as! [String]
         for aKey: String in keys {
