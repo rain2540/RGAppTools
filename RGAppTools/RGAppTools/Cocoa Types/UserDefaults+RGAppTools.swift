@@ -20,7 +20,7 @@ extension UserDefaults {
      - parameter object: 将要存入的 object
      - parameter key:    将要存入的 key
      */
-    public func save(_ object: Any?, forKey key: String) {
+    public func rat_save(_ object: Any?, forKey key: String) {
         self.set(object, forKey: key)
         self.synchronize()
     }
