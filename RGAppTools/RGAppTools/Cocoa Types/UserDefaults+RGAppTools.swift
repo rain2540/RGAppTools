@@ -9,7 +9,10 @@
 import Foundation
 
 extension RGAppTools where Base: UserDefaults {
-
+    public func save(_ object: Any?, forKey key: String) {
+        base.set(object, forKey: key)
+        base.synchronize()
+    }
 }
 
 //  MARK: Savings
