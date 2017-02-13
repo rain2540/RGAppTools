@@ -23,6 +23,7 @@ extension UserDefaults {
      - parameter object: 将要存入的 object
      - parameter key:    将要存入的 key
      */
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.save` instead.", renamed: "rat.save")
     public func rat_save(_ object: Any?, forKey key: String) {
         self.set(object, forKey: key)
         self.synchronize()
