@@ -9,6 +9,11 @@
 import Foundation
 
 extension RGAppTools where Base: UserDefaults {
+    /// 将某个 key - Object 值存入 UserDefaults 中
+    ///
+    /// - Parameters:
+    ///   - object: 将要存入的 object
+    ///   - key: 将要存入的 key
     public func save(_ object: Any?, forKey key: String) {
         base.set(object, forKey: key)
         base.synchronize()
