@@ -18,6 +18,11 @@ extension RGAppTools where Base: UserDefaults {
         base.set(object, forKey: key)
         base.synchronize()
     }
+
+    public func saveBool(_ value: Bool, forKey key: String) {
+        base.set(value, forKey: key)
+        base.synchronize()
+    }
 }
 
 //  MARK: Savings
