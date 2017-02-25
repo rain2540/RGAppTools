@@ -199,6 +199,7 @@ extension UIDevice {
     /**
      打印当前设备信息
      */
+    @available(*, deprecated, message: "Extensions directly on UIDevice are deprecated. Use `UIDevice.rat.deviceInformations` instead.", renamed: "rat.deviceInformations")
     public static func rat_deviceInformations() {
         print("currentDevice: ", UIDevice.current)
 
