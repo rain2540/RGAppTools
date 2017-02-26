@@ -24,7 +24,7 @@ extension Date {
 
      - returns: 描述某个时间对应的时间戳的字符串
      */
-    public func rg_timestampString() -> String {
+    public func rat_timestampString() -> String {
         return String(self.rg_toTimestamp())
     }
 
