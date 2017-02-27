@@ -50,6 +50,7 @@ extension UserDefaults {
      - parameter value: 将要存入的 Bool 值
      - parameter key:   将要存入的 key
      */
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.saveBool` instead.", renamed: "rat.saveBool")
     public func rat_saveBool(_ value: Bool, forKey key: String) {
         self.set(value, forKey: key)
         self.synchronize()
