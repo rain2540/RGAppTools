@@ -28,6 +28,11 @@ extension RGAppTools where Base: UserDefaults {
         base.set(value, forKey: key)
         base.synchronize()
     }
+
+    public func saveDouble(_ value: Double, forKey key: String) {
+        base.set(value, forKey: key)
+        base.synchronize()
+    }
 }
 
 //  MARK: Savings
