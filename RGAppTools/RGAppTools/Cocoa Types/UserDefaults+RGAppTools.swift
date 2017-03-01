@@ -67,6 +67,7 @@ extension UserDefaults {
      - parameter value: 将要存入的 Double 值
      - parameter key:   将要存入的 key
      */
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.saveDouble` instead.", renamed: "rat.saveDouble")
     public func rat_saveDouble(_ value: Double, forKey key: String) {
         self.set(value, forKey: key)
         self.synchronize()
