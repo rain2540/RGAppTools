@@ -29,6 +29,11 @@ extension RGAppTools where Base: UserDefaults {
         base.synchronize()
     }
 
+    /// 将某个 key - Double 值存入 UserDefaults 中
+    ///
+    /// - Parameters:
+    ///   - value: 将要存入的 Double 值
+    ///   - key: 将要存入的 key
     public func saveDouble(_ value: Double, forKey key: String) {
         base.set(value, forKey: key)
         base.synchronize()
