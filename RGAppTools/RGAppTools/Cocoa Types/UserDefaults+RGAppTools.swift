@@ -101,6 +101,7 @@ extension UserDefaults {
 
      - returns: 检验结果
      */
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.isHaveKey` instead.", renamed: "rat.isHaveKey")
     public func rat_isHaveKey(key: String) -> Bool {
         let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
