@@ -9,6 +9,10 @@
 import Foundation
 
 extension RGAppTools where Base: UserDefaults {
+    /// 检验 UserDefaults 中是否存在某个 key
+    ///
+    /// - Parameter key: 待检验的 key
+    /// - Returns: 检验结果
     public func isHaveKey(key: String) -> Bool {
         let userDefaultsDic = base.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
