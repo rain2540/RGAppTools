@@ -46,6 +46,11 @@ extension RGAppTools where Base: UserDefaults {
         base.synchronize()
     }
 
+    public func saveInt(_ value: Int, forKey key: String) {
+        base.set(value, forKey: key)
+        base.synchronize()
+    }
+
     /// 将某个 key - Double 值存入 UserDefaults 中
     ///
     /// - Parameters:
