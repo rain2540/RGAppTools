@@ -16,7 +16,7 @@ extension RGAppTools where Base: UserDefaults {
     public func isHaveKey(key: String) -> Bool {
         let userDefaultsDic = base.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
-        
+
         for i in 0 ..< keys.count {
             let aKey = keys[i] as? String
             if key == aKey {
@@ -25,7 +25,7 @@ extension RGAppTools where Base: UserDefaults {
         }
         return false
     }
-    
+
     /// 将某个 key - Object 值存入 UserDefaults 中
     ///
     /// - Parameters:
@@ -56,6 +56,11 @@ extension RGAppTools where Base: UserDefaults {
         base.synchronize()
     }
 
+    public func saveFloat(_ value: Float, forKey key: String) {
+        base.set(value, forKey: key)
+        base.synchronize()
+    }
+
     /// 将某个 key - Double 值存入 UserDefaults 中
     ///
     /// - Parameters:
@@ -71,7 +76,7 @@ extension RGAppTools where Base: UserDefaults {
 extension UserDefaults {
     /**
      将某个 key - Object 值存入 UserDefaults 中
-     
+
      - parameter object: 将要存入的 object
      - parameter key:    将要存入的 key
      */
@@ -83,7 +88,7 @@ extension UserDefaults {
 
     /**
      将某个 key - Bool 值存入 UserDefaults 中
-     
+
      - parameter value: 将要存入的 Bool 值
      - parameter key:   将要存入的 key
      */
@@ -92,10 +97,10 @@ extension UserDefaults {
         self.set(value, forKey: key)
         self.synchronize()
     }
-    
+
     /**
      将某个 key - Double 值存入 UserDefaults 中
-     
+
      - parameter value: 将要存入的 Double 值
      - parameter key:   将要存入的 key
      */
