@@ -56,6 +56,11 @@ extension RGAppTools where Base: UserDefaults {
         base.synchronize()
     }
 
+    /// 将某个 key - Float 值存入 UserDefaults 中
+    ///
+    /// - Parameters:
+    ///   - value: 将要存入的 Float 值
+    ///   - key: 将要存入的 key
     public func saveFloat(_ value: Float, forKey key: String) {
         base.set(value, forKey: key)
         base.synchronize()
