@@ -19,5 +19,8 @@ extension TopView {
         get {
             return UIColor.clear
         }
+        set {
+            topColor = newValue
+        }
     }
 }
