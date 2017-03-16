@@ -23,4 +23,11 @@ extension TopView {
             topColor = newValue
         }
     }
+
+    var topView: UIView {
+        let view = UIView()
+        
+        return view
+    }
+
 }
