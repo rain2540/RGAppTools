@@ -14,7 +14,7 @@ protocol TopView {
     var naviColor: UIColor { get set }
 }
 
-extension TopView {
+extension TopView where Self: UIViewController {
     var topColor: UIColor {
         get {
             return UIColor.clear
@@ -26,7 +26,8 @@ extension TopView {
 
     var topView: UIView {
         let view = UIView()
-        
+        view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height: 64.0)
+        view.backgroundColor = topColor
         return view
     }
 
