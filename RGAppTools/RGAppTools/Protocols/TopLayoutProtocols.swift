@@ -31,4 +31,10 @@ extension TopView where Self: UIViewController {
         return view
     }
 
+    var statusColor: UIColor {
+        get {
+            return UIColor.clear
+        }
+    }
+
 }
