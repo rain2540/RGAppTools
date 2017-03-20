@@ -41,4 +41,8 @@ extension TopView where Self: UIViewController {
         }
     }
 
+    var statusView: UIView {
+        let view = UIView()
+        return view
+    }
 }
