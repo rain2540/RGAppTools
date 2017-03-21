@@ -43,6 +43,8 @@ extension TopView where Self: UIViewController {
 
     var statusView: UIView {
         let view = UIView()
+        view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height: 20.0)
+        view.backgroundColor = statusColor
         return view
     }
 }
