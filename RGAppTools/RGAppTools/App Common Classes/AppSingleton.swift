@@ -9,7 +9,7 @@
 import UIKit
 
 /// Application
-public let kApplication = UIApplication.shared
+public let kSharedApplication = UIApplication.shared
 
 /// AppDelegate
 internal let kAppDelegate = UIApplication.shared.delegate as? AppDelegate
