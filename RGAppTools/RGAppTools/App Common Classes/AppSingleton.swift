@@ -25,3 +25,5 @@ public let kMainScreen = UIScreen.main
 
 /// Standard UserDefaults
 public let kStandardUserDefaults = UserDefaults.standard
+
+public let kDefaultNotificationCenter = NotificationCenter.default
