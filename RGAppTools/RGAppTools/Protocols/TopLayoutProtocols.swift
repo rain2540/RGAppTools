@@ -47,4 +47,10 @@ extension TopView where Self: UIViewController {
         view.backgroundColor = statusColor
         return view
     }
+    
+    var naviColor: UIColor {
+        get {
+            return UIColor.clear
+        }
+    }
 }
