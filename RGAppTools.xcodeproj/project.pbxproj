@@ -25,6 +25,7 @@
 		B79DA2EE1C604D7B002FB62E /* String+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2EB1C604D7B002FB62E /* String+RGAppTools.swift */; };
 		B79DA2F01C60569B002FB62E /* UIDevice+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2EF1C60569B002FB62E /* UIDevice+RGAppTools.swift */; };
 		B79DA2F21C6056AE002FB62E /* MethodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2F11C6056AE002FB62E /* MethodInfo.swift */; };
+		B7D704561E889C3900E1E3CF /* UIAlertController+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D704551E889C3900E1E3CF /* UIAlertController+RGAppTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		B79DA2EB1C604D7B002FB62E /* String+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+RGAppTools.swift"; sourceTree = "<group>"; };
 		B79DA2EF1C60569B002FB62E /* UIDevice+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+RGAppTools.swift"; sourceTree = "<group>"; };
 		B79DA2F11C6056AE002FB62E /* MethodInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodInfo.swift; sourceTree = "<group>"; };
+		B7D704551E889C3900E1E3CF /* UIAlertController+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIAlertController+RGAppTools.swift"; path = "UIExtension/UIAlertController+RGAppTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B79DA2E41C603AFD002FB62E /* App Common Infos */,
 				B79DA2E51C603AFD002FB62E /* Basic Types */,
 				B79DA2E61C603AFD002FB62E /* Cocoa Types */,
+				B7D704521E889B9C00E1E3CF /* UIExtension */,
 				B73265231DE1E1FB00CF73CE /* Protocols */,
 			);
 			path = RGAppTools;
@@ -142,6 +145,14 @@
 				B752D6F31DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift */,
 			);
 			path = "Cocoa Types";
+			sourceTree = "<group>";
+		};
+		B7D704521E889B9C00E1E3CF /* UIExtension */ = {
+			isa = PBXGroup;
+			children = (
+				B7D704551E889C3900E1E3CF /* UIAlertController+RGAppTools.swift */,
+			);
+			name = UIExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 				B74476D21DE51FB600E985A4 /* TopLayoutProtocols.swift in Sources */,
 				B752D6F41DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift in Sources */,
 				B79DA2EE1C604D7B002FB62E /* String+RGAppTools.swift in Sources */,
+				B7D704561E889C3900E1E3CF /* UIAlertController+RGAppTools.swift in Sources */,
 				B7764DA31C643D04007FEBD9 /* NSDictionary+RGAppTools.swift in Sources */,
 				B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */,
 			);
