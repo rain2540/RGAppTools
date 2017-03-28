@@ -7,3 +7,8 @@
 //
 
 import UIKit
+
+extension RGAppTools where Base: UIAlertController {
+
+
+}
