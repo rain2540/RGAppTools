@@ -52,5 +52,8 @@ extension TopView where Self: UIViewController {
         get {
             return UIColor.clear
         }
+        set {
+            naviColor = newValue
+        }
     }
 }
