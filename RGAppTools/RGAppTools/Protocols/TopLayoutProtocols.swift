@@ -56,4 +56,10 @@ extension TopView where Self: UIViewController {
             naviColor = newValue
         }
     }
+
+    var naviView: UIView {
+        let view = UIView()
+
+        return view
+    }
 }
