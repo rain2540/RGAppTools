@@ -28,3 +28,5 @@ public let kStandardUserDefaults = UserDefaults.standard
 
 /// Default Notification Center
 public let kDefaultNotificationCenter = NotificationCenter.default
+
+public let kDefaultFileManager = FileManager.default
