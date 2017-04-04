@@ -9,6 +9,7 @@
 import Foundation
 
 extension FileManager {
+    /// Caches 文件夹路径
     public static var cachesPath: String? {
         return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
     }
