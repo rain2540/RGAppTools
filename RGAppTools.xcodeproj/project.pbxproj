@@ -10,6 +10,7 @@
 		B724BBEB1E8BBB0800172A14 /* FileManager+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724BBEA1E8BBB0800172A14 /* FileManager+RGAppTools.swift */; };
 		B73F878D1DF4EA9B001F4E46 /* RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F878C1DF4EA9B001F4E46 /* RGAppTools.swift */; };
 		B74476D21DE51FB600E985A4 /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */; };
+		B74E54F81E945DDB00B3F6BB /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E54F71E945DDB00B3F6BB /* MainScreen.swift */; };
 		B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */; };
 		B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */; };
 		B752D6F41DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6F31DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift */; };
@@ -33,6 +34,7 @@
 		B724BBEA1E8BBB0800172A14 /* FileManager+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73F878C1DF4EA9B001F4E46 /* RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGAppTools.swift; sourceTree = "<group>"; };
 		B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
+		B74E54F71E945DDB00B3F6BB /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreen.swift; path = UIExtension/MainScreen.swift; sourceTree = "<group>"; };
 		B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+RGAppTools.swift"; sourceTree = "<group>"; };
 		B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+RGAppTools.swift"; sourceTree = "<group>"; };
 		B752D6F31DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		B7D704521E889B9C00E1E3CF /* UIExtension */ = {
 			isa = PBXGroup;
 			children = (
+				B74E54F71E945DDB00B3F6BB /* MainScreen.swift */,
 				B7D704551E889C3900E1E3CF /* UIAlertController+RGAppTools.swift */,
 			);
 			name = UIExtension;
@@ -237,6 +240,7 @@
 				B79DA2EC1C604D7B002FB62E /* Double+RGAppTools.swift in Sources */,
 				B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */,
 				B73F878D1DF4EA9B001F4E46 /* RGAppTools.swift in Sources */,
+				B74E54F81E945DDB00B3F6BB /* MainScreen.swift in Sources */,
 				B79DA2D41C603837002FB62E /* ViewController.swift in Sources */,
 				B79DA2E81C603B7F002FB62E /* AppSingleton.swift in Sources */,
 				B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */,
