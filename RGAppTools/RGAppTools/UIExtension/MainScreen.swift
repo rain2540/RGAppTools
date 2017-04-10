@@ -9,5 +9,5 @@
 import UIKit
 
 struct MainScreen {
-    static private var mainScreen = UIScreen.main
+    static private let mainScreen = UIScreen.main
 }
