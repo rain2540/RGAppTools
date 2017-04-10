@@ -75,6 +75,10 @@ extension RGAppTools where Base: UserDefaults {
         base.set(value, forKey: key)
         base.synchronize()
     }
+
+    public func saveURL(_ url: URL?, forKey key: String) {
+
+    }
 }
 
 //  MARK: Savings
