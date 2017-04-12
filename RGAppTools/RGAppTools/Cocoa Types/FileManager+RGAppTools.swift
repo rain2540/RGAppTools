@@ -13,4 +13,8 @@ extension FileManager {
     public static var cachesPath: String? {
         return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
     }
+
+    public static var cacheSize: String {
+        return ""
+    }
 }
