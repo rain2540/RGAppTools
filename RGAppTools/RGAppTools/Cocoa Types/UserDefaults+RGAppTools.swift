@@ -76,6 +76,11 @@ extension RGAppTools where Base: UserDefaults {
         base.synchronize()
     }
 
+    /// 将某个 key - URL 值存入 UserDefaults 中
+    ///
+    /// - Parameters:
+    ///   - url: 将要存入的 URL 值
+    ///   - key: 将要存入的 key
     public func saveURL(_ url: URL?, forKey key: String) {
         base.set(url, forKey: key)
         base.synchronize()
