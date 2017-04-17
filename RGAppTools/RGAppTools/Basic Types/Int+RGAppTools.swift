@@ -25,7 +25,7 @@ extension Int {
 //  MARK: Transfer
 extension Int {
     /// Transfer to CGFloat
-    public var rg_CGFloatValue: CGFloat {
+    public var rat_CGFloatValue: CGFloat {
         return CGFloat(self)
     }
 }
