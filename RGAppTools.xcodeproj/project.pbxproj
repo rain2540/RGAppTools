@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		B724BBEB1E8BBB0800172A14 /* FileManager+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B724BBEA1E8BBB0800172A14 /* FileManager+RGAppTools.swift */; };
+		B72628601EA59EC30006A35C /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B726285F1EA59EC30006A35C /* TopLayoutProtocols.swift */; };
 		B73F878D1DF4EA9B001F4E46 /* RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73F878C1DF4EA9B001F4E46 /* RGAppTools.swift */; };
-		B74476D21DE51FB600E985A4 /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */; };
 		B74E54F81E945DDB00B3F6BB /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E54F71E945DDB00B3F6BB /* MainScreen.swift */; };
 		B74E98381CDD99DC001A18A3 /* NSObject+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */; };
 		B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */; };
@@ -32,8 +32,8 @@
 
 /* Begin PBXFileReference section */
 		B724BBEA1E8BBB0800172A14 /* FileManager+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+RGAppTools.swift"; sourceTree = "<group>"; };
+		B726285F1EA59EC30006A35C /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
 		B73F878C1DF4EA9B001F4E46 /* RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGAppTools.swift; sourceTree = "<group>"; };
-		B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
 		B74E54F71E945DDB00B3F6BB /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainScreen.swift; path = UIExtension/MainScreen.swift; sourceTree = "<group>"; };
 		B74E98371CDD99DC001A18A3 /* NSObject+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+RGAppTools.swift"; sourceTree = "<group>"; };
 		B74E98391CDDB7E7001A18A3 /* Date+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -67,10 +67,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B726285E1EA59EC30006A35C /* View Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B726285F1EA59EC30006A35C /* TopLayoutProtocols.swift */,
+			);
+			path = "View Protocols";
+			sourceTree = "<group>";
+		};
 		B73265231DE1E1FB00CF73CE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				B74476D11DE51FB600E985A4 /* TopLayoutProtocols.swift */,
+				B726285E1EA59EC30006A35C /* View Protocols */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -235,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79DA2F21C6056AE002FB62E /* MethodInfo.swift in Sources */,
+				B72628601EA59EC30006A35C /* TopLayoutProtocols.swift in Sources */,
 				B79DA2ED1C604D7B002FB62E /* Int+RGAppTools.swift in Sources */,
 				B79DA2F01C60569B002FB62E /* UIDevice+RGAppTools.swift in Sources */,
 				B79DA2EC1C604D7B002FB62E /* Double+RGAppTools.swift in Sources */,
@@ -246,7 +255,6 @@
 				B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */,
 				B7764DA11C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift in Sources */,
 				B724BBEB1E8BBB0800172A14 /* FileManager+RGAppTools.swift in Sources */,
-				B74476D21DE51FB600E985A4 /* TopLayoutProtocols.swift in Sources */,
 				B752D6F41DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift in Sources */,
 				B79DA2EE1C604D7B002FB62E /* String+RGAppTools.swift in Sources */,
 				B7D704561E889C3900E1E3CF /* UIAlertController+RGAppTools.swift in Sources */,
