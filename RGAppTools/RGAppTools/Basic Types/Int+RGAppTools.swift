@@ -17,7 +17,7 @@ extension Int {
      
      - returns: 格式化输出结果
      */
-    public func rg_format(_ fmt: String) -> String {
+    public func rat_format(_ fmt: String) -> String {
         return String(format: "%\(fmt)d", self)
     }
 }
