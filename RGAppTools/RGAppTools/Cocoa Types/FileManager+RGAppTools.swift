@@ -8,13 +8,9 @@
 
 import Foundation
 
-extension FileManager {
+extension RGAppTools where Base: FileManager {
     /// Caches 文件夹路径
     public static var cachesPath: String? {
         return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
-    }
-
-    public static var cacheSize: String {
-        return ""
     }
 }
