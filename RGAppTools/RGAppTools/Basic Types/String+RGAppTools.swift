@@ -41,7 +41,7 @@ extension String {
      
      - returns: 经处理后的字符串
      */
-    public static func rg_stringWithoutNull(_ obj: AnyObject?) -> String {
+    public static func rat_stringWithoutNull(_ obj: AnyObject?) -> String {
         guard let obj = obj else {
             return ""
         }
