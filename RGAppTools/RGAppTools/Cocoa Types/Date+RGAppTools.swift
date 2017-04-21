@@ -42,7 +42,7 @@ extension Date {
 
      - returns: 描述实时对应的时间戳的字符串
      */
-    public static func rg_timestampForNowString() -> String {
+    public static func rat_timestampForNowString() -> String {
         return String(Date.rg_timestampForNow())
     }
 }
