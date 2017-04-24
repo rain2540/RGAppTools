@@ -10,6 +10,7 @@ import Foundation
 
 extension RGAppTools where Base: FileManager {
     
+    /// Home Directory 文件夹的路径
     public static var homeDirectoryPath: String {
         return NSHomeDirectory()
     }
