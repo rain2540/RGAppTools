@@ -15,6 +15,10 @@ extension RGAppTools where Base: UIAlertController {
                              in viewController: UIViewController,
                              actions: UIAlertAction...)
     {
-
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        for action in actions {
+            alert.addAction(action)
+        }
+        viewController.present(alert, animated: true, completion: nil)
     }
 }
