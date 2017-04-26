@@ -9,5 +9,6 @@
 import UIKit
 
 struct MainScreen {
+    public static var bounds: CGRect { return self.mainScreen.bounds }
     static private let mainScreen = UIScreen.main
 }
