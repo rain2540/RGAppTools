@@ -19,4 +19,10 @@ extension RGAppTools where Base: FileManager {
     public static var cachesPath: String? {
         return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
     }
+
+    public static var cacheSize: String {
+        var size: Int = 0
+        return "\(size / (1024 * 1024)) M"
+    }
+
 }
