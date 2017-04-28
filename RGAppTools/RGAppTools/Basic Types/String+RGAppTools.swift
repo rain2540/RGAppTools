@@ -215,14 +215,6 @@ extension String {
 
 //  MARK: Sandbox
 extension String {
-    /**
-     获取 Home Directory 文件夹的路径
-     
-     - returns: Home Directory 文件夹的路径
-     */
-    public static func rg_pathOfHomeDirectory() -> String {
-        return NSHomeDirectory()
-    }
     
     /**
      获取 Documents 文件夹的路径
