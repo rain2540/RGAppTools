@@ -226,15 +226,6 @@ extension String {
     }
     
     /**
-     获取 Caches 文件夹的路径
-     
-     - returns: Caches 文件夹的路径
-     */
-    public static func rg_pathOfCaches() -> String? {
-        return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
-    }
-    
-    /**
      获取 tmp 文件夹的路径
      
      - returns: tmp文件夹的路径
