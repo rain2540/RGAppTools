@@ -24,6 +24,10 @@ extension RGAppTools where Base: FileManager {
         return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
     }
 
+    public static var temporaryPath: String {
+        return NSTemporaryDirectory()
+    }
+
     public static var cacheSize: String {
         var size: Int = 0
         return "\(size / (1024 * 1024)) M"
