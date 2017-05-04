@@ -14,7 +14,8 @@ extension RGAppTools where Base: FileManager {
     public static var homeDirectoryPath: String {
         return NSHomeDirectory()
     }
-    
+
+    /// Documents 文件夹路径
     public static var documentsPath: String? {
         return kDefaultFileManager.urls(for: .documentDirectory, in: .userDomainMask).first?.path
     }
