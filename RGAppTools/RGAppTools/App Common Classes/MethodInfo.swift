@@ -11,7 +11,7 @@ import Foundation
 struct MethodInfo {
     /**
      在控制台输出方法信息
-     
+
      - parameter message: 原样显示在控制台的信息
      - parameter file:    文件名
      - parameter method:  方法名
