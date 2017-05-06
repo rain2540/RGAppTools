@@ -217,15 +217,6 @@ extension String {
 extension String {
     
     /**
-     获取 Documents 文件夹的路径
-     
-     - returns: Documents 文件夹的路径
-     */
-    public static func rg_pathOfDocuments() -> String? {
-        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.path
-    }
-    
-    /**
      获取 tmp 文件夹的路径
      
      - returns: tmp文件夹的路径

@@ -14,8 +14,8 @@ extension RGAppTools where Base: FileManager {
     public static var homeDirectoryPath: String {
         return NSHomeDirectory()
     }
-    
-    /// Documents 文件夹的路径
+
+    /// Documents 文件夹路径
     public static var documentsPath: String? {
         return kDefaultFileManager.urls(for: .documentDirectory, in: .userDomainMask).first?.path
     }
@@ -23,6 +23,10 @@ extension RGAppTools where Base: FileManager {
     /// Caches 文件夹路径
     public static var cachesPath: String? {
         return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
+    }
+
+    public static var temporaryPath: String {
+        return NSTemporaryDirectory()
     }
 
     public static var cacheSize: String {
