@@ -25,6 +25,7 @@ extension RGAppTools where Base: FileManager {
         return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
     }
 
+    /// Temporary 文件夹路径
     public static var temporaryPath: String {
         return NSTemporaryDirectory()
     }
