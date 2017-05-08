@@ -31,6 +31,10 @@ extension RGAppTools where Base: FileManager {
     }
 
     public static var cacheSize: String {
+        guard let cachePath = FileManager.rat.cachesPath else {
+            print("FileManager get cache path failed.")
+            return "0"
+        }
         var size: Int = 0
         return "\(size / (1024 * 1024)) M"
     }
