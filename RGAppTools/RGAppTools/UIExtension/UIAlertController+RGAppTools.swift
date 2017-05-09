@@ -21,4 +21,12 @@ extension RGAppTools where Base: UIAlertController {
         }
         viewController.present(alert, animated: true, completion: nil)
     }
+
+    public static func actionSheet(title: String,
+                                   message: String,
+                                   in viewController: UIViewController,
+                                   actions: UIAlertAction...)
+    {
+
+    }
 }
