@@ -35,6 +35,10 @@ extension RGAppTools where Base: FileManager {
             print("FileManager get cache path failed.")
             return "0"
         }
+        guard let fileNames = kDefaultFileManager.subpaths(atPath: cachePath) else {
+            print("FileManager get cache files failed.")
+            return "0"
+        }
         var size: Int = 0
         return "\(size / (1024 * 1024)) M"
     }
