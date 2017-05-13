@@ -65,7 +65,7 @@ extension String {
      
      - returns: 按照给定字体绘制时, 字符串所占有的边界大小
      */
-    public func rg_sizeWithFont(_ font: UIFont) -> CGSize {
+    public func rat_sizeWithFont(_ font: UIFont) -> CGSize {
         return (self as NSString).size(attributes: [NSFontAttributeName: font])
     }
     
