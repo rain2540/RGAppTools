@@ -212,16 +212,3 @@ extension String {
         try? self.init(contentsOfFile: path)
     }
 }
-
-//  MARK: Sandbox
-extension String {
-    
-    /**
-     获取 tmp 文件夹的路径
-     
-     - returns: tmp文件夹的路径
-     */
-    public static func rg_pathOfTmp() -> String {
-        return NSTemporaryDirectory()
-    }
-}
