@@ -54,6 +54,14 @@ enum DeviceType {
 }
 
 extension RGAppTools where Base: UIDevice {
+
+    public var deviceTime: String {
+        let deviceTime = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
+        return dateFormatter.string(from: deviceTime)
+    }
+
     /// 打印当前设备信息
     public static func deviceInformations() {
         print("currentDevice: ", UIDevice.current)
