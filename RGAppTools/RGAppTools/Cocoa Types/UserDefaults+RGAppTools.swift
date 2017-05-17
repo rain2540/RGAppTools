@@ -13,7 +13,7 @@ extension RGAppTools where Base: UserDefaults {
     ///
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果
-    public func isHaveKey(key: String) -> Bool {
+    public func isHave(key: String) -> Bool {
         let userDefaultsDic = base.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
 
