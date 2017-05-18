@@ -15,7 +15,7 @@ extension Date {
 
      - returns: 某个时间对应的时间戳
      */
-    public func rg_toTimestamp() -> TimeInterval {
+    public func rat_toTimestamp() -> TimeInterval {
         return self.timeIntervalSince1970
     }
 
@@ -25,7 +25,7 @@ extension Date {
      - returns: 描述某个时间对应的时间戳的字符串
      */
     public func rat_timestampString() -> String {
-        return String(self.rg_toTimestamp())
+        return String(self.rat_toTimestamp())
     }
 
     /**
