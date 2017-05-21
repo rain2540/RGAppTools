@@ -58,7 +58,7 @@ extension RGAppTools where Base: UIDevice {
     public var deviceTime: String {
         let deviceTime = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
+        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
         return dateFormatter.string(from: deviceTime)
     }
 
