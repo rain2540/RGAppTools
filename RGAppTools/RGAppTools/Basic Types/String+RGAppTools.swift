@@ -72,7 +72,7 @@ extension String {
      
      - returns: 按照给定属性绘制时, 字符串所占有的边界大小
      */
-    public func rg_sizeWithAttributes(_ attrs: [String: AnyObject]?) -> CGSize {
+    public func rat_sizeWithAttributes(_ attrs: [String: AnyObject]?) -> CGSize {
         return (self as NSString).size(attributes: attrs)
     }
 }
