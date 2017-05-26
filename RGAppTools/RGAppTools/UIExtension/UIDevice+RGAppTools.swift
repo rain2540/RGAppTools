@@ -55,6 +55,7 @@ enum DeviceType {
 
 extension RGAppTools where Base: UIDevice {
 
+    /// 获取设备时间
     public var deviceTime: String {
         let deviceTime = Date()
         let dateFormatter = DateFormatter()
