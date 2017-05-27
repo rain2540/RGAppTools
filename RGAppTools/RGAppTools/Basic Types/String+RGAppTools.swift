@@ -84,7 +84,7 @@ extension String {
      
      - returns: String 对应的 Boolean 值
      */
-    public func rg_boolValue() -> Bool {
+    public func rat_boolValue() -> Bool {
         return (self as NSString).boolValue
     }
     
