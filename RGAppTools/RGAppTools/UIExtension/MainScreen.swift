@@ -12,6 +12,7 @@ struct MainScreen {
 
     /// width of main screen
     public static var width: CGFloat { return self.size.width }
+    /// height of main screen
     public static var height: CGFloat { return self.size.height }
     public static var size: CGSize { return self.bounds.size }
     public static var bounds: CGRect { return self.mainScreen.bounds }
