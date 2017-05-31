@@ -93,7 +93,7 @@ extension String {
      
      - returns: String 对应的 Int 值
      */
-    public func rg_intValue() -> Int? {
+    public func rat_intValue() -> Int? {
         return Int(self)
     }
     
