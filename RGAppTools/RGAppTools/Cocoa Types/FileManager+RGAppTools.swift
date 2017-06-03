@@ -31,15 +31,18 @@ extension RGAppTools where Base: FileManager {
     }
     
     public static var cacheSize: String {
+        //  取出 cache 文件路径
         guard let cachePath = FileManager.rat.cachesPath else {
             print("FileManager get cache path failed.")
             return "0"
         }
+        //  取出文件夹下所有文件, 构成数组
         guard let fileNames = kDefaultFileManager.subpaths(atPath: cachePath) else {
             print("FileManager get cache files failed.")
             return "0"
         }
         var size: Int = 0
+        //  快速枚举出所有文件名
         for fileName in fileNames {
             //  把文件名拼接到路径中
             let path = cachePath.appendingFormat("/\(fileName)")
