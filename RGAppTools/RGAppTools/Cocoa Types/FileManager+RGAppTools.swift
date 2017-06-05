@@ -30,6 +30,7 @@ extension RGAppTools where Base: FileManager {
         return NSTemporaryDirectory()
     }
     
+    /// 缓存大小
     public static var cacheSize: String {
         //  取出 cache 文件路径
         guard let cachePath = FileManager.rat.cachesPath else {
@@ -62,5 +63,6 @@ extension RGAppTools where Base: FileManager {
         }
         return "\(size / (1024 * 1024)) M"
     }
-    
+
+
 }
