@@ -29,6 +29,13 @@ extension RGAppTools where Base: UIAlertController {
         viewController.present(alert, animated: true, completion: nil)
     }
 
+    /// 在视图中添加 ActionSheet
+    ///
+    /// - Parameters:
+    ///   - title: ActionSheet 标题
+    ///   - message: ActionSheet 内容
+    ///   - viewController: 展示 ActionSheet 的视图
+    ///   - actions: 完成的 actions
     public static func actionSheet(title: String,
                                    message: String,
                                    in viewController: UIViewController,
