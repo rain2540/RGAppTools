@@ -16,6 +16,7 @@ struct MainScreen {
     public static var height: CGFloat { return self.size.height }
     /// size of main screen
     public static var size: CGSize { return self.bounds.size }
+    /// bounds of main screen
     public static var bounds: CGRect { return self.mainScreen.bounds }
     static private let mainScreen = UIScreen.main
 }
