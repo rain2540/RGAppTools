@@ -102,7 +102,7 @@ extension String {
      
      - returns: String 对应的 Float 值
      */
-    public func rg_floatValue() -> Float? {
+    public func rat_floatValue() -> Float? {
         return Float(self)
     }
     
