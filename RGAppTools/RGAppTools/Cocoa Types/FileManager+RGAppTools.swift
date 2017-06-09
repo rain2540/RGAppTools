@@ -64,5 +64,7 @@ extension RGAppTools where Base: FileManager {
         return "\(size / (1024 * 1024)) M"
     }
 
-
+    public static func clearCache() {
+        
+    }
 }
