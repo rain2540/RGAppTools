@@ -111,7 +111,7 @@ extension String {
      
      - returns: String 对应的 Double 值
      */
-    public func rg_doubleValue() -> Double? {
+    public func rat_doubleValue() -> Double? {
         return Double(self)
     }
 
