@@ -46,3 +46,10 @@ extension Date {
         return String(Date.rat_timestampForNow())
     }
 }
+
+extension Date {
+    public func rg_components(unit: Calendar.Component) -> Int {
+        let cal = Calendar.current
+        return cal.component(unit, from: self)
+    }
+}
