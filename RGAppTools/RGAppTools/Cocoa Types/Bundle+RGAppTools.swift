@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+extension RGAppTools where Base: Bundle {
+
+}
