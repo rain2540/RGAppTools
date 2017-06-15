@@ -52,6 +52,7 @@ extension NSDictionary {
      
      - returns: 检验结果的布尔值
      */
+    @available(*, deprecated, message: "Extensions directly on NSDictionary are deprecated. Use `NSDictionary.rat.isHave(key:)` instead.", renamed: "rat.isHave(key:)")
     func rat_isHaveKey(_ key: String) -> Bool {
         let keys = self.allKeys as! [String]
         for aKey: String in keys {
