@@ -120,7 +120,7 @@ extension String {
 
      - returns: 转换得到的 JSON 对象
      */
-    public func rg_toObject() -> AnyObject? {
+    public func rat_toObject() -> AnyObject? {
         let string = self.replacingOccurrences(of: "\0", with: "")
         guard let data = string.data(using: String.Encoding.utf8) else {
             print("RGAppTools String to object Error:\n", "Fail to get data")
