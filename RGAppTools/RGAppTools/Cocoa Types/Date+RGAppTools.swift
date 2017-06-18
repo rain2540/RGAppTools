@@ -48,7 +48,7 @@ extension Date {
 }
 
 extension Date {
-    public func rg_components(unit: Calendar.Component) -> Int {
+    public func rat_components(unit: Calendar.Component) -> Int {
         let cal = Calendar.current
         return cal.component(unit, from: self)
     }
