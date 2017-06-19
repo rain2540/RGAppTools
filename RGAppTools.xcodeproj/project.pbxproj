@@ -16,6 +16,7 @@
 		B752D6F41DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B752D6F31DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift */; };
 		B7764DA11C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7764DA01C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift */; };
 		B7764DA31C643D04007FEBD9 /* NSDictionary+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7764DA21C643D04007FEBD9 /* NSDictionary+RGAppTools.swift */; };
+		B77707691EF7A3B90025DADE /* UIImage+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B77707681EF7A3B90025DADE /* UIImage+RGAppTools.swift */; };
 		B783C8F81EEE14D100D9634D /* Bundle+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B783C8F71EEE14D100D9634D /* Bundle+RGAppTools.swift */; };
 		B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D11C603837002FB62E /* AppDelegate.swift */; };
 		B79DA2D41C603837002FB62E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D31C603837002FB62E /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		B752D6F31DD6AD17005D0B00 /* DispatchQueue+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7764DA01C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7764DA21C643D04007FEBD9 /* NSDictionary+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDictionary+RGAppTools.swift"; sourceTree = "<group>"; };
+		B77707681EF7A3B90025DADE /* UIImage+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+RGAppTools.swift"; path = "UIExtension/UIImage+RGAppTools.swift"; sourceTree = "<group>"; };
 		B783C8F71EEE14D100D9634D /* Bundle+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+RGAppTools.swift"; sourceTree = "<group>"; };
 		B79DA2CE1C603836002FB62E /* RGAppTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGAppTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79DA2D11C603837002FB62E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				B74E54F71E945DDB00B3F6BB /* MainScreen.swift */,
 				B7D704551E889C3900E1E3CF /* UIAlertController+RGAppTools.swift */,
 				B7B413D31EC9363D001DED5B /* UIDevice+RGAppTools.swift */,
+				B77707681EF7A3B90025DADE /* UIImage+RGAppTools.swift */,
 			);
 			name = UIExtension;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				B73F878D1DF4EA9B001F4E46 /* RGAppTools.swift in Sources */,
 				B74E54F81E945DDB00B3F6BB /* MainScreen.swift in Sources */,
 				B79DA2D41C603837002FB62E /* ViewController.swift in Sources */,
+				B77707691EF7A3B90025DADE /* UIImage+RGAppTools.swift in Sources */,
 				B79DA2E81C603B7F002FB62E /* AppSingleton.swift in Sources */,
 				B74E983A1CDDB7E7001A18A3 /* Date+RGAppTools.swift in Sources */,
 				B7764DA11C643CD8007FEBD9 /* UserDefaults+RGAppTools.swift in Sources */,
