@@ -8,4 +8,4 @@
 
 import UIKit
 
-
+extension RGAppTools where Base: UIImage { }
