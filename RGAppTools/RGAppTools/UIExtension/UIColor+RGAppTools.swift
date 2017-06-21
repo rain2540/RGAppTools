@@ -7,3 +7,5 @@
 //
 
 import UIKit
+
+extension RGAppTools where Base: UIColor { }
