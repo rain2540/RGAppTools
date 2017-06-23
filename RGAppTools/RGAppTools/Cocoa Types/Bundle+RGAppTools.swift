@@ -9,5 +9,7 @@
 import Foundation
 
 extension RGAppTools where Base: Bundle {
-
+    public static var mainBundlePath: String {
+        return Bundle.main.bundlePath
+    }
 }
