@@ -33,4 +33,4 @@ public let kDefaultNotificationCenter = NotificationCenter.default
 public let kDefaultFileManager = FileManager.default
 
 /// Main Bundle
-public let kMainBundle = Bundle.main
+public let MainBundle = Bundle.main
