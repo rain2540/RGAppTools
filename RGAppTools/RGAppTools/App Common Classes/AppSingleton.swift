@@ -21,7 +21,7 @@ public let kAppMainWindow = (UIApplication.shared.delegate as? AppDelegate)?.win
 public let kRootViewController = (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController
 
 /// Main Screen
-public let kMainScreen = UIScreen.main
+public let AppMainScreen = UIScreen.main
 
 /// Standard UserDefaults
 public let kStandardUserDefaults = UserDefaults.standard
