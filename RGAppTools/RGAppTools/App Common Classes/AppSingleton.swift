@@ -30,7 +30,7 @@ public let kStandardUserDefaults = UserDefaults.standard
 public let kDefaultNotificationCenter = NotificationCenter.default
 
 /// Default File Manager
-public let kDefaultFileManager = FileManager.default
+public let DefaultFileManager = FileManager.default
 
 /// Main Bundle
 public let MainBundle = Bundle.main
