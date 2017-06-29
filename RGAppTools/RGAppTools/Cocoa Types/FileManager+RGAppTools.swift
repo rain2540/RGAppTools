@@ -17,12 +17,12 @@ extension RGAppTools where Base: FileManager {
     
     /// Documents 文件夹路径
     public static var documentsPath: String? {
-        return kDefaultFileManager.urls(for: .documentDirectory, in: .userDomainMask).first?.path
+        return DefaultFileManager.urls(for: .documentDirectory, in: .userDomainMask).first?.path
     }
     
     /// Caches 文件夹路径
     public static var cachesPath: String? {
-        return kDefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
+        return DefaultFileManager.urls(for: .cachesDirectory, in: .userDomainMask).first?.path
     }
     
     /// Temporary 文件夹路径
@@ -38,7 +38,7 @@ extension RGAppTools where Base: FileManager {
             return "0"
         }
         //  取出文件夹下所有文件, 构成数组
-        guard let fileNames = kDefaultFileManager.subpaths(atPath: cachePath) else {
+        guard let fileNames = DefaultFileManager.subpaths(atPath: cachePath) else {
             print("FileManager get cache files failed.")
             return "0"
         }
@@ -49,7 +49,7 @@ extension RGAppTools where Base: FileManager {
             let path = cachePath.appendingFormat("/\(fileName)")
             do {
                 //  取出文件属性
-                let fileAttributes = try kDefaultFileManager.attributesOfItem(atPath: path)
+                let fileAttributes = try DefaultFileManager.attributesOfItem(atPath: path)
                 //  取出文件大小属性
                 for (key, value) in fileAttributes {
                     if key == FileAttributeKey.size {
