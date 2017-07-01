@@ -142,13 +142,6 @@ extension String {
      
      - returns: String of app version
      */
-    public static func rg_stringOfAppVersion() -> String {
-        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
-        let infoDic = NSDictionary(contentsOfFile: infoPath!)
-        let version = infoDic!["CFBundleShortVersionString"] as! String
-        let build = infoDic!["CFBundleVersion"] as! String
-        return version + " " + "(" + build + ")"
-    }
     
     public static func rg_stringOfBundleIdentifier() -> String {
         let infoPath = String.rg_pathForResourceInMainBundle("Info", ofType: "plist")
