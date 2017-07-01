@@ -15,7 +15,7 @@ public let kSharedApplication = UIApplication.shared
 internal let kAppDelegate = UIApplication.shared.delegate as? AppDelegate
 
 /// Main Window
-public let kAppMainWindow = (UIApplication.shared.delegate as? AppDelegate)?.window
+public let AppMainWindow = (UIApplication.shared.delegate as? AppDelegate)?.window
 
 /// Root View Controller
 public let kRootViewController = (UIApplication.shared.delegate as? AppDelegate)?.window?.rootViewController
