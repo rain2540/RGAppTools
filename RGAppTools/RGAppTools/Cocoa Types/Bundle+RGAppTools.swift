@@ -9,6 +9,7 @@
 import Foundation
 
 extension RGAppTools where Base: Bundle {
+    /// 获取 Main Bundle 路径
     public static var mainBundlePath: String {
         return Bundle.main.bundlePath
     }
