@@ -27,7 +27,7 @@ public let AppMainScreen = UIScreen.main
 public let kStandardUserDefaults = UserDefaults.standard
 
 /// Default Notification Center
-public let kDefaultNotificationCenter = NotificationCenter.default
+public let DefaultNotificationCenter = NotificationCenter.default
 
 /// Default File Manager
 public let DefaultFileManager = FileManager.default
