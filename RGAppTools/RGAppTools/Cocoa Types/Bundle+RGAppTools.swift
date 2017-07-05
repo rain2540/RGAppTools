@@ -21,4 +21,10 @@ extension RGAppTools where Base: Bundle {
         let build = infoDic!["CFBundleVersion"] as! String
         return version + " " + "(" + build + ")"
     }
+
+    public static var identifier: String {
+        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
+        let infoDic = NSDictionary(contentsOfFile: infoPath!)
+        return infoDic!["CFBundleIdentifier"] as! String
+    }
 }
