@@ -24,7 +24,7 @@ public let kRootViewController = (UIApplication.shared.delegate as? AppDelegate)
 public let AppMainScreen = UIScreen.main
 
 /// Standard UserDefaults
-public let kStandardUserDefaults = UserDefaults.standard
+public let StandardUserDefaults = UserDefaults.standard
 
 /// Default Notification Center
 public let DefaultNotificationCenter = NotificationCenter.default
