@@ -143,12 +143,6 @@ extension String {
      - returns: String of app version
      */
     
-    public static func rg_stringOfBundleIdentifier() -> String {
-        let infoPath = String.rg_pathForResourceInMainBundle("Info", ofType: "plist")
-        let infoDic = NSDictionary(contentsOfFile: infoPath!)
-        return infoDic!["CFBundleIdentifier"] as! String
-    }
-    
     /**
      获取设备时间
      
