@@ -14,6 +14,7 @@ extension RGAppTools where Base: Bundle {
         return Bundle.main.bundlePath
     }
 
+    /// 应用版本号
     public static var appVersion: String {
         let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
