@@ -138,12 +138,6 @@ extension String {
 //  MARK: App Infos
 extension String {
     /**
-     获取应用版本号
-     
-     - returns: String of app version
-     */
-    
-    /**
      获取设备时间
      
      - returns: String of device time
