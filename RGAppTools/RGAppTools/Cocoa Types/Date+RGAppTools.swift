@@ -48,6 +48,10 @@ extension Date {
 }
 
 extension Date {
+    public var rat_year: Int {
+        return self.rat_components(unit: .year)
+    }
+    
     public func rat_components(unit: Calendar.Component) -> Int {
         let cal = Calendar.current
         return cal.component(unit, from: self)
