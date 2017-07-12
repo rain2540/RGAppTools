@@ -23,6 +23,7 @@ extension RGAppTools where Base: Bundle {
         return version + " " + "(" + build + ")"
     }
 
+    /// 应用的 Bundle Identifier
     public static var identifier: String {
         let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
