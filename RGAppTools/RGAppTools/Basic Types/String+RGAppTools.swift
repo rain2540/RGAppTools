@@ -153,15 +153,6 @@ extension String {
 //  MARK: Main Bundle
 extension String {
     /**
-     获取 Main Bundle 路径
-     
-     - returns: 表示 Main Bundle 路径的字符串
-     */
-    public static func rg_pathOfMainBundle() -> String {
-        return Bundle.main.description
-    }
-    
-    /**
      获取 Main Bundle 中的文件路径
      
      - parameter name: 文件名
