@@ -9,7 +9,7 @@
 import Foundation
 
 extension RGAppTools where Base: Bundle {
-    /// 获取 Main Bundle 路径
+    /// Main Bundle 路径
     public static var mainBundlePath: String {
         return Bundle.main.bundlePath
     }
@@ -28,5 +28,11 @@ extension RGAppTools where Base: Bundle {
         let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
         return infoDic!["CFBundleIdentifier"] as! String
+    }
+    
+    public static func path(forResourceInMainBundle name: String?,
+                            ofType ext: String?) -> String?
+    {
+        return Bundle.main.path(forResource: name, ofType: ext)
     }
 }
