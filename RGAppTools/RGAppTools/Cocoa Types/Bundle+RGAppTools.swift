@@ -35,4 +35,19 @@ extension RGAppTools where Base: Bundle {
     {
         return Bundle.main.path(forResource: name, ofType: ext)
     }
+    
+    public static func string(pathForResourceInMainBundle name: String?,
+                              ofType ext: String?) -> String?
+    {
+        guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
+            print("RGAppTools String init with path for resource in main bundle error: \n", "path is nil")
+            return nil
+        }
+        do {
+            return try String(contentsOfFile: path)
+        } catch let error as NSError {
+            print("RGAppTools String init with path for resource in main bundle error: \n", error)
+            return nil
+        }
+    }
 }
