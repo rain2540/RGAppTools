@@ -135,21 +135,6 @@ extension String {
     }
 }
 
-//  MARK: App Infos
-extension String {
-    /**
-     获取设备时间
-     
-     - returns: String of device time
-     */
-    public static func rg_deviceTime() -> String {
-        let deviceTime = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd-HH-mm-ss"
-        return dateFormatter.string(from: deviceTime)
-    }
-}
-
 //  MARK: Main Bundle
 extension String {
     /**
