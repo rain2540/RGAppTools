@@ -30,6 +30,12 @@ extension RGAppTools where Base: Bundle {
         return infoDic!["CFBundleIdentifier"] as! String
     }
     
+    /// 获取 Main Bundle 中的文件路径
+    ///
+    /// - Parameters:
+    ///   - name: 文件名
+    ///   - ext: 文件后缀名
+    /// - Returns: Main Bundle 中文件的路径
     public static func path(forResourceInMainBundle name: String?,
                             ofType ext: String?) -> String?
     {
