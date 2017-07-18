@@ -42,6 +42,12 @@ extension RGAppTools where Base: Bundle {
         return Bundle.main.path(forResource: name, ofType: ext)
     }
     
+    /// 获取 Main Bundle 中文件内的字符串
+    ///
+    /// - Parameters:
+    ///   - name: 文件名
+    ///   - ext: 文件后缀名
+    /// - Returns: Main Bundle 中文件内的字符串
     public static func string(pathForResourceInMainBundle name: String?,
                               ofType ext: String?) -> String?
     {
