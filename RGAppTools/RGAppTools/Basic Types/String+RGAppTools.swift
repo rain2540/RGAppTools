@@ -137,17 +137,6 @@ extension String {
 
 //  MARK: Main Bundle
 extension String {
-    /**
-     获取 Main Bundle 中的文件路径
-     
-     - parameter name: 文件名
-     - parameter ext:  文件后缀名
-     
-     - returns: Main Bundle 中文件的路径
-     */
-    public static func rg_pathForResourceInMainBundle(_ name: String?, ofType ext: String?) -> String? {
-        return Bundle.main.path(forResource: name, ofType: ext)
-    }
     
     /**
      获取 Main Bundle 中文件内的字符串
