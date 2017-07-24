@@ -134,23 +134,3 @@ extension String {
         }
     }
 }
-
-//  MARK: Main Bundle
-extension String {
-    
-    /**
-     获取 Main Bundle 中文件内的字符串
-     
-     - parameter name: 文件名
-     - parameter ext:  文件后缀名
-     
-     - returns: Main Bundle 中文件内的字符串
-     */
-    public init?(pathForResource name: String?, ofType ext: String?) {
-        guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
-            print("RGBring :: String init with path for resource of type error: path is nil")
-            return nil
-        }
-        try? self.init(contentsOfFile: path)
-    }
-}
