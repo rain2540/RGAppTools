@@ -9,7 +9,9 @@
 import Foundation
 
 extension RGAppTools where Base: DispatchQueue {
-
+    func after(_ delay: TimeInterval, execute closure: @escaping () -> Void) {
+        base.asyncAfter(deadline: .now() + delay, execute: closure)
+    }
 }
 
 public extension DispatchQueue {
