@@ -65,6 +65,17 @@ extension RGAppTools where Base: FileManager {
     }
 
     public static func clearCache() {
-        
+        guard let cachesPath = FileManager.rat.cachesPath else { return }
+        guard let fileNames = DefaultFileManager.subpaths(atPath: cachesPath) else { return }
+        for fileName in fileNames {
+            let path = cachesPath.appendingFormat("/\(fileName)")
+            if DefaultFileManager.fileExists(atPath: path) {
+                do {
+                    try DefaultFileManager.removeItem(atPath: path)
+                } catch let error as NSError {
+                    print("FileManager clear cache error: \n", error)
+                }
+            }
+        }
     }
 }
