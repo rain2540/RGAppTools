@@ -63,6 +63,10 @@ extension Date {
     public var rat_hour: Int {
         return self.rat_components(unit: .hour)
     }
+
+    public var rat_minute: Int {
+        return self.rat_components(unit: .minute)
+    }
     
     public func rat_components(unit: Calendar.Component) -> Int {
         let cal = Calendar.current
