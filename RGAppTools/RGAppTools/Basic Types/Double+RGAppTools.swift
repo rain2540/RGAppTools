@@ -20,8 +20,8 @@ extension Double {
      
      - returns: 转化完成的角度值
      */
-    public func rat_radianToDegree() -> Double {
-        return (180.0 * self) / Double.pi
+    public var rat_angle: Double {
+        return (180.0 * self) / .pi
     }
 }
 
