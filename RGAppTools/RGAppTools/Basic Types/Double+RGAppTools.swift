@@ -10,11 +10,7 @@ import Foundation
 
 //  MARK: Angle transform
 extension Double {
-    /**
-     角度转化为弧度
-     
-     - returns: 转化完成的弧度值
-     */
+    /// 角度转化为弧度
     public var rat_radian: Double {
         return (.pi * self) / 180.0
     }
