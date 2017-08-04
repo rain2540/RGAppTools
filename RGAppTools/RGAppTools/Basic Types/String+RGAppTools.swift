@@ -115,6 +115,7 @@ extension String {
         return Double(self)
     }
 
+    /// String 对应的 Base64 Data
     public var rat_base64Data: Data? {
         return Data(base64Encoded: self)
     }
