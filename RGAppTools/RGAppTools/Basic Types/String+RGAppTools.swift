@@ -115,6 +115,10 @@ extension String {
         return Double(self)
     }
 
+    public var rat_base64Data: Data? {
+        return Data(base64Encoded: self)
+    }
+
     /**
      将字符串转换为 JSON 对象
 
