@@ -120,6 +120,11 @@ extension String {
         return Data(base64Encoded: self)
     }
 
+    public var rat_base64Image: UIImage? {
+        guard let data = self.rat_base64Data else { return nil }
+        return UIImage(data: data)
+    }
+
     /**
      将字符串转换为 JSON 对象
 
