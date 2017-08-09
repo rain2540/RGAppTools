@@ -72,6 +72,10 @@ extension Date {
         return self.rat_components(unit: .second)
     }
     
+    /// 依据参数, 给出某时间点对应的时间组件的值
+    ///
+    /// - Parameter unit: 需要的时间组件
+    /// - Returns: 时间组件的值
     public func rat_components(unit: Calendar.Component) -> Int {
         let cal = Calendar.current
         return cal.component(unit, from: self)
