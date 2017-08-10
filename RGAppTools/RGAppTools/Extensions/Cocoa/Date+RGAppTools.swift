@@ -48,6 +48,7 @@ extension Date {
 }
 
 extension Date {
+    /// 某时间点对应的 year 值
     public var rat_year: Int {
         return self.rat_components(unit: .year)
     }
