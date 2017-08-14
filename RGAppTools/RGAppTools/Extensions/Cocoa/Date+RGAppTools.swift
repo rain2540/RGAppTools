@@ -10,20 +10,12 @@ import Foundation
 
 //  MARK: Transform
 extension Date {
-    /**
-     返回某个时间对应的时间戳
-
-     - returns: 某个时间对应的时间戳
-     */
+    /// 某个时间对应的时间戳
     public var rat_timestamp: TimeInterval {
         return self.timeIntervalSince1970
     }
 
-    /**
-     返回描述某个时间对应的时间戳的字符串
-
-     - returns: 描述某个时间对应的时间戳的字符串
-     */
+    /// 描述某个时间对应的时间戳的字符串
     public var rat_timestampString: String {
         return String(self.rat_timestamp)
     }
