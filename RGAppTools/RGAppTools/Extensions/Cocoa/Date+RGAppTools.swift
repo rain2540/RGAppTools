@@ -25,8 +25,8 @@ extension Date {
 
      - returns: 实时对应的时间戳
      */
-    public static func rat_timestampForNow() -> TimeInterval {
-        return NSDate().timeIntervalSince1970
+    public static var rat_timestampforNow: TimeInterval {
+        return Date().timeIntervalSince1970
     }
 
     /**
@@ -34,8 +34,8 @@ extension Date {
 
      - returns: 描述实时对应的时间戳的字符串
      */
-    public static func rat_timestampForNowString() -> String {
-        return String(Date.rat_timestampForNow())
+    public static var rat_timestampForNowString: String {
+        return String(Date.rat_timestampforNow)
     }
 }
 
