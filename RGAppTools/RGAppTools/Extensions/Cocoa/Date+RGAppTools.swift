@@ -20,11 +20,7 @@ extension Date {
         return String(self.rat_timestamp)
     }
 
-    /**
-     返回实时对应的时间戳
-
-     - returns: 实时对应的时间戳
-     */
+    /// 当前时间对应的时间戳
     public static var rat_timestampforNow: TimeInterval {
         return Date().timeIntervalSince1970
     }
