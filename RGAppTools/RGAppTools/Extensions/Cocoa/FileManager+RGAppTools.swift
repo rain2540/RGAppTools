@@ -64,6 +64,7 @@ extension RGAppTools where Base: FileManager {
         return "\(size / (1024 * 1024)) M"
     }
 
+    /// 清除缓存
     public static func clearCache() {
         guard let cachesPath = FileManager.rat.cachesPath else { return }
         guard let fileNames = DefaultFileManager.subpaths(atPath: cachesPath) else { return }
