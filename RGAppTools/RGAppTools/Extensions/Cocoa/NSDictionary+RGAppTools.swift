@@ -43,7 +43,7 @@ extension NSDictionary {
     }
 }
 
-//  MARK: Ckeck key exist or not
+//  MARK: Check key exist or not
 extension NSDictionary {
     /**
      检验 NSDictionary 中是否存在某个 key
