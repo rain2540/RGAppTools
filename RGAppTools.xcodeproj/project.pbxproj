@@ -12,6 +12,7 @@
 		B73D43221F43CCF60048A97D /* UITabBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */; };
 		B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */; };
 		B73D43261F43CD350048A97D /* UIViewController+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */; };
+		B784E6731F46DB6700D702AF /* CLLocation+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */; };
 		B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D11C603837002FB62E /* AppDelegate.swift */; };
 		B79DA2D41C603837002FB62E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79DA2D31C603837002FB62E /* ViewController.swift */; };
 		B79DA2D71C603837002FB62E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B79DA2D51C603837002FB62E /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RGAppTools.swift"; sourceTree = "<group>"; };
+		B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+RGAppTools.swift"; sourceTree = "<group>"; };
 		B79DA2CE1C603836002FB62E /* RGAppTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RGAppTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B79DA2D11C603837002FB62E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B79DA2D31C603837002FB62E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		B7BDB5DB1F3949A0003C3F60 /* Cocoa */ = {
 			isa = PBXGroup;
 			children = (
+				B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */,
 				B7BDB5DC1F3949A0003C3F60 /* Bundle+RGAppTools.swift */,
 				B7BDB5DD1F3949A0003C3F60 /* Date+RGAppTools.swift */,
 				B7BDB5DE1F3949A0003C3F60 /* DispatchQueue+RGAppTools.swift */,
@@ -295,6 +298,7 @@
 				B7BDB5FF1F3949A0003C3F60 /* TopLayoutProtocols.swift in Sources */,
 				B7BDB5F01F3949A0003C3F60 /* Double+RGAppTools.swift in Sources */,
 				B7BDB5F61F3949A0003C3F60 /* FileManager+RGAppTools.swift in Sources */,
+				B784E6731F46DB6700D702AF /* CLLocation+RGAppTools.swift in Sources */,
 				B7BDB5EE1F3949A0003C3F60 /* AppSingleton.swift in Sources */,
 				B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */,
 				B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */,
