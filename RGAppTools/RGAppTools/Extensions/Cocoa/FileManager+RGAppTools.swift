@@ -31,29 +31,29 @@ extension RGAppTools where Base: FileManager {
     }
     
     /// 缓存大小
-    public static var cacheSize: String {
-        //  取出 cache 文件路径
+    public static var cacheSize: Int {
+        var size: Int = 0
+        // 取出 cache 文件路径
         guard let cachePath = FileManager.rat.cachesPath else {
             print("FileManager get cache path failed.")
-            return "0"
+            return size / (1024 * 1024)
         }
-        //  取出文件夹下所有文件, 构成数组
+        // 取出文件夹下所有文件, 构成数组
         guard let fileNames = DefaultFileManager.subpaths(atPath: cachePath) else {
             print("FileManager get cache files failed.")
-            return "0"
+            return size / (1024 * 1024)
         }
-        var size: Int = 0
-        //  快速枚举出所有文件名
+        // 快速枚举出所有文件名
         for fileName in fileNames {
-            //  把文件名拼接到路径中
+            // 把文件名拼接到路径中
             let path = cachePath.appendingFormat("/\(fileName)")
             do {
-                //  取出文件属性
+                // 取出文件属性
                 let fileAttributes = try DefaultFileManager.attributesOfItem(atPath: path)
-                //  取出文件大小属性
+                // 取出文件大小属性
                 for (key, value) in fileAttributes {
                     if key == FileAttributeKey.size {
-                        //  取出文件大小进行累加
+                        // 取出文件大小进行累加
                         size += Int(value as! NSNumber)
                     }
                 }
@@ -61,7 +61,12 @@ extension RGAppTools where Base: FileManager {
                 print("FileManager get cache file attributes failed with error: \n", error)
             }
         }
-        return "\(size / (1024 * 1024)) M"
+        return size / (1024 * 1024)
+    }
+
+    /// 描述缓存大小的字符串
+    public static var cacheSizeString: String {
+        return "\(FileManager.rat.cacheSize) M"
     }
 
     /// 清除缓存
