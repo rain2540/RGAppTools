@@ -26,7 +26,7 @@ extension TopView where Self: UIViewController {
 
     var topView: UIView {
         let view = UIView()
-        view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height: 64.0)
+        view.frame = CGRect(x: 0.0, y: 0.0, width: MainScreen.width, height: 64.0)
         view.backgroundColor = topColor
         return view
     }
@@ -43,7 +43,7 @@ extension TopView where Self: UIViewController {
 
     var statusView: UIView {
         let view = UIView()
-        view.frame = CGRect(x: 0.0, y: 0.0, width: self.view.bounds.width, height: 20.0)
+        view.frame = CGRect(x: 0.0, y: 0.0, width: MainScreen.width, height: 20.0)
         view.backgroundColor = statusColor
         return view
     }
@@ -59,7 +59,15 @@ extension TopView where Self: UIViewController {
 
     var naviView: UIView {
         let view = UIView()
-
+        view.frame = CGRect(x: 0.0, y: 20.0, width: MainScreen.width, height: 44.0)
+        view.backgroundColor = naviColor
+        view.isUserInteractionEnabled = true
         return view
+    }
+
+    func buildTopView() {
+        self.view.addSubview(topView)
+        self.view.addSubview(statusView)
+        self.view.addSubview(naviView)
     }
 }
