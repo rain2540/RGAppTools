@@ -36,16 +36,6 @@ extension RGAppTools where Base: UserDefaults {
         base.synchronize()
     }
 
-    /// 将某个 key - Bool 值存入 UserDefaults 中
-    ///
-    /// - Parameters:
-    ///   - value: 将要存入的 Bool 值
-    ///   - key: 将要存入的 key
-    public func saveBool(_ value: Bool, forKey key: String) {
-        base.set(value, forKey: key)
-        base.synchronize()
-    }
-
     /// 将某个 key - Int 值存入 UserDefaults 中
     ///
     /// - Parameters:
@@ -72,6 +62,16 @@ extension RGAppTools where Base: UserDefaults {
     ///   - value: 将要存入的 Double 值
     ///   - key: 将要存入的 key
     public func saveDouble(_ value: Double, forKey key: String) {
+        base.set(value, forKey: key)
+        base.synchronize()
+    }
+
+    /// 将某个 key - Bool 值存入 UserDefaults 中
+    ///
+    /// - Parameters:
+    ///   - value: 将要存入的 Bool 值
+    ///   - key: 将要存入的 key
+    public func saveBool(_ value: Bool, forKey key: String) {
         base.set(value, forKey: key)
         base.synchronize()
     }
