@@ -64,7 +64,7 @@ extension RGAppTools where Base: UIDevice {
     }
 
     /// 打印当前设备信息
-    public static func deviceInformations() {
+    public static func printDeviceInformations() {
         print("currentDevice: ", UIDevice.current)
 
         let device = UIDevice()
