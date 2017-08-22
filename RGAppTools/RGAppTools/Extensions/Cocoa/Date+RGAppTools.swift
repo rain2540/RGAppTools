@@ -25,11 +25,7 @@ extension Date {
         return Date().timeIntervalSince1970
     }
 
-    /**
-     返回描述实时对应的时间戳的字符串
-
-     - returns: 描述实时对应的时间戳的字符串
-     */
+    /// 描述实时对应的时间戳的字符串
     public static var rat_timestampForNowString: String {
         return String(Date.rat_timestampforNow)
     }
@@ -41,22 +37,27 @@ extension Date {
         return self.rat_components(unit: .year)
     }
 
+    /// 某时间点对应的 month 值
     public var rat_month: Int {
         return self.rat_components(unit: .month)
     }
 
+    /// 某时间点对应的 day 值
     public var rat_day: Int {
         return self.rat_components(unit: .day)
     }
 
+    /// 某时间点对应的 hour 值
     public var rat_hour: Int {
         return self.rat_components(unit: .hour)
     }
 
+    /// 某时间点对应的 minute 值
     public var rat_minute: Int {
         return self.rat_components(unit: .minute)
     }
 
+    /// 某时间点对应的 second 值
     public var rat_second: Int {
         return self.rat_components(unit: .second)
     }
