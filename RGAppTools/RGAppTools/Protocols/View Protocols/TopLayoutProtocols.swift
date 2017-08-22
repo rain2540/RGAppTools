@@ -66,8 +66,61 @@ extension TopView where Self: UIViewController {
     }
 
     func buildTopView() {
-        self.view.addSubview(topView)
-        self.view.addSubview(statusView)
-        self.view.addSubview(naviView)
+        view.addSubview(topView)
+        view.addSubview(statusView)
+        view.addSubview(naviView)
+    }
+}
+
+// MARK: 
+protocol TopViewWithTitle: TopView {
+    var titleString: String { get set }
+    var titleFont: UIFont { get set }
+    var titleColor: UIColor { get set }
+}
+
+extension TopViewWithTitle where Self: UIViewController {
+    var titleString: String {
+        get {
+            return ""
+        }
+        set {
+            titleString = newValue
+        }
+    }
+
+    var titleFont: UIFont {
+        get {
+            return UIFont.systemFont(ofSize: 12.0)
+        }
+        set {
+            titleFont = newValue
+        }
+    }
+
+    var titleColor: UIColor {
+        get {
+            return UIColor.black
+        }
+        set {
+            titleColor = newValue
+        }
+    }
+
+    var titleLabel: UILabel {
+        let titleSize = titleString.rat_sizeWithFont(titleFont)
+        let label = UILabel()
+        label.font = titleFont
+        label.textColor = titleColor
+        label.text = titleString
+        label.frame = CGRect(x: (naviView.bounds.width - titleSize.width) / 2.0,
+                             y: statusView.bounds.height + (naviView.bounds.height - titleSize.height) / 2,
+                             width: titleSize.width,
+                             height: titleSize.height)
+        return label
+    }
+
+    func addTitle() {
+        self.view.addSubview(titleLabel)
     }
 }
