@@ -4,7 +4,7 @@ Swift 语言版本的 App 开发辅助工具集。
 
 源码位于项目文件夹与`Info.plist`同级的`RGAppTools`文件夹内。源码结构如下：
 
-![Structure_of_RGAppTools](/Users/rain/Documents/Development/00_Smartech/RGAppTools/RGAppTools.png)
+![Structure_of_RGAppTools](https://github.com/rain2540/RGAppTools/blob/master/RGAppTools.png)
 
 * `RGAppTools.swift` 为`Extension`中数据类型为类的数据规定了命名空间`rat`
 * `App Commons` 包含了应用开发中常用的单例对象、常用控件默认尺寸等
