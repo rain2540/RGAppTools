@@ -9,17 +9,31 @@
 import UIKit
 
 extension RGAppTools where Base: UIColor {
-    public static func color(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> Base {
-        return Base(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
+    /// 通过指定的不透明度和 RGB 分量值, 返回一个颜色对象
+    ///
+    /// - Parameters:
+    ///   - red: 红色分量的值 (0 ~ 255)
+    ///   - green: 绿色分量的值 (0 ~ 255)
+    ///   - blue: 蓝色分量的值 (0 ~ 255)
+    ///   - alpha: 不透明度的值 (0 ~ 1)
+    /// - Returns: 颜色对象
+    public static func color(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
+        return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
 
-    public static func color(hexString: String, alpha: CGFloat) -> Base {
+    /// 通过指定的不透明度 和 一个用16进制数字表示 RGB 分量值的字符串, 返回一个颜色对象
+    ///
+    /// - Parameters:
+    ///   - hexString: 以"#"或"0x"开头, 后面跟随6位(或3位)16进制数字 表示RGB分量值的字符串
+    ///   - alpha: 不透明度 (0 ~ 1)
+    /// - Returns: 颜色对象
+    public static func color(hexString: String, alpha: CGFloat) -> UIColor {
         var red: CGFloat = 0.0, green: CGFloat = 0.0, blue:  CGFloat = 0.0
         var cString = hexString.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
 
         guard cString.hasPrefix("0X") || cString.hasPrefix("#") else {
             print("Invalid RGB hex string, missing '#' or '0x' as prefix.")
-            return Base(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+            return UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
         }
 
         if cString.hasPrefix("0X") {
@@ -32,7 +46,7 @@ extension RGAppTools where Base: UIColor {
         var hexValue: CUnsignedLongLong = 0
         guard scanner.scanHexInt64(&hexValue) else {
             print("Scan hex error.")
-            return Base(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
+            return UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
         }
 
         switch (cString.characters.count) {
@@ -50,6 +64,6 @@ extension RGAppTools where Base: UIColor {
             red = 0.0; green = 0.0; blue = 1.0
             NSLog("Invalid RGB hex string, number of characters after '#' or '0x' should be either 3 or 6.")
         }
-        return Base(red: red, green: green, blue: blue, alpha: alpha)
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
