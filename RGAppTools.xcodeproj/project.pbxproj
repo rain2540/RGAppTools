@@ -11,6 +11,7 @@
 		B73D43221F43CCF60048A97D /* UITabBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */; };
 		B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */; };
 		B73D43261F43CD350048A97D /* UIViewController+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */; };
+		B753AD6E1F4BFB9D00978DD8 /* RGToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753AD6D1F4BFB9D00978DD8 /* RGToast.swift */; };
 		B784E6731F46DB6700D702AF /* CLLocation+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */; };
 		B784E6751F46E4D600D702AF /* UIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784E6741F46E4D600D702AF /* UIConstant.swift */; };
 		B784E6771F46E4E900D702AF /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784E6761F46E4E900D702AF /* MainScreen.swift */; };
@@ -44,6 +45,7 @@
 		B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RGAppTools.swift"; sourceTree = "<group>"; };
+		B753AD6D1F4BFB9D00978DD8 /* RGToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGToast.swift; sourceTree = "<group>"; };
 		B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+RGAppTools.swift"; sourceTree = "<group>"; };
 		B784E6741F46E4D600D702AF /* UIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
 		B784E6761F46E4E900D702AF /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				B784E6761F46E4E900D702AF /* MainScreen.swift */,
+				B753AD6D1F4BFB9D00978DD8 /* RGToast.swift */,
 			);
 			path = RGBuild;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B753AD6E1F4BFB9D00978DD8 /* RGToast.swift in Sources */,
 				B7BDB5FD1F3949A0003C3F60 /* UIDevice+RGAppTools.swift in Sources */,
 				B7BDB5EF1F3949A0003C3F60 /* MethodInfo.swift in Sources */,
 				B7BDB5FB1F3949A0003C3F60 /* UIAlertController+RGAppTools.swift in Sources */,
