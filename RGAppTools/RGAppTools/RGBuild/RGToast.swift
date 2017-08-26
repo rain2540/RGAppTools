@@ -257,9 +257,9 @@ fileprivate class RGToastView: UIView {
         let paragraphStyle = NSMutableParagraphStyle.default.mutableCopy()
         (paragraphStyle as! NSMutableParagraphStyle).lineBreakMode = .byWordWrapping
         (paragraphStyle as! NSMutableParagraphStyle).alignment = .center
-        let dict = [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0),
-                    NSParagraphStyleAttributeName: paragraphStyle,
-                    NSForegroundColorAttributeName: UIColor.white]
+        let dict = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14.0),
+                    NSAttributedStringKey.paragraphStyle: paragraphStyle,
+                    NSAttributedStringKey.foregroundColor: UIColor.white]
         (messageText! as NSString).draw(in: messageRect!, withAttributes: dict)
 
         if let image = image {
@@ -275,9 +275,9 @@ fileprivate class RGToastView: UIView {
     private func adjust() {
         let size = messageText?.boundingRect(with: CGSize(width: 160.0, height: 200.0),
                                              options: [.usesLineFragmentOrigin],
-                                             attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)],
+                                             attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14.0)],
                                              context: nil).size
-        messageText?.size(attributes: [NSFontAttributeName: UIFont.boldSystemFont(ofSize: 14.0)])
+        messageText?.size(withAttributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14.0)])
         var imageAdjustment: CGFloat = 0.0
         if image != nil {
             imageAdjustment = 7.0 + (image?.size.height)!
