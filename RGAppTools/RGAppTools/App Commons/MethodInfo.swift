@@ -9,14 +9,13 @@
 import Foundation
 
 struct MethodInfo {
-    /**
-     在控制台输出方法信息
-
-     - parameter message: 原样显示在控制台的信息
-     - parameter file:    文件名
-     - parameter method:  方法名
-     - parameter line:    代码行数
-     */
+    /// 在控制台输出方法信息
+    ///
+    /// - Parameters:
+    ///   - message: 原样显示在控制台的信息
+    ///   - file: 文件名
+    ///   - method: 方法名
+    ///   - line: 代码行数
     func methodLog<T>(_ message: T,
                    file:   String = #file,
                    method: String = #function,
