@@ -29,13 +29,13 @@ extension RGAppTools where Base: UIImage {
      /// - Parameters:
      ///   - size: 尺寸
      ///   - backColor: 背景色(默认`white`)
-     ///   - lineColor: 边线颜色(默认`lightGray`)
-     ///   - lineWidth: 边线宽度(默认`1.0`)
+     ///   - borderColor: 边线颜色(默认`lightGray`)
+     ///   - borderWidth: 边线宽度(默认`1.0`)
      /// - Returns: 新创建的矩形图像
      public func createRectImage(size: CGSize?,
                                 backColor: UIColor = .white,
-                                lineColor: UIColor = .lightGray,
-                                lineWidth: CGFloat = 1.0) -> UIImage?
+                                borderColor: UIColor = .lightGray,
+                                borderWidth: CGFloat = 1.0) -> UIImage?
     {
         var size = size
         if size == nil {
@@ -65,9 +65,9 @@ extension RGAppTools where Base: UIImage {
         // 4.1 按照新尺寸的图片边界实例化一个路径
         let path = UIBezierPath(rect: rect)
         // 4.2 设置边线颜色
-        lineColor.setStroke()
+        borderColor.setStroke()
         // 4.3 设置边线宽度
-        path.lineWidth = lineWidth
+        path.lineWidth = borderWidth
         // 4.4 绘制边线
         path.stroke()
 
@@ -86,13 +86,13 @@ extension RGAppTools where Base: UIImage {
     /// - Parameters:
     ///   - size: 尺寸
     ///   - backColor: 背景色(默认`white`)
-    ///   - lineColor: 边线颜色(默认`lightGray`)
-    ///   - lineWidth: 边线宽度(默认`1.0`)
+    ///   - borderColor: 边线颜色(默认`lightGray`)
+    ///   - borderWidth: 边线宽度(默认`1.0`)
     /// - Returns: 新创建的圆角图像
     public func createCircleImage(size: CGSize?,
                                   backColor: UIColor = .white,
-                                  lineColor: UIColor = .lightGray,
-                                  lineWidth: CGFloat = 1.0) -> UIImage?
+                                  borderColor: UIColor = .lightGray,
+                                  borderWidth: CGFloat = 1.0) -> UIImage?
     {
         var size = size
         if size == nil {
@@ -125,9 +125,9 @@ extension RGAppTools where Base: UIImage {
 
         // 4.绘制内切的圆形
         // 4.1 设置边线颜色
-        lineColor.setStroke()
+        borderColor.setStroke()
         // 4.2 设置边线宽度
-        path.lineWidth = lineWidth
+        path.lineWidth = borderWidth
         // 4.3 绘制边线
         path.stroke()
 
