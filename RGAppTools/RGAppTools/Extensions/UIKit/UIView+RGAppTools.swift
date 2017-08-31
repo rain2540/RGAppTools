@@ -133,4 +133,17 @@ extension UIView {
             self.frame = frame
         }
     }
+
+    /// 视图中心横坐标
+    var rat_centerX: CGFloat {
+        get {
+            return self.center.x
+        }
+        set {
+            var center = self.center
+            center.x = newValue
+            self.center = center
+        }
+    }
+    
 }
