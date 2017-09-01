@@ -145,5 +145,15 @@ extension UIView {
             self.center = center
         }
     }
-    
+
+    var rat_centerY: CGFloat {
+        get {
+            return self.center.y
+        }
+        set {
+            var center = self.center
+            center.y = newValue
+            self.center = center
+        }
+    }
 }
