@@ -86,12 +86,21 @@ extension RGAppTools where Base: UIView {
 }
 
 public class UIViewFrameExtension {
-    var view: UIView
+    private var view: UIView
     
-    init(_ view: UIView) {
+    fileprivate init(_ view: UIView) {
         self.view = view
     }
     
+    /// 视图左上角横坐标值
+    public var x: CGFloat {
+        get {
+            return view.rat_x
+        }
+        set {
+            view.rat_x = newValue
+        }
+    }
 }
 
 extension UIView {
@@ -99,8 +108,7 @@ extension UIView {
         return UIViewFrameExtension(self)
     }
     
-    /// 视图左上角横坐标值
-    var rat_x: CGFloat {
+    fileprivate var rat_x: CGFloat {
         get {
             return self.frame.origin.x
         }
