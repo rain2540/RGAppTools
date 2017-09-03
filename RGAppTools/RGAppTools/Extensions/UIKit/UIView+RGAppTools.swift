@@ -85,6 +85,15 @@ extension RGAppTools where Base: UIView {
     var maxY: CGFloat { return base.frame.maxY }
 }
 
+class UIViewFrameExtension {
+    var view: UIView
+    
+    init(_ view: UIView) {
+        self.view = view
+    }
+    
+}
+
 extension UIView {
     /// 视图左上角横坐标值
     var rat_x: CGFloat {
