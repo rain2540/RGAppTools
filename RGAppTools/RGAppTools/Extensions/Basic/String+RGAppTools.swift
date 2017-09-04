@@ -54,15 +54,12 @@ extension String {
 
 //  MARK: Size
 extension String {
-    /**
-     返回按照给定字体绘制时, 字符串所占有的边界大小
-     
-     - parameter font: 要应用于字符串的字体
-     
-     - returns: 按照给定字体绘制时, 字符串所占有的边界大小
-     */
-    public func rat_sizeWithFont(_ font: UIFont) -> CGSize {
-        return (self as NSString).size(withAttributes: [NSAttributedStringKey.font: font])
+    /// 返回按照给定字体绘制时, 字符串所占有的边界大小
+    ///
+    /// - Parameter font: 要应用于字符串的字体
+    /// - Returns: 按照给定字体绘制时, 字符串所占有的边界大小
+    public func rat_size(withFont font: UIFont) -> CGSize {
+        return self.rat_size(withAttributes: [.font: font])
     }
 
     /// 返回按照给定属性绘制时, 字符串所占有的边界大小
