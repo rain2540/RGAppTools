@@ -101,6 +101,16 @@ public class UIViewFrameExtension {
             view.rat_x = newValue
         }
     }
+
+    /// 视图左上角纵坐标值
+    public var y: CGFloat {
+        get {
+            return view.rat_y
+        }
+        set {
+            view.rat_y = newValue
+        }
+    }
 }
 
 extension UIView {
@@ -118,9 +128,8 @@ extension UIView {
             self.frame = frame
         }
     }
-    
-    /// 视图左上角纵坐标值
-    var rat_y: CGFloat {
+
+    fileprivate var rat_y: CGFloat {
         get {
             return self.frame.origin.y
         }
