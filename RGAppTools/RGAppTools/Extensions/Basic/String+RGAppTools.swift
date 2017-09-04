@@ -64,15 +64,12 @@ extension String {
     public func rat_sizeWithFont(_ font: UIFont) -> CGSize {
         return (self as NSString).size(withAttributes: [NSAttributedStringKey.font: font])
     }
-    
-    /**
-     返回按照给定属性绘制时, 字符串所占有的边界大小
-     
-     - parameter attrs: 要应用于字符串的文本属性的字典
-     
-     - returns: 按照给定属性绘制时, 字符串所占有的边界大小
-     */
-    public func rat_sizeWithAttributes(_ attrs: [String: AnyObject]?) -> CGSize {
+
+    /// 返回按照给定属性绘制时, 字符串所占有的边界大小
+    ///
+    /// - Parameter attrs: 要应用于字符串的文本属性的字典
+    /// - Returns: 按照给定属性绘制时, 字符串所占有的边界大小
+    public func rat_size(withAttributes attrs: [NSAttributedStringKey: Any]?) -> CGSize {
         return (self as NSString).size(withAttributes: attrs)
     }
 }
