@@ -17,6 +17,30 @@ extension RGAppTools where Base: UserDefaults {
         return base.value(forKey: key.key) != nil
     }
 
+    /// 将内容存入 UserDefaults, 并用 key 标记
+    ///
+    /// - Parameters:
+    ///   - value: 将要存入的内容
+    ///   - key: 用于标记的 key
+    public func save<ValueType>(_ value: ValueType, forKey key: Key<ValueType>) {
+        if isPrimitive(type: ValueType.self) {
+            base.set(value, forKey: key.key)
+            base.synchronize()
+            return
+        }
+
+        do {
+            let encoder = JSONEncoder()
+            let result = try encoder.encode(value)
+            base.set(result, forKey: key.key)
+            base.synchronize()
+        } catch {
+            #if DEBUG
+                print(error)
+            #endif
+        }
+    }
+
     /// 检验给定类型是否为基础类型
     ///
     /// - Parameter type: 待检验的类型
