@@ -17,6 +17,29 @@ extension RGAppTools where Base: UserDefaults {
         return base.value(forKey: key.key) != nil
     }
 
+    /// 获取 key 值对应的内容
+    ///
+    /// - Parameter key: 标记内容的 key
+    /// - Returns: key 对应的内容
+    public func value<ValueType>(forKey key: Key<ValueType>) -> ValueType? {
+        if isPrimitive(type: ValueType.self) {
+            return base.value(forKey: key.key) as? ValueType
+        }
+
+        guard let data = base.data(forKey: key.key) else { return nil }
+
+        do {
+            let decoder = JSONDecoder()
+            let result = try decoder.decode(ValueType.self, from: data)
+            return result
+        } catch {
+            #if DEBUG
+                print(error)
+            #endif
+        }
+        return nil
+    }
+
     /// 将内容存入 UserDefaults, 并用 key 标记
     ///
     /// - Parameters:
