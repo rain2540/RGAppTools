@@ -13,6 +13,15 @@ extension RGAppTools where Base: UserDefaults {
     ///
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果
+    public func has<ValueType>(key: Key<ValueType>) -> Bool {
+        return base.value(forKey: key.key) != nil
+    }
+
+    /// 检验 UserDefaults 中是否存在某个 key
+    ///
+    /// - Parameter key: 待检验的 key
+    /// - Returns: 检验结果
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.has(key:)` instead.", renamed: "has(key:)")
     public func isHave(key: String) -> Bool {
         let userDefaultsDic = base.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
@@ -84,6 +93,13 @@ extension RGAppTools where Base: UserDefaults {
     public func saveURL(_ url: URL?, forKey key: String) {
         base.set(url, forKey: key)
         base.synchronize()
+    }
+}
+
+public final class Key<ValueType: Codable> {
+    fileprivate let key: String
+    public init(_ key: String) {
+        self.key = key
     }
 }
 
