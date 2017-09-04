@@ -64,6 +64,14 @@ extension RGAppTools where Base: UserDefaults {
         }
     }
 
+    /// 清除 key 值对应内容
+    ///
+    /// - Parameter key: 标记内容的 key
+    public func clear<ValueType>(forKey key: Key<ValueType>) {
+        base.set(nil, forKey: key.key)
+        base.synchronize()
+    }
+
     /// 检验给定类型是否为基础类型
     ///
     /// - Parameter type: 待检验的类型
