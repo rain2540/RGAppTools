@@ -35,7 +35,7 @@ extension RGAppTools where Base: UIView {
         switch direction {
         case .horizontal:
             line.frame = CGRect(x: startPoint.x, y: startPoint.y, width: length, height: width)
-            
+
         case .vertical:
             line.frame = CGRect(x: startPoint.x, y: startPoint.y, width: width, height: length)
         }
@@ -43,7 +43,7 @@ extension RGAppTools where Base: UIView {
         base.addSubview(line)
         return line
     }
-    
+
     /// 为视图添加边线
     ///
     /// - Parameters:
@@ -56,7 +56,7 @@ extension RGAppTools where Base: UIView {
         base.layer.cornerRadius = cornerRadius
         base.layer.borderColor = color.cgColor
     }
-    
+
     // MARK: Interaction
     /// 设置视图交互状态
     ///
@@ -65,18 +65,18 @@ extension RGAppTools where Base: UIView {
         base.isUserInteractionEnabled = status
         base.isMultipleTouchEnabled = status
     }
-    
+
     // MARK: Rect
     /// 视图尺寸
     var size: CGSize { return base.bounds.size }
-    
+
     /// 视图横坐标最小值
     var minX: CGFloat { return base.frame.minX }
     /// 视图中心横坐标值
     var midX: CGFloat { return base.frame.midX }
     /// 视图横坐标最大值
     var maxX: CGFloat { return base.frame.maxX }
-    
+
     /// 视图纵坐标最小值
     var minY: CGFloat { return base.frame.minY }
     /// 视图中心纵坐标值
@@ -87,11 +87,11 @@ extension RGAppTools where Base: UIView {
 
 public class UIViewFrameExtension {
     private var view: UIView
-    
+
     fileprivate init(_ view: UIView) {
         self.view = view
     }
-    
+
     /// 视图左上角横坐标值
     public var x: CGFloat {
         get {
@@ -117,7 +117,7 @@ extension UIView {
     public var rat: UIViewFrameExtension {
         return UIViewFrameExtension(self)
     }
-    
+
     fileprivate var rat_x: CGFloat {
         get {
             return self.frame.origin.x
@@ -139,7 +139,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+
     /// 视图宽度
     var rat_width: CGFloat {
         get {
@@ -151,7 +151,7 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+
     /// 视图高度
     var rat_height: CGFloat {
         get {
@@ -163,7 +163,18 @@ extension UIView {
             self.frame = frame
         }
     }
-    
+
+    var rat_size: CGSize {
+        get {
+            return self.frame.size
+        }
+        set {
+            var frame = self.frame
+            frame.size = newValue
+            self.frame = frame
+        }
+    }
+
     /// 视图中心横坐标
     var rat_centerX: CGFloat {
         get {
@@ -175,7 +186,7 @@ extension UIView {
             self.center = center
         }
     }
-    
+
     var rat_centerY: CGFloat {
         get {
             return self.center.y
@@ -186,4 +197,15 @@ extension UIView {
             self.center = center
         }
     }
+
+    // TODO: /// 视图上边界
+
+
+    // TODO: /// 视图下边界
+
+
+    // TODO: /// 视图左边界
+
+
+    // TODO: /// 视图右边界
 }
