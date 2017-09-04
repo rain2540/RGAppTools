@@ -17,6 +17,19 @@ extension RGAppTools where Base: UserDefaults {
         return base.value(forKey: key.key) != nil
     }
 
+    /// 检验给定类型是否为基础类型
+    ///
+    /// - Parameter type: 待检验的类型
+    /// - Returns: 检验结果
+    private func isPrimitive<ValueType>(type: ValueType.Type) -> Bool {
+        switch type {
+        case is String.Type, is Bool.Type, is Int.Type, is Float.Type, is Double.Type:
+            return true
+        default:
+            return false
+        }
+    }
+
     /// 检验 UserDefaults 中是否存在某个 key
     ///
     /// - Parameter key: 待检验的 key
