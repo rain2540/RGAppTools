@@ -111,6 +111,16 @@ public class UIViewFrameExtension {
             view.rat_y = newValue
         }
     }
+
+    /// 视图宽度
+    public var width: CGFloat {
+        get {
+            return view.rat_width
+        }
+        set {
+            view.rat_width = newValue
+        }
+    }
 }
 
 extension UIView {
@@ -140,8 +150,7 @@ extension UIView {
         }
     }
 
-    /// 视图宽度
-    var rat_width: CGFloat {
+    fileprivate var rat_width: CGFloat {
         get {
             return self.frame.size.width
         }
@@ -202,10 +211,10 @@ extension UIView {
 
 
     // TODO: /// 视图下边界
-
-
+    
+    
     // TODO: /// 视图左边界
-
-
+    
+    
     // TODO: /// 视图右边界
 }
