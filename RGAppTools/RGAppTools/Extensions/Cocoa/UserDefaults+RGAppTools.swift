@@ -8,12 +8,19 @@
 
 import Foundation
 
+public final class Key<ValueType: Codable> {
+    fileprivate let key: String
+    public init(_ key: String) {
+        self.key = key
+    }
+}
+
 extension RGAppTools where Base: UserDefaults {
     /// 检验 UserDefaults 中是否存在某个 key
     ///
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果
-    public func has<ValueType>(key: Key<ValueType>) -> Bool {
+    public func has<ValueType>(_ key: Key<ValueType>) -> Bool {
         return base.value(forKey: key.key) != nil
     }
 
@@ -21,7 +28,7 @@ extension RGAppTools where Base: UserDefaults {
     ///
     /// - Parameter key: 标记内容的 key
     /// - Returns: key 对应的内容
-    public func value<ValueType>(forKey key: Key<ValueType>) -> ValueType? {
+    public func value<ValueType>(for key: Key<ValueType>) -> ValueType? {
         if isPrimitive(type: ValueType.self) {
             return base.value(forKey: key.key) as? ValueType
         }
@@ -45,7 +52,7 @@ extension RGAppTools where Base: UserDefaults {
     /// - Parameters:
     ///   - value: 将要存入的内容
     ///   - key: 用于标记的 key
-    public func save<ValueType>(_ value: ValueType, forKey key: Key<ValueType>) {
+    public func save<ValueType>(_ value: ValueType, for key: Key<ValueType>) {
         if isPrimitive(type: ValueType.self) {
             base.set(value, forKey: key.key)
             base.synchronize()
@@ -67,7 +74,7 @@ extension RGAppTools where Base: UserDefaults {
     /// 清除 key 值对应内容
     ///
     /// - Parameter key: 标记内容的 key
-    public func clear<ValueType>(forKey key: Key<ValueType>) {
+    public func clear<ValueType>(for key: Key<ValueType>) {
         base.set(nil, forKey: key.key)
         base.synchronize()
     }
@@ -85,11 +92,12 @@ extension RGAppTools where Base: UserDefaults {
         }
     }
 
+    // MARK: deprecated methods
     /// 检验 UserDefaults 中是否存在某个 key
     ///
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果
-    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.has(key:)` instead.", renamed: "has(key:)")
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.has(_:)` instead.", renamed: "has(_:)")
     public func isHave(key: String) -> Bool {
         let userDefaultsDic = base.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
@@ -108,6 +116,7 @@ extension RGAppTools where Base: UserDefaults {
     /// - Parameters:
     ///   - object: 将要存入的 object
     ///   - key: 将要存入的 key
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "save(_:for:)")
     public func save(_ object: Any?, forKey key: String) {
         base.set(object, forKey: key)
         base.synchronize()
@@ -118,6 +127,7 @@ extension RGAppTools where Base: UserDefaults {
     /// - Parameters:
     ///   - value: 将要存入的 Int 值
     ///   - key: 将要存入的 key
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "save(_:for:)")
     public func saveInt(_ value: Int, forKey key: String) {
         base.set(value, forKey: key)
         base.synchronize()
@@ -128,6 +138,7 @@ extension RGAppTools where Base: UserDefaults {
     /// - Parameters:
     ///   - value: 将要存入的 Float 值
     ///   - key: 将要存入的 key
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "save(_:for:)")
     public func saveFloat(_ value: Float, forKey key: String) {
         base.set(value, forKey: key)
         base.synchronize()
@@ -138,6 +149,7 @@ extension RGAppTools where Base: UserDefaults {
     /// - Parameters:
     ///   - value: 将要存入的 Double 值
     ///   - key: 将要存入的 key
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "save(_:for:)")
     public func saveDouble(_ value: Double, forKey key: String) {
         base.set(value, forKey: key)
         base.synchronize()
@@ -148,6 +160,7 @@ extension RGAppTools where Base: UserDefaults {
     /// - Parameters:
     ///   - value: 将要存入的 Bool 值
     ///   - key: 将要存入的 key
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "save(_:for:)")
     public func saveBool(_ value: Bool, forKey key: String) {
         base.set(value, forKey: key)
         base.synchronize()
@@ -158,16 +171,10 @@ extension RGAppTools where Base: UserDefaults {
     /// - Parameters:
     ///   - url: 将要存入的 URL 值
     ///   - key: 将要存入的 key
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "save(_:for:)")
     public func saveURL(_ url: URL?, forKey key: String) {
         base.set(url, forKey: key)
         base.synchronize()
-    }
-}
-
-public final class Key<ValueType: Codable> {
-    fileprivate let key: String
-    public init(_ key: String) {
-        self.key = key
     }
 }
 
@@ -179,7 +186,7 @@ extension UserDefaults {
      - parameter object: 将要存入的 object
      - parameter key:    将要存入的 key
      */
-    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.save` instead.", renamed: "rat.save")
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "rat.save(_:for:)")
     public func rat_save(_ object: Any?, forKey key: String) {
         self.set(object, forKey: key)
         self.synchronize()
@@ -191,7 +198,7 @@ extension UserDefaults {
      - parameter value: 将要存入的 Bool 值
      - parameter key:   将要存入的 key
      */
-    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.saveBool` instead.", renamed: "rat.saveBool")
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "rat.save(_:for:)")
     public func rat_saveBool(_ value: Bool, forKey key: String) {
         self.set(value, forKey: key)
         self.synchronize()
@@ -203,7 +210,7 @@ extension UserDefaults {
      - parameter value: 将要存入的 Double 值
      - parameter key:   将要存入的 key
      */
-    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.saveDouble` instead.", renamed: "rat.saveDouble")
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "rat.save(_:for:)")
     public func rat_saveDouble(_ value: Double, forKey key: String) {
         self.set(value, forKey: key)
         self.synchronize()
@@ -219,7 +226,7 @@ extension UserDefaults {
 
      - returns: 检验结果
      */
-    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.rat.isHaveKey` instead.", renamed: "rat.isHaveKey")
+    @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.has(key:)` instead.", renamed: "rat.has(_:)")
     public func rat_isHaveKey(key: String) -> Bool {
         let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
         let keys = userDefaultsDic.allKeys
