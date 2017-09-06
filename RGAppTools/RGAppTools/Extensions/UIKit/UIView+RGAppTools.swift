@@ -121,6 +121,16 @@ public class UIViewFrameExtension {
             view.rat_width = newValue
         }
     }
+
+    /// 视图高度
+    public var height: CGFloat {
+        get {
+            return view.rat_height
+        }
+        set {
+            view.rat_height =  newValue
+        }
+    }
 }
 
 extension UIView {
@@ -161,8 +171,7 @@ extension UIView {
         }
     }
 
-    /// 视图高度
-    var rat_height: CGFloat {
+    fileprivate var rat_height: CGFloat {
         get {
             return self.frame.size.height
         }
