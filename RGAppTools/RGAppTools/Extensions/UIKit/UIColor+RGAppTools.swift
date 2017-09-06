@@ -37,9 +37,9 @@ extension RGAppTools where Base: UIColor {
         }
 
         if cString.hasPrefix("0X") {
-            cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 2))
+            cString = String(cString.suffix(from: cString.index(cString.startIndex, offsetBy: 2)))
         } else if cString.hasPrefix("#") {
-            cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 1))
+            cString = String(cString.suffix(from: cString.index(cString.startIndex, offsetBy: 1)))
         }
 
         let scanner = Scanner(string: cString)
