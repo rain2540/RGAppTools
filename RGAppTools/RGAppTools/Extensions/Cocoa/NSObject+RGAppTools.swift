@@ -9,19 +9,10 @@
 import Foundation
 
 extension RGAppTools where Base: NSObject {
-    
-}
-
-//  MARK: Transform to JSON String
-extension NSObject {
-    /**
-     将 Object 转换为 JSON 字符串
-     
-     - returns: 转换得到的 JSON 字符串
-     */
-    public static func rat_objectToJSONString() -> String? {
+    /// Object 对应的 JSON 字符串
+    public var jsonString: String? {
         do {
-            let data = try JSONSerialization.data(withJSONObject: self, options: .prettyPrinted)
+            let data = try JSONSerialization.data(withJSONObject: base, options: .prettyPrinted)
             return String(data: data, encoding: String.Encoding.utf8)
         } catch let error as NSError {
             print("RGAppTools NSObject to JSON string Error:\n", error)
