@@ -17,7 +17,7 @@ extension RGAppTools where Base: UIColor {
     ///   - blue: 蓝色分量的值 (0 ~ 255)
     ///   - alpha: 不透明度的值 (0 ~ 1)
     /// - Returns: 颜色对象
-    public static func color(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) -> UIColor {
+    public static func color(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
 
@@ -27,7 +27,7 @@ extension RGAppTools where Base: UIColor {
     ///   - hexString: 以"#"或"0x"开头, 后面跟随6位(或3位)16进制数字 表示RGB分量值的字符串
     ///   - alpha: 不透明度 (0 ~ 1)
     /// - Returns: 颜色对象
-    public static func color(hexString: String, alpha: CGFloat) -> UIColor {
+    public static func color(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         var red: CGFloat = 0.0, green: CGFloat = 0.0, blue:  CGFloat = 0.0
         var cString = hexString.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
 
