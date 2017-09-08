@@ -224,6 +224,7 @@ extension UIView {
         }
     }
 
+    /// 视图中心纵坐标
     var rat_centerY: CGFloat {
         get {
             return self.center.y
@@ -235,14 +236,43 @@ extension UIView {
         }
     }
 
-    // TODO: /// 视图上边界
+    /// 视图上边界
+    var rat_top: CGFloat {
+        get {
+            return self.rat_y
+        }
+        set {
+            self.rat_y = newValue
+        }
+    }
 
+    /// 视图下边界
+    var rat_bottom: CGFloat {
+        get {
+            return self.rat_y + self.rat_height
+        }
+        set {
+            self.rat_y = newValue - self.rat_height
+        }
+    }
 
-    // TODO: /// 视图下边界
-    
-    
-    // TODO: /// 视图左边界
-    
-    
-    // TODO: /// 视图右边界
+    /// 视图左边界
+    var rat_left: CGFloat {
+        get {
+            return self.rat_x
+        }
+        set {
+            self.rat_x = newValue
+        }
+    }
+
+    /// 视图右边界
+    var rat_right: CGFloat {
+        get {
+            return self.rat_x + self.rat_width
+        }
+        set {
+            self.rat_x = newValue - self.rat_width
+        }
+    }
 }
