@@ -141,6 +141,16 @@ public class UIViewFrameExtension {
             view.rat_size = newValue
         }
     }
+
+    /// 视图中心横坐标
+    public var centerX: CGFloat {
+        get {
+            return view.rat_centerX
+        }
+        set {
+            view.rat_centerX = newValue
+        }
+    }
 }
 
 extension UIView {
@@ -203,8 +213,7 @@ extension UIView {
         }
     }
 
-    /// 视图中心横坐标
-    var rat_centerX: CGFloat {
+    fileprivate var rat_centerX: CGFloat {
         get {
             return self.center.x
         }
