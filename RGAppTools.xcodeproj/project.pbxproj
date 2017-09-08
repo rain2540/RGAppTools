@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B72EC9521F6268600014E460 /* Dictionary+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */; };
 		B73D43201F43CCD50048A97D /* UINavigationBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */; };
 		B73D43221F43CCF60048A97D /* UITabBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */; };
 		B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		B7BDB5D71F39499F003C3F60 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */,
 				B7BDB5D81F39499F003C3F60 /* Double+RGAppTools.swift */,
 				B7BDB5D91F39499F003C3F60 /* Int+RGAppTools.swift */,
 				B7BDB5DA1F3949A0003C3F60 /* String+RGAppTools.swift */,
@@ -300,6 +303,7 @@
 				B7BDB5F91F3949A0003C3F60 /* UserDefaults+RGAppTools.swift in Sources */,
 				B7BDB5F11F3949A0003C3F60 /* Int+RGAppTools.swift in Sources */,
 				B7BDB5F51F3949A0003C3F60 /* DispatchQueue+RGAppTools.swift in Sources */,
+				B72EC9521F6268600014E460 /* Dictionary+RGAppTools.swift in Sources */,
 				B7BDB5FF1F3949A0003C3F60 /* TopLayoutProtocols.swift in Sources */,
 				B7BDB5F01F3949A0003C3F60 /* Double+RGAppTools.swift in Sources */,
 				B7BDB5F61F3949A0003C3F60 /* FileManager+RGAppTools.swift in Sources */,
