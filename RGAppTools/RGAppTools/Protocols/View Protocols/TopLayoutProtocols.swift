@@ -108,7 +108,7 @@ extension TopViewWithTitle where Self: UIViewController {
     }
 
     var titleLabel: UILabel {
-        let titleSize = titleString.rat_size(withFont: titleFont)
+        let titleSize = titleString.rat.size(withFont: titleFont)
         let label = UILabel()
         label.font = titleFont
         label.textColor = titleColor
