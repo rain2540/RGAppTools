@@ -8,29 +8,35 @@
 
 import Foundation
 
-//  MARK: Angle transform
 extension Double {
-    /// 角度转化为弧度
-    public var rat_radian: Double {
-        return (.pi * self) / 180.0
-    }
-
-    /// 弧度转化为角度
-    public var rat_angle: Double {
-        return (180.0 * self) / .pi
+    public var rat: DoubleExtension {
+        return DoubleExtension(double: self)
     }
 }
 
-//  MARK: Formatted Output
-extension Double {
-    /**
-     格式化输出
+public struct DoubleExtension {
+    private var double: Double
+    fileprivate init(double: Double) {
+        self.double = double
+    }
 
-     - parameter fmt: 以字符串形式表示的输出格式
+    //  MARK: Angle transform
+    /// 角度转化为弧度
+    public var radian: Double {
+        return (Double.pi * double) / 180.0
+    }
 
-     - returns: 格式化输出结果
-     */
-    public func rat_format(_ fmt: String) -> String {
-        return String(format: "%\(fmt)f", self)
+    /// 弧度转化为角度
+    public var angle: Double {
+        return (180.0 * double) / Double.pi
+    }
+
+    //  MARK: Formatted Output
+    /// 格式化输出
+    ///
+    /// - Parameter fmt: 以字符串形式表示的输出格式
+    /// - Returns: 格式化输出结果
+    public func format(_ fmt: String) -> String {
+        return String(format: "%\(fmt)f", double)
     }
 }
