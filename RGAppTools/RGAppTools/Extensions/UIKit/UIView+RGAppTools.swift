@@ -171,6 +171,16 @@ public class UIViewFrameExtension {
             view.rat_top = newValue
         }
     }
+
+    /// 视图下边界
+    public var bottom: CGFloat {
+        get {
+            return view.rat_bottom
+        }
+        set {
+            view.rat_bottom = newValue
+        }
+    }
 }
 
 extension UIView {
@@ -263,9 +273,8 @@ extension UIView {
             self.rat_y = newValue
         }
     }
-    
-    /// 视图下边界
-    var rat_bottom: CGFloat {
+
+    fileprivate var rat_bottom: CGFloat {
         get {
             return self.rat_y + self.rat_height
         }
