@@ -8,66 +8,81 @@
 
 import Foundation
 
-//  MARK: Transform
 extension Date {
+    public var rat: DateExtension {
+        return DateExtension(date: self)
+    }
+
+    public static var rat: DateExtension.Type {
+        return DateExtension.self
+    }
+}
+
+public struct DateExtension {
+    private var date: Date
+
+    init(date: Date) {
+        self.date = date
+    }
+
+    //  MARK: Transform
     /// 某个时间对应的时间戳
-    public var rat_timestamp: TimeInterval {
-        return self.timeIntervalSince1970
+    public var timestamp: TimeInterval {
+        return date.timeIntervalSince1970
     }
 
     /// 描述某个时间对应的时间戳的字符串
-    public var rat_timestampString: String {
-        return String(self.rat_timestamp)
+    public var timestampString: String {
+        return String(timestamp)
     }
 
     /// 当前时间对应的时间戳
-    public static var rat_timestampforNow: TimeInterval {
+    public static var timestampforNow: TimeInterval {
         return Date().timeIntervalSince1970
     }
 
     /// 描述实时对应的时间戳的字符串
-    public static var rat_timestampForNowString: String {
-        return String(Date.rat_timestampforNow)
+    public static var timestampForNowString: String {
+        return String(Date.rat.timestampforNow)
     }
-}
 
-extension Date {
+    // MARK: Component
     /// 某时间点对应的 year 值
-    public var rat_year: Int {
-        return self.rat_components(unit: .year)
+    public var year: Int {
+        return components(unit: .year)
     }
 
     /// 某时间点对应的 month 值
-    public var rat_month: Int {
-        return self.rat_components(unit: .month)
+    public var month: Int {
+        return components(unit: .month)
     }
 
     /// 某时间点对应的 day 值
-    public var rat_day: Int {
-        return self.rat_components(unit: .day)
+    public var day: Int {
+        return components(unit: .day)
     }
 
     /// 某时间点对应的 hour 值
-    public var rat_hour: Int {
-        return self.rat_components(unit: .hour)
+    public var hour: Int {
+        return components(unit: .hour)
     }
 
     /// 某时间点对应的 minute 值
-    public var rat_minute: Int {
-        return self.rat_components(unit: .minute)
+    public var minute: Int {
+        return components(unit: .minute)
     }
 
     /// 某时间点对应的 second 值
-    public var rat_second: Int {
-        return self.rat_components(unit: .second)
+    public var second: Int {
+        return components(unit: .second)
     }
-    
+
     /// 依据参数, 给出某时间点对应的时间组件的值
     ///
     /// - Parameter unit: 需要的时间组件
     /// - Returns: 时间组件的值
-    public func rat_components(unit: Calendar.Component) -> Int {
+    public func components(unit: Calendar.Component) -> Int {
         let cal = Calendar.current
-        return cal.component(unit, from: self)
+        return cal.component(unit, from: date)
     }
 }
