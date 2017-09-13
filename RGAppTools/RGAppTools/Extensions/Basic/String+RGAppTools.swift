@@ -72,7 +72,10 @@ extension String {
     /// - Parameter i: 指定位置索引
     /// - Returns: 被移除的字符
     public mutating func rat_remove(at i: Int) -> Character? {
-        guard i < characters.count else { return nil }
+        guard (i < characters.count) && (i >= 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
         return remove(at: index(startIndex, offsetBy: i))
     }
 
