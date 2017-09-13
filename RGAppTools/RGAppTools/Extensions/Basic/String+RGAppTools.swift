@@ -53,6 +53,10 @@ extension String {
     ///   - newElement: 插入的字符
     ///   - i: 指定位置索引
     public mutating func rat_insert(_ newElement: Character, at i: Int) {
+        guard (i <= characters.count) && (i >= 0) else {
+            print("\(#function): index out of range")
+            return
+        }
         insert(newElement, at: index(startIndex, offsetBy: i))
     }
 
