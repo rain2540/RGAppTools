@@ -203,7 +203,11 @@ public struct StringExtension {
     ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
-    public func substring(to index: Int) -> String {
+    public func substring(to index: Int) -> String? {
+        guard (index <= string.count) && (index > 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
         return String(string.prefix(upTo: string.index(string.startIndex, offsetBy: index)))
     }
 
@@ -211,7 +215,11 @@ public struct StringExtension {
     ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
-    public func substring(from index: Int) -> String {
+    public func substring(from index: Int) -> String? {
+        guard (index < string.count) && (index >= 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
         return String(string.suffix(from: string.index(string.startIndex, offsetBy: index)))
     }
 
@@ -219,7 +227,11 @@ public struct StringExtension {
     ///
     /// - Parameter range: 指定的范围
     /// - Returns: 截取到的字符串
-    public func substring(with range: Range<Int>) -> String {
+    public func substring(with range: Range<Int>) -> String? {
+        guard (range.upperBound <= string.count) && (range.lowerBound >= 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
         let start = string.index(string.startIndex, offsetBy: range.lowerBound)
         let length = range.count
         let str = String(string.suffix(from: start))
