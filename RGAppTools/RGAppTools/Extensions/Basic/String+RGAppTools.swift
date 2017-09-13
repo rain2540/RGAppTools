@@ -91,6 +91,10 @@ extension String {
     ///
     /// - Parameter subrange: 指定的范围
     public mutating func rat_remove(subrange: Range<Int>) {
+        guard (subrange.upperBound <= characters.count) && (subrange.lowerBound >= 0) else {
+            print("\(#function): index out of range")
+            return
+        }
         let start = index(startIndex, offsetBy: subrange.lowerBound)
         let end = index(startIndex, offsetBy: subrange.upperBound)
         removeSubrange(start ..< end)
