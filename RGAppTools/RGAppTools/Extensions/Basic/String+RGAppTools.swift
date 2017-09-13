@@ -71,7 +71,8 @@ extension String {
     ///
     /// - Parameter i: 指定位置索引
     /// - Returns: 被移除的字符
-    public mutating func rat_remove(at i: Int) -> Character {
+    public mutating func rat_remove(at i: Int) -> Character? {
+        guard i < characters.count else { return nil }
         return remove(at: index(startIndex, offsetBy: i))
     }
 
