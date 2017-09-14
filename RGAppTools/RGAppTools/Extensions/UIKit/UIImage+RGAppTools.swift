@@ -185,7 +185,7 @@ extension RGAppTools where Base: UIImage {
         // 3.绘图'drawInRect'就是在指定区域内拉伸屏幕
         base.draw(in: rect)
 
-        // 4.绘制内切的圆形
+        // 4.绘制边线
         // 4.1 设置边线颜色
         borderColor.setStroke()
         // 4.2 设置边线宽度
