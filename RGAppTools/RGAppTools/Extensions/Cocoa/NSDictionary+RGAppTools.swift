@@ -13,7 +13,7 @@ extension RGAppTools where Base: NSDictionary {
     ///
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果的布尔值
-    func isHave(key: String) -> Bool {
+    public func isHave(key: String) -> Bool {
        return base.value(forKey: key) != nil
     }
 }
@@ -28,7 +28,7 @@ extension NSDictionary {
      
      - returns: 文件路径
      */
-    convenience init?(mainBundlePathForResource name: String?, ofType ext: String?) {
+    public convenience init?(mainBundlePathForResource name: String?, ofType ext: String?) {
         guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
             print("RGApptools: NSDictionary init with main bundle path for resource of type is nil")
             return nil
