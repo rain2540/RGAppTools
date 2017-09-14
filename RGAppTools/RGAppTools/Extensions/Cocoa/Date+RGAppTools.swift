@@ -21,7 +21,7 @@ extension Date {
 public struct DateExtension {
     private var date: Date
 
-    init(date: Date) {
+    fileprivate init(date: Date) {
         self.date = date
     }
 
