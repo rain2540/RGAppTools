@@ -67,22 +67,19 @@ extension RGAppTools where Base: UIView {
     }
     
     // MARK: Rect
-    /// 视图尺寸
-    var size: CGSize { return base.bounds.size }
-    
     /// 视图横坐标最小值
-    var minX: CGFloat { return base.frame.minX }
+    public var minX: CGFloat { return base.frame.minX }
     /// 视图中心横坐标值
-    var midX: CGFloat { return base.frame.midX }
+    public var midX: CGFloat { return base.frame.midX }
     /// 视图横坐标最大值
-    var maxX: CGFloat { return base.frame.maxX }
+    public var maxX: CGFloat { return base.frame.maxX }
     
     /// 视图纵坐标最小值
-    var minY: CGFloat { return base.frame.minY }
+    public var minY: CGFloat { return base.frame.minY }
     /// 视图中心纵坐标值
-    var midY: CGFloat { return base.frame.midY }
+    public var midY: CGFloat { return base.frame.midY }
     /// 视图纵坐标最大值
-    var maxY: CGFloat { return base.frame.maxY }
+    public var maxY: CGFloat { return base.frame.maxY }
 }
 
 public class UIViewFrameExtension {
