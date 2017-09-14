@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MethodInfo {
+public struct MethodInfo {
     /// 在控制台输出方法信息
     ///
     /// - Parameters:
@@ -16,10 +16,10 @@ struct MethodInfo {
     ///   - file: 文件名
     ///   - method: 方法名
     ///   - line: 代码行数
-    func methodLog<T>(_ message: T,
-                   file:   String = #file,
-                   method: String = #function,
-                   line:   Int    = #line)
+    public func methodLog<T>(_ message: T,
+                          file:   String = #file,
+                          method: String = #function,
+                          line:   Int    = #line)
     {
         print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
     }
