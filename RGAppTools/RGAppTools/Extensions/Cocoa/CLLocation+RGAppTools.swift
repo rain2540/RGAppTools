@@ -15,7 +15,7 @@ extension RGAppTools where Base: CLLocation {
     ///
     /// - Parameter baiduCoordinate: 记录百度坐标经纬度的结构体
     /// - Returns: 记录火星坐标经纬度的结构体
-    static func locationMars(fromBaidu baiduCoordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+    public static func locationMars(fromBaidu baiduCoordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
         let x = baiduCoordinate.longitude - 0.0065;
         let y = baiduCoordinate.latitude - 0.006
         let z = sqrt(x * x + y * y) - 0.00002 * sin(y * TransPI)
@@ -29,7 +29,7 @@ extension RGAppTools where Base: CLLocation {
     ///
     /// - Parameter marsCoordinate: 记录火星坐标经纬度的结构体
     /// - Returns: 记录百度坐标经纬度的结构体
-    static func locationBaidu(fromMars marsCoordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+    public static func locationBaidu(fromMars marsCoordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
         let x = marsCoordinate.longitude
         let y = marsCoordinate.latitude
         let z = sqrt(x * x + y * y) + 0.00002 * sin(y * TransPI)
