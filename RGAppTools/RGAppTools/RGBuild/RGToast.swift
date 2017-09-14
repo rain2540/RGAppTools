@@ -9,8 +9,8 @@
 import UIKit
 
 //  MARK: RGToast
-class RGToast: NSObject {
-    static public let shared = RGToast()
+public class RGToast: NSObject {
+    public static let shared = RGToast()
 
     private var toastContents: Array<[CanBeToast]> = []
     private var active = false
@@ -294,6 +294,6 @@ fileprivate class RGToastView: UIView {
 }
 
 // MARK:
-protocol CanBeToast { }
+fileprivate protocol CanBeToast { }
 extension UIImage: CanBeToast { }
 extension String: CanBeToast { }
