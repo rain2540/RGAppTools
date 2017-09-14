@@ -303,7 +303,7 @@ extension UIView {
         }
     }
 
-    var rat_left: CGFloat {
+    fileprivate var rat_left: CGFloat {
         get {
             return self.rat_x
         }
@@ -312,7 +312,7 @@ extension UIView {
         }
     }
     
-    var rat_right: CGFloat {
+    fileprivate var rat_right: CGFloat {
         get {
             return self.rat_x + self.rat_width
         }
