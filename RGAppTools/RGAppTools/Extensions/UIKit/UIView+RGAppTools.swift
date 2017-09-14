@@ -191,6 +191,16 @@ public class UIViewFrameExtension {
             view.rat_left = newValue
         }
     }
+
+    /// 视图右边界
+    public var right: CGFloat {
+        get {
+            return view.rat_right
+        }
+        set {
+            view.rat_right = newValue
+        }
+    }
 }
 
 extension UIView {
@@ -302,7 +312,6 @@ extension UIView {
         }
     }
     
-    /// 视图右边界
     var rat_right: CGFloat {
         get {
             return self.rat_x + self.rat_width
