@@ -9,7 +9,7 @@
 import UIKit
 
 /// Enum of Device Types
-enum DeviceType {
+public enum DeviceType {
     case unknown,
     //  iPhone
     iPhone_2G,
@@ -79,7 +79,7 @@ extension RGAppTools where Base: UIDevice {
     }
 
     /// 获取设备类型
-    static var deviceType: DeviceType {
+    public static var deviceType: DeviceType {
         var systemInfo = utsname()
         uname(&systemInfo)
         let machineMirror = Mirror(reflecting: systemInfo.machine)
