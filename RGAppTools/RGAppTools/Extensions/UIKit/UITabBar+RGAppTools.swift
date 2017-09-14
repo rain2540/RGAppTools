@@ -12,14 +12,14 @@ extension RGAppTools where Base: UITabBar {
     /// 修改 Tab Bar 的背景颜色
     ///
     /// - Parameter color: 提供给 Tab Bar 的背景的 tint color
-    static func barTintColor(_ color: UIColor) {
+    public static func barTintColor(_ color: UIColor) {
         UITabBar.appearance().barTintColor = color
     }
 
     /// 修改 Tab Bar item 的 tint color
     ///
     /// - Parameter color: 提供给 Tab Bar item 的 tint color
-    static func tintColor(_ color: UIColor) {
+    public static func tintColor(_ color: UIColor) {
         UITabBar.appearance().tintColor = color
     }
 }
