@@ -8,26 +8,6 @@
 
 import UIKit
 
-infix operator >
-func > (_ lh: String, _ rh: String) -> Bool {
-    return lh.compare(rh, options: .numeric) == .orderedDescending
-}
-
-infix operator >=
-func >= (_ lh: String, _ rh: String) -> Bool {
-    return lh.compare(rh, options: .numeric) != .orderedAscending
-}
-
-infix operator <
-func < (_ lh: String, _ rh: String) -> Bool {
-    return lh.compare(rh, options: .numeric) == .orderedAscending
-}
-
-infix operator <=
-func <= (_ lh: String, _ rh: String) -> Bool {
-    return lh.compare(rh, options: .numeric) != .orderedDescending
-}
-
 extension String {
     public var rat: StringExtension {
         return StringExtension(string: self)
