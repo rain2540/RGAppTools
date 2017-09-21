@@ -39,3 +39,6 @@ public let TextFieldDefaultHeight: CGFloat = 30.0
 
 /// TableViewCell 默认高度
 public let TableViewCellDefaultHeight: CGFloat = 44.0
+
+/// Home Indicator 所在区域高度
+public let HomeIndicatorAreaHeight: CGFloat = 34.0
