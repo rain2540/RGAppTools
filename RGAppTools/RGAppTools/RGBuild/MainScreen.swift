@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct MainScreen {
+public struct MainScreen {
 
     /// width of main screen
     public static var width: CGFloat { return self.size.width }

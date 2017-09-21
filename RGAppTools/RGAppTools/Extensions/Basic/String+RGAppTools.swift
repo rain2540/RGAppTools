@@ -24,7 +24,7 @@ extension String {
 
     /// 获取指定范围字符串
     public subscript(subRange: Range<Int>) -> String {
-        return self[characters.index(startIndex, offsetBy: subRange.lowerBound) ..< characters.index(startIndex, offsetBy: subRange.upperBound)]
+        return String(self[index(startIndex, offsetBy: subRange.lowerBound) ..< index(startIndex, offsetBy: subRange.upperBound)])
     }
 
     /// 在字符串指定位置插入一个字符
@@ -33,6 +33,10 @@ extension String {
     ///   - newElement: 插入的字符
     ///   - i: 指定位置索引
     public mutating func rat_insert(_ newElement: Character, at i: Int) {
+        guard (i <= characters.count) && (i >= 0) else {
+            print("\(#function): index out of range")
+            return
+        }
         insert(newElement, at: index(startIndex, offsetBy: i))
     }
 
@@ -42,6 +46,10 @@ extension String {
     ///   - subrange: 指定范围
     ///   - newValues: 用于替换的字符串
     public mutating func rat_replace(subrange: Range<Int>, with newValues: String) {
+        guard (subrange.upperBound <= characters.count) && (subrange.lowerBound >= 0) else {
+            print("\(#function): index out of range")
+            return
+        }
         let start = index(startIndex, offsetBy: subrange.lowerBound)
         let end = index(startIndex, offsetBy: subrange.upperBound)
         replaceSubrange(start ..< end, with: newValues)
@@ -51,7 +59,11 @@ extension String {
     ///
     /// - Parameter i: 指定位置索引
     /// - Returns: 被移除的字符
-    public mutating func rat_remove(at i: Int) -> Character {
+    public mutating func rat_remove(at i: Int) -> Character? {
+        guard (i < characters.count) && (i >= 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
         return remove(at: index(startIndex, offsetBy: i))
     }
 
@@ -59,6 +71,10 @@ extension String {
     ///
     /// - Parameter subrange: 指定的范围
     public mutating func rat_remove(subrange: Range<Int>) {
+        guard (subrange.upperBound <= characters.count) && (subrange.lowerBound >= 0) else {
+            print("\(#function): index out of range")
+            return
+        }
         let start = index(startIndex, offsetBy: subrange.lowerBound)
         let end = index(startIndex, offsetBy: subrange.upperBound)
         removeSubrange(start ..< end)
@@ -97,15 +113,15 @@ public struct StringExtension {
     /// - Parameter font: 要应用于字符串的字体
     /// - Returns: 按照给定字体绘制时, 字符串所占有的边界大小
     public func size(withFont font: UIFont) -> CGSize {
-        return (string as NSString).size(attributes: [NSFontAttributeName: font])
+        return (string as NSString).size(withAttributes: [NSAttributedStringKey.font: font])
     }
 
     /// 返回按照给定属性绘制时, 字符串所占有的边界大小
     ///
     /// - Parameter attrs: 要应用于字符串的文本属性的字典
     /// - Returns: 按照给定属性绘制时, 字符串所占有的边界大小
-    public func size(attributes attrs: [String: Any]? = nil) -> CGSize {
-        return (string as NSString).size(attributes: attrs)
+    public func size(attributes attrs: [NSAttributedStringKey: Any]? = nil) -> CGSize {
+        return (string as NSString).size(withAttributes: attrs)
     }
 
     //  MARK: Trans
@@ -160,32 +176,45 @@ public struct StringExtension {
     // MARK: Basic
     /// 字符串长度
     public var length: Int {
-        return string.characters.distance(from: string.startIndex, to: string.endIndex)
+        return string.distance(from: string.startIndex, to: string.endIndex)
     }
 
     /// 截取字符串(从首个字符到指定位置, 不包含指定位置的字符)
     ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
-    public func substring(to index: Int) -> String {
-        return string.substring(to: string.characters.index(string.startIndex, offsetBy: index))
+    public func substring(to index: Int) -> String? {
+        guard (index <= string.count) && (index > 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
+        return String(string.prefix(upTo: string.index(string.startIndex, offsetBy: index)))
     }
 
     /// 截取字符串(从制定位置到最后一个字符, 包含指定位置的字符)
     ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
-    public func substring(from index: Int) -> String {
-        return string.substring(from: string.characters.index(string.startIndex, offsetBy: index))
+    public func substring(from index: Int) -> String? {
+        guard (index < string.count) && (index >= 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
+        return String(string.suffix(from: string.index(string.startIndex, offsetBy: index)))
     }
 
     /// 截取字符串(指定范围)
     ///
     /// - Parameter range: 指定的范围
     /// - Returns: 截取到的字符串
-    public func substring(with range: Range<Int>) -> String {
-        let start = string.characters.index(string.startIndex, offsetBy: range.lowerBound)
-        let end = string.characters.index(string.startIndex, offsetBy: range.upperBound)
-        return string.substring(with: start ..< end)
+    public func substring(with range: Range<Int>) -> String? {
+        guard (range.upperBound <= string.count) && (range.lowerBound >= 0) else {
+            print("\(#function): index out of range")
+            return nil
+        }
+        let start = string.index(string.startIndex, offsetBy: range.lowerBound)
+        let length = range.count
+        let str = String(string.suffix(from: start))
+        return String(str.prefix(length))
     }
 }

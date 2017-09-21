@@ -54,7 +54,7 @@ extension RGAppTools where Base: FileManager {
                 for (key, value) in fileAttributes {
                     if key == FileAttributeKey.size {
                         // 取出文件大小进行累加
-                        size += Int(value as! NSNumber)
+                        size += Int(truncating: value as! NSNumber)
                     }
                 }
             } catch let error as NSError {
