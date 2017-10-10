@@ -24,7 +24,30 @@ extension String {
 
     /// 获取指定范围字符串
     public subscript(subRange: Range<Int>) -> String {
-        return String(self[index(startIndex, offsetBy: subRange.lowerBound) ..< index(startIndex, offsetBy: subRange.upperBound)])
+        guard let startIndex = validStartIndex(original: subRange.lowerBound),
+            let endIndex = validEndIndex(original: subRange.upperBound),
+            startIndex < endIndex else {
+                return ""
+        }
+        return String(self[startIndex ..< endIndex])
+    }
+
+    private func validIndex(original: Int) -> String.Index {
+        switch original {
+        case ...startIndex.encodedOffset : return startIndex
+        case endIndex.encodedOffset...   : return endIndex
+        default                          : return index(startIndex, offsetBy: original)
+        }
+    }
+
+    private func validStartIndex(original: Int) -> String.Index? {
+        guard original <= endIndex.encodedOffset else { return nil }
+        return validIndex(original: original)
+    }
+
+    private func validEndIndex(original: Int) -> String.Index? {
+        guard original >= startIndex.encodedOffset else { return nil }
+        return validIndex(original: original)
     }
 
     /// 在字符串指定位置插入一个字符
