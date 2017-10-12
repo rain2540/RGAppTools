@@ -18,8 +18,10 @@ extension String {
     }
 
     /// 获取指定位置字符
-    public subscript(index: Int) -> Character {
-        return self[characters.index(startIndex, offsetBy: index)]
+    public subscript(original: Int) -> String {
+        guard original <= endIndex.encodedOffset else { return "" }
+        guard original >= startIndex.encodedOffset else { return "" }
+        return String(self[index(startIndex, offsetBy: original)])
     }
 
     /// 获取指定范围字符串
