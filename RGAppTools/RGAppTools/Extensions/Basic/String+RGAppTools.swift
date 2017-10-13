@@ -55,7 +55,7 @@ extension String {
     ///
     /// - Parameter original: 待检验的索引值
     /// - Returns: 经过检验的有效索引值或 nil
-    private func validStartIndex(original: Int) -> String.Index? {
+    fileprivate func validStartIndex(original: Int) -> String.Index? {
         guard original <= endIndex.encodedOffset else { return nil }
         return validIndex(original: original)
     }
@@ -64,7 +64,7 @@ extension String {
     ///
     /// - Parameter original: 待检验的索引值
     /// - Returns: 经过检验的有效索引值或 nil
-    private func validEndIndex(original: Int) -> String.Index? {
+    fileprivate func validEndIndex(original: Int) -> String.Index? {
         guard original >= startIndex.encodedOffset else { return nil }
         return validIndex(original: original)
     }
@@ -249,14 +249,16 @@ public struct StringExtension {
     ///
     /// - Parameter range: 指定的范围
     /// - Returns: 截取到的字符串
-    public func substring(with range: Range<Int>) -> String? {
-        guard (range.upperBound <= string.count) && (range.lowerBound >= 0) else {
-            print("\(#function): index out of range")
-            return nil
+    public func substring(with range: Range<Int>) -> String {
+        guard let startIndex = string.validStartIndex(original: range.lowerBound),
+            let endIndex = string.validEndIndex(original: range.upperBound),
+            startIndex < endIndex else {
+                print("\(#function): index out of range")
+                return ""
         }
-        let start = string.index(string.startIndex, offsetBy: range.lowerBound)
-        let length = range.count
+        let start = string.index(string.startIndex, offsetBy: startIndex.encodedOffset)
+        let validLength = endIndex.encodedOffset - startIndex.encodedOffset
         let str = String(string.suffix(from: start))
-        return String(str.prefix(length))
+        return String(str.prefix(validLength))
     }
 }
