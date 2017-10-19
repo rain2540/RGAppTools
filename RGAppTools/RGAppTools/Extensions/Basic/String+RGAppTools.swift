@@ -233,6 +233,10 @@ public struct StringExtension {
         return String(string.prefix(upTo: string.index(string.startIndex, offsetBy: index)))
     }
 
+    /// 截取字符串(从首个字符到指定位置, 包含指定位置的字符)
+    ///
+    /// - Parameter index: 指定位置索引
+    /// - Returns: 截取到的字符串
     public func substring(through index: Int) -> String? {
         guard (index < string.count) && (index >= 0) else {
             print("\(#function): index out of range")
@@ -252,7 +256,7 @@ public struct StringExtension {
         }
         return String(string.suffix(from: string.index(string.startIndex, offsetBy: index)))
     }
-
+    
     /// 截取字符串(指定范围)
     ///
     /// - Parameter range: 指定的范围
