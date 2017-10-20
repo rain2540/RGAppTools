@@ -8,6 +8,10 @@
 
 import UIKit
 
+public var is_iPhoneX: Bool {
+    return (UIScreen.main.bounds.height == 812.0 && UIScreen.main.bounds.width == 375.0)
+}
+
 /// Status Bar 默认高度
 public let StatusBarDefaultHeight: CGFloat = 20.0
 
