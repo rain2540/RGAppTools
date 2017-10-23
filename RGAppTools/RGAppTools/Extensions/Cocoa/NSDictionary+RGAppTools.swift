@@ -3,7 +3,7 @@
 //  RGAppTools
 //
 //  Created by RAIN on 16/2/5.
-//  Copyright © 2016年 Smartech. All rights reserved.
+//  Copyright © 2016-2017 Smartech. All rights reserved.
 //
 
 import Foundation
