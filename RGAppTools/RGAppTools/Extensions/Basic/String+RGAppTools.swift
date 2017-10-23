@@ -3,7 +3,7 @@
 //  RGAppTools
 //
 //  Created by RAIN on 16/2/2.
-//  Copyright © 2016年 Smartech. All rights reserved.
+//  Copyright © 2016-2017 Smartech. All rights reserved.
 //
 
 import UIKit
@@ -19,8 +19,14 @@ extension String {
 
     /// 获取指定位置字符
     public subscript(original: Int) -> String {
-        guard original <= endIndex.encodedOffset else { return "" }
-        guard original >= startIndex.encodedOffset else { return "" }
+        guard original < endIndex.encodedOffset else {
+            print("\(#function): original out of end index")
+            return ""
+        }
+        guard original >= startIndex.encodedOffset else {
+            print("\(#function): original out of start index")
+            return ""
+        }
         return String(self[index(startIndex, offsetBy: original)])
     }
 
@@ -29,6 +35,7 @@ extension String {
         guard let startIndex = rat_validStartIndex(original: subRange.lowerBound),
             let endIndex = rat_validEndIndex(original: subRange.upperBound),
             startIndex < endIndex else {
+                print("\(#function): index out of range")
                 return ""
         }
         return String(self[startIndex ..< endIndex])
