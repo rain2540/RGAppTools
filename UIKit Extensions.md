@@ -1,6 +1,6 @@
 # Extensions of UIKit <a href="#中文介绍">中文介绍</a>
 
-RGUIExtension is a group of class extension for iOS UI.
+This part is a group of class extensions for UIKit.
 
 Until now, the project includes the following:
 
@@ -22,7 +22,7 @@ RGUIExtension is provided under the MIT license. See LICENSE file for details.
 ---
 中文介绍
 ================
-RGUIExtension 是一组关于 iOS UI 的类扩展。
+这个部分是一组关于 UIKit 的类扩展。
 
 目前该项目中包括如下内容：
 
