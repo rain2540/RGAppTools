@@ -256,10 +256,10 @@ public struct StringExtension {
     ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
-    public func substring(from index: Int) -> String? {
+    public func substring(from index: Int) -> String {
         guard (index < string.count) && (index >= 0) else {
             print("\(#function): index out of range")
-            return nil
+            return ""
         }
         return String(string.suffix(from: string.index(string.startIndex, offsetBy: index)))
     }
