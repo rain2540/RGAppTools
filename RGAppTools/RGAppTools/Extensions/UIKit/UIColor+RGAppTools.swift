@@ -49,7 +49,7 @@ extension RGAppTools where Base: UIColor {
             return UIColor(red: 0.0, green: 1.0, blue: 0.0, alpha: 1.0)
         }
 
-        switch (cString.characters.count) {
+        switch (cString.count) {
         case 3:
             red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
             green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0
