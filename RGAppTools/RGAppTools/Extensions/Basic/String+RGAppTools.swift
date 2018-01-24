@@ -120,7 +120,7 @@ extension String {
     ///
     /// - Parameter subrange: 指定的范围
     public mutating func rat_remove(subrange: Range<Int>) {
-        guard (subrange.upperBound <= characters.count) && (subrange.lowerBound >= 0) else {
+        guard (subrange.upperBound <= self.count) && (subrange.lowerBound >= 0) else {
             print("\(#function): index out of range")
             return
         }
