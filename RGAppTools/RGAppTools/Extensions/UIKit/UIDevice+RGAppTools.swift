@@ -27,13 +27,15 @@ public enum DeviceType {
     iPhone_SE,
     iPhone_7,
     iPhone_7_Plus,
+    iPhone_8,
+    iPhone_8_Plus,
+    iPhone_X,
     //  iPod Touch
     iPod_Touch_1,
     iPod_Touch_2,
     iPod_Touch_3,
     iPod_Touch_4,
     iPod_Touch_5,
-    iPod_Touch_6,
     //  iPad
     iPad_1,
     iPad_2,
@@ -45,7 +47,8 @@ public enum DeviceType {
     iPad_Air_2,
     iPad_Mini_3,
     iPad_Mini_4,
-    iPad_Pro,
+    iPad_Pro_97,
+    iPad_Pro_129,
     //  Apple TV
     Apple_TV,
     //  Simulator
@@ -88,13 +91,25 @@ extension RGAppTools where Base: UIDevice {
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
         switch identifier {
+        case "iPod1,1":
+            print("iPod Touch 1G")
+            return .iPod_Touch_1
+            
+        case "iPod2,1":
+            print("iPod Touch 2G")
+            return .iPod_Touch_2
+            
+        case "iPod3,1":
+            print("iPod Touch 3G")
+            return .iPod_Touch_3
+            
+        case "iPod4,1":
+            print("iPod Touch 4G")
+            return .iPod_Touch_4
+            
         case "iPod5,1":
-            print("iPod Touch 5")
+            print("iPod Touch (5 Gen)")
             return .iPod_Touch_5
-
-        case "iPod7,1":
-            print("iPod Touch 6")
-            return .iPod_Touch_6
 
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":
             print("iPhone 4")
@@ -136,17 +151,33 @@ extension RGAppTools where Base: UIDevice {
             print("iPhone SE")
             return .iPhone_SE
 
-        case "iPhone9,1":
+        case "iPhone9,1", "iPhone9,3":
             print("iPhone 7")
             return .iPhone_7
 
-        case "iPhone9,2":
+        case "iPhone9,2", "iPhone9,4":
             print("iPhone 7 Plus")
             return .iPhone_7_Plus
+            
+        case "iPhone10,1", "iPhone10,4":
+            print("iPhone 8")
+            return .iPhone_8
+            
+        case "iPhone10,2", "iPhone10,5":
+            print("iPhone 8 Pllus")
+            return .iPhone_8_Plus
+            
+        case "iPhone10,3", "iPhone10,6":
+            print("iPhone X")
+            return .iPhone_X
 
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
             print("iPad 2")
             return .iPad_2
+            
+        case "iPad2,5", "iPad2,6", "iPad2,7":
+            print("iPad Mini")
+            return .iPad_Mini
 
         case "iPad3,1", "iPad3,2", "iPad3,3":
             print("iPad 3")
@@ -159,30 +190,30 @@ extension RGAppTools where Base: UIDevice {
         case "iPad4,1", "iPad4,2", "iPad4,3":
             print("iPad Air")
             return .iPad_Air
-
-        case "iPad5,3", "iPad5,4":
-            print("iPad Air 2")
-            return .iPad_Air_2
-
-        case "iPad2,5", "iPad2,6", "iPad2,7":
-            print("iPad Mini")
-            return .iPad_Mini
-
+            
         case "iPad4,4", "iPad4,5", "iPad4,6":
             print("iPad Mini 2")
             return .iPad_Mini_2
-
+            
         case "iPad4,7", "iPad4,8", "iPad4,9":
             print("iPad Mini 3")
             return .iPad_Mini_3
-
+            
         case "iPad5,1", "iPad5,2":
             print("iPad Mini 4")
             return .iPad_Mini_4
 
+        case "iPad5,3", "iPad5,4":
+            print("iPad Air 2")
+            return .iPad_Air_2
+            
+        case "iPad6,3", "iPad6,4":
+            print("iPad Pro 9.7")
+            return .iPad_Pro_97
+
         case "iPad6,7", "iPad6,8":
-            print("iPad Pro")
-            return .iPad_Pro
+            print("iPad Pro 12.9")
+            return .iPad_Pro_129
 
         case "AppleTV5,3":
             print("Apple TV")
