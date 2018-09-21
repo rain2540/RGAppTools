@@ -111,6 +111,10 @@ extension RGAppTools where Base: UIDevice {
             print("iPod Touch (5 Gen)")
             return .iPod_Touch_5
 
+        case "iPhone2,1":
+            print("iPhone 3GS")
+            return .iPhone_3GS
+
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":
             print("iPhone 4")
             return .iPhone_4
