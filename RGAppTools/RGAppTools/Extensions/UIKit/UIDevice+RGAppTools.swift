@@ -65,6 +65,23 @@ extension RGAppTools where Base: UIDevice {
         dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
         return dateFormatter.string(from: deviceTime)
     }
+    
+    public static var isIPhoneXSeries: Bool {
+        var iPhoneXSeries = false
+        if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
+            return iPhoneXSeries
+        }
+        
+        if #available(iOS 11.0, *)  {
+            if let bottom = UIApplication.shared.delegate?.window??.safeAreaInsets.bottom {
+                if bottom > CGFloat(0.0) {
+                    iPhoneXSeries = true
+                }
+            }
+        }
+        
+        return iPhoneXSeries
+    }
 
     /// 打印当前设备信息
     public static func printDeviceInformations() {
