@@ -66,6 +66,7 @@ extension RGAppTools where Base: UIDevice {
         return dateFormatter.string(from: deviceTime)
     }
     
+    /// 判断是否为 iPhone X 系列
     public static var isIPhoneXSeries: Bool {
         var iPhoneXSeries = false
         if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
