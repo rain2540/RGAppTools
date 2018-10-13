@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(*, deprecated, message: "Extensions directly on is_iPhoneX in UIConstant is deprecated. Use `UIDevice.rat.isIPhoneXSeries` instead.", renamed: "UIDevice.rat.isIPhoneXSeries")
 public var is_iPhoneX: Bool {
     return (UIScreen.main.bounds.height == 812.0 && UIScreen.main.bounds.width == 375.0)
 }
