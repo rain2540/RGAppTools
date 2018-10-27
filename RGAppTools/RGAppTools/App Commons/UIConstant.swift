@@ -14,7 +14,7 @@ public var is_iPhoneX: Bool {
 }
 
 /// Status Bar 默认高度
-public let StatusBarDefaultHeight: CGFloat = is_iPhoneX ? 44.0 : 20.0
+public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeries ? 44.0 : 20.0
 
 /// Navigation Bar 默认高度
 public let NavigationBarDefaultHeight: CGFloat = 44.0
