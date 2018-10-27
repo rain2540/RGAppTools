@@ -27,6 +27,6 @@ extension RGAppTools where Base: UINavigationBar {
     ///
     /// - Parameter color: 提供给 Navigation Bar 上文字的颜色
     public static func titleTextColor(_ color: UIColor) {
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: color]
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: color]
     }
 }
