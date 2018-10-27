@@ -162,14 +162,14 @@ public struct StringExtension {
     /// - Parameter font: 要应用于字符串的字体
     /// - Returns: 按照给定字体绘制时, 字符串所占有的边界大小
     public func size(withFont font: UIFont) -> CGSize {
-        return (string as NSString).size(withAttributes: [NSAttributedStringKey.font: font])
+        return (string as NSString).size(withAttributes: [NSAttributedString.Key.font: font])
     }
 
     /// 返回按照给定属性绘制时, 字符串所占有的边界大小
     ///
     /// - Parameter attrs: 要应用于字符串的文本属性的字典
     /// - Returns: 按照给定属性绘制时, 字符串所占有的边界大小
-    public func size(attributes attrs: [NSAttributedStringKey: Any]? = nil) -> CGSize {
+    public func size(attributes attrs: [NSAttributedString.Key: Any]? = nil) -> CGSize {
         return (string as NSString).size(withAttributes: attrs)
     }
 
