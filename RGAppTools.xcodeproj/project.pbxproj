@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B707C40521892FC4008D2058 /* UIScrollView+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707C40421892FC4008D2058 /* UIScrollView+RGAppTools.swift */; };
 		B72EC9521F6268600014E460 /* Dictionary+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */; };
 		B73D43201F43CCD50048A97D /* UINavigationBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */; };
 		B73D43221F43CCF60048A97D /* UITabBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B707C40421892FC4008D2058 /* UIScrollView+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+RGAppTools.swift"; sourceTree = "<group>"; };
 		B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				B7BDB5E71F3949A0003C3F60 /* UIDevice+RGAppTools.swift */,
 				B7BDB5E81F3949A0003C3F60 /* UIImage+RGAppTools.swift */,
 				B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */,
+				B707C40421892FC4008D2058 /* UIScrollView+RGAppTools.swift */,
 				B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */,
 				B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */,
 				B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */,
@@ -310,6 +313,7 @@
 				B784E6731F46DB6700D702AF /* CLLocation+RGAppTools.swift in Sources */,
 				B7BDB5EE1F3949A0003C3F60 /* AppSingleton.swift in Sources */,
 				B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */,
+				B707C40521892FC4008D2058 /* UIScrollView+RGAppTools.swift in Sources */,
 				B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */,
 				B7BDB6001F3949A0003C3F60 /* RGAppTools.swift in Sources */,
 				B7BDB5F81F3949A0003C3F60 /* NSObject+RGAppTools.swift in Sources */,
