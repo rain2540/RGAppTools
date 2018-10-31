@@ -20,6 +20,16 @@ extension RGAppTools where Base: UIScrollView {
             }
         }
     }
+
+    public func registerNibHeaderFooter(with viewClass: AnyClass) {
+        if let nibName = anyClassToString(viewClass) {
+            let nib = UINib(nibName: nibName, bundle: nil)
+
+            if let tableView = base as? UITableView {
+                tableView.register(nib, forHeaderFooterViewReuseIdentifier: nibName)
+            }
+        }
+    }
     
     /// 描述类名的字符串
     ///
