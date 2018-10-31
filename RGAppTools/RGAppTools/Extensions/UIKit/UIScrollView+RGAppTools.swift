@@ -21,6 +21,10 @@ extension RGAppTools where Base: UIScrollView {
         }
     }
     
+    /// 描述类名的字符串
+    ///
+    /// - Parameter className: 要转换成字符串的类
+    /// - Returns: 转换后的字符串
     private func anyClassToString(_ className: AnyClass) -> String? {
         let desc = className.description()
         guard desc.contains(".") else {
