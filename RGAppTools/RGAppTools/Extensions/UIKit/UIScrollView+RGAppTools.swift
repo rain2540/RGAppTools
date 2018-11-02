@@ -24,6 +24,9 @@ extension RGAppTools where Base: UIScrollView {
         }
     }
 
+    /// 注册 Table View 的 Header / Footer
+    ///
+    /// - Parameter viewClass: Header / Footer 类
     public func registerNibHeaderFooter(with viewClass: AnyClass) {
         if let nibName = anyClassToString(viewClass) {
             let nib = UINib(nibName: nibName, bundle: nil)
