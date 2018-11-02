@@ -9,6 +9,9 @@
 import UIKit
 
 extension RGAppTools where Base: UIScrollView {
+    /// 注册 Table View / Collection View 的 Cell
+    ///
+    /// - Parameter cellClass: Cell 类
     public func registerNibCell(with cellClass: AnyClass) {
         if let nibName = anyClassToString(cellClass) {
             let cellNib = UINib(nibName: nibName, bundle: nil)
