@@ -36,6 +36,23 @@ extension RGAppTools where Base: UIScrollView {
             }
         }
     }
+
+    public func dequeueReusableCell(with cellClass: AnyClass, indexPath: IndexPath? = nil) -> Any? {
+        if let nibName = string(from: cellClass)  {
+            if let tableView = base as? UITableView {
+                guard let `indexPath` = indexPath else {
+                    return tableView.dequeueReusableCell(withIdentifier: nibName)
+                }
+                return tableView.dequeueReusableCell(withIdentifier: nibName, for: `indexPath`)
+            } else if let collectionView = base as? UICollectionView {
+                guard let `indexPath` = indexPath else {
+                    return UICollectionView()
+                }
+                return collectionView.dequeueReusableCell(withReuseIdentifier: nibName, for: `indexPath`)
+            }
+        }
+        return nil
+    }
     
     /// 描述类名的字符串
     ///
