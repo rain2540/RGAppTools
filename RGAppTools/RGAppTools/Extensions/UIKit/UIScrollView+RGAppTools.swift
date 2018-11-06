@@ -13,7 +13,7 @@ extension RGAppTools where Base: UIScrollView {
     ///
     /// - Parameter cellClass: Cell 类
     public func registerNibCell(with cellClass: AnyClass) {
-        if let nibName = anyClassToString(cellClass) {
+        if let nibName = string(from: cellClass) {
             let cellNib = UINib(nibName: nibName, bundle: nil)
 
             if let tableView = base as? UITableView {
@@ -28,7 +28,7 @@ extension RGAppTools where Base: UIScrollView {
     ///
     /// - Parameter viewClass: Header / Footer 类
     public func registerNibHeaderFooter(with viewClass: AnyClass) {
-        if let nibName = anyClassToString(viewClass) {
+        if let nibName = string(from: viewClass) {
             let nib = UINib(nibName: nibName, bundle: nil)
 
             if let tableView = base as? UITableView {
@@ -41,7 +41,7 @@ extension RGAppTools where Base: UIScrollView {
     ///
     /// - Parameter className: 要转换成字符串的类
     /// - Returns: 转换后的字符串
-    private func anyClassToString(_ className: AnyClass) -> String? {
+    private func string(from className: AnyClass) -> String? {
         let desc = className.description()
         guard desc.contains(".") else {
             return desc
