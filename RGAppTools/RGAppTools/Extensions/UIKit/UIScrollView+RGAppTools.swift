@@ -59,7 +59,13 @@ extension RGAppTools where Base: UIScrollView {
         }
         return nil
     }
-    
+
+    public func dequeueReusableHeaderFooterView(with viewClass: AnyClass) -> Any? {
+        guard let nibName = string(from: viewClass) else { return nil }
+        guard let tableView = base as? UITableView else { return nil }
+        return tableView.dequeueReusableHeaderFooterView(withIdentifier: nibName)
+    }
+
     /// 描述类名的字符串
     ///
     /// - Parameter className: 要转换成字符串的类
