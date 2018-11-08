@@ -60,6 +60,10 @@ extension RGAppTools where Base: UIScrollView {
         return nil
     }
 
+    /// 为 Table View 分配可重用的 Header / Footer View
+    ///
+    /// - Parameter viewClass: Header / Footer 类
+    /// - Returns: 分配的 Header / Footer View
     public func dequeueReusableHeaderFooterView(with viewClass: AnyClass) -> Any? {
         guard let nibName = string(from: viewClass) else { return nil }
         guard let tableView = base as? UITableView else { return nil }
