@@ -65,6 +65,7 @@ extension TopView where Self: UIViewController {
         return view
     }
 
+    /// 构建顶部视图
     func buildTopView() {
         view.addSubview(topView)
         view.addSubview(statusView)
