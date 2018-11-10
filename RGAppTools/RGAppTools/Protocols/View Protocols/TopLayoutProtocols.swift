@@ -47,7 +47,8 @@ extension TopView where Self: UIViewController {
         view.backgroundColor = statusColor
         return view
     }
-    
+
+    /// 导航栏颜色
     var naviColor: UIColor {
         get {
             return UIColor.clear
@@ -65,6 +66,7 @@ extension TopView where Self: UIViewController {
         return view
     }
 
+    /// 构建顶部视图
     func buildTopView() {
         view.addSubview(topView)
         view.addSubview(statusView)
