@@ -41,6 +41,7 @@ extension TopView where Self: UIViewController {
         }
     }
 
+    /// 状态栏
     var statusView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 0.0, y: 0.0, width: MainScreen.width, height: 20.0)
