@@ -58,6 +58,7 @@ extension TopView where Self: UIViewController {
         }
     }
 
+    /// 导航栏
     var naviView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 0.0, y: 20.0, width: MainScreen.width, height: 44.0)
