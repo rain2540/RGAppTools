@@ -31,6 +31,7 @@ extension TopView where Self: UIViewController {
         return view
     }
 
+    /// 状态栏颜色
     var statusColor: UIColor {
         get {
             return UIColor.clear
@@ -41,6 +42,7 @@ extension TopView where Self: UIViewController {
         }
     }
 
+    /// 状态栏
     var statusView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 0.0, y: 0.0, width: MainScreen.width, height: 20.0)
@@ -58,6 +60,7 @@ extension TopView where Self: UIViewController {
         }
     }
 
+    /// 导航栏
     var naviView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 0.0, y: 20.0, width: MainScreen.width, height: 44.0)
