@@ -31,6 +31,7 @@ extension TopView where Self: UIViewController {
         return view
     }
 
+    /// 状态栏颜色
     var statusColor: UIColor {
         get {
             return UIColor.clear
