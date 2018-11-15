@@ -125,6 +125,7 @@ extension TopViewWithTitle where Self: UIViewController {
         return label
     }
 
+    /// 添加页面标题
     func addTitle() {
         self.view.addSubview(titleLabel)
     }
