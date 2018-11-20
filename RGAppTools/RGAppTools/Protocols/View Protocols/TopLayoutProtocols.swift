@@ -103,6 +103,7 @@ extension TopViewWithTitle where Self: UIViewController {
         }
     }
 
+    /// 标题文字颜色
     var titleColor: UIColor {
         get {
             return UIColor.black
