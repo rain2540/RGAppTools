@@ -94,6 +94,7 @@ extension TopViewWithTitle where Self: UIViewController {
         }
     }
 
+    /// 标题字体
     var titleFont: UIFont {
         get {
             return UIFont.systemFont(ofSize: 12.0)
