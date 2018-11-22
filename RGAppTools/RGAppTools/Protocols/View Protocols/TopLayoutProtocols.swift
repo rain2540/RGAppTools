@@ -85,6 +85,7 @@ protocol TopViewWithTitle: TopView {
 }
 
 extension TopViewWithTitle where Self: UIViewController {
+    /// 标题内容
     var titleString: String {
         get {
             return ""
