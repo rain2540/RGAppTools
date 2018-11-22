@@ -24,6 +24,7 @@ extension TopView where Self: UIViewController {
         }
     }
 
+    /// 页面顶部视图
     var topView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 0.0, y: 0.0, width: MainScreen.width, height: 64.0)
@@ -85,6 +86,7 @@ protocol TopViewWithTitle: TopView {
 }
 
 extension TopViewWithTitle where Self: UIViewController {
+    /// 标题内容
     var titleString: String {
         get {
             return ""
@@ -94,6 +96,7 @@ extension TopViewWithTitle where Self: UIViewController {
         }
     }
 
+    /// 标题字体
     var titleFont: UIFont {
         get {
             return UIFont.systemFont(ofSize: 12.0)
@@ -103,6 +106,7 @@ extension TopViewWithTitle where Self: UIViewController {
         }
     }
 
+    /// 标题文字颜色
     var titleColor: UIColor {
         get {
             return UIColor.black
@@ -112,6 +116,7 @@ extension TopViewWithTitle where Self: UIViewController {
         }
     }
 
+    /// 显示页面标题的 Label
     var titleLabel: UILabel {
         let titleSize = titleString.rat.size(withFont: titleFont)
         let label = UILabel()
@@ -125,6 +130,7 @@ extension TopViewWithTitle where Self: UIViewController {
         return label
     }
 
+    /// 添加页面标题
     func addTitle() {
         self.view.addSubview(titleLabel)
     }
