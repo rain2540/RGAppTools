@@ -24,6 +24,7 @@ extension TopView where Self: UIViewController {
         }
     }
 
+    /// 页面顶部视图
     var topView: UIView {
         let view = UIView()
         view.frame = CGRect(x: 0.0, y: 0.0, width: MainScreen.width, height: 64.0)
