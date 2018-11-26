@@ -81,6 +81,7 @@ extension TopView where Self: UIViewController {
 // MARK: 
 protocol TopViewWithTitle: TopView {
     var titleString: String { get set }
+    /// 标题字体
     var titleFont: UIFont { get set }
     /// 标题文字颜色
     var titleColor: UIColor { get set }
