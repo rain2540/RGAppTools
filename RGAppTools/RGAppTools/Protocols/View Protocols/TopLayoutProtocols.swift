@@ -15,6 +15,7 @@ protocol TopView {
 }
 
 extension TopView where Self: UIViewController {
+    /// 页面顶部视图背景色
     var topColor: UIColor {
         get {
             return UIColor.clear
