@@ -23,19 +23,19 @@ public class RGToast: NSObject {
         NotificationCenter.default
             .addObserver(self,
                          selector: #selector(RGToast.keyboardWillAppear(notification:)),
-                         name: NSNotification.Name.UIKeyboardWillShow,
+                         name: UIResponder.keyboardWillShowNotification,
                          object: nil)
 
         NotificationCenter.default
             .addObserver(self,
                          selector: #selector(RGToast.keyboardWillDisappear(notification:)),
-                         name: NSNotification.Name.UIKeyboardDidHide,
+                         name: UIResponder.keyboardDidHideNotification,
                          object: nil)
 
         NotificationCenter.default
             .addObserver(self,
                          selector: #selector(RGToast.orientationWillChange(notification:)),
-                         name: NSNotification.Name.UIApplicationWillChangeStatusBarOrientation,
+                         name: UIApplication.willChangeStatusBarOrientationNotification,
                          object: nil)
     }
 
@@ -132,8 +132,8 @@ public class RGToast: NSObject {
             }
             vKeyboardFrame.origin = CGPoint.zero
         } else {
-            vKeyboardFrame.origin.x = fabs(keyboardFrame.size.width - screenFrame.size.width)
-            vKeyboardFrame.origin.y = fabs(keyboardFrame.size.height - screenFrame.size.height)
+            vKeyboardFrame.origin.x = abs(keyboardFrame.size.width - screenFrame.size.width)
+            vKeyboardFrame.origin.y = abs(keyboardFrame.size.height - screenFrame.size.height)
 
             if vKeyboardFrame.origin.x > 0 {
                 let temp = vKeyboardFrame.origin.x
@@ -151,7 +151,7 @@ public class RGToast: NSObject {
     //  MARK: Target - Action
     @objc private func keyboardWillAppear(notification: Notification) {
         let userInfo = notification.userInfo
-        let aValue = userInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue
+        let aValue = userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue
         let keyboardFrame = aValue.cgRectValue
         let screenFrame = UIScreen.main.bounds
 
@@ -167,7 +167,7 @@ public class RGToast: NSObject {
 
     @objc private func orientationWillChange(notification: Notification) {
         let userInfo = notification.userInfo
-        let v = userInfo?[UIApplicationStatusBarOrientationUserInfoKey] as! NSNumber
+        let v = userInfo?[UIApplication.statusBarOrientationUserInfoKey] as! NSNumber
         let o = UIInterfaceOrientation(rawValue: v.intValue)
 
         let degress = rotationDegress(orientation: o!)
@@ -257,9 +257,9 @@ fileprivate class RGToastView: UIView {
         let paragraphStyle = NSMutableParagraphStyle.default.mutableCopy()
         (paragraphStyle as! NSMutableParagraphStyle).lineBreakMode = .byWordWrapping
         (paragraphStyle as! NSMutableParagraphStyle).alignment = .center
-        let dict = [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14.0),
-                    NSAttributedStringKey.paragraphStyle: paragraphStyle,
-                    NSAttributedStringKey.foregroundColor: UIColor.white]
+        let dict = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14.0),
+                    NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                    NSAttributedString.Key.foregroundColor: UIColor.white]
         (messageText! as NSString).draw(in: messageRect!, withAttributes: dict)
 
         if let image = image {
@@ -275,9 +275,9 @@ fileprivate class RGToastView: UIView {
     private func adjust() {
         let size = messageText?.boundingRect(with: CGSize(width: 160.0, height: 200.0),
                                              options: [.usesLineFragmentOrigin],
-                                             attributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14.0)],
+                                             attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14.0)],
                                              context: nil).size
-        messageText?.size(withAttributes: [NSAttributedStringKey.font: UIFont.boldSystemFont(ofSize: 14.0)])
+        messageText?.size(withAttributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14.0)])
         var imageAdjustment: CGFloat = 0.0
         if image != nil {
             imageAdjustment = 7.0 + (image?.size.height)!
