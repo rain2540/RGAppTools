@@ -9,6 +9,7 @@
 import UIKit
 
 protocol TopView {
+    /// 页面顶部视图背景色
     var topColor: UIColor { get set }
     /// 状态栏颜色
     var statusColor: UIColor { get set }
