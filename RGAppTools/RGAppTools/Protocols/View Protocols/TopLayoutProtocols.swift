@@ -11,6 +11,7 @@ import UIKit
 protocol TopView {
     var topColor: UIColor { get set }
     var statusColor: UIColor { get set }
+    /// 导航栏颜色
     var naviColor: UIColor { get set }
 }
 
