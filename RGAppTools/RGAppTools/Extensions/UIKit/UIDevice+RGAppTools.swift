@@ -84,6 +84,10 @@ extension RGAppTools where Base: UIDevice {
         return iPhoneXSeries
     }
 
+    public static var isPhone: Bool {
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
+    }
+
     /// 打印当前设备信息
     public static func printDeviceInformations() {
         print("currentDevice: ", UIDevice.current)
