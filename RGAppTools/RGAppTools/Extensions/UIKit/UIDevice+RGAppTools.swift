@@ -84,6 +84,7 @@ extension RGAppTools where Base: UIDevice {
         return iPhoneXSeries
     }
 
+    /// 判断设备是否为 iPhone
     public static var isPhone: Bool {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
     }
