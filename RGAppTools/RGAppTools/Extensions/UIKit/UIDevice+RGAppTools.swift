@@ -88,6 +88,10 @@ extension RGAppTools where Base: UIDevice {
     public static var isPhone: Bool {
         return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone
     }
+    
+    public static var isPad: Bool {
+        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
+    }
 
     /// 打印当前设备信息
     public static func printDeviceInformations() {
