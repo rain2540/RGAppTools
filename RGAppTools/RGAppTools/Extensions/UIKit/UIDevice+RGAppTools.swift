@@ -30,6 +30,7 @@ public enum DeviceType {
     iPhone_8,
     iPhone_8_Plus,
     iPhone_X,
+    iPhone_XR,
     //  iPod Touch
     iPod_Touch_1,
     iPod_Touch_2,
@@ -202,6 +203,10 @@ extension RGAppTools where Base: UIDevice {
         case "iPhone10,3", "iPhone10,6":
             print("iPhone X")
             return .iPhone_X
+
+        case "iPhone11,8":
+            print("iPhone XR")
+            return .iPhone_XR
 
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
             print("iPad 2")
