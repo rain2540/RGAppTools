@@ -70,7 +70,7 @@ extension RGAppTools where Base: UIDevice {
     /// 判断是否为 iPhone X 系列
     public static var isIPhoneXSeries: Bool {
         var iPhoneXSeries = false
-        if UIDevice.current.userInterfaceIdiom != UIUserInterfaceIdiom.phone {
+        if UIDevice.rat.isPhone == false {
             return iPhoneXSeries
         }
         
