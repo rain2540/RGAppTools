@@ -92,7 +92,7 @@ extension RGAppTools where Base: UIDevice {
     
     /// 判断设备是否为 iPad
     public static var isPad: Bool {
-        return UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad
+        return UIDevice.current.userInterfaceIdiom == .pad
     }
 
     /// 打印当前设备信息
