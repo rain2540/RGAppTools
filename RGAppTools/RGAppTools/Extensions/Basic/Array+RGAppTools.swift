@@ -10,6 +10,12 @@ import Foundation
 
 extension Array {
 
+    /// 获取数组特定位置的元素 / 设置数组特定元素的值
+    ///
+    /// - Parameters:
+    ///   - first: 第一个特定元素的下标
+    ///   - second: 第二个特定元素的下标
+    ///   - others: 其他特定元素的下标
     subscript(first: Int, second: Int, others: Int...) -> ArraySlice<Element> {
         get {
             var indexes: [Int] = []
