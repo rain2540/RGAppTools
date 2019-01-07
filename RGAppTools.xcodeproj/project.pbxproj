@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B707C40521892FC4008D2058 /* UIScrollView+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707C40421892FC4008D2058 /* UIScrollView+RGAppTools.swift */; };
+		B71B98FA21E340A8007EBDB9 /* Array+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B98F921E340A8007EBDB9 /* Array+RGAppTools.swift */; };
 		B72EC9521F6268600014E460 /* Dictionary+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */; };
 		B73D43201F43CCD50048A97D /* UINavigationBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */; };
 		B73D43221F43CCF60048A97D /* UITabBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		B707C40421892FC4008D2058 /* UIScrollView+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+RGAppTools.swift"; sourceTree = "<group>"; };
+		B71B98F921E340A8007EBDB9 /* Array+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+RGAppTools.swift"; sourceTree = "<group>"; };
 		B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		B7BDB5D71F39499F003C3F60 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				B71B98F921E340A8007EBDB9 /* Array+RGAppTools.swift */,
 				B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */,
 				B7BDB5D81F39499F003C3F60 /* Double+RGAppTools.swift */,
 				B7BDB5D91F39499F003C3F60 /* Int+RGAppTools.swift */,
@@ -311,6 +314,7 @@
 				B7BDB5F01F3949A0003C3F60 /* Double+RGAppTools.swift in Sources */,
 				B7BDB5F61F3949A0003C3F60 /* FileManager+RGAppTools.swift in Sources */,
 				B784E6731F46DB6700D702AF /* CLLocation+RGAppTools.swift in Sources */,
+				B71B98FA21E340A8007EBDB9 /* Array+RGAppTools.swift in Sources */,
 				B7BDB5EE1F3949A0003C3F60 /* AppSingleton.swift in Sources */,
 				B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */,
 				B707C40521892FC4008D2058 /* UIScrollView+RGAppTools.swift in Sources */,
