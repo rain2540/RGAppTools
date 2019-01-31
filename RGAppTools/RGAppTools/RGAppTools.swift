@@ -22,12 +22,12 @@ public protocol RGAppToolsCompatible {
     static var rat: RATCompatibleType.Type { get }
 }
 
-public extension RGAppToolsCompatible {
-    var rat: RGAppTools<Self> {
+extension RGAppToolsCompatible {
+    public var rat: RGAppTools<Self> {
         return RGAppTools(self)
     }
 
-    static var rat: RGAppTools<Self>.Type {
+    public static var rat: RGAppTools<Self>.Type {
         return RGAppTools.self
     }
 }
