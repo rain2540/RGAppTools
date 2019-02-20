@@ -130,6 +130,8 @@ extension String {
     }
 }
 
+
+//  MARK: -
 public struct StringExtension {
     private var string: String
 
@@ -137,23 +139,6 @@ public struct StringExtension {
         self.string = string
     }
 
-
-    //  MARK: Size
-    /// 返回按照给定字体绘制时, 字符串所占有的边界大小
-    ///
-    /// - Parameter font: 要应用于字符串的字体
-    /// - Returns: 按照给定字体绘制时, 字符串所占有的边界大小
-    public func size(withFont font: UIFont) -> CGSize {
-        return (string as NSString).size(withAttributes: [NSAttributedString.Key.font: font])
-    }
-
-    /// 返回按照给定属性绘制时, 字符串所占有的边界大小
-    ///
-    /// - Parameter attrs: 要应用于字符串的文本属性的字典
-    /// - Returns: 按照给定属性绘制时, 字符串所占有的边界大小
-    public func size(attributes attrs: [NSAttributedString.Key: Any]? = nil) -> CGSize {
-        return (string as NSString).size(withAttributes: attrs)
-    }
 
     //  MARK: Trans
     /// String 对应的 Boolean 值
@@ -204,7 +189,8 @@ public struct StringExtension {
         }
     }
 
-    // MARK: Basic
+
+    // MARK: - Basic
     /// 字符串长度
     public var length: Int {
         return string.distance(from: string.startIndex, to: string.endIndex)
@@ -283,5 +269,25 @@ extension StringExtension {
         } else {
             return "\(obj)"
         }
+    }
+}
+
+
+//  MARK: - Size
+extension StringExtension {
+    /// 返回按照给定字体绘制时, 字符串所占有的边界大小
+    ///
+    /// - Parameter font: 要应用于字符串的字体
+    /// - Returns: 按照给定字体绘制时, 字符串所占有的边界大小
+    public func size(withFont font: UIFont) -> CGSize {
+        return (string as NSString).size(withAttributes: [NSAttributedString.Key.font: font])
+    }
+
+    /// 返回按照给定属性绘制时, 字符串所占有的边界大小
+    ///
+    /// - Parameter attrs: 要应用于字符串的文本属性的字典
+    /// - Returns: 按照给定属性绘制时, 字符串所占有的边界大小
+    public func size(attributes attrs: [NSAttributedString.Key: Any]? = nil) -> CGSize {
+        return (string as NSString).size(withAttributes: attrs)
     }
 }
