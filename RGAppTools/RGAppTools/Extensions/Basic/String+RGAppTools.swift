@@ -137,24 +137,6 @@ public struct StringExtension {
         self.string = string
     }
 
-    // MARK: Clear nil
-    /// 清除 nil 和 NSNull 对象，并返回字符串
-    ///
-    /// - Parameter obj: 未经处理的对象
-    /// - Returns: 经处理后的字符串
-    public static func withoutNil(_ obj: Any?) -> String {
-        guard let obj = obj else {
-            return ""
-        }
-
-        if obj is NSNull {
-            return ""
-        } else if obj is NSNumber {
-            return "\(obj)"
-        } else {
-            return "\(obj)"
-        }
-    }
 
     //  MARK: Size
     /// 返回按照给定字体绘制时, 字符串所占有的边界大小
@@ -279,5 +261,27 @@ public struct StringExtension {
         let validLength = endIndex.encodedOffset - startIndex.encodedOffset
         let str = String(string.suffix(from: start))
         return String(str.prefix(validLength))
+    }
+}
+
+
+// MARK: - Clear nil
+extension StringExtension {
+    /// 清除 nil 和 NSNull 对象，并返回字符串
+    ///
+    /// - Parameter obj: 未经处理的对象
+    /// - Returns: 经处理后的字符串
+    public static func withoutNil(_ obj: Any?) -> String {
+        guard let obj = obj else {
+            return ""
+        }
+
+        if obj is NSNull {
+            return ""
+        } else if obj is NSNumber {
+            return "\(obj)"
+        } else {
+            return "\(obj)"
+        }
     }
 }
