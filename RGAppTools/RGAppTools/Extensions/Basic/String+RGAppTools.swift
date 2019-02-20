@@ -139,57 +139,7 @@ public struct StringExtension {
         self.string = string
     }
 
-
-    //  MARK: Trans
-    /// String 对应的 Boolean 值
-    public var boolValue: Bool {
-        return (string as NSString).boolValue
-    }
-
-    /// String 对应的 Int 值
-    public var intValue: Int? {
-        return Int(string)
-    }
-
-    /// String 对应的 Float 值
-    public var floatValue: Float? {
-        return Float(string)
-    }
-
-    /// String 对应的 Double 值
-    public var doubleValue: Double? {
-        return Double(string)
-    }
-
-    /// String 对应的 Base64 Data
-    public var base64Data: Data? {
-        return Data(base64Encoded: string)
-    }
-
-    /// String 对应的 Base64 Image
-    public var base64Image: UIImage? {
-        guard let data = base64Data else { return nil }
-        return UIImage(data: data)
-    }
-
-    /// 将字符串转换为 JSON 对象
-    ///
-    /// - Returns: 转换得到的 JSON 对象
-    public func toObject() -> Any? {
-        let str = string.replacingOccurrences(of: "\0", with: "")
-        guard let data = str.data(using: String.Encoding.utf8) else {
-            print("RGAppTools String to object Error:\n", "Fail to get data")
-            return nil
-        }
-        do {
-            return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-        } catch let error as NSError {
-            print("RGAppTools String to object Error:\n", error)
-            return nil
-        }
-    }
-
-
+    
     // MARK: - Basic
     /// 字符串长度
     public var length: Int {
@@ -289,5 +239,57 @@ extension StringExtension {
     /// - Returns: 按照给定属性绘制时, 字符串所占有的边界大小
     public func size(attributes attrs: [NSAttributedString.Key: Any]? = nil) -> CGSize {
         return (string as NSString).size(withAttributes: attrs)
+    }
+}
+
+
+//  MARK: - Trans
+extension StringExtension {
+    /// String 对应的 Boolean 值
+    public var boolValue: Bool {
+        return (string as NSString).boolValue
+    }
+
+    /// String 对应的 Int 值
+    public var intValue: Int? {
+        return Int(string)
+    }
+
+    /// String 对应的 Float 值
+    public var floatValue: Float? {
+        return Float(string)
+    }
+
+    /// String 对应的 Double 值
+    public var doubleValue: Double? {
+        return Double(string)
+    }
+
+    /// String 对应的 Base64 Data
+    public var base64Data: Data? {
+        return Data(base64Encoded: string)
+    }
+
+    /// String 对应的 Base64 Image
+    public var base64Image: UIImage? {
+        guard let data = base64Data else { return nil }
+        return UIImage(data: data)
+    }
+
+    /// 将字符串转换为 JSON 对象
+    ///
+    /// - Returns: 转换得到的 JSON 对象
+    public func toObject() -> Any? {
+        let str = string.replacingOccurrences(of: "\0", with: "")
+        guard let data = str.data(using: String.Encoding.utf8) else {
+            print("RGAppTools String to object Error:\n", "Fail to get data")
+            return nil
+        }
+        do {
+            return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        } catch let error as NSError {
+            print("RGAppTools String to object Error:\n", error)
+            return nil
+        }
     }
 }
