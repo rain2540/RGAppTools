@@ -293,3 +293,19 @@ extension StringExtension {
         }
     }
 }
+
+
+// MARK: - Attributed String
+extension StringExtension {
+    public func attributedString(keyword: String?,
+                                 color: UIColor = UIColor.black,
+                                 font: UIFont = UIFont.systemFont(ofSize: 17.0)) -> NSMutableAttributedString
+    {
+        let attributedString = NSMutableAttributedString(string: string)
+        guard let keyword = keyword else { return attributedString }
+        let keywordRange = (string as NSString).range(of: keyword)
+        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: keywordRange)
+        attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: keywordRange)
+        return attributedString
+    }
+}
