@@ -297,6 +297,13 @@ extension StringExtension {
 
 // MARK: - Attributed String
 extension StringExtension {
+    /// 返回为 keyword 设定颜色、字体的 attributed string
+    ///
+    /// - Parameters:
+    ///   - keyword: 关键词
+    ///   - color: keyword 的颜色
+    ///   - font: keyword 的字体
+    /// - Returns: 完成 keyword 颜色、字体设定的 attributed string
     public func attributedString(keyword: String?,
                                  color: UIColor = UIColor.black,
                                  font: UIFont = UIFont.systemFont(ofSize: 17.0)) -> NSMutableAttributedString
