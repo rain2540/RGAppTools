@@ -207,7 +207,7 @@ extension StringExtension {
     ///
     /// - Parameter obj: 未经处理的对象
     /// - Returns: 经处理后的字符串
-    public static func withoutNil(_ obj: Any?) -> String {
+    public static func clearNil(for obj: Any?) -> String {
         guard let obj = obj else {
             return ""
         }
