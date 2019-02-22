@@ -14,6 +14,7 @@
 		B73D43221F43CCF60048A97D /* UITabBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */; };
 		B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */; };
 		B73D43261F43CD350048A97D /* UIViewController+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */; };
+		B7439F77221F81700066D0F6 /* UITextField+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7439F76221F81700066D0F6 /* UITextField+RGAppTools.swift */; };
 		B753AD6E1F4BFB9D00978DD8 /* RGToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = B753AD6D1F4BFB9D00978DD8 /* RGToast.swift */; };
 		B784E6731F46DB6700D702AF /* CLLocation+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */; };
 		B784E6751F46E4D600D702AF /* UIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B784E6741F46E4D600D702AF /* UIConstant.swift */; };
@@ -51,6 +52,7 @@
 		B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITabBar+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RGAppTools.swift"; sourceTree = "<group>"; };
 		B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+RGAppTools.swift"; sourceTree = "<group>"; };
+		B7439F76221F81700066D0F6 /* UITextField+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+RGAppTools.swift"; sourceTree = "<group>"; };
 		B753AD6D1F4BFB9D00978DD8 /* RGToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGToast.swift; sourceTree = "<group>"; };
 		B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+RGAppTools.swift"; sourceTree = "<group>"; };
 		B784E6741F46E4D600D702AF /* UIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				B73D431F1F43CCD50048A97D /* UINavigationBar+RGAppTools.swift */,
 				B707C40421892FC4008D2058 /* UIScrollView+RGAppTools.swift */,
 				B73D43211F43CCF60048A97D /* UITabBar+RGAppTools.swift */,
+				B7439F76221F81700066D0F6 /* UITextField+RGAppTools.swift */,
 				B73D43231F43CD150048A97D /* UIView+RGAppTools.swift */,
 				B73D43251F43CD350048A97D /* UIViewController+RGAppTools.swift */,
 			);
@@ -316,6 +319,7 @@
 				B784E6731F46DB6700D702AF /* CLLocation+RGAppTools.swift in Sources */,
 				B71B98FA21E340A8007EBDB9 /* Array+RGAppTools.swift in Sources */,
 				B7BDB5EE1F3949A0003C3F60 /* AppSingleton.swift in Sources */,
+				B7439F77221F81700066D0F6 /* UITextField+RGAppTools.swift in Sources */,
 				B73D43241F43CD150048A97D /* UIView+RGAppTools.swift in Sources */,
 				B707C40521892FC4008D2058 /* UIScrollView+RGAppTools.swift in Sources */,
 				B79DA2D21C603837002FB62E /* AppDelegate.swift in Sources */,
