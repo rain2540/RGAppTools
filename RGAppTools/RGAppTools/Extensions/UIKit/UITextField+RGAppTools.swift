@@ -15,10 +15,9 @@ extension RGAppTools where Base: UITextField {
                               contentMode: UIView.ContentMode = .center,
                               showMode: UITextField.ViewMode = .always)
     {
-        let imageView = UIImageView()
-        imageView.image = UIImage(named: name)
-        imageView.frame = frame
-        imageView.contentMode = contentMode
+        let imageView = createImageView(imageNamed: name,
+                                        frame: frame,
+                                        contentMode: contentMode)
         base.rightViewMode = showMode
         base.rightView = imageView
     }
