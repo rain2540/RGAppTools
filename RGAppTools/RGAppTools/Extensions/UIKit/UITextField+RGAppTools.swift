@@ -9,7 +9,19 @@
 import UIKit
 
 extension RGAppTools where Base: UITextField {
-
+    
+    public func addLeftImage(named name: String,
+                             frame: CGRect = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0),
+                             contentMode: UIView.ContentMode = .center,
+                             showMode: UITextField.ViewMode = .always)
+    {
+        let imageView = createImageView(imageNamed: name,
+                                        frame: frame,
+                                        contentMode: contentMode)
+        base.leftViewMode = showMode
+        base.leftView = imageView
+    }
+    
     public func addRightImage(named name: String,
                               frame: CGRect = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0),
                               contentMode: UIView.ContentMode = .center,
@@ -21,7 +33,8 @@ extension RGAppTools where Base: UITextField {
         base.rightViewMode = showMode
         base.rightView = imageView
     }
-
+    
+    
     private func createImageView(imageNamed name: String,
                                  frame: CGRect,
                                  contentMode: UIView.ContentMode) -> UIImageView
