@@ -19,6 +19,7 @@ public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeries ? 44.0
 /// Status Bar 的 Frame
 public let StatusBarFrame = UIApplication.shared.statusBarFrame
 
+/// Status Bar 的 Height
 public let StatusBarHeight = StatusBarFrame.height
 
 /// Navigation Bar 默认高度
