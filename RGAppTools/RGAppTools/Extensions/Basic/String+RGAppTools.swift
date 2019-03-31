@@ -63,7 +63,7 @@ extension String {
     /// - Parameter original: 待检验的索引值
     /// - Returns: 经过检验的有效索引值或 nil
     fileprivate func rat_validStartIndex(original: Int) -> String.Index? {
-        guard original <= endIndex.encodedOffset else { return nil }
+        guard original < count else { return nil }
         return rat_validIndex(original: original)
     }
 
