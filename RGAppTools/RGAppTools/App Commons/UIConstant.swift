@@ -27,6 +27,7 @@ public let StatusBarHeight = StatusBarFrame.height
 public let NavigationBarDefaultHeight: CGFloat = 44.0
 
 /// Top Layout 默认高度
+@available(*, deprecated, message: "Constant 'TopLayoutDefaultHeight' is deprecated. Use`TopLayoutHeight` instead.", renamed: "TopLayoutHeight")
 public var TopLayoutDefaultHeight: CGFloat {
     return StatusBarDefaultHeight + NavigationBarDefaultHeight
 }
