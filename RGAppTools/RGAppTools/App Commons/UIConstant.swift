@@ -14,6 +14,7 @@ public var is_iPhoneX: Bool {
 }
 
 /// Status Bar 默认高度
+@available(*, deprecated, message: "Constant 'StatusBarDefaultHeight' is deprecated. Use`StatusBarHeight` instead.", renamed: "StatusBarHeight")
 public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeries ? 44.0 : 20.0
 
 /// Status Bar 的 Frame
