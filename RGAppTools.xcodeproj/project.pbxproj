@@ -265,10 +265,9 @@
 			};
 			buildConfigurationList = B79DA2C91C603836002FB62E /* Build configuration list for PBXProject "RGAppTools" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
