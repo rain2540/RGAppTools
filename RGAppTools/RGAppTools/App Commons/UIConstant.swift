@@ -31,6 +31,7 @@ public var TopLayoutDefaultHeight: CGFloat {
     return StatusBarDefaultHeight + NavigationBarDefaultHeight
 }
 
+/// Top Layout 的 高度
 public var TopLayoutHeight: CGFloat {
     return StatusBarHeight + NavigationBarDefaultHeight
 }
