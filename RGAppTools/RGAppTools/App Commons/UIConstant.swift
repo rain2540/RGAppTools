@@ -31,6 +31,10 @@ public var TopLayoutDefaultHeight: CGFloat {
     return StatusBarDefaultHeight + NavigationBarDefaultHeight
 }
 
+public var TopLayoutHeight: CGFloat {
+    return StatusBarHeight + NavigationBarDefaultHeight
+}
+
 /// Tab Bar 默认高度
 public let TabBarDefaultHeight: CGFloat = 49.0
 
