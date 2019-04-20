@@ -15,7 +15,7 @@ import Foundation
 public enum BuildVersionFormat {
     /// 应用版本号 Build 字段格式 - 括号 (默认值)
     case normal
-    
+    /// 应用版本号 Build 字段格式 - 点
     case dot
 }
 
