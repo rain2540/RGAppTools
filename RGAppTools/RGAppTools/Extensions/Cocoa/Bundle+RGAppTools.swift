@@ -42,6 +42,14 @@ extension RGAppTools where Base: Bundle {
         return infoDic!["CFBundleIdentifier"] as! String
     }
     
+    public static func appVersion(format: BuildVersionFormat) -> String {
+        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
+        let infoDic = NSDictionary(contentsOfFile: infoPath!)
+        let version = infoDic!["CFBundleShortVersionString"] as! String
+        let build = infoDic!["CFBundleVersion"] as! String
+        return format == .normal ? "\(version) (\(build))" : "\(version).\(build)"
+    }
+    
     /// 获取 Main Bundle 中的文件路径
     ///
     /// - Parameters:
