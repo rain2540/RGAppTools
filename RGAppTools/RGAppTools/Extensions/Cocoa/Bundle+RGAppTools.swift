@@ -8,6 +8,11 @@
 
 import Foundation
 
+public enum BuildVersionFormat {
+    case normal
+    case dot
+}
+
 extension RGAppTools where Base: Bundle {
     /// Main Bundle 路径
     public static var mainBundlePath: String {
