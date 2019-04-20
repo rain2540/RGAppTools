@@ -18,23 +18,19 @@ extension RGAppTools where Base: Bundle {
     public static var mainBundlePath: String {
         return Bundle.main.bundlePath
     }
-
+    
     /// 应用版本号
     public static var appVersion: String {
-        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
-        let infoDic = NSDictionary(contentsOfFile: infoPath!)
-        let version = infoDic!["CFBundleShortVersionString"] as! String
-        let build = infoDic!["CFBundleVersion"] as! String
-        return version + " " + "(" + build + ")"
+        return appVersion(format: .normal)
     }
-
+    
     /// 应用显示名称
     public static var displayName: String {
         let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
         return infoDic!["CFBundleDisplayName"] as! String
     }
-
+    
     /// 应用的 Bundle Identifier
     public static var identifier: String {
         let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
