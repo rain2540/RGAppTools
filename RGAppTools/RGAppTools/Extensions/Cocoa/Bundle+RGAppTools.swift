@@ -13,7 +13,7 @@ import Foundation
 /// - normal: 括号 形如: 1.0.0 (29)
 /// - dot: 点  形如: 1.0.0.29
 public enum BuildVersionFormat {
-    /// 应用版本号 Build 字段格式 - 括号 (默认值)
+    /// 应用版本号 Build 字段格式 - 括号 (默认值) 形如: 1.0.0 (29)
     case normal
     /// 应用版本号 Build 字段格式 - 点
     case dot
