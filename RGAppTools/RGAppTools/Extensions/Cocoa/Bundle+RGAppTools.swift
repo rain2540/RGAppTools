@@ -45,10 +45,12 @@ extension RGAppTools where Base: Bundle {
     }
     
     public static func appVersion(format: BuildVersionFormat) -> String {
-        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
-        let infoDic = NSDictionary(contentsOfFile: infoPath!)
-        let version = infoDic!["CFBundleShortVersionString"] as! String
-        let build = infoDic!["CFBundleVersion"] as! String
+        guard let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist"),
+            let infoDic = NSDictionary(contentsOfFile: infoPath),
+            let version = infoDic["CFBundleShortVersionString"],
+            let build = infoDic["CFBundleVersion"] else {
+                return ""
+        }
         return format == .normal ? "\(version) (\(build))" : "\(version).\(build)"
     }
     
