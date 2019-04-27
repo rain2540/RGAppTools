@@ -10,12 +10,12 @@ import Foundation
 
 /// 应用版本号 Build 字段格式
 ///
-/// - normal: 括号 例如: 1.0.0 (29)
-/// - dot: 点  例如: 1.0.0.29
+/// - normal: 括号 形如: 1.0.0 (29)
+/// - dot: 点  形如: 1.0.0.29
 public enum BuildVersionFormat {
-    /// 应用版本号 Build 字段格式 - 括号 (默认值)
+    /// 应用版本号 Build 字段格式 - 括号 (默认值) 形如: 1.0.0 (29)
     case normal
-    /// 应用版本号 Build 字段格式 - 点
+    /// 应用版本号 Build 字段格式 - 点 形如: 1.0.0.29
     case dot
 }
 
@@ -44,6 +44,10 @@ extension RGAppTools where Base: Bundle {
         return infoDic!["CFBundleIdentifier"] as! String
     }
     
+    /// 应用版本号
+    ///
+    /// - Parameter format: 输出的格式
+    /// - Returns: 表示应用版本号的字符串
     public static func appVersion(format: BuildVersionFormat) -> String {
         guard let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist"),
             let infoDic = NSDictionary(contentsOfFile: infoPath),
