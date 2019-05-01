@@ -20,11 +20,11 @@ extension String {
     /// 获取指定位置字符
     public subscript(original: Int) -> String {
         guard original < endIndex.encodedOffset else {
-            print("\(#function): original out of end index")
+            print("\(#function): original '\(original)' out of end index")
             return ""
         }
         guard original >= startIndex.encodedOffset else {
-            print("\(#function): original out of start index")
+            print("\(#function): original '\(original)' out of start index")
             return ""
         }
         return String(self[index(startIndex, offsetBy: original)])
