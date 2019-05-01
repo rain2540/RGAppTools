@@ -52,7 +52,7 @@ extension String {
     /// - Returns: 经过检验的有效索引值
     private func rat_validIndex(original: Int) -> String.Index {
         switch original {
-        case ...0           :   return startIndex
+        case ...startIndex.utf16Offset(in: self)           :   return startIndex
         case (count - 1)... :   return endIndex
         default             :   return index(startIndex, offsetBy: original)
         }
