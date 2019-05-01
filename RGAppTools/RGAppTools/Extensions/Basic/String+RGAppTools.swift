@@ -72,7 +72,7 @@ extension String {
     /// - Parameter original: 待检验的索引值
     /// - Returns: 经过检验的有效索引值或 nil
     fileprivate func rat_validEndIndex(original: Int) -> String.Index? {
-        guard original >= 0 else { return nil }
+        guard original >= startIndex.utf16Offset(in: self) else { return nil }
         return rat_validIndex(original: original)
     }
 
