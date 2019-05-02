@@ -19,7 +19,7 @@ extension String {
 
     /// 获取指定位置字符
     public subscript(original: Int) -> String {
-        guard original < endIndex.encodedOffset else {
+        guard original < endIndex.utf16Offset(in: self) else {
             print("\(#function): original '\(original)' out of end index")
             return ""
         }
