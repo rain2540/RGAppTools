@@ -23,7 +23,7 @@ extension String {
             print("\(#function): original '\(original)' out of end index")
             return ""
         }
-        guard original >= startIndex.encodedOffset else {
+        guard original >= startIndex.utf16Offset(in: self) else {
             print("\(#function): original '\(original)' out of start index")
             return ""
         }
