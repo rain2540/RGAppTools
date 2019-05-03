@@ -35,7 +35,7 @@ extension String {
         guard let startIndex = rat_validStartIndex(original: subRange.lowerBound),
             let endIndex = rat_validEndIndex(original: subRange.upperBound),
             startIndex < endIndex else {
-                print("\(#function): index out of range")
+                print("\(#function): sub-range '\(subRange)' out of range")
                 return ""
         }
         return String(self[startIndex ..< endIndex])
