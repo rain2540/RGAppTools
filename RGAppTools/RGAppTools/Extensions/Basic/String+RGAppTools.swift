@@ -193,8 +193,10 @@ public struct StringExtension {
                 print("\(#function): index out of range")
                 return ""
         }
-        let start = string.index(string.startIndex, offsetBy: startIndex.utf16Offset(in: string))
-        let validLength = endIndex.encodedOffset - startIndex.encodedOffset
+        let startOffset = startIndex.utf16Offset(in: string)
+        let endOffset = endIndex.utf16Offset(in: string)
+        let start = string.index(string.startIndex, offsetBy: startOffset)
+        let validLength = endOffset - startOffset
         let str = String(string.suffix(from: start))
         return String(str.prefix(validLength))
     }
