@@ -83,7 +83,7 @@ extension String {
     ///   - i: 指定位置索引
     public mutating func rat_insert(_ newElement: Character, at i: Int) {
         guard (i <= self.count) && (i >= 0) else {
-            print("\(#function): index out of range")
+            print("\(#function): index '\(i)' out of range")
             return
         }
         insert(newElement, at: index(startIndex, offsetBy: i))
