@@ -96,7 +96,7 @@ extension String {
     ///   - newValues: 用于替换的字符串
     public mutating func rat_replace(subrange: Range<Int>, with newValues: String) {
         guard (subrange.upperBound <= self.count) && (subrange.lowerBound >= 0) else {
-            print("\(#function): index out of range")
+            print("\(#function): sub-range '\(subrange)' out of range")
             return
         }
         let start = index(startIndex, offsetBy: subrange.lowerBound)
