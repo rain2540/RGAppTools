@@ -176,7 +176,7 @@ public struct StringExtension {
     /// - Returns: 截取到的字符串
     public func substring(from index: Int) -> String {
         guard (index < string.count) && (index >= 0) else {
-            print("\(#function): index out of range")
+            print("\(#function): index '\(index)' out of range")
             return ""
         }
         return String(string.suffix(from: string.index(string.startIndex, offsetBy: index)))
