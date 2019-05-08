@@ -190,7 +190,7 @@ public struct StringExtension {
         guard let startIndex = string.rat_validStartIndex(original: range.lowerBound),
             let endIndex = string.rat_validEndIndex(original: range.upperBound),
             startIndex < endIndex else {
-                print("\(#function): index out of range")
+                print("\(#function): sub-range '\(range)' out of range")
                 return ""
         }
         let startOffset = startIndex.utf16Offset(in: string)
