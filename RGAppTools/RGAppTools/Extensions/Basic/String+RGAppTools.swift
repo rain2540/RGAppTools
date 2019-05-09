@@ -110,7 +110,7 @@ extension String {
     /// - Returns: 被移除的字符
     public mutating func rat_remove(at i: Int) -> Character? {
         guard (i < self.count) && (i >= 0) else {
-            print("\(#function): index out of range")
+            print("\(#function): index '\(i)' out of range")
             return nil
         }
         return remove(at: index(startIndex, offsetBy: i))
