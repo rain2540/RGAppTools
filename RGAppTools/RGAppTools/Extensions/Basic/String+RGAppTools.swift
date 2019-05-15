@@ -82,7 +82,7 @@ extension String {
     ///   - newElement: 插入的字符
     ///   - i: 指定位置索引
     public mutating func rat_insert(_ newElement: Character, at i: Int) {
-        guard (i <= self.count) && (i >= 0) else {
+        guard (i <= endIndex.utf16Offset(in: self)) && (i >= 0) else {
             print("\(#function): index '\(i)' out of range")
             return
         }
