@@ -95,7 +95,8 @@ extension String {
     ///   - subrange: 指定范围
     ///   - newValues: 用于替换的字符串
     public mutating func rat_replace(subrange: Range<Int>, with newValues: String) {
-        guard (subrange.upperBound <= self.count) && (subrange.lowerBound >= 0) else {
+        let upperBoundCondition = subrange.upperBound <= self.count
+        guard upperBoundCondition && (subrange.lowerBound >= 0) else {
             print("\(#function): sub-range '\(subrange)' out of range")
             return
         }
