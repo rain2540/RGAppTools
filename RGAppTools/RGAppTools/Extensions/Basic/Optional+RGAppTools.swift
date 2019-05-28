@@ -9,5 +9,7 @@
 import UIKit
 
 extension Optional where Wrapped == String {
-    
+    public var rat_isBlank: Bool {
+        return self?.rat_isBlank ?? true
+    }
 }
