@@ -269,7 +269,7 @@ extension StringExtension {
     }
 
     /// String 对应的 Double 值
-    public var doubleValue: Double? {
+    public var double: Double? {
         return Double(string)
     }
 
