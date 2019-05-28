@@ -273,6 +273,10 @@ extension StringExtension {
         return Double(string)
     }
 
+    public var doubleValue: Double {
+        return string.rat.double ?? 0.0
+    }
+
     /// String 对应的 Base64 Data
     public var base64Data: Data? {
         return Data(base64Encoded: string)
