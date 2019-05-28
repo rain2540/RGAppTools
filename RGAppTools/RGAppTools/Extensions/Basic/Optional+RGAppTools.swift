@@ -7,3 +7,7 @@
 //
 
 import UIKit
+
+extension Optional where Wrapped == String {
+    
+}
