@@ -268,7 +268,7 @@ extension StringExtension {
         return Float(string)
     }
 
-    /// String 对应的 Double 值
+    /// String 对应的 Double? 值
     public var double: Double? {
         return Double(string)
     }
