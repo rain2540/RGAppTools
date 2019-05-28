@@ -58,6 +58,10 @@ extension String {
         }
     }
 
+    public var rat_isBlank: Bool {
+        return allSatisfy{ $0.isWhitespace }
+    }
+
     /// 检验索引值是否可以作为起始点, 否则返回 nil
     ///
     /// - Parameter original: 待检验的索引值
