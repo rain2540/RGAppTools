@@ -273,6 +273,7 @@ extension StringExtension {
         return Double(string)
     }
 
+    /// String 对应的 Double 值
     public var doubleValue: Double {
         return string.rat.double ?? 0.0
     }
