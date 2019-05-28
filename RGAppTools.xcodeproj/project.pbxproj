@@ -42,6 +42,7 @@
 		B7BDB5FE1F3949A0003C3F60 /* UIImage+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDB5E81F3949A0003C3F60 /* UIImage+RGAppTools.swift */; };
 		B7BDB5FF1F3949A0003C3F60 /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDB5EB1F3949A0003C3F60 /* TopLayoutProtocols.swift */; };
 		B7BDB6001F3949A0003C3F60 /* RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDB5EC1F3949A0003C3F60 /* RGAppTools.swift */; };
+		B7E56DCE229D093E00A8DDB9 /* Optional+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E56DCD229D093E00A8DDB9 /* Optional+RGAppTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		B7BDB5E81F3949A0003C3F60 /* UIImage+RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7BDB5EB1F3949A0003C3F60 /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
 		B7BDB5EC1F3949A0003C3F60 /* RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGAppTools.swift; sourceTree = "<group>"; };
+		B7E56DCD229D093E00A8DDB9 /* Optional+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+RGAppTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				B72EC9511F6268600014E460 /* Dictionary+RGAppTools.swift */,
 				B7BDB5D81F39499F003C3F60 /* Double+RGAppTools.swift */,
 				B7BDB5D91F39499F003C3F60 /* Int+RGAppTools.swift */,
+				B7E56DCD229D093E00A8DDB9 /* Optional+RGAppTools.swift */,
 				B7BDB5DA1F3949A0003C3F60 /* String+RGAppTools.swift */,
 			);
 			path = Basic;
@@ -308,6 +311,7 @@
 				B7BDB5FC1F3949A0003C3F60 /* UIColor+RGAppTools.swift in Sources */,
 				B784E6771F46E4E900D702AF /* MainScreen.swift in Sources */,
 				B7BDB5F31F3949A0003C3F60 /* Bundle+RGAppTools.swift in Sources */,
+				B7E56DCE229D093E00A8DDB9 /* Optional+RGAppTools.swift in Sources */,
 				B73D43201F43CCD50048A97D /* UINavigationBar+RGAppTools.swift in Sources */,
 				B7BDB5F91F3949A0003C3F60 /* UserDefaults+RGAppTools.swift in Sources */,
 				B7BDB5F11F3949A0003C3F60 /* Int+RGAppTools.swift in Sources */,
