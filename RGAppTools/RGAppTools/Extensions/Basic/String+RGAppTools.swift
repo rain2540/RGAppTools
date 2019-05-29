@@ -263,6 +263,7 @@ extension StringExtension {
         return Int(string)
     }
 
+    /// String 对应的 Int 值
     public var intValue: Int {
         return string.rat.int ?? 0
     }
