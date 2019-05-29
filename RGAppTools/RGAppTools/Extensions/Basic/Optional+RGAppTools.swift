@@ -9,6 +9,7 @@
 import UIKit
 
 extension Optional where Wrapped == String {
+    /// 判断字符串是否为 nil
     public var rat_isBlank: Bool {
         return self?.rat_isBlank ?? true
     }
