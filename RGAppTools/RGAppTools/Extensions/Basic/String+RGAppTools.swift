@@ -259,7 +259,7 @@ extension StringExtension {
     }
 
     /// String 对应的 Int 值
-    public var intValue: Int? {
+    public var int: Int? {
         return Int(string)
     }
 
