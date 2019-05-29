@@ -258,7 +258,7 @@ extension StringExtension {
         return (string as NSString).boolValue
     }
 
-    /// String 对应的 Int 值
+    /// String 对应的 Int? 值
     public var int: Int? {
         return Int(string)
     }
