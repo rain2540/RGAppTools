@@ -263,6 +263,10 @@ extension StringExtension {
         return Int(string)
     }
 
+    public var intValue: Int {
+        return string.rat.int ?? 0
+    }
+
     /// String 对应的 Float? 值
     public var float: Float? {
         return Float(string)
