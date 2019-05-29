@@ -58,6 +58,7 @@ extension String {
         }
     }
 
+    /// 判断字符串是否为空, 或只包括空字符
     public var rat_isBlank: Bool {
         return allSatisfy{ $0.isWhitespace }
     }
