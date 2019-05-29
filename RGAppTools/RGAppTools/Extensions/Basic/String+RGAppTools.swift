@@ -264,7 +264,7 @@ extension StringExtension {
     }
 
     /// String 对应的 Float 值
-    public var floatValue: Float? {
+    public var float: Float? {
         return Float(string)
     }
 
