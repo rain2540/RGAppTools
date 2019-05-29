@@ -268,6 +268,7 @@ extension StringExtension {
         return Float(string)
     }
 
+    /// String 对应的 Float 值
     public var floatValue: Float {
         return string.rat.float ?? 0.0
     }
