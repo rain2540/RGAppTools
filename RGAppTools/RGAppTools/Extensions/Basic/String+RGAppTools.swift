@@ -263,7 +263,7 @@ extension StringExtension {
         return Int(string)
     }
 
-    /// String 对应的 Float 值
+    /// String 对应的 Float? 值
     public var float: Float? {
         return Float(string)
     }
