@@ -101,7 +101,7 @@ extension String {
     ///   - newValues: 用于替换的字符串
     public mutating func rat_replace(subrange: Range<Int>, with newValues: String) {
         let lowerBoundCondition = (subrange.lowerBound >= startIndex.utf16Offset(in: self))
-        let upperBoundCondition = subrange.upperBound <= self.count
+        let upperBoundCondition = subrange.upperBound <= endIndex.utf16Offset(in: self)//self.count
         guard lowerBoundCondition && upperBoundCondition else {
             print("\(#function): sub-range '\(subrange)' out of range")
             return
