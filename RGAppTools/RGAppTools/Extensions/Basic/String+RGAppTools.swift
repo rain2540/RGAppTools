@@ -116,7 +116,7 @@ extension String {
     /// - Parameter i: 指定位置索引
     /// - Returns: 被移除的字符
     public mutating func rat_remove(at i: Int) -> Character? {
-        guard (i < self.count) && (i >= 0) else {
+        guard (i < self.count) && (i >= startIndex.utf16Offset(in: self)) else {
             print("\(#function): index '\(i)' out of range")
             return nil
         }
