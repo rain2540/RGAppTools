@@ -101,7 +101,7 @@ extension String {
     ///   - newValues: 用于替换的字符串
     public mutating func rat_replace(subrange: Range<Int>, with newValues: String) {
         let lowerBoundCondition = (subrange.lowerBound >= startIndex.utf16Offset(in: self))
-        let upperBoundCondition = subrange.upperBound <= endIndex.utf16Offset(in: self)//self.count
+        let upperBoundCondition = subrange.upperBound <= endIndex.utf16Offset(in: self)
         guard lowerBoundCondition && upperBoundCondition else {
             print("\(#function): sub-range '\(subrange)' out of range")
             return
@@ -116,7 +116,7 @@ extension String {
     /// - Parameter i: 指定位置索引
     /// - Returns: 被移除的字符
     public mutating func rat_remove(at i: Int) -> Character? {
-        guard (i < self.count) && (i >= startIndex.utf16Offset(in: self)) else {
+        guard (i < endIndex.utf16Offset(in: self)) && (i >= startIndex.utf16Offset(in: self)) else {
             print("\(#function): index '\(i)' out of range")
             return nil
         }
