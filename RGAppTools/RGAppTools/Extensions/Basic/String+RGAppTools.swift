@@ -129,7 +129,7 @@ extension String {
     public mutating func rat_remove(subrange: Range<Int>) {
         let lowerBoundCondition = (subrange.lowerBound >= startIndex.utf16Offset(in: self))
         let upperBoundCondition = subrange.upperBound <= endIndex.utf16Offset(in: self)
-        guard (subrange.upperBound <= self.count) && lowerBoundCondition else {
+        guard lowerBoundCondition && upperBoundCondition else {
             print("\(#function): index out of range")
             return
         }
