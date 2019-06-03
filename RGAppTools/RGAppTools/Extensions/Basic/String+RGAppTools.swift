@@ -128,7 +128,8 @@ extension String {
     /// - Parameter subrange: 指定的范围
     public mutating func rat_remove(subrange: Range<Int>) {
         let lowerBoundCondition = (subrange.lowerBound >= startIndex.utf16Offset(in: self))
-        guard (subrange.upperBound <= self.count) && (subrange.lowerBound >= 0) else {
+        let upperBoundCondition = subrange.upperBound <= endIndex.utf16Offset(in: self)
+        guard (subrange.upperBound <= self.count) && lowerBoundCondition else {
             print("\(#function): index out of range")
             return
         }
