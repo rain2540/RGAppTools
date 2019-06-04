@@ -130,7 +130,7 @@ extension String {
         let lowerBoundCondition = (subrange.lowerBound >= startIndex.utf16Offset(in: self))
         let upperBoundCondition = subrange.upperBound <= endIndex.utf16Offset(in: self)
         guard lowerBoundCondition && upperBoundCondition else {
-            print("\(#function): index out of range")
+            print("\(#function): sub-range '\(subrange)' out of range")
             return
         }
         let start = index(startIndex, offsetBy: subrange.lowerBound)
