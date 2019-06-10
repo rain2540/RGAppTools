@@ -160,8 +160,8 @@ public struct StringExtension {
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
     public func substring(upTo index: Int) -> String {
-        guard (index <= string.count) && (index > 0) else {
-            print("\(#function): index out of range")
+        guard (index <= string.count) && (index > string.startIndex.utf16Offset(in: string)) else {
+            print("\(#function): index '\(index)' out of range")
             return ""
         }
         return String(string.prefix(upTo: string.index(string.startIndex, offsetBy: index)))
@@ -172,8 +172,8 @@ public struct StringExtension {
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
     public func substring(through index: Int) -> String {
-        guard (index < string.count) && (index >= 0) else {
-            print("\(#function): index out of range")
+        guard (index < string.endIndex.utf16Offset(in: string)) && (index >= string.startIndex.utf16Offset(in: string)) else {
+            print("\(#function): index '\(index)' out of range")
             return ""
         }
         return String(string.prefix(through: string.index(string.startIndex, offsetBy: index)))
@@ -184,7 +184,7 @@ public struct StringExtension {
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
     public func substring(from index: Int) -> String {
-        guard (index < string.count) && (index >= 0) else {
+        guard (index < string.endIndex.utf16Offset(in: string)) && (index >= string.startIndex.utf16Offset(in: string)) else {
             print("\(#function): index '\(index)' out of range")
             return ""
         }
