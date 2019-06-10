@@ -9,7 +9,15 @@
 import UIKit
 
 extension Optional {
-    
+    public var isNone: Bool {
+        switch self {
+        case .none:
+            return true
+
+        case .some:
+            return false
+        }
+    }
 }
 
 extension Optional where Wrapped == String {
