@@ -20,7 +20,7 @@ extension Optional {
     }
 
     public var isSome: Bool {
-        return !isNone
+        return !rat_isNone
     }
 }
 
