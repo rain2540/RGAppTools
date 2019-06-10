@@ -9,7 +9,7 @@
 import UIKit
 
 extension Optional {
-    public var isNone: Bool {
+    public var rat_isNone: Bool {
         switch self {
         case .none:
             return true
