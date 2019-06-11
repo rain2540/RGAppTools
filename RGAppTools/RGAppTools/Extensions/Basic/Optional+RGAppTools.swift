@@ -22,6 +22,10 @@ extension Optional {
     public var rat_isSome: Bool {
         return !rat_isNone
     }
+
+    public func rat_or(_ default: Wrapped) -> Wrapped {
+        return self ?? `default`
+    }
 }
 
 
