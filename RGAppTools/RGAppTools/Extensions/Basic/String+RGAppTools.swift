@@ -17,6 +17,12 @@ extension String {
         return StringExtension.self
     }
 
+
+    /// 判断字符串是否为 nil, 为空, 或只包括空字符
+    public var rat_isBlank: Bool {
+        return allSatisfy{ $0.isWhitespace }
+    }
+
     /// 获取指定位置字符
     public subscript(original: Int) -> String {
         guard original < endIndex.utf16Offset(in: self) else {
@@ -39,46 +45,6 @@ extension String {
                 return ""
         }
         return String(self[startIndex ..< endIndex])
-    }
-
-    /**
-     * 以下三个方法对 String 的索引值做如下的检验
-     * 1.索引值是否在合理的范围内, 如果不合理, 就拉回到最近的边界上
-     * 2.索引值作为一个起始点 / 终止点是否合理, 如果不合理, 就返回 nil
-     */
-    /// 检验索引值是否在合理的范围内, 不合理则拉回到最近的边界上
-    ///
-    /// - Parameter original: 待检验的索引值
-    /// - Returns: 经过检验的有效索引值
-    private func rat_validIndex(original: Int) -> String.Index {
-        switch original {
-        case ...startIndex.utf16Offset(in: self)    :   return startIndex
-        case endIndex.utf16Offset(in: self)...      :   return endIndex
-        default                                     :   return index(startIndex, offsetBy: original)
-        }
-    }
-
-    /// 判断字符串是否为 nil, 为空, 或只包括空字符
-    public var rat_isBlank: Bool {
-        return allSatisfy{ $0.isWhitespace }
-    }
-
-    /// 检验索引值是否可以作为起始点, 否则返回 nil
-    ///
-    /// - Parameter original: 待检验的索引值
-    /// - Returns: 经过检验的有效索引值或 nil
-    fileprivate func rat_validStartIndex(original: Int) -> String.Index? {
-        guard original < endIndex.utf16Offset(in: self) else { return nil }
-        return rat_validIndex(original: original)
-    }
-
-    /// 检验索引值是否可以作为终止点, 否则返回 nil
-    ///
-    /// - Parameter original: 待检验的索引值
-    /// - Returns: 经过检验的有效索引值或 nil
-    fileprivate func rat_validEndIndex(original: Int) -> String.Index? {
-        guard original >= startIndex.utf16Offset(in: self) else { return nil }
-        return rat_validIndex(original: original)
     }
 
     /// 在字符串指定位置插入一个字符
@@ -137,6 +103,43 @@ extension String {
         let end = index(startIndex, offsetBy: subrange.upperBound)
         removeSubrange(start ..< end)
     }
+
+
+    /**
+     * 以下三个方法对 String 的索引值做如下的检验
+     * 1.索引值是否在合理的范围内, 如果不合理, 就拉回到最近的边界上
+     * 2.索引值作为一个起始点 / 终止点是否合理, 如果不合理, 就返回 nil
+     */
+
+    /// 检验索引值是否可以作为起始点, 否则返回 nil
+    ///
+    /// - Parameter original: 待检验的索引值
+    /// - Returns: 经过检验的有效索引值或 nil
+    fileprivate func rat_validStartIndex(original: Int) -> String.Index? {
+        guard original < endIndex.utf16Offset(in: self) else { return nil }
+        return rat_validIndex(original: original)
+    }
+
+    /// 检验索引值是否可以作为终止点, 否则返回 nil
+    ///
+    /// - Parameter original: 待检验的索引值
+    /// - Returns: 经过检验的有效索引值或 nil
+    fileprivate func rat_validEndIndex(original: Int) -> String.Index? {
+        guard original >= startIndex.utf16Offset(in: self) else { return nil }
+        return rat_validIndex(original: original)
+    }
+
+    /// 检验索引值是否在合理的范围内, 不合理则拉回到最近的边界上
+    ///
+    /// - Parameter original: 待检验的索引值
+    /// - Returns: 经过检验的有效索引值
+    private func rat_validIndex(original: Int) -> String.Index {
+        switch original {
+        case ...startIndex.utf16Offset(in: self)    :   return startIndex
+        case endIndex.utf16Offset(in: self)...      :   return endIndex
+        default                                     :   return index(startIndex, offsetBy: original)
+        }
+    }
 }
 
 
@@ -148,7 +151,7 @@ public struct StringExtension {
         self.string = string
     }
 
-    
+
     // MARK: - Basic
     /// 字符串长度
     public var length: Int {
