@@ -30,6 +30,10 @@ extension Optional {
     public func rat_or(else: @autoclosure () -> Wrapped) -> Wrapped {
         return self ?? `else`()
     }
+
+    public func rat_or(else: () -> Wrapped) -> Wrapped {
+        return self ?? `else`()
+    }
 }
 
 
