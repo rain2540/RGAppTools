@@ -34,6 +34,11 @@ extension Optional {
     public func rat_or(else: () -> Wrapped) -> Wrapped {
         return self ?? `else`()
     }
+
+    public func rat_or(throw exception: Error) throws -> Wrapped {
+        guard let unwrapped = self else { throw exception }
+        return unwrapped
+    }
 }
 
 
