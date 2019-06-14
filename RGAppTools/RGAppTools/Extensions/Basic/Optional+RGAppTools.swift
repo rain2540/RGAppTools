@@ -44,6 +44,8 @@ extension Optional {
         return self ?? `else`()
     }
 
+    /// 当可选值不为空时，返回可选值；如果为空，抛出异常
+    /// - Parameter exception: 可选值为空时抛出的异常
     public func rat_or(throw exception: Error) throws -> Wrapped {
         guard let unwrapped = self else { throw exception }
         return unwrapped
