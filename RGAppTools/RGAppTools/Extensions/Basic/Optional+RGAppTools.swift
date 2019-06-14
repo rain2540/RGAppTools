@@ -43,7 +43,10 @@ extension Optional {
 
 
 extension Optional where Wrapped == Error {
-    
+    public func rat_or(else: (Error) -> Void) {
+        guard let error = self else { return }
+        `else`(error)
+    }
 }
 
 
