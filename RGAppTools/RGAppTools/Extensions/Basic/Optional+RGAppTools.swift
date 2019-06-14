@@ -8,6 +8,15 @@
 
 import UIKit
 
+public func should(_ do: () throws -> Void) -> Error? {
+    do {
+        try `do`()
+        return nil
+    } catch {
+        return error
+    }
+}
+
 extension Optional {
     public var rat_isNone: Bool {
         switch self {
