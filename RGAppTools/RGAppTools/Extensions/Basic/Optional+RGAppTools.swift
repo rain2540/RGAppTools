@@ -29,6 +29,7 @@ extension Optional {
         }
     }
 
+    /// 判断可选值是否非空
     public var rat_isSome: Bool {
         return !rat_isNone
     }
