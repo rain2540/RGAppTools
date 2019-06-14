@@ -40,6 +40,8 @@ extension Optional {
         return self ?? `else`()
     }
 
+    /// 返回可选值或者 `else` 闭包的返回值
+    /// - Parameter else: 可选值为空时返回的闭包
     public func rat_or(else: () -> Wrapped) -> Wrapped {
         return self ?? `else`()
     }
