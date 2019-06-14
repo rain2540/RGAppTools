@@ -62,6 +62,9 @@ extension Optional {
 
 
 extension Optional where Wrapped == Error {
+    /// 当 Error 不为空时，执行 `else`
+    ///
+    /// - Parameter else: Error 不为空时执行的操作
     public func rat_or(else: (Error) -> Void) {
         guard let error = self else { return }
         `else`(error)
