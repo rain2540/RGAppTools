@@ -33,14 +33,12 @@ extension Optional {
     }
 
     /// 返回可选值或默认值
-    ///
     /// - Parameter default: 可选值为空时返回的默认值
     public func rat_or(_ default: Wrapped) -> Wrapped {
         return self ?? `default`
     }
 
     /// 返回可选值或 `else` 表达式的返回值
-    ///
     /// - Parameter else: 可选值为空时返回的表达式
     public func rat_or(else: @autoclosure () -> Wrapped) -> Wrapped {
         return self ?? `else`()
@@ -63,7 +61,6 @@ extension Optional {
 
 extension Optional where Wrapped == Error {
     /// 当 Error 不为空时，执行 `else`
-    ///
     /// - Parameter else: Error 不为空时执行的操作
     public func rat_or(else: (Error) -> Void) {
         guard let error = self else { return }
