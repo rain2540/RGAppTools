@@ -36,6 +36,9 @@ extension Optional {
         return self ?? `default`
     }
 
+    /// 返回可选值或 `else` 表达式的返回值
+    ///
+    /// - Parameter else: 可选值为空时返回的表达式
     public func rat_or(else: @autoclosure () -> Wrapped) -> Wrapped {
         return self ?? `else`()
     }
