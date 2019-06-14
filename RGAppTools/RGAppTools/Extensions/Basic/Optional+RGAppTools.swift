@@ -8,6 +8,8 @@
 
 import UIKit
 
+/// 执行 `do` 或抛出异常
+/// - Parameter do: 执行的操作
 public func should(_ do: () throws -> Void) -> Error? {
     do {
         try `do`()
