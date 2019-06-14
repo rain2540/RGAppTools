@@ -19,6 +19,8 @@ public func should(_ do: () throws -> Void) -> Error? {
     }
 }
 
+
+// MARK: - 
 extension Optional {
     /// 判断可选值是否为空
     public var rat_isNone: Bool {
