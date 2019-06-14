@@ -32,6 +32,9 @@ extension Optional {
         return !rat_isNone
     }
 
+    /// 返回可选值或默认值
+    ///
+    /// - Parameter default: 可选值为空时返回的默认值
     public func rat_or(_ default: Wrapped) -> Wrapped {
         return self ?? `default`
     }
