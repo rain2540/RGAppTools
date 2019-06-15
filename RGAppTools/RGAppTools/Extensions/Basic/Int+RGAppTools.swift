@@ -40,3 +40,9 @@ public struct IntExtension {
         return CGFloat(int)
     }
 }
+
+extension IntExtension {
+    public static func randomIntNumber(lower: Int = 0, upper: Int = Int(UInt32.max)) -> Int {
+        return lower + Int(arc4random_uniform(UInt32(upper - lower)))
+    }
+}
