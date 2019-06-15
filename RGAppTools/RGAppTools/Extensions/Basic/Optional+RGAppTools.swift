@@ -63,7 +63,7 @@ extension Optional {
         return unwrapped
     }
     
-    public func map<T>(_ fn: (Wrapped) throws -> T, default: T) rethrows -> T {
+    public func rat_map<T>(_ fn: (Wrapped) throws -> T, default: T) rethrows -> T {
         return try map(fn) ?? `default`
     }
 }
