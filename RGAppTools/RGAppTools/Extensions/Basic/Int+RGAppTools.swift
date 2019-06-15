@@ -12,6 +12,10 @@ extension Int {
     public var rat: IntExtension {
         return IntExtension(int: self)
     }
+    
+    public static var rat: IntExtension.Type {
+        return IntExtension.self
+    }
 }
 
 public struct IntExtension {
