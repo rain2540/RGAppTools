@@ -69,6 +69,7 @@ extension Optional {
 }
 
 
+// MARK: - Map
 extension Optional {
     public func rat_map<T>(_ fn: (Wrapped) throws -> T, default: T) rethrows -> T {
         return try map(fn) ?? `default`
