@@ -62,11 +62,14 @@ extension Optional {
         guard let unwrapped = self else { throw exception }
         return unwrapped
     }
-    
+}
+
+
+extension Optional {
     public func rat_map<T>(_ fn: (Wrapped) throws -> T, default: T) rethrows -> T {
         return try map(fn) ?? `default`
     }
-    
+
     public func rat_map<T>(_ fn: (Wrapped) throws -> T, else: () throws -> T) rethrows -> T {
         return try map(fn) ?? `else`()
     }
