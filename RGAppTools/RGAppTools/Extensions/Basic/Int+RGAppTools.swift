@@ -12,6 +12,10 @@ extension Int {
     public var rat: IntExtension {
         return IntExtension(int: self)
     }
+    
+    public static var rat: IntExtension.Type {
+        return IntExtension.self
+    }
 }
 
 public struct IntExtension {
@@ -34,5 +38,11 @@ public struct IntExtension {
     /// 转换为对应的 CGFloat 值
     public var cgFloatValue: CGFloat {
         return CGFloat(int)
+    }
+}
+
+extension IntExtension {
+    public static func randomIntNumber(lower: Int = 0, upper: Int = Int(UInt32.max)) -> Int {
+        return lower + Int(arc4random_uniform(UInt32(upper - lower)))
     }
 }
