@@ -49,4 +49,12 @@ extension IntExtension {
     public static func randomNumber(range: Range<Int>) -> Int {
         return randomNumber(lower: range.lowerBound, upper: range.upperBound)
     }
+    
+    public static func randomNumbers(lower: Int = 0, upper: Int = Int(UInt32.max), size: Int = 10) -> [Int] {
+        var res: [Int] = []
+        for _ in 0 ..< size {
+            res.append(randomNumber(lower: lower, upper: upper))
+        }
+        return res
+    }
 }
