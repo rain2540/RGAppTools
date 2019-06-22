@@ -57,4 +57,12 @@ extension IntExtension {
         }
         return res
     }
+    
+    public static func randomNumbers(range: Range<Int>, size: Int = 10) -> [Int] {
+        var res: [Int] = []
+        for _ in 0 ..< size {
+            res.append(randomNumber(range: range))
+        }
+        return res
+    }
 }
