@@ -42,6 +42,9 @@ public struct IntExtension {
 }
 
 extension IntExtension {
+    /// lower - upper 之间的随机数
+    /// - Parameter lower: 范围下限
+    /// - Parameter upper: 范围上限
     public static func randomNumber(lower: Int = 0, upper: Int = Int(UInt32.max)) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower)))
     }
