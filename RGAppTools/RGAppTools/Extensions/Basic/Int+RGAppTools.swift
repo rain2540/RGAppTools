@@ -18,6 +18,7 @@ extension Int {
     }
 }
 
+
 public struct IntExtension {
     private var int: Int
 
@@ -33,13 +34,17 @@ public struct IntExtension {
     public func format(_ fmt: String) -> String {
         return String(format: "%\(fmt)d", int)
     }
+}
 
-    //  MARK: Transfer
+
+//  MARK: - Transfer
+extension IntExtension {
     /// 转换为对应的 CGFloat 值
     public var cgFloatValue: CGFloat {
         return CGFloat(int)
     }
 }
+
 
 extension IntExtension {
     /// lower - upper 之间的随机数
