@@ -25,8 +25,11 @@ public struct IntExtension {
     fileprivate init(int: Int) {
         self.int = int
     }
+}
 
-    //  MARK: Farmatted Output
+
+//  MARK: - Farmatted Output
+extension IntExtension {
     /// 格式化输出
     ///
     /// - Parameter fmt: 以字符串形式表示的输出格式
