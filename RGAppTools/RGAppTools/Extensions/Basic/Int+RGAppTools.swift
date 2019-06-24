@@ -49,6 +49,7 @@ extension IntExtension {
 }
 
 
+// MARK: - Random Number
 extension IntExtension {
     /// lower - upper 之间的随机数
     /// - Parameter lower: 范围下限
