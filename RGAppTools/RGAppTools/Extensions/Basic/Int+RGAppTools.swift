@@ -57,7 +57,9 @@ extension IntExtension {
     public static func randomNumber(lower: Int = 0, upper: Int = Int(UInt32.max)) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower)))
     }
-    
+
+    /// range 范围内的随机数
+    /// - Parameter range: 产生随机数的范围
     public static func randomNumber(range: Range<Int>) -> Int {
         return randomNumber(lower: range.lowerBound, upper: range.upperBound)
     }
