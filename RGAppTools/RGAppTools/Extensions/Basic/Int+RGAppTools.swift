@@ -64,6 +64,12 @@ extension IntExtension {
         return randomNumber(lower: range.lowerBound, upper: range.upperBound)
     }
     
+    /// 创建 lower - upper 之间的若干个随机数
+    ///
+    /// - Parameters:
+    ///   - lower: 范围下限
+    ///   - upper: 范围上限
+    ///   - size: 随机数个数
     public static func randomNumbers(lower: Int = 0, upper: Int = Int(UInt32.max), size: Int = 10) -> [Int] {
         var res: [Int] = []
         for _ in 0 ..< size {
