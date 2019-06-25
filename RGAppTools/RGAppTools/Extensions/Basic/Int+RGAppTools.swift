@@ -51,7 +51,7 @@ extension IntExtension {
 
 // MARK: - Random Number
 extension IntExtension {
-    /// lower - upper 之间的随机数
+    /// 产生 lower - upper 之间的一个随机数
     /// - Parameter lower: 范围下限
     /// - Parameter upper: 范围上限
     public static func randomNumber(lower: Int = 0, upper: Int = Int(UInt32.max)) -> Int {
