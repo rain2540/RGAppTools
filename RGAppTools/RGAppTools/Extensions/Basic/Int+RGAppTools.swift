@@ -51,14 +51,14 @@ extension IntExtension {
 
 // MARK: - Random Number
 extension IntExtension {
-    /// 产生 lower - upper 之间的一个随机数
+    /// 创建 lower - upper 之间的一个随机数
     /// - Parameter lower: 范围下限
     /// - Parameter upper: 范围上限
     public static func randomNumber(lower: Int = 0, upper: Int = Int(UInt32.max)) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower)))
     }
 
-    /// range 范围内的随机数
+    /// 创建 range 范围内的一个随机数
     /// - Parameter range: 产生随机数的范围
     public static func randomNumber(range: Range<Int>) -> Int {
         return randomNumber(lower: range.lowerBound, upper: range.upperBound)
