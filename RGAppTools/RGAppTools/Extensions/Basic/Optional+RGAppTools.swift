@@ -69,6 +69,17 @@ extension Optional {
 }
 
 
+// MARK: - Error
+extension Optional where Wrapped == Error {
+    /// 当 Error 不为空时，执行 `else`
+    /// - Parameter else: Error 不为空时执行的操作
+    public func rat_or(else: (Error) -> Void) {
+        guard let error = self else { return }
+        `else`(error)
+    }
+}
+
+
 // MARK: - Map
 extension Optional {
     /// 可选值变换返回，如果可选值为空，则返回默认值
@@ -91,15 +102,7 @@ extension Optional {
 }
 
 
-// MARK: - Error
-extension Optional where Wrapped == Error {
-    /// 当 Error 不为空时，执行 `else`
-    /// - Parameter else: Error 不为空时执行的操作
-    public func rat_or(else: (Error) -> Void) {
-        guard let error = self else { return }
-        `else`(error)
-    }
-}
+
 
 
 // MARK: - String
