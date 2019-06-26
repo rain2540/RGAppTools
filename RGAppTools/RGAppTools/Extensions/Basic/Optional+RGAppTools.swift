@@ -102,7 +102,12 @@ extension Optional {
 }
 
 
-
+extension Optional {
+    public func rat_and<T>(_ optional: T?) -> T? {
+        guard self != nil else { return nil }
+        return optional
+    }
+}
 
 
 // MARK: - String
