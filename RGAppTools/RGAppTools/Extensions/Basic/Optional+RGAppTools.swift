@@ -107,6 +107,11 @@ extension Optional {
         guard self != nil else { return nil }
         return optional
     }
+
+    public func rat_and<T>(then: (Wrapped) throws -> T?) rethrows -> T? {
+        guard let unwrapped = self else { return nil }
+        return try then(unwrapped)
+    }
 }
 
 
