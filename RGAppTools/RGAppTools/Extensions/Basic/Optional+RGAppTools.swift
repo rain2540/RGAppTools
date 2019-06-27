@@ -112,6 +112,11 @@ extension Optional {
         guard let unwrapped = self else { return nil }
         return try then(unwrapped)
     }
+
+    func zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
+        guard let first = self, let second = other else { return nil }
+        return (first, second)
+    }
 }
 
 
