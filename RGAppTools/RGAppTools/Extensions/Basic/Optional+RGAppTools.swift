@@ -128,6 +128,11 @@ extension Optional {
 }
 
 
+extension Optional {
+    
+}
+
+
 // MARK: - String
 extension Optional where Wrapped == String {
     /// 判断字符串是否为 nil, 为空, 或只包括空字符
