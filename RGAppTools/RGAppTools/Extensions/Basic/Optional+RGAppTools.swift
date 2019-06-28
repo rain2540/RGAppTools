@@ -117,6 +117,13 @@ extension Optional {
         guard let first = self, let second = other else { return nil }
         return (first, second)
     }
+
+    func zip3<A, B>(with other: Optional<A>, another: Optional<B>) -> (Wrapped, A, B)? {
+        guard let first = self,
+            let second = other,
+            let third = another else { return nil }
+        return (first, second, third)
+    }
 }
 
 
