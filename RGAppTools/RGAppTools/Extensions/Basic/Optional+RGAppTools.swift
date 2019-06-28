@@ -129,7 +129,9 @@ extension Optional {
 
 
 extension Optional {
-    
+    func rat_on(some: () throws -> Void) rethrows {
+        if self != nil { try some() }
+    }
 }
 
 
