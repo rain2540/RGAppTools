@@ -132,6 +132,10 @@ extension Optional {
     public func rat_on(some: () throws -> Void) rethrows {
         if self != nil { try some() }
     }
+
+    public func rat_on(none: () throws -> Void) rethrows {
+        if self == nil { try none() }
+    }
 }
 
 
