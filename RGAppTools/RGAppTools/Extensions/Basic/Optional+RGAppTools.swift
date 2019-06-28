@@ -114,12 +114,12 @@ extension Optional {
         return try then(unwrapped)
     }
 
-    func rat_zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
+    public func rat_zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
         guard let first = self, let second = other else { return nil }
         return (first, second)
     }
 
-    func rat_zip3<A, B>(with other: Optional<A>, another: Optional<B>) -> (Wrapped, A, B)? {
+    public func rat_zip3<A, B>(with other: Optional<A>, another: Optional<B>) -> (Wrapped, A, B)? {
         guard let first = self,
             let second = other,
             let third = another else { return nil }
@@ -129,7 +129,7 @@ extension Optional {
 
 
 extension Optional {
-    func rat_on(some: () throws -> Void) rethrows {
+    public func rat_on(some: () throws -> Void) rethrows {
         if self != nil { try some() }
     }
 }
