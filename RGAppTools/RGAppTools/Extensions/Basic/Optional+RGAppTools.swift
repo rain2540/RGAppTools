@@ -114,12 +114,12 @@ extension Optional {
         return try then(unwrapped)
     }
 
-    func zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
+    func rat_zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
         guard let first = self, let second = other else { return nil }
         return (first, second)
     }
 
-    func zip3<A, B>(with other: Optional<A>, another: Optional<B>) -> (Wrapped, A, B)? {
+    func rat_zip3<A, B>(with other: Optional<A>, another: Optional<B>) -> (Wrapped, A, B)? {
         guard let first = self,
             let second = other,
             let third = another else { return nil }
