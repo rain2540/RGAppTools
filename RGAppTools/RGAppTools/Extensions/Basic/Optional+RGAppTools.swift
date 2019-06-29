@@ -104,6 +104,8 @@ extension Optional {
 
 // MARK: - Combining Optionals
 extension Optional {
+    /// 当可选值不为空时，解包并返回参数 `optional`
+    /// - Parameter optional: 可选值不为空时，返回的值
     public func rat_and<T>(_ optional: T?) -> T? {
         guard self != nil else { return nil }
         return optional
