@@ -129,6 +129,9 @@ extension Optional {
 
 
 extension Optional {
+    /// 当可选值不为空时，执行 `some` 闭包
+    ///
+    /// - Parameter some: 可选值不为空时，执行的操作
     public func rat_on(some: () throws -> Void) rethrows {
         if self != nil { try some() }
     }
