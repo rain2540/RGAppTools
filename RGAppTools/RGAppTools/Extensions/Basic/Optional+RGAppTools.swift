@@ -119,6 +119,9 @@ extension Optional {
         return try then(unwrapped)
     }
 
+    /// 将当前可选值与其他可选值组合在一起。当且仅当两个可选值都不为空时组合成功，否则返回空。
+    ///
+    /// - Parameter other: 其他可选值
     public func rat_zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
         guard let first = self, let second = other else { return nil }
         return (first, second)
