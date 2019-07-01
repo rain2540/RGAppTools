@@ -104,11 +104,16 @@ extension Optional {
 
 // MARK: - Combining Optionals
 extension Optional {
+    /// 当可选值不为空时，解包并返回参数 `optional`
+    /// - Parameter optional: 可选值不为空时，返回的值
     public func rat_and<T>(_ optional: T?) -> T? {
         guard self != nil else { return nil }
         return optional
     }
-
+    
+    /// 解包可选值，当可选值不为空时，执行 `then` 闭包，并返回执行结果
+    /// 可以将多个可选项连接在一起
+    /// - Parameter then: 可选值不为空时，执行的操作
     public func rat_and<T>(then: (Wrapped) throws -> T?) rethrows -> T? {
         guard let unwrapped = self else { return nil }
         return try then(unwrapped)
