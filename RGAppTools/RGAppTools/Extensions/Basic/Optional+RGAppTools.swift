@@ -119,11 +119,19 @@ extension Optional {
         return try then(unwrapped)
     }
 
+    /// 将当前可选值与其他可选值组合在一起。当且仅当两个可选值都不为空时组合成功，否则返回空。
+    ///
+    /// - Parameter other: 其他可选值
     public func rat_zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
         guard let first = self, let second = other else { return nil }
         return (first, second)
     }
 
+    /// 将当前可选值与其他可选值组合在一起。当且仅当三个可选值都不为空时组合成功，否则返回空。
+    ///
+    /// - Parameters:
+    ///   - other: 第二个可选值
+    ///   - another: 第三个可选值
     public func rat_zip3<A, B>(with other: Optional<A>, another: Optional<B>) -> (Wrapped, A, B)? {
         guard let first = self,
             let second = other,
@@ -134,6 +142,9 @@ extension Optional {
 
 
 extension Optional {
+    /// 当可选值不为空时，执行 `some` 闭包
+    ///
+    /// - Parameter some: 可选值不为空时，执行的操作
     public func rat_on(some: () throws -> Void) rethrows {
         if self != nil { try some() }
     }
