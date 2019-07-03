@@ -137,7 +137,9 @@ extension Optional {
     public func rat_on(some: () throws -> Void) rethrows {
         if self != nil { try some() }
     }
-
+    
+    /// 当可选值为空时，执行 `none` 闭包
+    /// - Parameter none: 可选值为空时，执行的操作
     public func rat_on(none: () throws -> Void) rethrows {
         if self == nil { try none() }
     }
