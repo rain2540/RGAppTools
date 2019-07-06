@@ -158,6 +158,12 @@ extension Optional {
 
 
 extension Optional {
+    public func rat_filter(_ predicate: (Wrapped) -> Bool) -> Wrapped? {
+        guard let unwrapped = self,
+            predicate(unwrapped) else { return nil }
+        return self
+    }
+    
     public func rat_expect(_ message: String) -> Wrapped {
         guard let value = self else { fatalError(message) }
         return value
