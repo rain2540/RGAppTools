@@ -157,6 +157,14 @@ extension Optional {
 }
 
 
+extension Optional {
+    public func rat_expect(_ message: String) -> Wrapped {
+        guard let value = self else { fatalError(message) }
+        return value
+    }
+}
+
+
 // MARK: - String
 extension Optional where Wrapped == String {
     /// 判断字符串是否为 nil, 为空, 或只包括空字符
