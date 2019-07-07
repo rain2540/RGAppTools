@@ -167,6 +167,8 @@ extension Optional {
         return self
     }
     
+    /// 可选值不为空时返回，否则 crash可选值wei kon
+    /// - Parameter message: 可选值为空时的 crash 信息
     public func rat_expect(_ message: String) -> Wrapped {
         guard let value = self else { fatalError(message) }
         return value
