@@ -157,7 +157,10 @@ extension Optional {
 }
 
 
+// MARK: - Various
 extension Optional {
+    /// 可选值不为空且可选值满足 `predicate` 条件才返回，否则返回 `nil`
+    /// - Parameter predicate: 判断条件
     public func rat_filter(_ predicate: (Wrapped) -> Bool) -> Wrapped? {
         guard let unwrapped = self,
             predicate(unwrapped) else { return nil }
