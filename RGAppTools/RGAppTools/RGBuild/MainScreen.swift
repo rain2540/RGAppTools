@@ -10,6 +10,7 @@ import UIKit
 
 public struct MainScreen {
 
+    /// scale of main screen
     public static var scale: CGFloat { return self.mainScreen.scale }
     /// width of main screen
     public static var width: CGFloat { return self.size.width }
