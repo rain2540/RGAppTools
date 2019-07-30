@@ -20,6 +20,42 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction private func actionButtonClick(_ sender: UIButton) {
+        deviceInfo()
+    }
+
+    private func deviceInfo() {
+        UIDevice.rat.printDeviceInformations()
+        print("screen.size: ", MainScreen.size)
+        print("screen.scale: ", MainScreen.scale)
+        print("pixel width: ", MainScreen.pixelWidth)
+        print("pixel height: ", MainScreen.pixelHeight)
+    }
+
+    private func aboutString() {
+        var str = "01234"
+        str.rat_insert("5", at: 5)
+        print(str)
+        print(str.rat_isBlank)
+        let r = str.rat_remove(at: 6)
+        print(str, r ?? "nil")
+        str.rat_replace(subrange: 0 ..< 1, with: "1")
+        print(str)
+
+        let s: String? = nil
+        print(s.rat_isBlank)
+        print(s.rat_isNone)
+
+        let dic = ["key": "value"]
+
+        should {
+            let data = try JSONSerialization.data(withJSONObject: dic, options: JSONSerialization.WritingOptions.prettyPrinted)
+            print(data)
+            }.rat_or{ print($0) }
+
+        let i: Int? = 9
+        print(i.rat_isNone)
+    }
 
 }
 
