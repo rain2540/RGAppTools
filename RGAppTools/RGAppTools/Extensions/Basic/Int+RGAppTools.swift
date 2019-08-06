@@ -9,6 +9,7 @@
 import UIKit
 
 extension Int {
+
     public var rat: IntExtension {
         return IntExtension(int: self)
     }
@@ -16,20 +17,25 @@ extension Int {
     public static var rat: IntExtension.Type {
         return IntExtension.self
     }
+
 }
 
 
+// MARK: - 
 public struct IntExtension {
+
     private var int: Int
 
     fileprivate init(int: Int) {
         self.int = int
     }
+
 }
 
 
 //  MARK: - Farmatted Output
 extension IntExtension {
+
     /// 格式化输出
     ///
     /// - Parameter fmt: 以字符串形式表示的输出格式
@@ -37,20 +43,24 @@ extension IntExtension {
     public func format(_ fmt: String) -> String {
         return String(format: "%\(fmt)d", int)
     }
+
 }
 
 
 //  MARK: - Transfer
 extension IntExtension {
+
     /// 转换为对应的 CGFloat 值
     public var cgFloatValue: CGFloat {
         return CGFloat(int)
     }
+
 }
 
 
 // MARK: - Random Number
 extension IntExtension {
+
     /// 创建 lower - upper 之间的一个随机数
     /// - Parameter lower: 范围下限
     /// - Parameter upper: 范围上限
@@ -90,4 +100,5 @@ extension IntExtension {
         }
         return res
     }
+
 }
