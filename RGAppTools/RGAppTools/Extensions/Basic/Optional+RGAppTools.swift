@@ -22,6 +22,7 @@ public func should(_ do: () throws -> Void) -> Error? {
 
 // MARK: - Emptiness
 extension Optional {
+
     /// 判断可选值是否为空
     public var rat_isNone: Bool {
         switch self {
@@ -37,11 +38,13 @@ extension Optional {
     public var rat_isSome: Bool {
         return !rat_isNone
     }
+
 }
 
 
 // MARK: - Or
 extension Optional {
+
     /// 返回可选值或默认值
     /// - Parameter default: 可选值为空时返回的默认值
     public func rat_or(_ default: Wrapped) -> Wrapped {
@@ -66,22 +69,26 @@ extension Optional {
         guard let unwrapped = self else { throw exception }
         return unwrapped
     }
+
 }
 
 
 // MARK: - Error
 extension Optional where Wrapped == Error {
+
     /// 当 Error 不为空时，执行 `else`
     /// - Parameter else: Error 不为空时执行的操作
     public func rat_or(else: (Error) -> Void) {
         guard let error = self else { return }
         `else`(error)
     }
+
 }
 
 
 // MARK: - Map
 extension Optional {
+
     /// 可选值变换返回，如果可选值为空，则返回默认值
     ///
     /// - Parameters:
@@ -99,11 +106,13 @@ extension Optional {
     public func rat_map<T>(_ fn: (Wrapped) throws -> T, else: () throws -> T) rethrows -> T {
         return try map(fn) ?? `else`()
     }
+
 }
 
 
 // MARK: - Combining Optionals
 extension Optional {
+
     /// 当可选值不为空时，解包并返回参数 `optional`
     /// - Parameter optional: 可选值不为空时，返回的值
     public func rat_and<T>(_ optional: T?) -> T? {
@@ -138,10 +147,12 @@ extension Optional {
             let third = another else { return nil }
         return (first, second, third)
     }
+
 }
 
 
 extension Optional {
+
     /// 当可选值不为空时，执行 `some` 闭包
     ///
     /// - Parameter some: 可选值不为空时，执行的操作
@@ -154,11 +165,13 @@ extension Optional {
     public func rat_on(none: () throws -> Void) rethrows {
         if self == nil { try none() }
     }
+
 }
 
 
 // MARK: - Various
 extension Optional {
+
     /// 可选值不为空且可选值满足 `predicate` 条件才返回，否则返回 `nil`
     /// - Parameter predicate: 判断条件
     public func rat_filter(_ predicate: (Wrapped) -> Bool) -> Wrapped? {
@@ -173,13 +186,16 @@ extension Optional {
         guard let value = self else { fatalError(message) }
         return value
     }
+
 }
 
 
 // MARK: - String
 extension Optional where Wrapped == String {
+
     /// 判断字符串是否为 nil, 为空, 或只包括空字符
     public var rat_isBlank: Bool {
         return self?.rat_isBlank ?? true
     }
+
 }
