@@ -9,36 +9,39 @@
 import UIKit
 
 /// Enum of Device Types
-public enum DeviceType {
-    case unknown,
+public enum DeviceType: String {
+    case unknown = "unknown",
+    
     //  iPhone
-    iPhone_2G,
-    iPhone_3G,
-    iPhone_3GS,
-    iPhone_4,
-    iPhone_4S,
-    iPhone_5,
-    iPhone_5c,
-    iPhone_5s,
-    iPhone_6_Plus,
-    iPhone_6,
-    iPhone_6s,
-    iPhone_6s_Plus,
-    iPhone_SE,
-    iPhone_7,
-    iPhone_7_Plus,
-    iPhone_8,
-    iPhone_8_Plus,
-    iPhone_X,
-    iPhone_XS,
-    iPhone_XS_Max,
-    iPhone_XR,
+    iPhone_2G       =   "iPhone",
+    iPhone_3G       =   "iPhone 3G",
+    iPhone_3GS      =   "iPhone 3GS",
+    iPhone_4        =   "iPhone 4",
+    iPhone_4S       =   "iPhone 4S",
+    iPhone_5        =   "iPhone 5",
+    iPhone_5c       =   "iPhone 5c",
+    iPhone_5s       =   "iPhone 5s",
+    iPhone_6_Plus   =   "iPhone 6 Plus",
+    iPhone_6        =   "iPhone 6",
+    iPhone_6s       =   "iPhone 6s",
+    iPhone_6s_Plus  =   "iPhone 6s Plus",
+    iPhone_SE       =   "iPhone SE",
+    iPhone_7        =   "iPhone 7",
+    iPhone_7_Plus   =   "iPhone 7 Plus",
+    iPhone_8        =   "iPhone 8",
+    iPhone_8_Plus   =   "iPhone 8 Plus",
+    iPhone_X        =   "iPhone X",
+    iPhone_XS       =   "iPhone XS",
+    iPhone_XS_Max   =   "iPhone XS Max",
+    iPhone_XR       =   "iPhone XR",
+
     //  iPod Touch
     iPod_Touch_1,
     iPod_Touch_2,
     iPod_Touch_3,
     iPod_Touch_4,
     iPod_Touch_5,
+
     //  iPad
     iPad_1,
     iPad_2,
@@ -52,8 +55,10 @@ public enum DeviceType {
     iPad_Mini_4,
     iPad_Pro_97,
     iPad_Pro_129,
+
     //  Apple TV
     Apple_TV,
+
     //  Simulator
     simulator_32bit,
     simulator_64bit
@@ -121,6 +126,7 @@ extension RGAppTools where Base: UIDevice {
             guard let value = element.value as? Int8, value != 0 else { return identifier }
             return identifier + String(UnicodeScalar(UInt8(value)))
         }
+
         switch identifier {
         case "iPod1,1":
             print("iPod Touch 1G")
