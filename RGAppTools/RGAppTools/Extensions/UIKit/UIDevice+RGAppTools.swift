@@ -210,6 +210,10 @@ extension RGAppTools where Base: UIDevice {
             print("iPhone XS")
             return .iPhone_XS
 
+        case "iPhone11,4", "iPhone11,6":
+            print("iPhone XS Max")
+            return .iPhone_XS_Max
+
         case "iPhone11,8":
             print("iPhone XR")
             return .iPhone_XR
