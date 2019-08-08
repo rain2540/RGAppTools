@@ -30,6 +30,8 @@ public enum DeviceType {
     iPhone_8,
     iPhone_8_Plus,
     iPhone_X,
+    iPhone_XS,
+    iPhone_XS_Max,
     iPhone_XR,
     //  iPod Touch
     iPod_Touch_1,
