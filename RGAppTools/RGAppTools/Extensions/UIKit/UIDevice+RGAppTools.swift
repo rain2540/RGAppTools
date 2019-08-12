@@ -41,6 +41,8 @@ public enum DeviceType: String {
     iPod_Touch_3,
     iPod_Touch_4,
     iPod_Touch_5,
+    iPod_Touch_6,
+    iPod_Touch_7,
 
     //  iPad
     iPad_1,
