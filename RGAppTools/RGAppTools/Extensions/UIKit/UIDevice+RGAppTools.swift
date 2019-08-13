@@ -36,13 +36,13 @@ public enum DeviceType: String {
     iPhone_XR       =   "iPhone XR",
 
     //  iPod Touch
-    iPod_Touch_1,
-    iPod_Touch_2,
-    iPod_Touch_3,
-    iPod_Touch_4,
-    iPod_Touch_5,
-    iPod_Touch_6,
-    iPod_Touch_7,
+    iPod_Touch_1    =   "iPod Touch 1",
+    iPod_Touch_2    =   "iPod Touch 2",
+    iPod_Touch_3    =   "iPod Touch 3",
+    iPod_Touch_4    =   "iPod Touch 4",
+    iPod_Touch_5    =   "iPod Touch 5",
+    iPod_Touch_6    =   "iPod Touch 6",
+    iPod_Touch_7    =   "iPod Touch 7",
 
     //  iPad
     iPad_1,
