@@ -212,6 +212,14 @@ public struct StringExtension {
         let str = String(string.suffix(from: start))
         return String(str.prefix(validLength))
     }
+
+    public func removingLast(ifHas suffix: String) -> String {
+        var resultString = string
+        if resultString.hasSuffix(suffix) {
+            resultString.removeLast()
+        }
+        return resultString
+    }
 }
 
 
