@@ -104,6 +104,12 @@ extension String {
         removeSubrange(start ..< end)
     }
 
+    public mutating func rat_removeLast(ifHas suffix: String) {
+        if hasSuffix(suffix){
+            removeLast()
+        }
+    }
+
 
     /**
      * 以下三个方法对 String 的索引值做如下的检验
