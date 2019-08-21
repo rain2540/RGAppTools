@@ -19,6 +19,10 @@ extension RGAppTools where Base: FileManager {
     public static var documentsPath: String? {
         return DefaultFileManager.urls(for: .documentDirectory, in: .userDomainMask).first?.path
     }
+
+    public static var libraryPath: String? {
+        return DefaultFileManager.urls(for: .libraryDirectory, in: .userDomainMask).first?.path
+    }
     
     /// Caches 文件夹路径
     public static var cachesPath: String? {
