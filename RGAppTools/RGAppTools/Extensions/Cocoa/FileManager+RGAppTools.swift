@@ -20,6 +20,7 @@ extension RGAppTools where Base: FileManager {
         return DefaultFileManager.urls(for: .documentDirectory, in: .userDomainMask).first?.path
     }
 
+    /// Library 文件夹路径
     public static var libraryPath: String? {
         return DefaultFileManager.urls(for: .libraryDirectory, in: .userDomainMask).first?.path
     }
