@@ -34,6 +34,7 @@ public enum DeviceType: String {
     iPhone_XS       =   "iPhone XS",
     iPhone_XS_Max   =   "iPhone XS Max",
     iPhone_XR       =   "iPhone XR",
+    iPhone_11       =   "iPhone 11",
 
     //  iPod Touch
     iPod_Touch_1    =   "iPod Touch 1",
