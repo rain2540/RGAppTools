@@ -124,15 +124,8 @@ extension RGAppTools where Base: UIDevice {
 
     /// 获取设备类型
     public static var deviceType: DeviceType {
-        var systemInfo = utsname()
-        uname(&systemInfo)
-        let machineMirror = Mirror(reflecting: systemInfo.machine)
-        let identifier = machineMirror.children.reduce("") { identifier, element in
-            guard let value = element.value as? Int8, value != 0 else { return identifier }
-            return identifier + String(UnicodeScalar(UInt8(value)))
-        }
 
-        switch identifier {
+        switch deviceIdentifier {
         case "iPod1,1":
             print("iPod Touch 1G")
             return .iPod_Touch_1
@@ -321,7 +314,7 @@ extension RGAppTools where Base: UIDevice {
         }
         return identifier
     }
-    
+
 }
 
 //  MARK: Device informations
