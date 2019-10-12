@@ -104,6 +104,8 @@ extension String {
         removeSubrange(start ..< end)
     }
 
+    /// 如果含有某个后缀，则删除掉
+    /// - Parameter suffix: 将要删除的后缀
     public mutating func rat_removeLast(ifHas suffix: String) {
         if hasSuffix(suffix){
             removeLast()
