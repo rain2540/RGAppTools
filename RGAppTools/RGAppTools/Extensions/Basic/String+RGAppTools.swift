@@ -221,6 +221,8 @@ public struct StringExtension {
         return String(str.prefix(validLength))
     }
 
+    /// 如果含有某个后缀，则删除掉，并返回删除后缀得到的字符串
+    /// - Parameter suffix: 将要删除的后缀
     public func removingLast(ifHas suffix: String) -> String {
         var resultString = string
         if resultString.hasSuffix(suffix) {
