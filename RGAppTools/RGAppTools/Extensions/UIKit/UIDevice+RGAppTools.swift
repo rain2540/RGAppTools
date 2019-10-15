@@ -8,10 +8,66 @@
 
 import UIKit
 
+extension RGAppTools where Base: UIDevice {
+
+    /// 获取设备时间
+    public var deviceTime: String {
+        let deviceTime = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
+        return dateFormatter.string(from: deviceTime)
+    }
+    
+    /// 判断是否为 iPhone X 系列
+    public static var isIPhoneXSeries: Bool {
+        var iPhoneXSeries = false
+        if UIDevice.rat.isPhone == false {
+            return iPhoneXSeries
+        }
+        
+        if #available(iOS 11.0, *)  {
+            if let bottom = UIApplication.shared.delegate?.window??.safeAreaInsets.bottom {
+                if bottom > CGFloat(0.0) {
+                    iPhoneXSeries = true
+                }
+            }
+        }
+        
+        return iPhoneXSeries
+    }
+
+    /// 判断设备是否为 iPhone
+    public static var isPhone: Bool {
+        return UIDevice.current.userInterfaceIdiom == .phone
+    }
+    
+    /// 判断设备是否为 iPad
+    public static var isPad: Bool {
+        return UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    /// 打印当前设备信息
+    public static func printDeviceInformations() {
+        print("currentDevice: ", UIDevice.current)
+
+        let device = UIDevice()
+        print("device.name: ", device.name)
+        print("device.model: ", device.model)
+        print("device.localizedModel: ", device.localizedModel)
+
+        print("device.systemName: ", device.systemName)
+        print("device.systemVersion: ", device.systemVersion)
+
+        print("device.identifierForVendor: ", device.identifierForVendor ?? "\nRGAppTools get device.identifierForVendor failed.")
+    }
+
+}
+
+
 /// Enum of Device Types
 public enum DeviceType: String {
     case unknown    =   "unknown",
-    
+
     //  iPhone
     iPhone_2G           =   "iPhone",
     iPhone_3G           =   "iPhone 3G",
@@ -69,58 +125,8 @@ public enum DeviceType: String {
     simulator_64bit
 }
 
+
 extension RGAppTools where Base: UIDevice {
-
-    /// 获取设备时间
-    public var deviceTime: String {
-        let deviceTime = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-dd HH:mm:ss"
-        return dateFormatter.string(from: deviceTime)
-    }
-    
-    /// 判断是否为 iPhone X 系列
-    public static var isIPhoneXSeries: Bool {
-        var iPhoneXSeries = false
-        if UIDevice.rat.isPhone == false {
-            return iPhoneXSeries
-        }
-        
-        if #available(iOS 11.0, *)  {
-            if let bottom = UIApplication.shared.delegate?.window??.safeAreaInsets.bottom {
-                if bottom > CGFloat(0.0) {
-                    iPhoneXSeries = true
-                }
-            }
-        }
-        
-        return iPhoneXSeries
-    }
-
-    /// 判断设备是否为 iPhone
-    public static var isPhone: Bool {
-        return UIDevice.current.userInterfaceIdiom == .phone
-    }
-    
-    /// 判断设备是否为 iPad
-    public static var isPad: Bool {
-        return UIDevice.current.userInterfaceIdiom == .pad
-    }
-
-    /// 打印当前设备信息
-    public static func printDeviceInformations() {
-        print("currentDevice: ", UIDevice.current)
-
-        let device = UIDevice()
-        print("device.name: ", device.name)
-        print("device.model: ", device.model)
-        print("device.localizedModel: ", device.localizedModel)
-
-        print("device.systemName: ", device.systemName)
-        print("device.systemVersion: ", device.systemVersion)
-
-        print("device.identifierForVendor: ", device.identifierForVendor ?? "\nRGAppTools get device.identifierForVendor failed.")
-    }
 
     /// 获取设备类型
     public static var deviceType: DeviceType {
@@ -129,19 +135,19 @@ extension RGAppTools where Base: UIDevice {
         case "iPod1,1":
             print("iPod Touch 1G")
             return .iPod_Touch_1
-            
+
         case "iPod2,1":
             print("iPod Touch 2G")
             return .iPod_Touch_2
-            
+
         case "iPod3,1":
             print("iPod Touch 3G")
             return .iPod_Touch_3
-            
+
         case "iPod4,1":
             print("iPod Touch 4G")
             return .iPod_Touch_4
-            
+
         case "iPod5,1":
             print("iPod Touch (5 Gen)")
             return .iPod_Touch_5
@@ -205,15 +211,15 @@ extension RGAppTools where Base: UIDevice {
         case "iPhone9,2", "iPhone9,4":
             print("iPhone 7 Plus")
             return .iPhone_7_Plus
-            
+
         case "iPhone10,1", "iPhone10,4":
             print("iPhone 8")
             return .iPhone_8
-            
+
         case "iPhone10,2", "iPhone10,5":
             print("iPhone 8 Pllus")
             return .iPhone_8_Plus
-            
+
         case "iPhone10,3", "iPhone10,6":
             print("iPhone X")
             return .iPhone_X
@@ -245,7 +251,7 @@ extension RGAppTools where Base: UIDevice {
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
             print("iPad 2")
             return .iPad_2
-            
+
         case "iPad2,5", "iPad2,6", "iPad2,7":
             print("iPad Mini")
             return .iPad_Mini
@@ -261,15 +267,15 @@ extension RGAppTools where Base: UIDevice {
         case "iPad4,1", "iPad4,2", "iPad4,3":
             print("iPad Air")
             return .iPad_Air
-            
+
         case "iPad4,4", "iPad4,5", "iPad4,6":
             print("iPad Mini 2")
             return .iPad_Mini_2
-            
+
         case "iPad4,7", "iPad4,8", "iPad4,9":
             print("iPad Mini 3")
             return .iPad_Mini_3
-            
+
         case "iPad5,1", "iPad5,2":
             print("iPad Mini 4")
             return .iPad_Mini_4
@@ -277,7 +283,7 @@ extension RGAppTools where Base: UIDevice {
         case "iPad5,3", "iPad5,4":
             print("iPad Air 2")
             return .iPad_Air_2
-            
+
         case "iPad6,3", "iPad6,4":
             print("iPad Pro 9.7")
             return .iPad_Pro_97
@@ -316,6 +322,7 @@ extension RGAppTools where Base: UIDevice {
     }
 
 }
+
 
 //  MARK: Device informations
 extension UIDevice {
