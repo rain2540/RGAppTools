@@ -260,6 +260,58 @@ extension RGAppTools where Base: UIDevice {
         }
     }
 
+    public static var iPadType: DeviceType {
+        switch deviceIdentifier {
+        case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
+            print("iPad 2")
+            return .iPad_2
+
+        case "iPad2,5", "iPad2,6", "iPad2,7":
+            print("iPad Mini")
+            return .iPad_Mini
+
+        case "iPad3,1", "iPad3,2", "iPad3,3":
+            print("iPad 3")
+            return .iPad_3
+
+        case "iPad3,4", "iPad3,5", "iPad3,6":
+            print("iPad 4")
+            return .iPad_4
+
+        case "iPad4,1", "iPad4,2", "iPad4,3":
+            print("iPad Air")
+            return .iPad_Air
+
+        case "iPad4,4", "iPad4,5", "iPad4,6":
+            print("iPad Mini 2")
+            return .iPad_Mini_2
+
+        case "iPad4,7", "iPad4,8", "iPad4,9":
+            print("iPad Mini 3")
+            return .iPad_Mini_3
+
+        case "iPad5,1", "iPad5,2":
+            print("iPad Mini 4")
+            return .iPad_Mini_4
+
+        case "iPad5,3", "iPad5,4":
+            print("iPad Air 2")
+            return .iPad_Air_2
+
+        case "iPad6,3", "iPad6,4":
+            print("iPad Pro 9.7")
+            return .iPad_Pro_97
+
+        case "iPad6,7", "iPad6,8":
+            print("iPad Pro 12.9")
+            return .iPad_Pro_129
+
+        default:
+            print("unknown")
+            return .unknown
+        }
+    }
+
     /// 获取设备类型
     public static var deviceType: DeviceType {
         if isPhoneOrPodUI {
