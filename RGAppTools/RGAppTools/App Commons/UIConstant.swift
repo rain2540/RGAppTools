@@ -56,7 +56,7 @@ public var is_iPhoneX: Bool {
 
 /// Status Bar 默认高度
 @available(*, deprecated, message: "Constant 'StatusBarDefaultHeight' is deprecated. Use`StatusBarHeight` instead.", renamed: "StatusBarHeight")
-public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeries ? 44.0 : 20.0
+public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeriesUI ? 44.0 : 20.0
 
 /// Top Layout 默认高度
 @available(*, deprecated, message: "Constant 'TopLayoutDefaultHeight' is deprecated. Use`TopLayoutHeight` instead.", renamed: "TopLayoutHeight")
