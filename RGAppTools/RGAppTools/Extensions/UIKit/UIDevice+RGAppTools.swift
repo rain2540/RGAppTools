@@ -128,6 +128,37 @@ public enum DeviceType: String {
 
 extension RGAppTools where Base: UIDevice {
 
+    /// 获取设备类型
+    public static var deviceType: DeviceType {
+        if isPhoneOrPodUI {
+            if deviceIdentifier.hasPrefix("iPhone") {
+                return iPhoneType
+            } else if deviceIdentifier.hasPrefix("iPod") {
+                return iPodType
+            }
+        } else if isPad {
+            return iPadType
+        }
+
+        switch deviceIdentifier {
+        case "AppleTV5,3":
+            print("Apple TV")
+            return .Apple_TV
+
+        case "i386":
+            print("Simulator 32 bit")
+            return .simulator_32bit
+
+        case "x86_64":
+            print("Simulator 64 bit")
+            return .simulator_64bit
+
+        default:
+            print("unknown")
+            return .unknown
+        }
+    }
+
     public static var iPhoneType: DeviceType {
         switch deviceIdentifier {
         case "iPhone1,1":
@@ -305,36 +336,6 @@ extension RGAppTools where Base: UIDevice {
         case "iPad6,7", "iPad6,8":
             print("iPad Pro 12.9")
             return .iPad_Pro_129
-
-        default:
-            print("unknown")
-            return .unknown
-        }
-    }
-
-    /// 获取设备类型
-    public static var deviceType: DeviceType {
-        if isPhoneOrPodUI {
-            if deviceIdentifier.hasPrefix("iPhone") {
-                return iPhoneType
-            } else if deviceIdentifier.hasPrefix("iPod") {
-                return iPodType
-            }
-        } else if isPad {
-            return iPadType
-        }
-        switch deviceIdentifier {
-        case "AppleTV5,3":
-            print("Apple TV")
-            return .Apple_TV
-
-        case "i386":
-            print("Simulator 32 bit")
-            return .simulator_32bit
-
-        case "x86_64":
-            print("Simulator 64 bit")
-            return .simulator_64bit
 
         default:
             print("unknown")
