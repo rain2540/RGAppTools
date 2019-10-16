@@ -18,7 +18,7 @@ extension RGAppTools where Base: UIDevice {
         return dateFormatter.string(from: deviceTime)
     }
     
-    /// 判断是否为 iPhone X 系列
+    /// 判断设备 UI 类型是否为 iPhone X 系列
     public static var isIPhoneXSeriesUI: Bool {
         var iPhoneXSeries = false
         if UIDevice.rat.isPhoneOrPodUI == false {
