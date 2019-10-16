@@ -36,7 +36,7 @@ extension RGAppTools where Base: UIDevice {
         return iPhoneXSeries
     }
 
-    /// 判断设备是否为 iPhone
+    /// 判断设备 UI 类型是否为 iPhone / iPod
     public static var isPhoneOrPodUI: Bool {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
