@@ -19,7 +19,7 @@ extension RGAppTools where Base: UIDevice {
     }
     
     /// 判断是否为 iPhone X 系列
-    public static var isIPhoneXSeries: Bool {
+    public static var isIPhoneXSeriesUI: Bool {
         var iPhoneXSeries = false
         if UIDevice.rat.isPhoneOrPodUI == false {
             return iPhoneXSeries
