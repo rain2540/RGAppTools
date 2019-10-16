@@ -41,7 +41,7 @@ extension RGAppTools where Base: UIDevice {
         return UIDevice.current.userInterfaceIdiom == .phone
     }
     
-    /// 判断设备是否为 iPad
+    /// 判断设备 UI 类型是否为 iPad
     public static var isPadUI: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
