@@ -232,9 +232,36 @@ extension RGAppTools where Base: UIDevice {
         }
     }
 
+    public static var iPodType: DeviceType {
+        switch deviceIdentifier {
+        case "iPod1,1":
+            print("iPod Touch 1G")
+            return .iPod_Touch_1
+
+        case "iPod2,1":
+            print("iPod Touch 2G")
+            return .iPod_Touch_2
+
+        case "iPod3,1":
+            print("iPod Touch 3G")
+            return .iPod_Touch_3
+
+        case "iPod4,1":
+            print("iPod Touch 4G")
+            return .iPod_Touch_4
+
+        case "iPod5,1":
+            print("iPod Touch (5 Gen)")
+            return .iPod_Touch_5
+
+        default:
+            print("unknown")
+            return .unknown
+        }
+    }
+
     /// 获取设备类型
     public static var deviceType: DeviceType {
-
         switch deviceIdentifier {
         case "iPod1,1":
             print("iPod Touch 1G")
