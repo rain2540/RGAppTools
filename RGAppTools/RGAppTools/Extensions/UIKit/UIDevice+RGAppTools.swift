@@ -262,6 +262,11 @@ extension RGAppTools where Base: UIDevice {
 
     /// 获取设备类型
     public static var deviceType: DeviceType {
+        if isPhoneOrPodUI {
+            if deviceIdentifier.hasPrefix("iPhone") {
+                return iPhoneType
+            }
+        }
         switch deviceIdentifier {
         case "iPod1,1":
             print("iPod Touch 1G")
