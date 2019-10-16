@@ -265,6 +265,8 @@ extension RGAppTools where Base: UIDevice {
         if isPhoneOrPodUI {
             if deviceIdentifier.hasPrefix("iPhone") {
                 return iPhoneType
+            } else if deviceIdentifier.hasPrefix("iPod") {
+                return iPodType
             }
         }
         switch deviceIdentifier {
