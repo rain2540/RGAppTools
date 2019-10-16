@@ -128,6 +128,110 @@ public enum DeviceType: String {
 
 extension RGAppTools where Base: UIDevice {
 
+    public static var iPhoneType: DeviceType {
+        switch deviceIdentifier {
+        case "iPhone1,1":
+            print("iPhone")
+            return .iPhone_2G
+
+        case "iPhone1,2":
+            print("iPhone 3G")
+            return .iPhone_3G
+
+        case "iPhone2,1":
+            print("iPhone 3GS")
+            return .iPhone_3GS
+
+        case "iPhone3,1", "iPhone3,2", "iPhone3,3":
+            print("iPhone 4")
+            return .iPhone_4
+
+        case "iPhone4,1":
+            print("iPhone 4S")
+            return .iPhone_4S
+
+        case "iPhone5,1", "iPhone5,2":
+            print("iPhone 5")
+            return .iPhone_5
+
+        case "iPhone5,3", "iPhone5,4":
+            print("iPhone 5c")
+            return .iPhone_5c
+
+        case "iPhone6,1", "iPhone6,2":
+            print("iPhone 5s")
+            return .iPhone_5s
+
+        case "iPhone7,1":
+            print("iPhone 6 Plus")
+            return .iPhone_6_Plus
+
+        case "iPhone7,2":
+            print("iPhone 6")
+            return .iPhone_6
+
+        case "iPhone8,1":
+            print("iPhone 6s")
+            return .iPhone_6s
+
+        case "iPhone8,2":
+            print("iPhone 6s Plus")
+            return .iPhone_6s_Plus
+
+        case "iPhone8,4":
+            print("iPhone SE")
+            return .iPhone_SE
+
+        case "iPhone9,1", "iPhone9,3":
+            print("iPhone 7")
+            return .iPhone_7
+
+        case "iPhone9,2", "iPhone9,4":
+            print("iPhone 7 Plus")
+            return .iPhone_7_Plus
+
+        case "iPhone10,1", "iPhone10,4":
+            print("iPhone 8")
+            return .iPhone_8
+
+        case "iPhone10,2", "iPhone10,5":
+            print("iPhone 8 Pllus")
+            return .iPhone_8_Plus
+
+        case "iPhone10,3", "iPhone10,6":
+            print("iPhone X")
+            return .iPhone_X
+
+        case "iPhone11,2":
+            print("iPhone XS")
+            return .iPhone_XS
+
+        case "iPhone11,4", "iPhone11,6":
+            print("iPhone XS Max")
+            return .iPhone_XS_Max
+
+        case "iPhone11,8":
+            print("iPhone XR")
+            return .iPhone_XR
+
+        case "iPhone12,1":
+            print("iPhone 11")
+            return .iPhone_11
+
+        case "iPhone12,3":
+            print("iPhone 11 Pro")
+            return .iPhone_11_Pro
+
+        case "iPhone12,5":
+            print("iPhone 11 Pro Max")
+            return .iPhone_11_Pro_Max
+
+        default:
+            print("unknown")
+            return .unknown
+        }
+    }
+
     /// 获取设备类型
     public static var deviceType: DeviceType {
 
