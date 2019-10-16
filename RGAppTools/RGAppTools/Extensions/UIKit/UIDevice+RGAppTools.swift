@@ -320,6 +320,8 @@ extension RGAppTools where Base: UIDevice {
             } else if deviceIdentifier.hasPrefix("iPod") {
                 return iPodType
             }
+        } else if isPad {
+            return iPadType
         }
         switch deviceIdentifier {
         case "iPod1,1":
