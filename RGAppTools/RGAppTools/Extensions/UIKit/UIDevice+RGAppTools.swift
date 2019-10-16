@@ -42,7 +42,7 @@ extension RGAppTools where Base: UIDevice {
     }
     
     /// 判断设备是否为 iPad
-    public static var isPad: Bool {
+    public static var isPadUI: Bool {
         return UIDevice.current.userInterfaceIdiom == .pad
     }
 
@@ -136,7 +136,7 @@ extension RGAppTools where Base: UIDevice {
             } else if deviceIdentifier.hasPrefix("iPod") {
                 return iPodType
             }
-        } else if isPad {
+        } else if isPadUI {
             return iPadType
         }
 
