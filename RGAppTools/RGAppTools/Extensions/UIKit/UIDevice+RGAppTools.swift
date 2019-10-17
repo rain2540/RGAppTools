@@ -159,6 +159,7 @@ extension RGAppTools where Base: UIDevice {
         }
     }
 
+    /// 获取 iPhone 类型
     public static var iPhoneType: DeviceType {
         switch deviceIdentifier {
         case "iPhone1,1":
