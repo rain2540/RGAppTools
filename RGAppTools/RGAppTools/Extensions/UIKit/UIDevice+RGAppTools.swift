@@ -264,6 +264,7 @@ extension RGAppTools where Base: UIDevice {
         }
     }
 
+    /// 获取 iPod 类型
     public static var iPodType: DeviceType {
         switch deviceIdentifier {
         case "iPod1,1":
