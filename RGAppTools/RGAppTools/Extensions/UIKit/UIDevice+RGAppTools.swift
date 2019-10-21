@@ -293,6 +293,7 @@ extension RGAppTools where Base: UIDevice {
         }
     }
 
+    /// 获取 iPad 类型
     public static var iPadType: DeviceType {
         switch deviceIdentifier {
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
