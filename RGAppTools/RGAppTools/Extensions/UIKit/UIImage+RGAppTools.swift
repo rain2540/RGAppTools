@@ -24,6 +24,19 @@ extension RGAppTools where Base: UIImage {
         return data.base64EncodedString()
     }
 
+    public func cropping(to rect: CGRect) -> UIImage? {
+        let scale = UIScreen.main.scale
+        let x = rect.origin.x * scale
+        let y = rect.origin.y * scale
+        let width = rect.size.width * scale
+        let height = rect.size.height * scale
+        let croppingRect = CGRect(x: x, y: y, width: width, height: height)
+        guard let sourceImageRef = base.cgImage else { return nil }
+        guard let newImageRef = sourceImageRef.cropping(to: croppingRect) else { return nil }
+        let newImage = UIImage(cgImage: newImageRef, scale: scale, orientation: .up)
+        return newImage
+    }
+
      /// 创建矩形图像
      ///
      /// - Parameters:
