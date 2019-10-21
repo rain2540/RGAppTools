@@ -31,6 +31,7 @@ extension RGAppTools where Base: UIImage {
         let width = rect.size.width * scale
         let height = rect.size.height * scale
         let croppingRect = CGRect(x: x, y: y, width: width, height: height)
+        // 截取部分图片并生成新图片
         guard let sourceImageRef = base.cgImage else { return nil }
         guard let newImageRef = sourceImageRef.cropping(to: croppingRect) else { return nil }
         let newImage = UIImage(cgImage: newImageRef, scale: scale, orientation: .up)
