@@ -24,6 +24,8 @@ extension RGAppTools where Base: UIImage {
         return data.base64EncodedString()
     }
 
+    /// 截取图片的指定区域，并生成新图片
+    /// - Parameter rect: 指定的区域
     public func cropping(to rect: CGRect) -> UIImage? {
         let scale = UIScreen.main.scale
         let x = rect.origin.x * scale
