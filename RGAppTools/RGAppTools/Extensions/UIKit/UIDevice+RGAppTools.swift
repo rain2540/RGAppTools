@@ -346,6 +346,7 @@ extension RGAppTools where Base: UIDevice {
         }
     }
 
+    /// 设备标识
     private static var deviceIdentifier: String {
         var systemInfo = utsname()
         uname(&systemInfo)
