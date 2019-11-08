@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+extension NSDecimalNumberHandler {
+
+    convenience init(
+        numberRoundingMode: NSDecimalNumber.RoundingMode = .plain,
+        scale: Int16,
+        raiseOnExactness exact: Bool = false,
+        raiseOnOverflow overflow: Bool = false,
+        raiseOnUnderflow underflow: Bool = false,
+        raiseOnDivideByZero divideByZero: Bool = false)
+    {
+        self.init(
+            roundingMode: numberRoundingMode,
+            scale: scale,
+            raiseOnExactness: exact,
+            raiseOnOverflow: overflow,
+            raiseOnUnderflow: underflow,
+            raiseOnDivideByZero: divideByZero
+        )
+    }
+
+}
