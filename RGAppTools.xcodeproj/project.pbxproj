@@ -153,7 +153,9 @@
 			isa = PBXGroup;
 			children = (
 				B7BDB5D71F39499F003C3F60 /* Basic */,
-				B7BDB5DB1F3949A0003C3F60 /* Cocoa */,
+				B7E876DE2375322900E3E840 /* Core Location */,
+				B7E876DF2375334D00E3E840 /* Dispatch */,
+				B7BDB5DB1F3949A0003C3F60 /* Foundation */,
 				B7BDB5E31F3949A0003C3F60 /* UIKit */,
 			);
 			path = Extensions;
@@ -172,19 +174,17 @@
 			path = Basic;
 			sourceTree = "<group>";
 		};
-		B7BDB5DB1F3949A0003C3F60 /* Cocoa */ = {
+		B7BDB5DB1F3949A0003C3F60 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */,
 				B7BDB5DC1F3949A0003C3F60 /* Bundle+RGAppTools.swift */,
 				B7BDB5DD1F3949A0003C3F60 /* Date+RGAppTools.swift */,
-				B7BDB5DE1F3949A0003C3F60 /* DispatchQueue+RGAppTools.swift */,
 				B7BDB5DF1F3949A0003C3F60 /* FileManager+RGAppTools.swift */,
 				B7BDB5E01F3949A0003C3F60 /* NSDictionary+RGAppTools.swift */,
 				B7BDB5E11F3949A0003C3F60 /* NSObject+RGAppTools.swift */,
 				B7BDB5E21F3949A0003C3F60 /* UserDefaults+RGAppTools.swift */,
 			);
-			path = Cocoa;
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 		B7BDB5E31F3949A0003C3F60 /* UIKit */ = {
@@ -227,6 +227,22 @@
 				B753AD6D1F4BFB9D00978DD8 /* RGToast.swift */,
 			);
 			path = RGBuild;
+			sourceTree = "<group>";
+		};
+		B7E876DE2375322900E3E840 /* Core Location */ = {
+			isa = PBXGroup;
+			children = (
+				B784E6721F46DB6700D702AF /* CLLocation+RGAppTools.swift */,
+			);
+			path = "Core Location";
+			sourceTree = "<group>";
+		};
+		B7E876DF2375334D00E3E840 /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				B7BDB5DE1F3949A0003C3F60 /* DispatchQueue+RGAppTools.swift */,
+			);
+			path = Dispatch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
