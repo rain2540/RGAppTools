@@ -43,6 +43,7 @@
 		B7BDB5FF1F3949A0003C3F60 /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDB5EB1F3949A0003C3F60 /* TopLayoutProtocols.swift */; };
 		B7BDB6001F3949A0003C3F60 /* RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDB5EC1F3949A0003C3F60 /* RGAppTools.swift */; };
 		B7E56DCE229D093E00A8DDB9 /* Optional+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E56DCD229D093E00A8DDB9 /* Optional+RGAppTools.swift */; };
+		B7E876E12375347900E3E840 /* NSDecimalNumberHandler+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E876E02375347900E3E840 /* NSDecimalNumberHandler+RGAppTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		B7BDB5EB1F3949A0003C3F60 /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
 		B7BDB5EC1F3949A0003C3F60 /* RGAppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGAppTools.swift; sourceTree = "<group>"; };
 		B7E56DCD229D093E00A8DDB9 /* Optional+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+RGAppTools.swift"; sourceTree = "<group>"; };
+		B7E876E02375347900E3E840 /* NSDecimalNumberHandler+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDecimalNumberHandler+RGAppTools.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				B7BDB5DC1F3949A0003C3F60 /* Bundle+RGAppTools.swift */,
 				B7BDB5DD1F3949A0003C3F60 /* Date+RGAppTools.swift */,
 				B7BDB5DF1F3949A0003C3F60 /* FileManager+RGAppTools.swift */,
+				B7E876E02375347900E3E840 /* NSDecimalNumberHandler+RGAppTools.swift */,
 				B7BDB5E01F3949A0003C3F60 /* NSDictionary+RGAppTools.swift */,
 				B7BDB5E11F3949A0003C3F60 /* NSObject+RGAppTools.swift */,
 				B7BDB5E21F3949A0003C3F60 /* UserDefaults+RGAppTools.swift */,
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B753AD6E1F4BFB9D00978DD8 /* RGToast.swift in Sources */,
+				B7E876E12375347900E3E840 /* NSDecimalNumberHandler+RGAppTools.swift in Sources */,
 				B7BDB5FD1F3949A0003C3F60 /* UIDevice+RGAppTools.swift in Sources */,
 				B7BDB5EF1F3949A0003C3F60 /* MethodInfo.swift in Sources */,
 				B7BDB5FB1F3949A0003C3F60 /* UIAlertController+RGAppTools.swift in Sources */,
