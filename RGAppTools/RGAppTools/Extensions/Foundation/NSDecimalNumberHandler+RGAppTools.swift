@@ -8,6 +8,15 @@
 
 import Foundation
 
+extension RGAppTools where Base: NSDecimalNumberHandler {
+
+    public static var defaultBehavior: NSDecimalNumberHandler {
+        return NSDecimalNumberHandler(scale: 2)
+    }
+
+}
+
+
 extension NSDecimalNumberHandler {
 
     convenience init(
