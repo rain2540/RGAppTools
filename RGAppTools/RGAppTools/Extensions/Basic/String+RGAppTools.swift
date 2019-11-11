@@ -363,3 +363,12 @@ extension StringExtension {
         return attributedString
     }
 }
+
+
+extension StringExtension {
+
+    public func decinalNumber(roundingBehavior: NSDecimalNumberBehaviors? = nil) -> NSDecimalNumber {
+        return NSDecimalNumber(string: string).rounding(accordingToBehavior: roundingBehavior)
+    }
+
+}
