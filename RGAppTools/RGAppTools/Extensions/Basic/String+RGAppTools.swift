@@ -367,6 +367,10 @@ extension StringExtension {
 
 extension StringExtension {
 
+    public var defaultBehaviorDecinalNumber: NSDecimalNumber {
+        return string.rat.decinalNumber(roundingBehavior: NSDecimalNumberHandler.rat.defaultBehavior)
+    }
+
     public func decinalNumber(roundingBehavior: NSDecimalNumberBehaviors? = nil) -> NSDecimalNumber {
         return NSDecimalNumber(string: string).rounding(accordingToBehavior: roundingBehavior)
     }
