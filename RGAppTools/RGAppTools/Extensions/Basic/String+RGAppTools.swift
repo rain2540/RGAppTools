@@ -372,11 +372,11 @@ extension StringExtension {
     }
 
     public var defaultBehaviorDecinalNumber: NSDecimalNumber {
-        return string.rat.decinalNumber(roundingBehavior: NSDecimalNumberHandler.rat.defaultBehavior)
+        return string.rat.decinalNumber(behavior: NSDecimalNumberHandler.rat.defaultBehavior)
     }
 
-    public func decinalNumber(roundingBehavior: NSDecimalNumberBehaviors? = nil) -> NSDecimalNumber {
-        return NSDecimalNumber(string: string).rounding(accordingToBehavior: roundingBehavior)
+    public func decinalNumber(behavior: NSDecimalNumberBehaviors? = nil) -> NSDecimalNumber {
+        return NSDecimalNumber(string: string).rounding(accordingToBehavior: behavior)
     }
 
 }
