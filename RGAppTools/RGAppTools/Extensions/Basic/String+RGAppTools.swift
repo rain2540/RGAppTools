@@ -367,6 +367,10 @@ extension StringExtension {
 
 extension StringExtension {
 
+    public var defaultBehaviorDecinalNumberString: String {
+        return String(format: "%@", string.rat.defaultBehaviorDecinalNumber)
+    }
+
     public var defaultBehaviorDecinalNumber: NSDecimalNumber {
         return string.rat.decinalNumber(roundingBehavior: NSDecimalNumberHandler.rat.defaultBehavior)
     }
