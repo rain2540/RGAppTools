@@ -19,6 +19,13 @@ extension RGAppTools where Base: NSDecimalNumberHandler {
 
 extension NSDecimalNumberHandler {
 
+    /// 构建Decimal Number Handler
+    /// - Parameter numberRoundingMode: 舍入模式，默认为四舍五入
+    /// - Parameter scale: 保留小数位数
+    /// - Parameter exact: 精度错误处理
+    /// - Parameter overflow: 上限越界处理
+    /// - Parameter underflow: 下限越界处理
+    /// - Parameter divideByZero: 除以零的处理
     convenience init(
         numberRoundingMode: NSDecimalNumber.RoundingMode = .plain,
         scale: Int16,
