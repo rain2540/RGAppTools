@@ -375,6 +375,8 @@ extension StringExtension {
         return string.rat.decinalNumber(behavior: NSDecimalNumberHandler.rat.defaultBehavior)
     }
 
+    /// 依据数值处理方式返回字符串对应的 Decimal Number
+    /// - Parameter behavior: 数值处理方式
     public func decinalNumber(behavior: NSDecimalNumberBehaviors? = nil) -> NSDecimalNumber {
         return NSDecimalNumber(string: string).rounding(accordingToBehavior: behavior)
     }
