@@ -10,6 +10,7 @@ import Foundation
 
 extension RGAppTools where Base: NSDecimalNumberHandler {
 
+    /// 数值处理默认方式
     public static var defaultBehavior: NSDecimalNumberHandler {
         return NSDecimalNumberHandler(scale: 2)
     }
