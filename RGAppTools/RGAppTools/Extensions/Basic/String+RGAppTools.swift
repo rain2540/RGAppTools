@@ -371,6 +371,7 @@ extension StringExtension {
         return String(format: "%@", string.rat.defaultBehaviorDecinalNumber)
     }
 
+    /// 依据默认处理方式返回字符串对应的 Decimal Number
     public var defaultBehaviorDecinalNumber: NSDecimalNumber {
         return string.rat.decinalNumber(behavior: NSDecimalNumberHandler.rat.defaultBehavior)
     }
