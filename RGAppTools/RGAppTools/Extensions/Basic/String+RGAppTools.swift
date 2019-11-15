@@ -367,6 +367,7 @@ extension StringExtension {
 
 extension StringExtension {
 
+    /// 依据默认处理方式返回的 Decimal Number 对应的字符串
     public var defaultBehaviorDecinalNumberString: String {
         return String(format: "%@", string.rat.defaultBehaviorDecinalNumber)
     }
