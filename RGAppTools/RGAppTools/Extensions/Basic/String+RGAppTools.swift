@@ -250,6 +250,23 @@ extension StringExtension {
             return "\(obj)"
         }
     }
+
+    public static func clearNil(and otherCondition: String..., for obj: Any?) -> String {
+        guard let obj = obj else { return "" }
+
+        if obj is NSNull {
+            return ""
+        } else {
+            let condition = otherCondition.reduce(false) { (res, conditionItem) -> Bool in
+                res || "\(obj)" == conditionItem
+            }
+            if condition {
+                return ""
+            } else {
+                return "\(obj)"
+            }
+        }
+    }
 }
 
 
