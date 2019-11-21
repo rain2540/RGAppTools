@@ -251,6 +251,10 @@ extension StringExtension {
         }
     }
 
+    /// 清除 nil 和 NSNull 对象，以及其他需要清除的字符串，并返回字符串
+    /// - Parameters:
+    ///   - otherConditions: 其他需要清除的字符串
+    ///   - obj: 未经处理的对象
     public static func clearNil(and otherConditions: String..., for obj: Any?) -> String {
         guard let obj = obj else { return "" }
 
