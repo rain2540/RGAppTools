@@ -8,6 +8,18 @@
 
 import UIKit
 
+infix operator ???: NilCoalescingPrecedence
+public func ???<T>(optional: T?, defaultValue: @autoclosure () -> String) -> String {
+    switch optional {
+    case let value?:
+        return String(describing: value)
+
+    case nil:
+        return defaultValue()
+    }
+}
+
+
 /// 执行 `do` 或抛出异常
 /// - Parameter do: 执行的操作
 public func should(_ do: () throws -> Void) -> Error? {
