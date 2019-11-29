@@ -20,16 +20,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction private func actionButtonClick(_ sender: UIButton) {
-        deviceInfo()
-    }
-
-    private func deviceInfo() {
+    @IBAction private func deviceInfoButtonCLick(_ sender: UIButton) {
         UIDevice.rat.printDeviceInformations()
         print("screen.size: ", MainScreen.size)
         print("screen.scale: ", MainScreen.scale)
         print("pixel width: ", MainScreen.pixelWidth)
         print("pixel height: ", MainScreen.pixelHeight)
+
+        print("Device Type: ", UIDevice.rat.deviceType.rawValue)
+    }
+
+    @IBAction private func clearNilButtonClick(_ sender: UIButton) {
+        print(String.rat.clearNil(and: "", for: "abb"))
+        print(String.rat.clearNil(and: "abb", "a", for: "abb"))
+        print(String.rat.clearNil(and: "NaN", "null", for: "abb"))
+
+        print(String.rat.clearNil(and: [], for: "abb"))
+        print(String.rat.clearNil(for: "abb"))
+        print(String.rat.clearNil(and: ["a", "abb"], for: "abb"))
+        print(String.rat.clearNil(and: ["a", "b"], for: "abb"))
     }
 
     private func aboutString() {
