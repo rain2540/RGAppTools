@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,27 +20,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zD5-sv-9Zb">
-                                <rect key="frame" x="162.5" y="311.5" width="50" height="44"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMD-zr-aFh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="hXa-cN-yS9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRz-SI-WUr">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="g1b-OA-kxe"/>
+                                                </constraints>
+                                                <state key="normal" title="Device Info"/>
+                                                <connections>
+                                                    <action selector="deviceInfoButtonCLick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ef7-7B-yFA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zD5-sv-9Zb">
+                                                <rect key="frame" x="0.0" y="52" width="375" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="ezs-QG-fLh"/>
+                                                </constraints>
+                                                <state key="normal" title="Clear Nil"/>
+                                                <connections>
+                                                    <action selector="clearNilButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ieN-ZG-BbT"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ezs-QG-fLh"/>
-                                    <constraint firstAttribute="width" constant="50" id="m9V-6i-rZV"/>
+                                    <constraint firstItem="hXa-cN-yS9" firstAttribute="leading" secondItem="mPZ-Na-zuv" secondAttribute="leading" id="FDL-Qz-aeK"/>
+                                    <constraint firstItem="hXa-cN-yS9" firstAttribute="trailing" secondItem="mPZ-Na-zuv" secondAttribute="trailing" constant="300" id="JPG-On-KgB"/>
+                                    <constraint firstItem="hXa-cN-yS9" firstAttribute="top" secondItem="mPZ-Na-zuv" secondAttribute="top" id="ThE-br-1pL"/>
+                                    <constraint firstItem="hXa-cN-yS9" firstAttribute="width" secondItem="okD-cS-dga" secondAttribute="width" id="m8b-aG-jxn"/>
+                                    <constraint firstItem="hXa-cN-yS9" firstAttribute="bottom" secondItem="mPZ-Na-zuv" secondAttribute="bottom" id="x9B-XX-4yT"/>
                                 </constraints>
-                                <state key="normal" title="Do it"/>
-                                <connections>
-                                    <action selector="actionButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pIB-RK-Qun"/>
-                                </connections>
-                            </button>
+                                <viewLayoutGuide key="contentLayoutGuide" id="mPZ-Na-zuv"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="okD-cS-dga"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zD5-sv-9Zb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ddc-bI-0Mk"/>
-                            <constraint firstItem="zD5-sv-9Zb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gdN-Yd-oLg"/>
+                            <constraint firstAttribute="bottom" secondItem="eMD-zr-aFh" secondAttribute="bottom" id="Gak-Pt-eMd"/>
+                            <constraint firstItem="eMD-zr-aFh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T9D-tM-gTE"/>
+                            <constraint firstItem="eMD-zr-aFh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jLx-ok-FSR"/>
+                            <constraint firstAttribute="trailing" secondItem="eMD-zr-aFh" secondAttribute="trailing" id="x8R-Rt-0ZS"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
