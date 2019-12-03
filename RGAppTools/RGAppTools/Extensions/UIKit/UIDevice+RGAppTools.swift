@@ -67,6 +67,9 @@ extension RGAppTools where Base: UIDevice {
 /// Enum of Device Types
 public enum DeviceType: String {
     case unknown    =   "unknown",
+    unknownPhone    =   "unknown iPhone",
+    unknownPad      =   "unknown iPad",
+    unknownPod      =   "unknown iPod",
 
     //  iPhone
     iPhone_2G           =   "iPhone",
