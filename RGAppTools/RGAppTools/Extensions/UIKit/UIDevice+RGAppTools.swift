@@ -271,23 +271,23 @@ extension RGAppTools where Base: UIDevice {
     public static var iPodType: DeviceType {
         switch deviceIdentifier {
         case "iPod1,1":
-            print("iPod Touch 1G")
+            print("iPod Touch 1")
             return .iPod_Touch_1
 
         case "iPod2,1":
-            print("iPod Touch 2G")
+            print("iPod Touch 2")
             return .iPod_Touch_2
 
         case "iPod3,1":
-            print("iPod Touch 3G")
+            print("iPod Touch 3")
             return .iPod_Touch_3
 
         case "iPod4,1":
-            print("iPod Touch 4G")
+            print("iPod Touch 4")
             return .iPod_Touch_4
 
         case "iPod5,1":
-            print("iPod Touch (5 Gen)")
+            print("iPod Touch 5")
             return .iPod_Touch_5
 
         case "iPod7,1":
