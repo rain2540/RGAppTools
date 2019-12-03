@@ -140,6 +140,16 @@ public enum DeviceType: String {
 
 extension RGAppTools where Base: UIDevice {
 
+    public static var deviceTypeValue: String {
+        switch deviceType {
+        case .unknown, .unknownPhone, .unknownPad, .unknownPod:
+            return deviceIdentifier
+
+        default:
+            return deviceType.rawValue
+        }
+    }
+
     /// 获取设备类型
     public static var deviceType: DeviceType {
         if isPhoneOrPodUI {
