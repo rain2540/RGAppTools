@@ -294,6 +294,10 @@ extension RGAppTools where Base: UIDevice {
             print("iPod Touch 6")
             return .iPod_Touch_6
 
+        case "iPod9,1":
+            print("iPod Touch 7")
+            return .iPod_Touch_7
+
         default:
             print(deviceIdentifier)
             return .unknownPod
