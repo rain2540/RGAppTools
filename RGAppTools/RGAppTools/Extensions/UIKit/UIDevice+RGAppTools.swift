@@ -154,7 +154,7 @@ extension RGAppTools where Base: UIDevice {
             return .simulator_64bit
 
         default:
-            print("unknown")
+            print(deviceIdentifier)
             return .unknown
         }
     }
@@ -259,7 +259,7 @@ extension RGAppTools where Base: UIDevice {
             return .iPhone_11_Pro_Max
 
         default:
-            print("unknown")
+            print(deviceIdentifier)
             return .unknown
         }
     }
@@ -288,7 +288,7 @@ extension RGAppTools where Base: UIDevice {
             return .iPod_Touch_5
 
         default:
-            print("unknown")
+            print(deviceIdentifier)
             return .unknown
         }
     }
@@ -341,7 +341,7 @@ extension RGAppTools where Base: UIDevice {
             return .iPad_Pro_129
 
         default:
-            print("unknown")
+            print(deviceIdentifier)
             return .unknown
         }
     }
