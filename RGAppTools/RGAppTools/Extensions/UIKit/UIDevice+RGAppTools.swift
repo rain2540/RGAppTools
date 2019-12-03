@@ -263,7 +263,7 @@ extension RGAppTools where Base: UIDevice {
 
         default:
             print(deviceIdentifier)
-            return .unknown
+            return .unknownPhone
         }
     }
 
@@ -292,7 +292,7 @@ extension RGAppTools where Base: UIDevice {
 
         default:
             print(deviceIdentifier)
-            return .unknown
+            return .unknownPod
         }
     }
 
@@ -345,7 +345,7 @@ extension RGAppTools where Base: UIDevice {
 
         default:
             print(deviceIdentifier)
-            return .unknown
+            return .unknownPad
         }
     }
 
