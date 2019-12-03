@@ -324,6 +324,10 @@ extension RGAppTools where Base: UIDevice {
             print("iPad 2")
             return .iPad_2
 
+        case "iPad2,5", "iPad2,6", "iPad2,7":
+            print("iPad Mini")
+            return .iPad_Mini
+
         case "iPad3,1", "iPad3,2", "iPad3,3":
             print("iPad 3")
             return .iPad_3
@@ -332,33 +336,9 @@ extension RGAppTools where Base: UIDevice {
             print("iPad 4")
             return .iPad_4
 
-        case "iPad6,11", "iPad6,12":
-            print("iPad 9.7 (2017)")
-            return .iPad_97_2017
-
-        case "iPad7,5", "iPad7,6":
-            print("iPad 9.7 (2018)")
-            return .iPad_97_2018
-
-        case "iPad7,11", "iPad7,12":
-            print("iPad 2019")
-            return .iPad_2019
-
         case "iPad4,1", "iPad4,2", "iPad4,3":
             print("iPad Air")
             return .iPad_Air
-
-        case "iPad5,3", "iPad5,4":
-            print("iPad Air 2")
-            return .iPad_Air_2
-
-        case "iPad11,3", "iPad11,4":
-            print("iPad Air 3")
-            return .iPad_Air_3
-
-        case "iPad2,5", "iPad2,6", "iPad2,7":
-            print("iPad Mini")
-            return .iPad_Mini
 
         case "iPad4,4", "iPad4,5", "iPad4,6":
             print("iPad Mini 2")
@@ -372,9 +352,9 @@ extension RGAppTools where Base: UIDevice {
             print("iPad Mini 4")
             return .iPad_Mini_4
 
-        case "iPad11,1", "iPad11,2":
-            print("iPad Mini 5")
-            return .iPad_Mini_5
+        case "iPad5,3", "iPad5,4":
+            print("iPad Air 2")
+            return .iPad_Air_2
 
         case "iPad6,3", "iPad6,4":
             print("iPad Pro (9.7)")
@@ -384,13 +364,25 @@ extension RGAppTools where Base: UIDevice {
             print("iPad Pro (12.9)")
             return .iPad_Pro_129
 
-        case "iPad7,3", "iPad7,4":
-            print("iPad Pro 2 (10.5)")
-            return .iPad_Pro_2_105
+        case "iPad6,11", "iPad6,12":
+            print("iPad 9.7 (2017)")
+            return .iPad_97_2017
 
         case "iPad7,1", "iPad7,2":
             print("iPad Pro 2 (12.9)")
             return .iPad_Pro_2_129
+
+        case "iPad7,3", "iPad7,4":
+            print("iPad Pro 2 (10.5)")
+            return .iPad_Pro_2_105
+
+        case "iPad7,5", "iPad7,6":
+            print("iPad 9.7 (2018)")
+            return .iPad_97_2018
+
+        case "iPad7,11", "iPad7,12":
+            print("iPad 2019")
+            return .iPad_2019
 
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":
             print("iPad Pro 3 (11)")
@@ -399,6 +391,14 @@ extension RGAppTools where Base: UIDevice {
         case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":
             print("iPad Pro 3 (12.9)")
             return .iPad_Pro_3_129
+
+        case "iPad11,1", "iPad11,2":
+            print("iPad Mini 5")
+            return .iPad_Mini_5
+
+        case "iPad11,3", "iPad11,4":
+            print("iPad Air 3")
+            return .iPad_Air_3
 
         default:
             print(deviceIdentifier)
