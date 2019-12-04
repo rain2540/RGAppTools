@@ -97,37 +97,40 @@ public enum DeviceType: String {
     iPhone_11_Pro       =   "iPhone 11 Pro",
     iPhone_11_Pro_Max   =   "iPhone 11 Pro Max",
 
-    //  iPod Touch
-    iPod_Touch_1    =   "iPod Touch 1",
-    iPod_Touch_2    =   "iPod Touch 2",
-    iPod_Touch_3    =   "iPod Touch 3",
-    iPod_Touch_4    =   "iPod Touch 4",
-    iPod_Touch_5    =   "iPod Touch 5",
-    iPod_Touch_6    =   "iPod Touch 6",
-    iPod_Touch_7    =   "iPod Touch 7",
+    //  iPod touch
+    iPod_touch_1    =   "iPod touch",
+    iPod_touch_2    =   "iPod touch (2nd generation)",
+    iPod_touch_3    =   "iPod touch (3rd generation)",
+    iPod_touch_4    =   "iPod touch (4th generation)",
+    iPod_touch_5    =   "iPod touch (5th generation)",
+    iPod_touch_6    =   "iPod touch (6th generation)",
+    iPod_touch_7    =   "iPod touch (7th generation)",
 
     //  iPad
-    iPad_1          =   "iPad 1",
+    iPad_1          =   "iPad",
     iPad_2          =   "iPad 2",
-    iPad_3          =   "iPad 3",
-    iPad_4          =   "iPad 4",
-    iPad_97_2017    =   "iPad 9.7 (2017)",
-    iPad_97_2018    =   "iPad 9.7 (2018)",
-    iPad_2019       =   "iPad 2019",
+    iPad_3          =   "iPad (3rd generation)",
+    iPad_4          =   "iPad (4th generation)",
+    iPad_5          =   "iPad (5th generation)",
+    iPad_6          =   "iPad (6th generation)",
+    iPad_7          =   "iPad (7th generation)",
+    // iPad Air
     iPad_Air        =   "iPad Air",
     iPad_Air_2      =   "iPad Air 2",
-    iPad_Air_3      =   "iPad Air 3",
-    iPad_Mini       =   "iPad mini",
-    iPad_Mini_2     =   "iPad mini 2",
-    iPad_Mini_3     =   "iPad mini 3",
-    iPad_Mini_4     =   "iPad mini 4",
-    iPad_Mini_5     =   "iPad mini 5",
-    iPad_Pro_97     =   "iPad Pro (9.7)",
-    iPad_Pro_129    =   "iPad Pro (12.9)",
-    iPad_Pro_2_105  =   "iPad Pro 2 (10.5)",
-    iPad_Pro_2_129  =   "iPad Pro 2 (12.9)",
-    iPad_Pro_3_11   =   "iPad Pro 3 (11)",
-    iPad_Pro_3_129  =   "iPad Pro 3 (12.9)",
+    iPad_Air_3      =   "iPad Air (3rd generation)",
+    // iPad mini
+    iPad_mini       =   "iPad mini",
+    iPad_mini_2     =   "iPad mini 2",
+    iPad_mini_3     =   "iPad mini 3",
+    iPad_mini_4     =   "iPad mini 4",
+    iPad_mini_5     =   "iPad mini (5th generation)",
+    // iPad Pro
+    iPad_Pro_129    =   "iPad Pro (12.9-inch)",
+    iPad_Pro_97     =   "iPad Pro (9.7-inch)",
+    iPad_Pro_2_129  =   "iPad Pro (12.9-inch) (2nd generation)",
+    iPad_Pro_2_105  =   "iPad Pro (10.5-inch)",
+    iPad_Pro_3_129  =   "iPad Pro (12.9-inch) (3rd generation)",
+    iPad_Pro_3_11   =   "iPad Pro (11-inch)",
 
     //  Apple TV
     Apple_TV,
@@ -290,32 +293,32 @@ extension RGAppTools where Base: UIDevice {
     public static var iPodType: DeviceType {
         switch deviceIdentifier {
         case "iPod1,1":
-            print("iPod Touch 1")
-            return .iPod_Touch_1
+            print("iPod touch")
+            return .iPod_touch_1
 
         case "iPod2,1":
-            print("iPod Touch 2")
-            return .iPod_Touch_2
+            print("iPod touch (2nd generation)")
+            return .iPod_touch_2
 
         case "iPod3,1":
-            print("iPod Touch 3")
-            return .iPod_Touch_3
+            print("iPod touch (3rd generation)")
+            return .iPod_touch_3
 
         case "iPod4,1":
-            print("iPod Touch 4")
-            return .iPod_Touch_4
+            print("iPod touch (4th generation)")
+            return .iPod_touch_4
 
         case "iPod5,1":
-            print("iPod Touch 5")
-            return .iPod_Touch_5
+            print("iPod touch (5th generation)")
+            return .iPod_touch_5
 
         case "iPod7,1":
-            print("iPod Touch 6")
-            return .iPod_Touch_6
+            print("iPod touch (6th generation)")
+            return .iPod_touch_6
 
         case "iPod9,1":
-            print("iPod Touch 7")
-            return .iPod_Touch_7
+            print("iPod touch (7th generation)")
+            return .iPod_touch_7
 
         default:
             print(deviceIdentifier)
@@ -327,7 +330,7 @@ extension RGAppTools where Base: UIDevice {
     public static var iPadType: DeviceType {
         switch deviceIdentifier {
         case "iPad1,1":
-            print("iPad 1")
+            print("iPad")
             return .iPad_1
 
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
@@ -335,15 +338,15 @@ extension RGAppTools where Base: UIDevice {
             return .iPad_2
 
         case "iPad2,5", "iPad2,6", "iPad2,7":
-            print("iPad Mini")
-            return .iPad_Mini
+            print("iPad mini")
+            return .iPad_mini
 
         case "iPad3,1", "iPad3,2", "iPad3,3":
-            print("iPad 3")
+            print("iPad (3rd generation)")
             return .iPad_3
 
         case "iPad3,4", "iPad3,5", "iPad3,6":
-            print("iPad 4")
+            print("iPad (4th generation)")
             return .iPad_4
 
         case "iPad4,1", "iPad4,2", "iPad4,3":
@@ -351,63 +354,63 @@ extension RGAppTools where Base: UIDevice {
             return .iPad_Air
 
         case "iPad4,4", "iPad4,5", "iPad4,6":
-            print("iPad Mini 2")
-            return .iPad_Mini_2
+            print("iPad mini 2")
+            return .iPad_mini_2
 
         case "iPad4,7", "iPad4,8", "iPad4,9":
-            print("iPad Mini 3")
-            return .iPad_Mini_3
+            print("iPad mini 3")
+            return .iPad_mini_3
 
         case "iPad5,1", "iPad5,2":
-            print("iPad Mini 4")
-            return .iPad_Mini_4
+            print("iPad mini 4")
+            return .iPad_mini_4
 
         case "iPad5,3", "iPad5,4":
             print("iPad Air 2")
             return .iPad_Air_2
 
         case "iPad6,3", "iPad6,4":
-            print("iPad Pro (9.7)")
+            print("iPad Pro (9.7-inch)")
             return .iPad_Pro_97
 
         case "iPad6,7", "iPad6,8":
-            print("iPad Pro (12.9)")
+            print("iPad Pro (12.9-inch)")
             return .iPad_Pro_129
 
         case "iPad6,11", "iPad6,12":
-            print("iPad 9.7 (2017)")
-            return .iPad_97_2017
+            print("iPad (5th generation)")
+            return .iPad_5
 
         case "iPad7,1", "iPad7,2":
-            print("iPad Pro 2 (12.9)")
+            print("iPad Pro (12.9-inch) (2nd generation)")
             return .iPad_Pro_2_129
 
         case "iPad7,3", "iPad7,4":
-            print("iPad Pro 2 (10.5)")
+            print("iPad Pro (10.5-inch)")
             return .iPad_Pro_2_105
 
         case "iPad7,5", "iPad7,6":
-            print("iPad 9.7 (2018)")
-            return .iPad_97_2018
+            print("iPad (6th generation)")
+            return .iPad_6
 
         case "iPad7,11", "iPad7,12":
-            print("iPad 2019")
-            return .iPad_2019
+            print("iPad (7th generation)")
+            return .iPad_7
 
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":
-            print("iPad Pro 3 (11)")
+            print("iPad Pro (11-inch)")
             return .iPad_Pro_3_11
 
         case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":
-            print("iPad Pro 3 (12.9)")
+            print("iPad Pro (12.9-inch) (3rd generation)")
             return .iPad_Pro_3_129
 
         case "iPad11,1", "iPad11,2":
-            print("iPad Mini 5")
-            return .iPad_Mini_5
+            print("iPad mini (5th generation)")
+            return .iPad_mini_5
 
         case "iPad11,3", "iPad11,4":
-            print("iPad Air 3")
+            print("iPad Air (3rd generation)")
             return .iPad_Air_3
 
         default:
