@@ -27,7 +27,9 @@ class ViewController: UIViewController {
         print("pixel width: ", MainScreen.pixelWidth)
         print("pixel height: ", MainScreen.pixelHeight)
 
-        print("Device Type: ", UIDevice.rat.deviceType.rawValue)
+        print("Device.type: ", UIDevice.rat.deviceType)
+        print("Device.type.rawValue: ", UIDevice.rat.deviceType.rawValue)
+        print("Device.typeValue: ", UIDevice.rat.deviceTypeValue)
     }
 
     @IBAction private func clearNilButtonClick(_ sender: UIButton) {
