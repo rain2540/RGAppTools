@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oqI-RX-jO2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -28,6 +28,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRz-SI-WUr">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="g1b-OA-kxe"/>
                                                 </constraints>
@@ -38,6 +39,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zD5-sv-9Zb">
                                                 <rect key="frame" x="0.0" y="52" width="375" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="ezs-QG-fLh"/>
                                                 </constraints>
@@ -49,9 +51,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="hXa-cN-yS9" firstAttribute="leading" secondItem="mPZ-Na-zuv" secondAttribute="leading" id="FDL-Qz-aeK"/>
-                                    <constraint firstItem="hXa-cN-yS9" firstAttribute="trailing" secondItem="mPZ-Na-zuv" secondAttribute="trailing" constant="300" id="JPG-On-KgB"/>
+                                    <constraint firstItem="hXa-cN-yS9" firstAttribute="trailing" secondItem="mPZ-Na-zuv" secondAttribute="trailing" id="JPG-On-KgB"/>
                                     <constraint firstItem="hXa-cN-yS9" firstAttribute="top" secondItem="mPZ-Na-zuv" secondAttribute="top" id="ThE-br-1pL"/>
                                     <constraint firstItem="hXa-cN-yS9" firstAttribute="width" secondItem="okD-cS-dga" secondAttribute="width" id="m8b-aG-jxn"/>
                                     <constraint firstItem="hXa-cN-yS9" firstAttribute="bottom" secondItem="mPZ-Na-zuv" secondAttribute="bottom" id="x9B-XX-4yT"/>
@@ -68,8 +71,27 @@
                             <constraint firstAttribute="trailing" secondItem="eMD-zr-aFh" secondAttribute="trailing" id="x8R-Rt-0ZS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wcu-wA-pNt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="132.68365817091455"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="GGL-6Y-WBt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oqI-RX-jO2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rfW-VE-6hn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cFX-jM-Fzl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfc-AG-XXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
