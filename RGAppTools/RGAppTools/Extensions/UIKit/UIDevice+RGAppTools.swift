@@ -144,6 +144,7 @@ public enum DeviceType: String {
 
 extension RGAppTools where Base: UIDevice {
 
+    /// 获取描述设备类型的字符串
     public static var deviceTypeValue: String {
         switch deviceType {
         case .unknown, .unknownPhone, .unknownPad, .unknownPod:
