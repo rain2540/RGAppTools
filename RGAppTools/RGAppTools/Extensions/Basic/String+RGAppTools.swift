@@ -230,6 +230,13 @@ public struct StringExtension {
         }
         return resultString
     }
+
+    public func or(_ defaultString: String) -> String {
+        guard !string.rat_isBlank else {
+            return defaultString
+        }
+        return string
+    }
 }
 
 
