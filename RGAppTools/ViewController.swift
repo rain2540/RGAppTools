@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         print(String.rat.clearNil(for: "abb"))
         print(String.rat.clearNil(and: ["a", "abb"], for: "abb"))
         print(String.rat.clearNil(and: ["a", "b"], for: "abb"))
+
+        print(" ".rat.or("default"))
+        print("not default".rat.or("default"))
     }
 
     private func aboutString() {
