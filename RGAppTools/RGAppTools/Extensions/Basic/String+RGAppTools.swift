@@ -237,6 +237,12 @@ public struct StringExtension {
         }
         return string
     }
+
+    public func validate(with regexString: String) -> Bool {
+        let regex = NSPredicate(format: "SELF MATCHES %@", regexString)
+        return regex.evaluate(with: string)
+    }
+
 }
 
 
