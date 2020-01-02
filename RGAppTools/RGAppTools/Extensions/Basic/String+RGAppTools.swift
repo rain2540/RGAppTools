@@ -238,6 +238,8 @@ public struct StringExtension {
         return string
     }
 
+    /// 通过传入的正则表达式进行校验
+    /// - Parameter regexString: 传入的正则表达式
     public func validate(with regexString: String) -> Bool {
         let regex = NSPredicate(format: "SELF MATCHES %@", regexString)
         return regex.evaluate(with: string)
