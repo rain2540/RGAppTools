@@ -41,8 +41,8 @@
 		B7FB81FC23D682F80082E362 /* TopLayoutProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81DB23D682F80082E362 /* TopLayoutProtocols.swift */; };
 		B7FB81FD23D682F80082E362 /* UIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81DD23D682F80082E362 /* UIConstant.swift */; platformFilter = ios; };
 		B7FB81FE23D682F80082E362 /* MethodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81DE23D682F80082E362 /* MethodInfo.swift */; };
-		B7FB81FF23D682F80082E362 /* AppSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81DF23D682F80082E362 /* AppSingleton.swift */; platformFilter = ios; };
 		B7FB825423D69D510082E362 /* UISingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB825323D69D510082E362 /* UISingleton.swift */; };
+		B7FB825623D69EB10082E362 /* FoundationSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB825523D69EB10082E362 /* FoundationSingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +93,8 @@
 		B7FB81DB23D682F80082E362 /* TopLayoutProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopLayoutProtocols.swift; sourceTree = "<group>"; };
 		B7FB81DD23D682F80082E362 /* UIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
 		B7FB81DE23D682F80082E362 /* MethodInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodInfo.swift; sourceTree = "<group>"; };
-		B7FB81DF23D682F80082E362 /* AppSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
 		B7FB825323D69D510082E362 /* UISingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISingleton.swift; sourceTree = "<group>"; };
+		B7FB825523D69EB10082E362 /* FoundationSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationSingleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +257,7 @@
 		B7FB81DC23D682F80082E362 /* App Commons */ = {
 			isa = PBXGroup;
 			children = (
-				B7FB81DF23D682F80082E362 /* AppSingleton.swift */,
+				B7FB825523D69EB10082E362 /* FoundationSingleton.swift */,
 				B7FB825323D69D510082E362 /* UISingleton.swift */,
 				B7FB81DD23D682F80082E362 /* UIConstant.swift */,
 				B7FB81DE23D682F80082E362 /* MethodInfo.swift */,
@@ -375,11 +375,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7FB81EF23D682F80082E362 /* Optional+RGAppTools.swift in Sources */,
-				B7FB81FF23D682F80082E362 /* AppSingleton.swift in Sources */,
 				B7FB81F623D682F80082E362 /* UserDefaults+RGAppTools.swift in Sources */,
 				B7FB81EA23D682F80082E362 /* UIView+RGAppTools.swift in Sources */,
 				B7FB81F423D682F80082E362 /* Date+RGAppTools.swift in Sources */,
 				B7FB81F223D682F80082E362 /* Int+RGAppTools.swift in Sources */,
+				B7FB825623D69EB10082E362 /* FoundationSingleton.swift in Sources */,
 				B7FB81E823D682F80082E362 /* UIDevice+RGAppTools.swift in Sources */,
 				B7FB81E723D682F80082E362 /* UINavigationBar+RGAppTools.swift in Sources */,
 				B7FB81E923D682F80082E362 /* UITabBar+RGAppTools.swift in Sources */,
