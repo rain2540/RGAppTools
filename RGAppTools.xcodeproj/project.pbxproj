@@ -142,7 +142,7 @@
 				B7FB819F23D681E50082E362 /* Info.plist */,
 				B7FB819E23D681E50082E362 /* RGAppTools.h */,
 				B7FB81D823D682F80082E362 /* RGAppTools.swift */,
-				B7FB81DC23D682F80082E362 /* App Commons */,
+				B7FB81DC23D682F80082E362 /* AppCommons */,
 				B7FB81B923D682F80082E362 /* Extensions */,
 				B7FB81D923D682F80082E362 /* Protocols */,
 				B7FB81B623D682F80082E362 /* RGBuild */,
@@ -257,7 +257,7 @@
 			path = "View Protocols";
 			sourceTree = "<group>";
 		};
-		B7FB81DC23D682F80082E362 /* App Commons */ = {
+		B7FB81DC23D682F80082E362 /* AppCommons */ = {
 			isa = PBXGroup;
 			children = (
 				B7FB825523D69EB10082E362 /* FoundationSingleton.swift */,
@@ -265,7 +265,7 @@
 				B7FB81DD23D682F80082E362 /* UIConstant.swift */,
 				B7FB81DE23D682F80082E362 /* MethodInfo.swift */,
 			);
-			path = "App Commons";
+			path = AppCommons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
