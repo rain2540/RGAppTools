@@ -16,8 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "RGAppTools"
-  spec.version      = "0.0.1"
-  spec.summary      = "A short description of RGAppTools."
+  spec.version      = "0.0.2"
+  spec.summary      = "App development support tools by Swift programming language."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,14 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-                   DESC
+                      App development support tools by Swift programming language.
 
-  spec.homepage     = "http://EXAMPLE/RGAppTools"
+                      * App Commons
+                      * Extensions
+                      * RGBuilds
+                      DESC
+
+  spec.homepage     = "https://github.com/rain2540/RGAppTools"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -38,8 +43,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MPL-2.0", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -52,10 +56,11 @@ Pod::Spec.new do |spec|
   #  profile URL.
   #
 
-  spec.author             = { "Smartech" => "rain2540@foxmail.com" }
-  # Or just: spec.author    = "Smartech"
-  # spec.authors            = { "Smartech" => "rain2540@foxmail.com" }
-  # spec.social_media_url   = "https://twitter.com/Smartech"
+  spec.author             = { "rain2540" => "rain2540@foxmail.com" }
+  spec.social_media_url   = "https://weibo.com/rain2540"
+
+  spec.swift_version = "5.0"
+  spec.swift_versions = ['5.0', '5.1']
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -64,7 +69,7 @@ Pod::Spec.new do |spec|
   #
 
   # spec.platform     = :ios
-  # spec.platform     = :ios, "5.0"
+  spec.platform     = :ios, "11.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,8 +84,10 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/RGAppTools.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/rain2540/RGAppTools.git", :tag => "spec.version" }
 
+  spec.requires_arc = true
+  spec.frameworks = "CoreLocation"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -90,8 +97,8 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = ["Sources/**/**/*.swift", "Sources/**/*.swift", "Sources/RGAppTools.swift", "Sources/RGAppTools.h"]
+  # spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
