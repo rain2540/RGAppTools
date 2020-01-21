@@ -10,6 +10,7 @@ import UIKit
 
 extension RGAppTools where Base: UINavigationBar {
 
+    /// Navigation Bar 默认高度
     public static var defaultHeight: CGFloat {
         return 44.0
     }
