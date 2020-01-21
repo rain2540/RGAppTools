@@ -18,4 +18,8 @@ extension RGAppTools where Base: UIApplication {
         }
     }
 
+    public static var statusBarHeight: CGFloat {
+        return UIApplication.rat.statusBarFrame.height
+    }
+
 }
