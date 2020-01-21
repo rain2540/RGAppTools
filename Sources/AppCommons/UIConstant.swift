@@ -47,7 +47,7 @@ public let StatusBarHeight = StatusBarFrame.height
 
 /// Status Bar 默认高度
 @available(*, deprecated, message: "Constant 'StatusBarDefaultHeight' is deprecated. Use`UIApplication.rat.statusBarDefaultHeight` instead.", renamed: "UIApplication.rat.statusBarDefaultHeight")
-public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeriesUI ? 44.0 : 20.0
+public let StatusBarDefaultHeight: CGFloat = is_iPhoneX ? 44.0 : 20.0
 
 /// Navigation Bar 默认高度
 @available(*, deprecated, message: "Constant 'NavigationBarDefaultHeight' is deprecated. Use`UINavigationBar.rat.defaultHeight` instead.", renamed: "UINavigationBar.rat.defaultHeight")
