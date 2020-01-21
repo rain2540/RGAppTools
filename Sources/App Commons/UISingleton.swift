@@ -20,5 +20,7 @@ public let AppMainWindow = UIApplication.shared.delegate?.window
 /// Root View Controller
 public let RootViewController = UIApplication.shared.delegate?.window??.rootViewController
 
+public let AppKeyWindow = UIApplication.shared.keyWindow
+
 /// Main Screen
 public let AppMainScreen = UIScreen.main
