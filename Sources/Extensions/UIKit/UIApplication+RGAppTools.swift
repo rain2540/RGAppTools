@@ -22,4 +22,8 @@ extension RGAppTools where Base: UIApplication {
         return UIApplication.rat.statusBarFrame.height
     }
 
+    public static var statusBarDefaultHeight: CGFloat {
+        return UIDevice.rat.isIPhoneXSeriesUI ? 44.0 : 20.0
+    }
+
 }
