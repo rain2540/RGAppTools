@@ -12,7 +12,7 @@ import UIKit
 public let SharedApplication = UIApplication.shared
 
 /// AppDelegate
-internal let SharedAppDelegate = UIApplication.shared.delegate
+public let SharedAppDelegate = UIApplication.shared.delegate
 
 /// Main Window
 public let AppMainWindow = UIApplication.shared.delegate?.window
