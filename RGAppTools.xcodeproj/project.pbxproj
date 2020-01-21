@@ -42,6 +42,7 @@
 		B7FB81FD23D682F80082E362 /* UIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81DD23D682F80082E362 /* UIConstant.swift */; platformFilter = ios; };
 		B7FB81FE23D682F80082E362 /* MethodInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81DE23D682F80082E362 /* MethodInfo.swift */; };
 		B7FB81FF23D682F80082E362 /* AppSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81DF23D682F80082E362 /* AppSingleton.swift */; platformFilter = ios; };
+		B7FB825423D69D510082E362 /* UISingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB825323D69D510082E362 /* UISingleton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		B7FB81DD23D682F80082E362 /* UIConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstant.swift; sourceTree = "<group>"; };
 		B7FB81DE23D682F80082E362 /* MethodInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MethodInfo.swift; sourceTree = "<group>"; };
 		B7FB81DF23D682F80082E362 /* AppSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSingleton.swift; sourceTree = "<group>"; };
+		B7FB825323D69D510082E362 /* UISingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISingleton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				B7FB81DF23D682F80082E362 /* AppSingleton.swift */,
+				B7FB825323D69D510082E362 /* UISingleton.swift */,
 				B7FB81DD23D682F80082E362 /* UIConstant.swift */,
 				B7FB81DE23D682F80082E362 /* MethodInfo.swift */,
 			);
@@ -389,6 +392,7 @@
 				B7FB81FB23D682F80082E362 /* RGAppTools.swift in Sources */,
 				B7FB81FA23D682F80082E362 /* CLLocation+RGAppTools.swift in Sources */,
 				B7FB81F523D682F80082E362 /* NSObject+RGAppTools.swift in Sources */,
+				B7FB825423D69D510082E362 /* UISingleton.swift in Sources */,
 				B7FB81FC23D682F80082E362 /* TopLayoutProtocols.swift in Sources */,
 				B7FB81E223D682F80082E362 /* UITextField+RGAppTools.swift in Sources */,
 				B7FB81ED23D682F80082E362 /* Double+RGAppTools.swift in Sources */,
