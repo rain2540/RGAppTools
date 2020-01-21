@@ -125,7 +125,7 @@ extension TopViewWithTitle where Self: UIViewController {
 
     /// 显示页面标题的 Label
     var titleLabel: UILabel {
-        let titleSize = titleString.rat.size(withFont: titleFont)
+        let titleSize = (titleString as NSString).size(withAttributes: [NSAttributedString.Key.font: titleFont]) //titleString.rat.size(withFont: titleFont)
         let label = UILabel()
         label.font = titleFont
         label.textColor = titleColor
