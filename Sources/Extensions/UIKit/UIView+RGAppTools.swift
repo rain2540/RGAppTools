@@ -14,6 +14,7 @@ public enum RGLineDirection {
 }
 
 extension RGAppTools where Base: UIView {
+
     // MARK: Draw
     /// 在 view 的指定位置加指定长宽、颜色的线
     ///
@@ -82,6 +83,15 @@ extension RGAppTools where Base: UIView {
     public var midY: CGFloat { return base.frame.midY }
     /// 视图纵坐标最大值
     public var maxY: CGFloat { return base.frame.maxY }
+
+    public static var topLayoutHeight: CGFloat {
+        return UIApplication.rat.statusBarHeight + UINavigationBar.rat.defaultHeight
+    }
+
+    public static var topLayoutDefaultHeight: CGFloat {
+        return UIApplication.rat.statusBarDefaultHeight + UINavigationBar.rat.defaultHeight
+    }
+
 }
 
 
