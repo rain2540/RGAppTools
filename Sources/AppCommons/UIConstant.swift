@@ -9,23 +9,6 @@
 import UIKit
 
 // MARK: Constants
-/// Status Bar 的 Frame
-public let StatusBarFrame = UIApplication.shared.statusBarFrame
-
-/// Status Bar 的 Height
-public let StatusBarHeight = StatusBarFrame.height
-
-/// Status Bar 默认高度
-public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeriesUI ? 44.0 : 20.0
-
-/// Top Layout 的 高度
-public var TopLayoutHeight: CGFloat {
-    return StatusBarHeight + NavigationBarDefaultHeight
-}
-
-/// Tab Bar 默认高度
-public let TabBarDefaultHeight: CGFloat = 49.0
-
 /// Tool Bar 默认高度
 public let ToolBarDefaultHeight: CGFloat = 44.0
 
@@ -54,12 +37,34 @@ public var is_iPhoneX: Bool {
     return (UIScreen.main.bounds.height == 812.0 && UIScreen.main.bounds.width == 375.0)
 }
 
+/// Status Bar 的 Frame
+@available(*, deprecated, message: "Constant 'StatusBarFrame' is deprecated. Use`UIApplication.rat.statusBarFrame` instead.", renamed: "UIApplication.rat.statusBarFrame")
+public let StatusBarFrame = UIApplication.shared.statusBarFrame
+
+/// Status Bar 的 Height
+@available(*, deprecated, message: "Constant 'StatusBarHeight' is deprecated. Use`UIApplication.rat.statusBarHeight` instead.", renamed: "UIApplication.rat.statusBarHeight")
+public let StatusBarHeight = StatusBarFrame.height
+
+/// Status Bar 默认高度
+@available(*, deprecated, message: "Constant 'StatusBarDefaultHeight' is deprecated. Use`UIApplication.rat.statusBarDefaultHeight` instead.", renamed: "UIApplication.rat.statusBarDefaultHeight")
+public let StatusBarDefaultHeight: CGFloat = UIDevice.rat.isIPhoneXSeriesUI ? 44.0 : 20.0
+
 /// Navigation Bar 默认高度
 @available(*, deprecated, message: "Constant 'NavigationBarDefaultHeight' is deprecated. Use`UINavigationBar.rat.defaultHeight` instead.", renamed: "UINavigationBar.rat.defaultHeight")
 public let NavigationBarDefaultHeight: CGFloat = 44.0
 
+/// Top Layout 的 高度
+@available(*, deprecated, message: "Constant 'TopLayoutHeight' is deprecated. Use`UIView.rat.topLayoutHeight` instead.", renamed: "UIView.rat.topLayoutHeight")
+public var TopLayoutHeight: CGFloat {
+    return StatusBarHeight + NavigationBarDefaultHeight
+}
+
 /// Top Layout 默认高度
-@available(*, deprecated, message: "Constant 'TopLayoutDefaultHeight' is deprecated. Use`TopLayoutHeight` instead.", renamed: "TopLayoutHeight")
+@available(*, deprecated, message: "Constant 'TopLayoutDefaultHeight' is deprecated. Use`UIView.rat.topLayoutDefaultHeight` instead.", renamed: "UIView.rat.topLayoutDefaultHeight")
 public var TopLayoutDefaultHeight: CGFloat {
     return StatusBarDefaultHeight + NavigationBarDefaultHeight
 }
+
+/// Tab Bar 默认高度
+@available(*, deprecated, message: "Constant 'TabBarDefaultHeight' is deprecated. Use`UITabBar.rat.defaultHeight` instead.", renamed: "UITabBar.rat.defaultHeight")
+public let TabBarDefaultHeight: CGFloat = 49.0
