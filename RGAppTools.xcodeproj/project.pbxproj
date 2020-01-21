@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B706DAF023D6DE4000197988 /* UIScreen+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B706DAEF23D6DE4000197988 /* UIScreen+RGAppTools.swift */; };
 		B7FB81A523D681E60082E362 /* RGAppTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FB819B23D681E50082E362 /* RGAppTools.framework */; };
 		B7FB81AA23D681E60082E362 /* RGAppToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81A923D681E60082E362 /* RGAppToolsTests.swift */; };
 		B7FB81AC23D681E60082E362 /* RGAppTools.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FB819E23D681E50082E362 /* RGAppTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -57,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B706DAEF23D6DE4000197988 /* UIScreen+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScreen+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7FB819B23D681E50082E362 /* RGAppTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RGAppTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FB819E23D681E50082E362 /* RGAppTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGAppTools.h; sourceTree = "<group>"; };
 		B7FB819F23D681E50082E362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				B7FB81C123D682F80082E362 /* UIDevice+RGAppTools.swift */,
 				B7FB81BF23D682F80082E362 /* UIImage+RGAppTools.swift */,
 				B7FB81C023D682F80082E362 /* UINavigationBar+RGAppTools.swift */,
+				B706DAEF23D6DE4000197988 /* UIScreen+RGAppTools.swift */,
 				B7FB81BC23D682F80082E362 /* UIScrollView+RGAppTools.swift */,
 				B7FB81C223D682F80082E362 /* UITabBar+RGAppTools.swift */,
 				B7FB81BB23D682F80082E362 /* UITextField+RGAppTools.swift */,
@@ -377,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B706DAF023D6DE4000197988 /* UIScreen+RGAppTools.swift in Sources */,
 				B7FB81EF23D682F80082E362 /* Optional+RGAppTools.swift in Sources */,
 				B7FB81F623D682F80082E362 /* UserDefaults+RGAppTools.swift in Sources */,
 				B7FB81EA23D682F80082E362 /* UIView+RGAppTools.swift in Sources */,
