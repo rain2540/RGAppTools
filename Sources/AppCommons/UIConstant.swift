@@ -16,6 +16,7 @@ public let ToolBarDefaultHeight: CGFloat = 44.0
 public let LabelDefaultHeight: CGFloat = 21.0
 
 /// Button 默认高度
+@available(*, deprecated, message: "Constant 'ButtonDefaultHeight' is deprecated. Use`UIButton.rat.defaultHeight` instead.", renamed: "UIButton.rat.defaultHeight")
 public let ButtonDefaultHeight: CGFloat = 44.0
 
 /// TextField 默认高度
