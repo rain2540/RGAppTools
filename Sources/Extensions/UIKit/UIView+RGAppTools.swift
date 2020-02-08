@@ -14,6 +14,10 @@ public enum RGLineDirection {
 }
 
 extension RGAppTools where Base: UIView {
+    
+    public static var defaultInterval: CGFloat {
+        return 8.0
+    }
 
     // MARK: Draw
     /// 在 view 的指定位置加指定长宽、颜色的线
