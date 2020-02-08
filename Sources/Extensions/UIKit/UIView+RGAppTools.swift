@@ -15,6 +15,7 @@ public enum RGLineDirection {
 
 extension RGAppTools where Base: UIView {
     
+    /// 视图默认间距
     public static var defaultInterval: CGFloat {
         return 8.0
     }
