@@ -14,11 +14,6 @@ public enum RGLineDirection {
 }
 
 extension RGAppTools where Base: UIView {
-    
-    /// 视图默认间距
-    public static var defaultInterval: CGFloat {
-        return 8.0
-    }
 
     // MARK: Draw
     /// 在 view 的指定位置加指定长宽、颜色的线
@@ -88,7 +83,13 @@ extension RGAppTools where Base: UIView {
     public var midY: CGFloat { return base.frame.midY }
     /// 视图纵坐标最大值
     public var maxY: CGFloat { return base.frame.maxY }
-
+    
+    /// 视图默认间距
+    public static var defaultInterval: CGFloat {
+        return 8.0
+    }
+    
+    /// Top Layout 的高度
     public static var topLayoutHeight: CGFloat {
         return UIApplication.rat.statusBarHeight + UINavigationBar.rat.defaultHeight
     }
