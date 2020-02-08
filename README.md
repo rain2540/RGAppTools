@@ -2,7 +2,7 @@
 
 Swift 语言版本的 App 开发辅助工具集。
 
-源码位于项目文件夹与`Info.plist`同级的`RGAppTools`文件夹内。源码结构如下：
+源码结构如下：
 
 ![Structure_of_RGAppTools](images/RGAppTools.png)
 
