@@ -10,6 +10,10 @@ import UIKit
 
 extension RGAppTools where Base: UITextField {
     
+    public static var defaultHeight: CGFloat {
+        return 30.0
+    }
+    
     /// 为 TextField 添加左侧图片
     ///
     /// - Parameters:
