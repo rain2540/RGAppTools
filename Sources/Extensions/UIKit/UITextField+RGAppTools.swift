@@ -10,6 +10,7 @@ import UIKit
 
 extension RGAppTools where Base: UITextField {
     
+    /// 默认高度
     public static var defaultHeight: CGFloat {
         return 30.0
     }
