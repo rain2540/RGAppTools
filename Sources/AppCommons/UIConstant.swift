@@ -18,9 +18,6 @@ public let LabelDefaultHeight: CGFloat = 21.0
 /// TableViewCell 默认高度
 public let TableViewCellDefaultHeight: CGFloat = 44.0
 
-/// Home Indicator 所在区域高度
-public let HomeIndicatorAreaHeight: CGFloat = 34.0
-
 
 // MARK: - Deprecated
 @available(*, deprecated, message: "Extensions directly on is_iPhoneX in UIConstant is deprecated. Use `UIDevice.rat.isIPhoneXSeries` instead.", renamed: "UIDevice.rat.isIPhoneXSeries")
@@ -71,3 +68,7 @@ public let TextFieldDefaultHeight: CGFloat = 30.0
 /// Tab Bar 默认高度
 @available(*, deprecated, message: "Constant 'TabBarDefaultHeight' is deprecated. Use`UITabBar.rat.defaultHeight` instead.", renamed: "UITabBar.rat.defaultHeight")
 public let TabBarDefaultHeight: CGFloat = 49.0
+
+/// Home Indicator 所在区域高度
+@available(*, deprecated, message: "Constant 'HomeIndicatorAreaHeight' is deprecated. Use`UIView.rat.homeIndicatorAreaHeight` instead.", renamed: "UIView.rat.homeIndicatorAreaHeight")
+public let HomeIndicatorAreaHeight: CGFloat = 34.0
