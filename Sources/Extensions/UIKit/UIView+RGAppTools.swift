@@ -97,6 +97,10 @@ extension RGAppTools where Base: UIView {
     public static var topLayoutDefaultHeight: CGFloat {
         return UIApplication.rat.statusBarDefaultHeight + UINavigationBar.rat.defaultHeight
     }
+    
+    public static var homeIndicatorAreaHeight: CGFloat {
+        return 34.0
+    }
 
 }
 
