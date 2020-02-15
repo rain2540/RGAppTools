@@ -12,9 +12,6 @@ import UIKit
 /// Tool Bar 默认高度
 public let ToolBarDefaultHeight: CGFloat = 44.0
 
-/// Label 默认高度
-public let LabelDefaultHeight: CGFloat = 21.0
-
 /// TableViewCell 默认高度
 public let TableViewCellDefaultHeight: CGFloat = 44.0
 
@@ -56,6 +53,10 @@ public var TopLayoutHeight: CGFloat {
 public var TopLayoutDefaultHeight: CGFloat {
     return StatusBarDefaultHeight + NavigationBarDefaultHeight
 }
+
+/// Label 默认高度
+@available(*, deprecated, message: "Constant 'LabelDefaultHeight' is deprecated. Use`UILabel.rat.defaultHeight` instead.", renamed: "UILabel.rat.defaultHeight")
+public let LabelDefaultHeight: CGFloat = 21.0
 
 /// Button 默认高度
 @available(*, deprecated, message: "Constant 'ButtonDefaultHeight' is deprecated. Use`UIButton.rat.defaultHeight` instead.", renamed: "UIButton.rat.defaultHeight")
