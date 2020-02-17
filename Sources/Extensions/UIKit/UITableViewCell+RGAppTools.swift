@@ -10,6 +10,8 @@ import UIKit
 
 extension RGAppTools where Base: UITableViewCell {
     
-    
+    public static var defaultHeight: CGFloat {
+        return 44.0
+    }
     
 }
