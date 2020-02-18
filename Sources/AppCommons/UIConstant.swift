@@ -12,9 +12,6 @@ import UIKit
 /// Tool Bar 默认高度
 public let ToolBarDefaultHeight: CGFloat = 44.0
 
-/// TableViewCell 默认高度
-public let TableViewCellDefaultHeight: CGFloat = 44.0
-
 
 // MARK: - Deprecated
 @available(*, deprecated, message: "Extensions directly on is_iPhoneX in UIConstant is deprecated. Use `UIDevice.rat.isIPhoneXSeries` instead.", renamed: "UIDevice.rat.isIPhoneXSeries")
@@ -61,6 +58,10 @@ public let LabelDefaultHeight: CGFloat = 21.0
 /// Button 默认高度
 @available(*, deprecated, message: "Constant 'ButtonDefaultHeight' is deprecated. Use`UIButton.rat.defaultHeight` instead.", renamed: "UIButton.rat.defaultHeight")
 public let ButtonDefaultHeight: CGFloat = 44.0
+
+/// TableViewCell 默认高度
+@available(*, deprecated, message: "Constant 'TableViewCellDefaultHeight' is deprecated. Use`UITableViewCell.rat.defaultHeight` instead.", renamed: "UITableViewCell.rat.defaultHeight")
+public let TableViewCellDefaultHeight: CGFloat = 44.0
 
 /// TextField 默认高度
 @available(*, deprecated, message: "Constant 'TextFieldDefaultHeight' is deprecated. Use`UITextField.rat.defaultHeight` instead.", renamed: "UITextField.rat.defaultHeight")
