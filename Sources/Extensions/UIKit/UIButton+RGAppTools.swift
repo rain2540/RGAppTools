@@ -10,6 +10,7 @@ import UIKit
 
 extension RGAppTools where Base: UIButton {
     
+    /// default height of UIButton
     public static var defaultHeight: CGFloat {
         return 44.0
     }
