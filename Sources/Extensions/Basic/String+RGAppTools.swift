@@ -332,6 +332,10 @@ extension StringExtension {
     public var intValue: Int {
         return string.rat.int ?? 0
     }
+    
+    public var uInt: UInt? {
+        return UInt(string)
+    }
 
     /// String 对应的 Float? 值
     public var float: Float? {
