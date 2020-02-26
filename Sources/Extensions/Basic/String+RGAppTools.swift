@@ -333,6 +333,7 @@ extension StringExtension {
         return string.rat.int ?? 0
     }
     
+    /// String 对应的 UInt? 值
     public var uInt: UInt? {
         return UInt(string)
     }
