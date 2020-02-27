@@ -338,6 +338,7 @@ extension StringExtension {
         return UInt(string)
     }
     
+    /// UInt Value for String
     public var uIntValue: UInt {
         return string.rat.uInt ?? 0
     }
