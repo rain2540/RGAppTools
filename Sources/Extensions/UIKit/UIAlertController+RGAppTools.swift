@@ -17,10 +17,10 @@ extension RGAppTools where Base: UIAlertController {
     ///   - message: Alert 内容
     ///   - viewController: 展示 Alert 的视图
     ///   - actions: 完成的 actions
-    public static func alert(title: String,
-                             message: String,
-                             in viewController: UIViewController,
-                             actions: UIAlertAction...)
+    public static func showAlert(in viewController: UIViewController,
+                                 title: String,
+                                 message: String,
+                                 actions: UIAlertAction...)
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for action in actions {
