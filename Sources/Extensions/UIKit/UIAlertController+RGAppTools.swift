@@ -46,11 +46,8 @@ extension RGAppTools where Base: UIAlertController {
                                        message: String,
                                        actions: UIAlertAction...)
     {
-        let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-        for action in actions {
-            actionSheet.addAction(action)
-        }
-        viewController.present(actionSheet, animated: true, completion: nil)
+        let sheet = actionSheet(title: title, message: message, actions: actions)
+        viewController.present(sheet, animated: true, completion: nil)
     }
     
     
