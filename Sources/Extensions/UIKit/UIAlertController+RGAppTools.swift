@@ -41,10 +41,10 @@ extension RGAppTools where Base: UIAlertController {
     ///   - message: ActionSheet 内容
     ///   - viewController: 展示 ActionSheet 的视图
     ///   - actions: 完成的 actions
-    public static func actionSheet(title: String,
-                                   message: String,
-                                   in viewController: UIViewController,
-                                   actions: UIAlertAction...)
+    public static func showActionSheet(in viewController: UIViewController,
+                                       title: String,
+                                       message: String,
+                                       actions: UIAlertAction...)
     {
         let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         for action in actions {
