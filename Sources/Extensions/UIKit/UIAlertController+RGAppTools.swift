@@ -50,6 +50,14 @@ extension RGAppTools where Base: UIAlertController {
         viewController.present(sheet, animated: true, completion: nil)
     }
     
+    public static func actionSheeet(title: String,
+                                    message: String,
+                                    actions: UIAlertAction...) -> UIAlertController
+    {
+        let sheet = actionSheet(title: title, message: message, actions: actions)
+        return sheet
+    }
+    
     
     // MARK: - Private
     private static func alert(title: String,
