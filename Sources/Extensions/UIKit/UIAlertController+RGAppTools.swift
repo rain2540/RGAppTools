@@ -10,12 +10,11 @@ import UIKit
 
 extension RGAppTools where Base: UIAlertController {
     
-    /// 在视图中添加 Alert
-    ///
+    /// 在视图中显示 Alert
     /// - Parameters:
+    ///   - viewController: 展示 Alert 的视图
     ///   - title: Alert 标题
     ///   - message: Alert 内容
-    ///   - viewController: 展示 Alert 的视图
     ///   - actions: 完成的 actions
     public static func showAlert(in viewController: UIViewController,
                                  title: String,
