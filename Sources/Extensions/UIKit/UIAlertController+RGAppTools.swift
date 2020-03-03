@@ -25,6 +25,11 @@ extension RGAppTools where Base: UIAlertController {
         viewController.present(alertView, animated: true, completion: nil)
     }
     
+    /// create an alert
+    /// - Parameters:
+    ///   - title: alert title
+    ///   - message: alert message
+    ///   - actions: alert button actions
     public static func alert(title: String,
                              message: String,
                              actions: UIAlertAction...) -> UIAlertController
