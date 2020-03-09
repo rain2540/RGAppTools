@@ -27,7 +27,7 @@ extension NSDecimalNumberHandler {
     /// - Parameter overflow: 上限越界处理
     /// - Parameter underflow: 下限越界处理
     /// - Parameter divideByZero: 除以零的处理
-    convenience init(
+    public convenience init(
         numberRoundingMode: NSDecimalNumber.RoundingMode = .plain,
         scale: Int16,
         raiseOnExactness exact: Bool = false,
