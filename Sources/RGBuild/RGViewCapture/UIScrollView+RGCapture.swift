@@ -24,7 +24,7 @@ public extension UIScrollView {
         let bakFrame     = self.frame
         let bakOffset    = self.contentOffset
         let bakSuperView = self.superview
-        let bakIndex     = self.superview?.subviews.index(of: self)
+        let bakIndex     = self.superview?.subviews.firstIndex(of: self)
 
         // Scroll To Bottom show all cached view
         if self.frame.size.height < self.contentSize.height {
@@ -61,7 +61,7 @@ public extension UIScrollView {
 
         // Swizzling setFrame
         let method: Method = class_getInstanceMethod(object_getClass(self), #selector(setter: UIView.frame))!
-        let swizzledMethod: Method = class_getInstanceMethod(object_getClass(self), #selector(UIView.rat_SetFrame(_:)))!
+        let swizzledMethod: Method = class_getInstanceMethod(object_getClass(self), #selector(setter: UIView.frame))!
         method_exchangeImplementations(method, swizzledMethod)
 
         // Sometimes ScrollView will Capture nothing without defer;
