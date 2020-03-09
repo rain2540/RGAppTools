@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   
   s.name         = "RGAppTools"
   
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   
   s.summary      = "App development support tools by Swift programming language."
   
@@ -57,7 +57,7 @@ Pod::Spec.new do |s|
   end
   
   s.subspec 'RGBuild' do |sp|
-    sp.source_files = ["Sources/RGBuild/*.swift"]
+    sp.source_files = ["Sources/RGBuild/**/*.swift", "Sources/RGBuild/*.swift"]
     sp.dependency 'RGAppTools/Core'
   end
   
