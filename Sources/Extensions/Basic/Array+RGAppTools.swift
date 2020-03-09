@@ -16,7 +16,7 @@ extension Array {
     ///   - first: 第一个特定元素的下标
     ///   - second: 第二个特定元素的下标
     ///   - others: 其他特定元素的下标
-    subscript(first: Int, second: Int, others: Int...) -> ArraySlice<Element> {
+    public subscript(first: Int, second: Int, others: Int...) -> ArraySlice<Element> {
         get {
             var indexes: [Int] = []
             indexes.append(contentsOf: [first, second])
@@ -45,7 +45,7 @@ extension Array {
     /// 获取数组特定位置的元素 / 设置数组特定元素的值
     ///
     /// - Parameter input: 特定元素的下标组成的数组
-    subscript(input: [Int]) -> ArraySlice<Element> {
+    public subscript(input: [Int]) -> ArraySlice<Element> {
         get {
             var result = ArraySlice<Element>()
             for i in input {
