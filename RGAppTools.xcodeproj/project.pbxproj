@@ -11,9 +11,6 @@
 		B71654AF23F854F700984573 /* UILabel+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */; };
 		B71654B123FA257100984573 /* UITableViewCell+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */; };
 		B716553723FE17BF00984573 /* UIToolBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */; };
-		B758D588241629A900BB201A /* UIScrollView+RGCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D585241629A900BB201A /* UIScrollView+RGCapture.swift */; };
-		B758D589241629A900BB201A /* WKWebView+RGCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D586241629A900BB201A /* WKWebView+RGCapture.swift */; };
-		B758D58A241629A900BB201A /* UIView+RGViewCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B758D587241629A900BB201A /* UIView+RGViewCapture.swift */; };
 		B7F6DE5F23EF1C4200E7F484 /* UIButton+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */; };
 		B7FB81A523D681E60082E362 /* RGAppTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FB819B23D681E50082E362 /* RGAppTools.framework */; };
 		B7FB81AA23D681E60082E362 /* RGAppToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81A923D681E60082E362 /* RGAppToolsTests.swift */; };
@@ -69,9 +66,6 @@
 		B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+RGAppTools.swift"; sourceTree = "<group>"; };
 		B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+RGAppTools.swift"; sourceTree = "<group>"; };
 		B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIToolBar+RGAppTools.swift"; path = "Sources/Extensions/Basic/UIToolBar+RGAppTools.swift"; sourceTree = SOURCE_ROOT; };
-		B758D585241629A900BB201A /* UIScrollView+RGCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+RGCapture.swift"; sourceTree = "<group>"; };
-		B758D586241629A900BB201A /* WKWebView+RGCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+RGCapture.swift"; sourceTree = "<group>"; };
-		B758D587241629A900BB201A /* UIView+RGViewCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+RGViewCapture.swift"; sourceTree = "<group>"; };
 		B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7FB819B23D681E50082E362 /* RGAppTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RGAppTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FB819E23D681E50082E362 /* RGAppTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGAppTools.h; sourceTree = "<group>"; };
@@ -134,16 +128,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B758D584241629A900BB201A /* RGViewCapture */ = {
-			isa = PBXGroup;
-			children = (
-				B758D585241629A900BB201A /* UIScrollView+RGCapture.swift */,
-				B758D587241629A900BB201A /* UIView+RGViewCapture.swift */,
-				B758D586241629A900BB201A /* WKWebView+RGCapture.swift */,
-			);
-			path = RGViewCapture;
-			sourceTree = "<group>";
-		};
 		B7FB819123D681E50082E362 = {
 			isa = PBXGroup;
 			children = (
@@ -189,7 +173,6 @@
 		B7FB81B623D682F80082E362 /* RGBuild */ = {
 			isa = PBXGroup;
 			children = (
-				B758D584241629A900BB201A /* RGViewCapture */,
 				B7FB81B823D682F80082E362 /* MainScreen.swift */,
 				B7FB81B723D682F80082E362 /* RGToast.swift */,
 			);
@@ -424,7 +407,6 @@
 				B7FB81F723D682F80082E362 /* FileManager+RGAppTools.swift in Sources */,
 				B7FB81EE23D682F80082E362 /* Dictionary+RGAppTools.swift in Sources */,
 				B7FB81E423D682F80082E362 /* UIAlertController+RGAppTools.swift in Sources */,
-				B758D589241629A900BB201A /* WKWebView+RGCapture.swift in Sources */,
 				B7FB81EB23D682F80082E362 /* UIViewController+RGAppTools.swift in Sources */,
 				B7FB81F123D682F80082E362 /* Array+RGAppTools.swift in Sources */,
 				B7FB81F323D682F80082E362 /* Bundle+RGAppTools.swift in Sources */,
@@ -448,8 +430,6 @@
 				B7FB81FD23D682F80082E362 /* UIConstant.swift in Sources */,
 				B7F6DE5F23EF1C4200E7F484 /* UIButton+RGAppTools.swift in Sources */,
 				B7FB81E323D682F80082E362 /* UIScrollView+RGAppTools.swift in Sources */,
-				B758D58A241629A900BB201A /* UIView+RGViewCapture.swift in Sources */,
-				B758D588241629A900BB201A /* UIScrollView+RGCapture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
