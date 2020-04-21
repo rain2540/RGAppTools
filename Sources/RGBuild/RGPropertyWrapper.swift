@@ -9,6 +9,9 @@
 import Foundation
 
 
+public typealias RPW = RGPropertyWrapper
+
+
 public struct RGPropertyWrapper {
 
     @propertyWrapper
