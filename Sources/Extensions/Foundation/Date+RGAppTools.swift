@@ -85,6 +85,11 @@ extension DateExtension {
         return res
     }
 
+    public static func isLeapYear(for year: Int) -> Bool {
+        let res = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
+        return res
+    }
+
 }
 
 
