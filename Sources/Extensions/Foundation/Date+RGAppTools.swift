@@ -81,7 +81,7 @@ extension DateExtension {
 extension DateExtension {
 
     public var isLeaoYear: Bool {
-        let res = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
+        let res = Date.rat.isLeapYear(for: year)
         return res
     }
 
