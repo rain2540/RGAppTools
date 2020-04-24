@@ -8,7 +8,9 @@
 
 import Foundation
 
+
 extension Date {
+
     public var rat: DateExtension {
         return DateExtension(date: self)
     }
@@ -16,16 +18,27 @@ extension Date {
     public static var rat: DateExtension.Type {
         return DateExtension.self
     }
+
 }
 
+
+// MARK: -
+
 public struct DateExtension {
+
     private var date: Date
 
     fileprivate init(date: Date) {
         self.date = date
     }
 
-    //  MARK: Transform
+}
+
+
+//  MARK: - Transform
+
+extension DateExtension {
+
     /// 某个时间对应的时间戳
     public var timestamp: TimeInterval {
         return date.timeIntervalSince1970
@@ -46,7 +59,13 @@ public struct DateExtension {
         return String(Date.rat.timestampforNow)
     }
 
-    // MARK: Component
+}
+
+
+// MARK: - Component
+
+extension DateExtension {
+
     /// 某时间点对应的 year 值
     public var year: Int {
         return components(unit: .year)
