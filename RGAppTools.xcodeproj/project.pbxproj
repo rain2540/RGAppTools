@@ -11,6 +11,7 @@
 		B71654AF23F854F700984573 /* UILabel+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */; };
 		B71654B123FA257100984573 /* UITableViewCell+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */; };
 		B716553723FE17BF00984573 /* UIToolBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */; };
+		B72BD7372452DCE200D89A5A /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */; };
 		B7F6DE5F23EF1C4200E7F484 /* UIButton+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */; };
 		B7FB81A523D681E60082E362 /* RGAppTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FB819B23D681E50082E362 /* RGAppTools.framework */; };
 		B7FB81AA23D681E60082E362 /* RGAppToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81A923D681E60082E362 /* RGAppToolsTests.swift */; };
@@ -66,6 +67,7 @@
 		B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+RGAppTools.swift"; sourceTree = "<group>"; };
 		B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+RGAppTools.swift"; sourceTree = "<group>"; };
 		B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIToolBar+RGAppTools.swift"; path = "Sources/Extensions/Basic/UIToolBar+RGAppTools.swift"; sourceTree = SOURCE_ROOT; };
+		B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7FB819B23D681E50082E362 /* RGAppTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RGAppTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FB819E23D681E50082E362 /* RGAppTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGAppTools.h; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				B7FB81A923D681E60082E362 /* RGAppToolsTests.swift */,
+				B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */,
 				B7FB825723D6C3DE0082E362 /* StringExtensionsTests.swift */,
 				B7FB81AB23D681E60082E362 /* Info.plist */,
 			);
@@ -438,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7FB825823D6C3DE0082E362 /* StringExtensionsTests.swift in Sources */,
+				B72BD7372452DCE200D89A5A /* DateExtensionTests.swift in Sources */,
 				B7FB81AA23D681E60082E362 /* RGAppToolsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
