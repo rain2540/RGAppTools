@@ -76,6 +76,18 @@ extension DateExtension {
 }
 
 
+// MARK: - Judgement
+
+extension DateExtension {
+
+    public var isLeaoYear: Bool {
+        let res = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
+        return res
+    }
+
+}
+
+
 // MARK: - Component
 
 extension DateExtension {
