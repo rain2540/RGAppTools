@@ -35,7 +35,7 @@ public struct DateExtension {
 }
 
 
-//  MARK: - Transform
+// MARK: - Timestamp
 
 extension DateExtension {
 
@@ -57,6 +57,20 @@ extension DateExtension {
     /// 描述实时对应的时间戳的字符串
     public static var timestampForNowString: String {
         return String(Date.rat.timestampforNow)
+    }
+
+}
+
+
+//  MARK: - Transform
+
+extension DateExtension {
+
+    public func dateString(format: String = "yyyy-MM-dd") -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        let dateString = dateFormatter.string(from: date)
+        return dateString
     }
 
 }
