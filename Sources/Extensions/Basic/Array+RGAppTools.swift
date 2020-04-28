@@ -11,7 +11,6 @@ import Foundation
 extension Array {
 
     /// 获取数组特定位置的元素 / 设置数组特定元素的值
-    ///
     /// - Parameters:
     ///   - first: 第一个特定元素的下标
     ///   - second: 第二个特定元素的下标
@@ -43,7 +42,6 @@ extension Array {
     }
 
     /// 获取数组特定位置的元素 / 设置数组特定元素的值
-    ///
     /// - Parameter input: 特定元素的下标组成的数组
     public subscript(input: [Int]) -> ArraySlice<Element> {
         get {
