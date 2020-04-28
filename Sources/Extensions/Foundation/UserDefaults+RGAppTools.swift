@@ -8,16 +8,22 @@
 
 import Foundation
 
+
 public final class Key<ValueType: Codable> {
+
     fileprivate let key: String
     public init(_ key: String) {
         self.key = key
     }
+
 }
 
+
+// MARK: -
+
 extension RGAppTools where Base: UserDefaults {
+
     /// 检验 UserDefaults 中是否存在某个 key
-    ///
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果
     public func has<ValueType>(_ key: Key<ValueType>) -> Bool {
@@ -25,7 +31,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 获取 key 值对应的内容
-    ///
     /// - Parameter key: 标记内容的 key
     /// - Returns: key 对应的内容
     public func value<ValueType>(for key: Key<ValueType>) -> ValueType? {
@@ -48,7 +53,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 将内容存入 UserDefaults, 并用 key 标记
-    ///
     /// - Parameters:
     ///   - value: 将要存入的内容
     ///   - key: 用于标记的 key
@@ -72,7 +76,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 清除 key 值对应内容
-    ///
     /// - Parameter key: 标记内容的 key
     public func clear<ValueType>(for key: Key<ValueType>) {
         base.set(nil, forKey: key.key)
@@ -80,7 +83,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 检验给定类型是否为基础类型
-    ///
     /// - Parameter type: 待检验的类型
     /// - Returns: 检验结果
     private func isPrimitive<ValueType>(type: ValueType.Type) -> Bool {
@@ -92,9 +94,13 @@ extension RGAppTools where Base: UserDefaults {
         }
     }
 
-    // MARK: deprecated methods
+}
+
+// MARK: - deprecated methods
+
+extension RGAppTools where Base: UserDefaults {
+
     /// 检验 UserDefaults 中是否存在某个 key
-    ///
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果
     @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.has(_:)` instead.", renamed: "has(_:)")
@@ -112,7 +118,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 将某个 key - Object 值存入 UserDefaults 中
-    ///
     /// - Parameters:
     ///   - object: 将要存入的 object
     ///   - key: 将要存入的 key
@@ -123,7 +128,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 将某个 key - Int 值存入 UserDefaults 中
-    ///
     /// - Parameters:
     ///   - value: 将要存入的 Int 值
     ///   - key: 将要存入的 key
@@ -134,7 +138,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 将某个 key - Float 值存入 UserDefaults 中
-    ///
     /// - Parameters:
     ///   - value: 将要存入的 Float 值
     ///   - key: 将要存入的 key
@@ -145,7 +148,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 将某个 key - Double 值存入 UserDefaults 中
-    ///
     /// - Parameters:
     ///   - value: 将要存入的 Double 值
     ///   - key: 将要存入的 key
@@ -156,7 +158,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 将某个 key - Bool 值存入 UserDefaults 中
-    ///
     /// - Parameters:
     ///   - value: 将要存入的 Bool 值
     ///   - key: 将要存入的 key
@@ -167,7 +168,6 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 将某个 key - URL 值存入 UserDefaults 中
-    ///
     /// - Parameters:
     ///   - url: 将要存入的 URL 值
     ///   - key: 将要存入的 key
@@ -176,56 +176,50 @@ extension RGAppTools where Base: UserDefaults {
         base.set(url, forKey: key)
         base.synchronize()
     }
+
 }
 
 //  MARK: Savings
 extension UserDefaults {
-    /**
-     将某个 key - Object 值存入 UserDefaults 中
 
-     - parameter object: 将要存入的 object
-     - parameter key:    将要存入的 key
-     */
+    /// 将某个 key - Object 值存入 UserDefaults 中
+    /// - Parameters:
+    ///   - object: 将要存入的 object
+    ///   - key: 将要存入的 key
     @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "rat.save(_:for:)")
     public func rat_save(_ object: Any?, forKey key: String) {
         self.set(object, forKey: key)
         self.synchronize()
     }
 
-    /**
-     将某个 key - Bool 值存入 UserDefaults 中
-
-     - parameter value: 将要存入的 Bool 值
-     - parameter key:   将要存入的 key
-     */
+    /// 将某个 key - Bool 值存入 UserDefaults 中
+    /// - Parameters:
+    ///   - value: 将要存入的 Bool 值
+    ///   - key: 将要存入的 key
     @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "rat.save(_:for:)")
     public func rat_saveBool(_ value: Bool, forKey key: String) {
         self.set(value, forKey: key)
         self.synchronize()
     }
 
-    /**
-     将某个 key - Double 值存入 UserDefaults 中
-
-     - parameter value: 将要存入的 Double 值
-     - parameter key:   将要存入的 key
-     */
+    /// 将某个 key - Double 值存入 UserDefaults 中
+    /// - Parameters:
+    ///   - value: 将要存入的 Double 值
+    ///   - key: 将要存入的 key
     @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.save` instead.", renamed: "rat.save(_:for:)")
     public func rat_saveDouble(_ value: Double, forKey key: String) {
         self.set(value, forKey: key)
         self.synchronize()
     }
+
 }
 
 //  MARK: Check key exist or not
 extension UserDefaults {
-    /**
-     检验 UserDefaults 中是否存在某个 key
 
-     - parameter key: 待检验的 key
-
-     - returns: 检验结果
-     */
+    /// 检验 UserDefaults 中是否存在某个 key
+    /// - Parameter key: 待检验的 key
+    /// - Returns: 检验结果
     @available(*, deprecated, message: "Extensions directly on UserDefaults are deprecated. Use `UserDefaults.standard.rat.has(key:)` instead.", renamed: "rat.has(_:)")
     public func rat_isHaveKey(key: String) -> Bool {
         let userDefaultsDic = self.dictionaryRepresentation() as NSDictionary
@@ -239,4 +233,5 @@ extension UserDefaults {
         }
         return false
     }
+
 }
