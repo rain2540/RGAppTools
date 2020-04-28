@@ -18,6 +18,7 @@ extension Double {
 
 
 // MARK: -
+
 public struct DoubleExtension {
     
     private var double: Double
@@ -30,6 +31,7 @@ public struct DoubleExtension {
 
 
 //  MARK: - Angle transform
+
 extension DoubleExtension {
 
     /// 角度转化为弧度
@@ -46,6 +48,7 @@ extension DoubleExtension {
 
 
 //  MARK: - Formatted Output
+
 extension DoubleExtension {
 
     /// 格式化输出
