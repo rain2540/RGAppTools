@@ -89,6 +89,11 @@ extension RGAppTools where Base: Bundle {
         }
     }
     
+    /// 获取 Bundle 中的图片路径
+    /// - Parameters:
+    ///   - name: 图片文件名
+    ///   - ext: 图片文件名后缀
+    /// - Returns: Bundle 中的图片路径
     public func imagePath(forResource name: String?, ofType ext: String?) -> String? {
         guard let name = name else { return nil }
         guard let ext = ext else { return nil }
