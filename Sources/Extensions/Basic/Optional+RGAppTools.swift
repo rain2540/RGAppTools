@@ -33,6 +33,7 @@ public func should(_ do: () throws -> Void) -> Error? {
 
 
 // MARK: - Emptiness
+
 extension Optional {
 
     /// 判断可选值是否为空
@@ -55,6 +56,7 @@ extension Optional {
 
 
 // MARK: - Or
+
 extension Optional {
 
     /// 返回可选值或默认值
@@ -86,6 +88,7 @@ extension Optional {
 
 
 // MARK: - Error
+
 extension Optional where Wrapped == Error {
 
     /// 当 Error 不为空时，执行 `else`
@@ -99,6 +102,7 @@ extension Optional where Wrapped == Error {
 
 
 // MARK: - Map
+
 extension Optional {
 
     /// 可选值变换返回，如果可选值为空，则返回默认值
@@ -123,6 +127,7 @@ extension Optional {
 
 
 // MARK: - Combining Optionals
+
 extension Optional {
 
     /// 当可选值不为空时，解包并返回参数 `optional`
@@ -182,6 +187,7 @@ extension Optional {
 
 
 // MARK: - Various
+
 extension Optional {
 
     /// 可选值不为空且可选值满足 `predicate` 条件才返回，否则返回 `nil`
@@ -203,6 +209,7 @@ extension Optional {
 
 
 // MARK: - String
+
 extension Optional where Wrapped == String {
 
     /// 判断字符串是否为 nil, 为空, 或只包括空字符
