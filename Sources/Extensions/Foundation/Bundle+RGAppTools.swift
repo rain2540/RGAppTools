@@ -20,6 +20,7 @@ public enum BuildVersionFormat {
 }
 
 extension RGAppTools where Base: Bundle {
+    
     /// Main Bundle 路径
     public static var mainBundlePath: String {
         return Bundle.main.bundlePath
@@ -45,7 +46,6 @@ extension RGAppTools where Base: Bundle {
     }
     
     /// 应用版本号
-    ///
     /// - Parameter format: 输出的格式
     /// - Returns: 表示应用版本号的字符串
     public static func appVersion(format: BuildVersionFormat) -> String {
@@ -59,7 +59,6 @@ extension RGAppTools where Base: Bundle {
     }
     
     /// 获取 Main Bundle 中的文件路径
-    ///
     /// - Parameters:
     ///   - name: 文件名
     ///   - ext: 文件后缀名
@@ -71,7 +70,6 @@ extension RGAppTools where Base: Bundle {
     }
     
     /// 获取 Main Bundle 中文件内的字符串
-    ///
     /// - Parameters:
     ///   - name: 文件名
     ///   - ext: 文件后缀名
@@ -90,4 +88,5 @@ extension RGAppTools where Base: Bundle {
             return nil
         }
     }
+    
 }
