@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Smartech. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /// 应用版本号 Build 字段格式
 ///
@@ -87,6 +87,23 @@ extension RGAppTools where Base: Bundle {
             print("RGAppTools String init with path for resource in main bundle error: \n", error)
             return nil
         }
+    }
+    
+    public func imagePath(forResource name: String?, ofType ext: String?) -> String? {
+        guard let name = name else { return nil }
+        guard let ext = ext else { return nil }
+        
+        var scaleString = "@2x"
+        if UIScreen.main.scale == 3.0 {
+            scaleString = "@3x"
+        } else if UIScreen.main.scale == 1.0 {
+            scaleString = "@1x"
+        }
+        
+        guard let path = base.path(forResource: name + scaleString, ofType: ext) else {
+            return base.path(forResource: name, ofType: ext)
+        }
+        return path
     }
     
 }
