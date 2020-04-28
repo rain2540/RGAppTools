@@ -21,7 +21,8 @@ extension Int {
 }
 
 
-// MARK: - 
+// MARK: -
+
 public struct IntExtension {
 
     private var int: Int
@@ -34,6 +35,7 @@ public struct IntExtension {
 
 
 //  MARK: - Farmatted Output
+
 extension IntExtension {
 
     /// 格式化输出
@@ -48,6 +50,7 @@ extension IntExtension {
 
 
 //  MARK: - Transfer
+
 extension IntExtension {
 
     /// 转换为对应的 CGFloat 值
@@ -59,6 +62,7 @@ extension IntExtension {
 
 
 // MARK: - Random Number
+
 extension IntExtension {
 
     /// 创建 lower - upper 之间的一个随机数
