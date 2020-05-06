@@ -106,10 +106,11 @@ extension Optional where Wrapped == Error {
 extension Optional {
 
     /// 可选值变换返回，如果可选值为空，则返回默认值
-    ///
     /// - Parameters:
     ///   - fn: 映射值的闭包
     ///   - default: 可选值为空时，将作为返回值
+    /// - Throws: 抛出的异常信息
+    /// - Returns: 变换后的结果
     public func rat_map<T>(_ fn: (Wrapped) throws -> T, default: T) rethrows -> T {
         return try map(fn) ?? `default`
     }
