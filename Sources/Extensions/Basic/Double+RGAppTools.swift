@@ -52,7 +52,6 @@ extension DoubleExtension {
 extension DoubleExtension {
 
     /// 格式化输出
-    ///
     /// - Parameter fmt: 以字符串形式表示的输出格式
     /// - Returns: 格式化输出结果
     public func format(_ fmt: String) -> String {
