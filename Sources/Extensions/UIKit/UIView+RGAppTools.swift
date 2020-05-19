@@ -25,6 +25,7 @@ extension RGAppTools where Base: UIView {
     ///   - color: 颜色
     ///   - direction: 方向
     /// - Returns: 按参数条件添加的线
+    @discardableResult
     public func drawLine(
         from startPoint: CGPoint,
         length: CGFloat,
