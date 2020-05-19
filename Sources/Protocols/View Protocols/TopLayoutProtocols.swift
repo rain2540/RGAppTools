@@ -18,14 +18,17 @@ protocol TopView {
 }
 
 extension TopView where Self: UIViewController {
+
     /// 页面顶部视图背景色
     var topColor: UIColor {
         get {
             return UIColor.clear
         }
+        /*
         set {
             topColor = newValue
         }
+        */
     }
 
     /// 页面顶部视图
@@ -42,9 +45,11 @@ extension TopView where Self: UIViewController {
             return UIColor.clear
         }
 
+        /*
         set {
             statusColor = newValue
         }
+        */
     }
 
     /// 状态栏
@@ -60,9 +65,11 @@ extension TopView where Self: UIViewController {
         get {
             return UIColor.clear
         }
+        /*
         set {
             naviColor = newValue
         }
+        */
     }
 
     /// 导航栏
@@ -98,9 +105,11 @@ extension TopViewWithTitle where Self: UIViewController {
         get {
             return ""
         }
+        /*
         set {
             titleString = newValue
         }
+        */
     }
 
     /// 标题字体
@@ -108,9 +117,11 @@ extension TopViewWithTitle where Self: UIViewController {
         get {
             return UIFont.systemFont(ofSize: 12.0)
         }
+        /*
         set {
             titleFont = newValue
         }
+        */
     }
 
     /// 标题文字颜色
@@ -118,9 +129,11 @@ extension TopViewWithTitle where Self: UIViewController {
         get {
             return UIColor.black
         }
+        /*
         set {
             titleColor = newValue
         }
+        */
     }
 
     /// 显示页面标题的 Label
