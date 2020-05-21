@@ -56,7 +56,7 @@ extension RGAppTools where Base: Bundle {
     }
 
     public static var mainBundleVersion: String? {
-        let version = mainBundleInfo?["CFBundleShortVersionString"] as? String
+        let version = Bundle.main.rat.version
         return version
     }
 
