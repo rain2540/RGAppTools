@@ -69,6 +69,10 @@ extension RGAppTools where Base: Bundle {
         return Base.main.infoDictionary
     }
 
+    public var version: String? {
+        return base.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+
     public var build: String? {
         return base.infoDictionary?["CFBundleVersion"] as? String
     }
