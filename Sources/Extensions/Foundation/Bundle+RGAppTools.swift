@@ -57,6 +57,10 @@ extension RGAppTools where Base: Bundle {
         }
         return format == .normal ? "\(version) (\(build))" : "\(version).\(build)"
     }
+
+    public static var mainBundleInfo: [String: Any] {
+        return Base.main.infoDictionary ?? [:]
+    }
     
     /// 获取 Main Bundle 中的文件路径
     /// - Parameters:
