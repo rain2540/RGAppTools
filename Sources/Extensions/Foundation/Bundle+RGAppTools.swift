@@ -68,6 +68,10 @@ extension RGAppTools where Base: Bundle {
     public static var mainBundleInfo: [String: Any]? {
         return Base.main.infoDictionary
     }
+
+    public var build: String? {
+        return base.infoDictionary?["CFBundleVersion"] as? String
+    }
     
     /// 获取 Main Bundle 中的文件路径
     /// - Parameters:
