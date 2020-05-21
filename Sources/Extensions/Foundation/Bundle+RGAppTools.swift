@@ -49,27 +49,24 @@ extension RGAppTools where Base: Bundle {
     /// - Parameter format: 输出的格式
     /// - Returns: 表示应用版本号的字符串
     public static func appVersion(format: BuildVersionFormat) -> String {
-        guard let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist"),
-            let infoDic = NSDictionary(contentsOfFile: infoPath),
-            let version = infoDic["CFBundleShortVersionString"],
-            let build = infoDic["CFBundleVersion"] else {
+        guard let version = mainBundleVersion, let build = mainBundleBuild else {
                 return ""
         }
         return format == .normal ? "\(version) (\(build))" : "\(version).\(build)"
     }
 
-    public static var mainBundleVersion: String {
-        let version = mainBundleInfo["CFBundleShortVersionString"] as? String ?? ""
+    public static var mainBundleVersion: String? {
+        let version = mainBundleInfo?["CFBundleShortVersionString"] as? String
         return version
     }
 
-    public static var mainBundleBuild: String {
-        let build = mainBundleInfo["CFBundleVersion"] as? String ?? ""
+    public static var mainBundleBuild: String? {
+        let build = mainBundleInfo?["CFBundleVersion"] as? String
         return build
     }
 
-    public static var mainBundleInfo: [String: Any] {
-        return Base.main.infoDictionary ?? [:]
+    public static var mainBundleInfo: [String: Any]? {
+        return Base.main.infoDictionary
     }
     
     /// 获取 Main Bundle 中的文件路径
