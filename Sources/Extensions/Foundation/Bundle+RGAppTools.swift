@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 /// 应用版本号 Build 字段格式
 ///
 /// - normal: 括号 形如: 1.0.0 (29)
@@ -19,12 +20,8 @@ public enum BuildVersionFormat {
     case dot
 }
 
+
 extension RGAppTools where Base: Bundle {
-    
-    /// Main Bundle 路径
-    public static var mainBundlePath: String {
-        return Bundle.main.bundlePath
-    }
     
     /// 应用版本号
     public static var appVersion: String {
@@ -55,6 +52,16 @@ extension RGAppTools where Base: Bundle {
         return format == .normal ? "\(version) (\(build))" : "\(version).\(build)"
     }
 
+}
+
+
+extension RGAppTools where Base: Bundle {
+
+    /// Main Bundle 路径
+    public static var mainBundlePath: String {
+        return Bundle.main.bundlePath
+    }
+
     public static var mainBundleVersion: String? {
         let version = Bundle.main.rat.version
         return version
@@ -69,14 +76,6 @@ extension RGAppTools where Base: Bundle {
         return Bundle.main.infoDictionary
     }
 
-    public var version: String? {
-        return base.infoDictionary?["CFBundleShortVersionString"] as? String
-    }
-
-    public var build: String? {
-        return base.infoDictionary?["CFBundleVersion"] as? String
-    }
-    
     /// 获取 Main Bundle 中的文件路径
     /// - Parameters:
     ///   - name: 文件名
@@ -87,7 +86,7 @@ extension RGAppTools where Base: Bundle {
     {
         return Bundle.main.path(forResource: name, ofType: ext)
     }
-    
+
     /// 获取 Main Bundle 中文件内的字符串
     /// - Parameters:
     ///   - name: 文件名
@@ -107,7 +106,22 @@ extension RGAppTools where Base: Bundle {
             return nil
         }
     }
-    
+
+}
+
+
+extension RGAppTools where Base: Bundle {
+
+    #warning("TODO: public var - identifier, displayName and ...  Rain 2020-05-21")
+
+    public var version: String? {
+        return base.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+
+    public var build: String? {
+        return base.infoDictionary?["CFBundleVersion"] as? String
+    }
+
     /// 获取 Bundle 中的图片路径
     /// - Parameters:
     ///   - name: 图片文件名
@@ -116,18 +130,18 @@ extension RGAppTools where Base: Bundle {
     public func imagePath(forResource name: String?, ofType ext: String?) -> String? {
         guard let name = name else { return nil }
         guard let ext = ext else { return nil }
-        
+
         var scaleString = "@2x"
         if UIScreen.main.scale == 3.0 {
             scaleString = "@3x"
         } else if UIScreen.main.scale == 1.0 {
             scaleString = "@1x"
         }
-        
+
         guard let path = base.path(forResource: name + scaleString, ofType: ext) else {
             return base.path(forResource: name, ofType: ext)
         }
         return path
     }
-    
+
 }
