@@ -21,6 +21,8 @@ public enum BuildVersionFormat {
 }
 
 
+// MARK: - App
+
 extension RGAppTools where Base: Bundle {
 
     /// 应用的 Bundle Identifier
@@ -51,6 +53,8 @@ extension RGAppTools where Base: Bundle {
 }
 
 
+// MARK: - Main Bundle
+
 extension RGAppTools where Base: Bundle {
 
     /// Main Bundle 路径
@@ -58,24 +62,29 @@ extension RGAppTools where Base: Bundle {
         return Bundle.main.bundlePath
     }
 
+    /// Main Bundle Info Dictionary
+    public static var mainBundleInfo: [String: Any]? {
+        return Bundle.main.infoDictionary
+    }
+
+    /// Main Bundle Identifier
     public static var mainBundleIdentifier: String? {
         return Bundle.main.rat.identifier
     }
 
+    /// Main Bundle Display Name
     public static var mainBundleDisplayName: String? {
         return Bundle.main.rat.displayName
     }
 
+    /// Main Bundle Version Number
     public static var mainBundleVersion: String? {
         return Bundle.main.rat.version
     }
 
+    /// Main Bundle Build Number
     public static var mainBundleBuild: String? {
         return Bundle.main.rat.build
-    }
-
-    public static var mainBundleInfo: [String: Any]? {
-        return Bundle.main.infoDictionary
     }
 
     /// 获取 Main Bundle 中的文件路径
@@ -112,20 +121,26 @@ extension RGAppTools where Base: Bundle {
 }
 
 
+// MARK: - Bundle
+
 extension RGAppTools where Base: Bundle {
 
+    /// Bundle Identifier
     public var identifier: String? {
         return base.infoDictionary?["CFBundleIdentifier"] as? String
     }
 
+    /// Bundle Display Name
     public var displayName: String? {
         return base.infoDictionary?["CFBundleDisplayName"] as? String
     }
 
+    /// Bundle Version Number
     public var version: String? {
         return base.infoDictionary?["CFBundleShortVersionString"] as? String
     }
 
+    /// Bundle Build Number
     public var build: String? {
         return base.infoDictionary?["CFBundleVersion"] as? String
     }
