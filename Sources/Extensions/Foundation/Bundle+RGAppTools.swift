@@ -36,7 +36,7 @@ extension RGAppTools where Base: Bundle {
     }
     
     /// 应用的 Bundle Identifier
-    public static var identifier: String {
+    public static var appIdentifier: String {
         let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
         return infoDic!["CFBundleIdentifier"] as! String
