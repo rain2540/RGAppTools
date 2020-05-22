@@ -112,9 +112,12 @@ extension RGAppTools where Base: Bundle {
 
 extension RGAppTools where Base: Bundle {
 
-    #warning("TODO: public var - displayName and ...  Rain 2020-05-21")
     public var identifier: String? {
         return base.infoDictionary?["CFBundleIdentifier"] as? String
+    }
+
+    public var displayName: String? {
+        return base.infoDictionary?["CFBundleDisplayName"] as? String
     }
 
     public var version: String? {
