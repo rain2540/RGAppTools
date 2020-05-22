@@ -145,6 +145,19 @@ extension RGAppTools where Base: Bundle {
         return base.infoDictionary?["CFBundleVersion"] as? String
     }
 
+    public func string(forResource name: String?, ofType ext: String?) -> String? {
+        guard let path = base.path(forResource: name, ofType: ext) else {
+            print("RGAppTools String init with path for resource in bundle error: \n", "path is nil")
+            return nil
+        }
+        do {
+            return try String(contentsOfFile: path)
+        } catch {
+            print("RGAppTools String init with path for resource in bundle error: \n", error)
+            return nil
+        }
+    }
+
     /// 获取 Bundle 中的图片路径
     /// - Parameters:
     ///   - name: 图片文件名
