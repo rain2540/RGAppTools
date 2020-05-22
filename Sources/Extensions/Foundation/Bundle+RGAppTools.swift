@@ -22,26 +22,22 @@ public enum BuildVersionFormat {
 
 
 extension RGAppTools where Base: Bundle {
+
+    /// 应用的 Bundle Identifier
+    public static var appIdentifier: String {
+        return Bundle.rat.mainBundleIdentifier ?? ""
+    }
+
+    /// 应用显示名称
+    public static var appDisplayName: String {
+        return Bundle.rat.mainBundleDisplayName ?? ""
+    }
     
     /// 应用版本号
     public static var appVersion: String {
         return appVersion(format: .normal)
     }
-    
-    /// 应用显示名称
-    public static var appDisplayName: String {
-        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
-        let infoDic = NSDictionary(contentsOfFile: infoPath!)
-        return infoDic!["CFBundleDisplayName"] as! String
-    }
-    
-    /// 应用的 Bundle Identifier
-    public static var appIdentifier: String {
-        let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
-        let infoDic = NSDictionary(contentsOfFile: infoPath!)
-        return infoDic!["CFBundleIdentifier"] as! String
-    }
-    
+
     /// 应用版本号
     /// - Parameter format: 输出的格式
     /// - Returns: 表示应用版本号的字符串
