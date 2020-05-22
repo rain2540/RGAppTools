@@ -29,7 +29,7 @@ extension RGAppTools where Base: Bundle {
     }
     
     /// 应用显示名称
-    public static var displayName: String {
+    public static var appDisplayName: String {
         let infoPath = Bundle.main.path(forResource: "Info", ofType: "plist")
         let infoDic = NSDictionary(contentsOfFile: infoPath!)
         return infoDic!["CFBundleDisplayName"] as! String
@@ -47,7 +47,7 @@ extension RGAppTools where Base: Bundle {
     /// - Returns: 表示应用版本号的字符串
     public static func appVersion(format: BuildVersionFormat) -> String {
         guard let version = mainBundleVersion, let build = mainBundleBuild else {
-                return ""
+            return ""
         }
         return format == .normal ? "\(version) (\(build))" : "\(version).\(build)"
     }
