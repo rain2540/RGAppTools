@@ -72,6 +72,10 @@ extension RGAppTools where Base: Bundle {
         return Bundle.main.rat.identifier
     }
 
+    public static var mainBundleName: String? {
+        return Bundle.main.rat.name
+    }
+
     /// Main Bundle Display Name
     public static var mainBundleDisplayName: String? {
         return Bundle.main.rat.displayName
@@ -92,9 +96,7 @@ extension RGAppTools where Base: Bundle {
     ///   - name: 文件名
     ///   - ext: 文件后缀名
     /// - Returns: Main Bundle 中文件的路径
-    public static func path(forResourceInMainBundle name: String?,
-                            ofType ext: String?) -> String?
-    {
+    public static func path(forResourceInMainBundle name: String?, ofType ext: String?) -> String? {
         return Bundle.main.path(forResource: name, ofType: ext)
     }
 
@@ -103,9 +105,7 @@ extension RGAppTools where Base: Bundle {
     ///   - name: 文件名
     ///   - ext: 文件后缀名
     /// - Returns: Main Bundle 中文件内的字符串
-    public static func string(pathForResourceInMainBundle name: String?,
-                              ofType ext: String?) -> String?
-    {
+    public static func string(pathForResourceInMainBundle name: String?, ofType ext: String?) -> String? {
         return Bundle.main.rat.string(forResource: name, ofType: ext)
     }
 
