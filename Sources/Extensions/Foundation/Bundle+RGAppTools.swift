@@ -121,6 +121,10 @@ extension RGAppTools where Base: Bundle {
         return base.infoDictionary?["CFBundleIdentifier"] as? String
     }
 
+    public var name: String? {
+        return base.infoDictionary?["CFBundleName"] as? String
+    }
+
     /// Bundle Display Name
     public var displayName: String? {
         return base.infoDictionary?["CFBundleDisplayName"] as? String
