@@ -72,6 +72,7 @@ extension RGAppTools where Base: Bundle {
         return Bundle.main.rat.identifier
     }
 
+    /// Main Bundle Name
     public static var mainBundleName: String? {
         return Bundle.main.rat.name
     }
