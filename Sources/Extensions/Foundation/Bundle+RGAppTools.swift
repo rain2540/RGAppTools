@@ -62,14 +62,16 @@ extension RGAppTools where Base: Bundle {
         return Bundle.main.bundlePath
     }
 
+    public static var mainBundleIdentifier: String? {
+        return Bundle.main.rat.identifier
+    }
+
     public static var mainBundleVersion: String? {
-        let version = Bundle.main.rat.version
-        return version
+        return Bundle.main.rat.version
     }
 
     public static var mainBundleBuild: String? {
-        let build = Bundle.main.rat.build
-        return build
+        return Bundle.main.rat.build
     }
 
     public static var mainBundleInfo: [String: Any]? {
