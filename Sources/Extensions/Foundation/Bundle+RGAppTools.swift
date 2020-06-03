@@ -142,6 +142,11 @@ extension RGAppTools where Base: Bundle {
         return base.infoDictionary?["CFBundleVersion"] as? String
     }
 
+    /// 获取 Bundle 中文件内的字符串
+    /// - Parameters:
+    ///   - name: 文件名
+    ///   - ext: 文件后缀名
+    /// - Returns: Bundle 中文件内的字符串
     public func string(forResource name: String?, ofType ext: String?) -> String? {
         guard let path = base.path(forResource: name, ofType: ext) else {
             print("RGAppTools String init with path for resource in bundle error: \n", "path is nil")
