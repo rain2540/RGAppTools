@@ -11,6 +11,9 @@ import XCTest
 
 class UILabelExtensionTests: XCTestCase {
 
-
+    func testLabelHeight() {
+        let defaultHeight = UILabel.rat.defaultHeight
+        XCTAssertEqual(defaultHeight, 21.0)
+    }
 
 }
