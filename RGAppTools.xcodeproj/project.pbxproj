@@ -15,6 +15,7 @@
 		B7F6DE5F23EF1C4200E7F484 /* UIButton+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */; };
 		B7FA46552487405F0030B922 /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */; };
 		B7FA4657248741FD0030B922 /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA4656248741FD0030B922 /* UILabelExtensionTests.swift */; };
+		B7FA4659248743340030B922 /* UIButtonExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA4658248743340030B922 /* UIButtonExtensionTests.swift */; };
 		B7FB81A523D681E60082E362 /* RGAppTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FB819B23D681E50082E362 /* RGAppTools.framework */; };
 		B7FB81AA23D681E60082E362 /* RGAppToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FB81A923D681E60082E362 /* RGAppToolsTests.swift */; };
 		B7FB81AC23D681E60082E362 /* RGAppTools.h in Headers */ = {isa = PBXBuildFile; fileRef = B7FB819E23D681E50082E362 /* RGAppTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,6 +74,7 @@
 		B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionTests.swift; sourceTree = "<group>"; };
 		B7FA4656248741FD0030B922 /* UILabelExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensionTests.swift; sourceTree = "<group>"; };
+		B7FA4658248743340030B922 /* UIButtonExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtensionTests.swift; sourceTree = "<group>"; };
 		B7FB819B23D681E50082E362 /* RGAppTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RGAppTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7FB819E23D681E50082E362 /* RGAppTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RGAppTools.h; sourceTree = "<group>"; };
 		B7FB819F23D681E50082E362 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */,
 				B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */,
 				B7FB825723D6C3DE0082E362 /* StringExtensionTests.swift */,
+				B7FA4658248743340030B922 /* UIButtonExtensionTests.swift */,
 				B7FA4656248741FD0030B922 /* UILabelExtensionTests.swift */,
 				B7FB81AB23D681E60082E362 /* Info.plist */,
 			);
@@ -451,6 +454,7 @@
 				B72BD7372452DCE200D89A5A /* DateExtensionTests.swift in Sources */,
 				B7FB81AA23D681E60082E362 /* RGAppToolsTests.swift in Sources */,
 				B7FA46552487405F0030B922 /* DictionaryExtensionTests.swift in Sources */,
+				B7FA4659248743340030B922 /* UIButtonExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
