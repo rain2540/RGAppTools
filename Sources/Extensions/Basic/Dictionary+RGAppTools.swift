@@ -22,6 +22,9 @@ extension Dictionary {
         return false
     }
 
+    /// 检验 Dictionary 中是否存在某个 key; 若存在, 是否有值 (不为 nil)
+    /// - Parameter key: 待检验的 key
+    /// - Returns: 检验结果的布尔值
     public func rat_hasValue(forKey key: Key) -> Bool {
         return self[key] != nil
     }
