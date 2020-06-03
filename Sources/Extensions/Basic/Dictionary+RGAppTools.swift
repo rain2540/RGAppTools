@@ -22,4 +22,8 @@ extension Dictionary {
         return false
     }
 
+    public func rat_hasValue(forKey key: Key) -> Bool {
+        return self[key] != nil
+    }
+
 }
