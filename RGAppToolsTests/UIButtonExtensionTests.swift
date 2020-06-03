@@ -11,6 +11,9 @@ import XCTest
 
 class UIButtonExtensionTests: XCTestCase {
 
-
+    func testLabelHeight() {
+        let defaultHeight = UIButton.rat.defaultHeight
+        XCTAssertEqual(defaultHeight, 44.0)
+    }
 
 }
