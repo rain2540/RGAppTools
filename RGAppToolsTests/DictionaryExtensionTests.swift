@@ -11,6 +11,12 @@ import XCTest
 
 class DictionaryExtensionTests: XCTestCase {
 
-
+    func testHasKey() {
+        let dic = ["1": "One"]
+        XCTAssertEqual(dic.rat_has(key: "1"), true)
+        XCTAssertEqual(dic.rat_has(key: "2"), false)
+        XCTAssertEqual(dic.rat_hasValue(forKey: "1"), true)
+        XCTAssertEqual(dic.rat_hasValue(forKey: "2"), false)
+    }
 
 }
