@@ -136,6 +136,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7FA465A248744A30030B922 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */,
+				B7FB825723D6C3DE0082E362 /* StringExtensionTests.swift */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		B7FA465B248744BA0030B922 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		B7FA465C248744C50030B922 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				B7FA4658248743340030B922 /* UIButtonExtensionTests.swift */,
+				B7FA4656248741FD0030B922 /* UILabelExtensionTests.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		B7FB819123D681E50082E362 = {
 			isa = PBXGroup;
 			children = (
@@ -172,11 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				B7FB81A923D681E60082E362 /* RGAppToolsTests.swift */,
-				B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */,
-				B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */,
-				B7FB825723D6C3DE0082E362 /* StringExtensionTests.swift */,
-				B7FA4658248743340030B922 /* UIButtonExtensionTests.swift */,
-				B7FA4656248741FD0030B922 /* UILabelExtensionTests.swift */,
+				B7FA465A248744A30030B922 /* Basic */,
+				B7FA465B248744BA0030B922 /* Foundation */,
+				B7FA465C248744C50030B922 /* UIKit */,
 				B7FB81AB23D681E60082E362 /* Info.plist */,
 			);
 			path = RGAppToolsTests;
