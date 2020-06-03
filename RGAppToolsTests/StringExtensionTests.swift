@@ -1,5 +1,5 @@
 //
-//  StringExtensionsTests.swift
+//  StringExtensionTests.swift
 //  RGAppToolsTests
 //
 //  Created by RAIN on 2020/1/21.
