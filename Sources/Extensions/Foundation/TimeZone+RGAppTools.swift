@@ -36,7 +36,7 @@ public struct TimeZoneExtension {
 
 // MARK: - Speical
 
-extension TimeZoneExtension {
+public extension TimeZoneExtension {
 
     static var chinaMainLand: TimeZone? {
         return TimeZone(secondsFromGMT: 60 * 60 * 8)
