@@ -21,12 +21,25 @@ extension TimeZone {
 }
 
 
+// MARK: -
+
 public struct TimeZoneExtension {
 
     private var timeZone: TimeZone
 
     fileprivate init(timeZone: TimeZone) {
         self.timeZone = timeZone
+    }
+
+}
+
+
+// MARK: - Speical
+
+extension TimeZoneExtension {
+
+    static var chinaMainLand: TimeZone? {
+        return TimeZone(secondsFromGMT: 60 * 60 * 8)
     }
 
 }
