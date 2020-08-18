@@ -17,4 +17,10 @@ extension TimeZone {
 
 public struct TimeZoneExtension {
 
+    private var timeZone: TimeZone
+
+    fileprivate init(timeZone: TimeZone) {
+        self.timeZone = timeZone
+    }
+
 }
