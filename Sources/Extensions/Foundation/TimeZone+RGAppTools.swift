@@ -10,7 +10,13 @@ import Foundation
 
 extension TimeZone {
 
+    public var rat: TimeZoneExtension {
+        return TimeZoneExtension(timeZone: self)
+    }
 
+    public static var rat: TimeZoneExtension.Type {
+        return TimeZoneExtension.self
+    }
 
 }
 
