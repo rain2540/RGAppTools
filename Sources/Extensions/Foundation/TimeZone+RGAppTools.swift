@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+extension TimeZone {
+
+
+
+}
+
+
+public struct TimeZoneExtension {
+
+}
