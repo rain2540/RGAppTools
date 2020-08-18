@@ -62,6 +62,17 @@ extension DateExtension {
 }
 
 
+// MARK: - Time Point
+
+public extension DateExtension {
+
+    var yesterday: Date {
+        return Date(timeInterval: -24 * 60 * 60, since: date)
+    }
+
+}
+
+
 //  MARK: - Transform
 
 extension DateExtension {
