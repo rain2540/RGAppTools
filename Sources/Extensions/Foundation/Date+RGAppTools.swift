@@ -66,9 +66,12 @@ extension DateExtension {
 
 extension DateExtension {
 
-    public func dateString(format: String = "yyyy-MM-dd") -> String {
+    public func dateString(format: String = "yyyy-MM-dd",
+                           timeZone: TimeZone? = TimeZone.rat.chinaMainLand) -> String
+    {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
+        dateFormatter.timeZone = timeZone
         let dateString = dateFormatter.string(from: date)
         return dateString
     }
