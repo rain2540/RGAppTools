@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7065BE524EBC47F00C23D08 /* TimeZone+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7065BE424EBC47F00C23D08 /* TimeZone+RGAppTools.swift */; };
 		B706DAF223D6E80B00197988 /* UIApplication+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B706DAF123D6E80B00197988 /* UIApplication+RGAppTools.swift */; };
 		B71654AF23F854F700984573 /* UILabel+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */; };
 		B71654B123FA257100984573 /* UITableViewCell+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7065BE424EBC47F00C23D08 /* TimeZone+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+RGAppTools.swift"; sourceTree = "<group>"; };
 		B706DAF123D6E80B00197988 /* UIApplication+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RGAppTools.swift"; sourceTree = "<group>"; };
 		B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+RGAppTools.swift"; sourceTree = "<group>"; };
 		B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				B7FB81D523D682F80082E362 /* NSDecimalNumberHandler+RGAppTools.swift */,
 				B7FB81D423D682F80082E362 /* NSDictionary+RGAppTools.swift */,
 				B7FB81D123D682F80082E362 /* NSObject+RGAppTools.swift */,
+				B7065BE424EBC47F00C23D08 /* TimeZone+RGAppTools.swift */,
 				B7FB81D223D682F80082E362 /* UserDefaults+RGAppTools.swift */,
 			);
 			path = Foundation;
@@ -461,6 +464,7 @@
 				B7FB81F823D682F80082E362 /* NSDictionary+RGAppTools.swift in Sources */,
 				B7FB81EC23D682F80082E362 /* DispatchQueue+RGAppTools.swift in Sources */,
 				B7FB81E623D682F80082E362 /* UIImage+RGAppTools.swift in Sources */,
+				B7065BE524EBC47F00C23D08 /* TimeZone+RGAppTools.swift in Sources */,
 				B7FB81E523D682F80082E362 /* UIColor+RGAppTools.swift in Sources */,
 				B7FB81E023D682F80082E362 /* RGToast.swift in Sources */,
 				B7FB81FD23D682F80082E362 /* UIConstant.swift in Sources */,
