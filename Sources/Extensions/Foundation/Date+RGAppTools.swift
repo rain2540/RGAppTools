@@ -70,6 +70,10 @@ public extension DateExtension {
         return Date(timeInterval: -24 * 60 * 60, since: date)
     }
 
+    static var yesterday: Date {
+        return Date(timeIntervalSinceNow: -24 * 60 * 60)
+    }
+
 }
 
 
