@@ -18,7 +18,7 @@ class DateExtensionTests: XCTestCase {
         XCTAssertEqual(Date.rat.isLeapYear(for: 2000), true)
 
         let date = Date()
-        XCTAssertEqual(date.rat.isLeaoYear, true)
+        XCTAssertEqual(date.rat.isLeapYear, true)
     }
 
 }
