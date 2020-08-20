@@ -9,6 +9,7 @@
 import UIKit
 
 extension String {
+
     public var rat: StringExtension {
         return StringExtension(string: self)
     }
@@ -48,7 +49,6 @@ extension String {
     }
 
     /// 在字符串指定位置插入一个字符
-    ///
     /// - Parameters:
     ///   - newElement: 插入的字符
     ///   - i: 指定位置索引
@@ -61,7 +61,6 @@ extension String {
     }
 
     /// 替换字符串指定范围内容
-    ///
     /// - Parameters:
     ///   - subrange: 指定范围
     ///   - newValues: 用于替换的字符串
@@ -78,7 +77,6 @@ extension String {
     }
 
     /// 移除字符串指定位置的字符, 并返回被移除的字符
-    ///
     /// - Parameter i: 指定位置索引
     /// - Returns: 被移除的字符
     public mutating func rat_remove(at i: Int) -> Character? {
@@ -90,7 +88,6 @@ extension String {
     }
 
     /// 移除字符串指定范围的内容
-    ///
     /// - Parameter subrange: 指定的范围
     public mutating func rat_remove(subrange: Range<Int>) {
         let lowerBoundCondition = (subrange.lowerBound >= startIndex.utf16Offset(in: self))
@@ -120,7 +117,6 @@ extension String {
      */
 
     /// 检验索引值是否可以作为起始点, 否则返回 nil
-    ///
     /// - Parameter original: 待检验的索引值
     /// - Returns: 经过检验的有效索引值或 nil
     fileprivate func rat_validStartIndex(original: Int) -> String.Index? {
@@ -129,7 +125,6 @@ extension String {
     }
 
     /// 检验索引值是否可以作为终止点, 否则返回 nil
-    ///
     /// - Parameter original: 待检验的索引值
     /// - Returns: 经过检验的有效索引值或 nil
     fileprivate func rat_validEndIndex(original: Int) -> String.Index? {
@@ -138,7 +133,6 @@ extension String {
     }
 
     /// 检验索引值是否在合理的范围内, 不合理则拉回到最近的边界上
-    ///
     /// - Parameter original: 待检验的索引值
     /// - Returns: 经过检验的有效索引值
     private func rat_validIndex(original: Int) -> String.Index {
@@ -152,6 +146,7 @@ extension String {
 
 
 //  MARK: -
+
 public struct StringExtension {
     private var string: String
 
@@ -161,13 +156,13 @@ public struct StringExtension {
 
 
     // MARK: - Basic
+
     /// 字符串长度
     public var length: Int {
         return string.distance(from: string.startIndex, to: string.endIndex)
     }
 
     /// 截取字符串(从首个字符到指定位置, 不包含指定位置的字符)
-    ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
     public func substring(upTo index: Int) -> String {
@@ -179,7 +174,6 @@ public struct StringExtension {
     }
 
     /// 截取字符串(从首个字符到指定位置, 包含指定位置的字符)
-    ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
     public func substring(through index: Int) -> String {
@@ -191,7 +185,6 @@ public struct StringExtension {
     }
 
     /// 截取字符串(从制定位置到最后一个字符, 包含指定位置的字符)
-    ///
     /// - Parameter index: 指定位置索引
     /// - Returns: 截取到的字符串
     public func substring(from index: Int) -> String {
@@ -203,7 +196,6 @@ public struct StringExtension {
     }
     
     /// 截取字符串(指定范围)
-    ///
     /// - Parameter range: 指定的范围
     /// - Returns: 截取到的字符串
     public func substring(with range: Range<Int>) -> String {
@@ -249,6 +241,7 @@ public struct StringExtension {
 
 
 // MARK: - Clear nil
+
 extension StringExtension {
 
     /// 清除 nil 和 NSNull 对象，以及其他需要清除的字符串，并返回字符串
@@ -297,9 +290,10 @@ extension StringExtension {
 
 
 //  MARK: - Size
+
 extension StringExtension {
+
     /// 返回按照给定字体绘制时, 字符串所占有的边界大小
-    ///
     /// - Parameter font: 要应用于字符串的字体
     /// - Returns: 按照给定字体绘制时, 字符串所占有的边界大小
     public func size(withFont font: UIFont) -> CGSize {
@@ -307,17 +301,19 @@ extension StringExtension {
     }
 
     /// 返回按照给定属性绘制时, 字符串所占有的边界大小
-    ///
     /// - Parameter attrs: 要应用于字符串的文本属性的字典
     /// - Returns: 按照给定属性绘制时, 字符串所占有的边界大小
     public func size(attributes attrs: [NSAttributedString.Key: Any]? = nil) -> CGSize {
         return (string as NSString).size(withAttributes: attrs)
     }
+
 }
 
 
 //  MARK: - Trans
+
 extension StringExtension {
+
     /// String 对应的 Boolean 值
     public var boolValue: Bool {
         return (string as NSString).boolValue
@@ -375,7 +371,6 @@ extension StringExtension {
     }
 
     /// 将字符串转换为 JSON 对象
-    ///
     /// - Returns: 转换得到的 JSON 对象
     public func toObject() -> Any? {
         let str = string.replacingOccurrences(of: "\0", with: "")
@@ -390,13 +385,15 @@ extension StringExtension {
             return nil
         }
     }
+
 }
 
 
 // MARK: - Attributed String
+
 extension StringExtension {
+
     /// 返回为 keyword 设定颜色、字体的 attributed string
-    ///
     /// - Parameters:
     ///   - keyword: 关键词
     ///   - color: keyword 的颜色
@@ -413,6 +410,7 @@ extension StringExtension {
         attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: keywordRange)
         return attributedString
     }
+
 }
 
 
