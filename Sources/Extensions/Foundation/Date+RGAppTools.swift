@@ -66,10 +66,12 @@ extension DateExtension {
 
 public extension DateExtension {
 
+    /// 某个指定日期的前一天
     var yesterday: Date {
         return Date(timeInterval: -24 * 60 * 60, since: date)
     }
 
+    /// 当前时间的前一天
     static var yesterday: Date {
         return Date(timeIntervalSinceNow: -24 * 60 * 60)
     }
@@ -146,11 +148,11 @@ extension DateExtension {
     }
 
     /// 依据参数, 给出某时间点对应的时间组件的值
-    ///
     /// - Parameter unit: 需要的时间组件
     /// - Returns: 时间组件的值
     public func components(unit: Calendar.Component) -> Int {
         let cal = Calendar.current
         return cal.component(unit, from: date)
     }
+    
 }
