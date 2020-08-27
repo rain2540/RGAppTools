@@ -26,9 +26,9 @@ public struct MethodInfo {
         #endif
     }
 
-    public static func debugPrint(_ item: @autoclosure () -> Any) {
+    public static func debugPrint(_ items: Any..., separator: String = " ", terminator: String = "\n") {
         #if DEBUG
-        print(item())
+        print(items, separator: separator, terminator: terminator)
         #endif
     }
 }
