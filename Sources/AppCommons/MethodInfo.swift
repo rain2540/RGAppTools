@@ -26,7 +26,7 @@ public struct MethodInfo {
         #endif
     }
 
-    public static func debugPrint(item: @autoclosure () -> Any) {
+    public static func debugPrint(_ item: @autoclosure () -> Any) {
         #if DEBUG
         print(item())
         #endif
