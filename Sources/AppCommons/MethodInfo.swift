@@ -25,4 +25,10 @@ public struct MethodInfo {
         print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
         #endif
     }
+
+    public static func debugPrint(item: @autoclosure () -> Any) {
+        #if DEBUG
+        print(item())
+        #endif
+    }
 }
