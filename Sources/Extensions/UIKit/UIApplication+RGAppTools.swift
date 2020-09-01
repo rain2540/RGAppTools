@@ -19,10 +19,12 @@ extension RGAppTools where Base: UIApplication {
         }
     }
 
+    /// height of status bar
     public static var statusBarHeight: CGFloat {
         return UIApplication.rat.statusBarFrame.height
     }
 
+    /// default height of status bar
     public static var statusBarDefaultHeight: CGFloat {
         return UIDevice.rat.isIPhoneXSeriesUI ? 44.0 : 20.0
     }
