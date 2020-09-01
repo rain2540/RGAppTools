@@ -105,6 +105,9 @@ extension DateExtension {
         return res
     }
 
+    /// 判断某一年是否为闰年
+    /// - Parameter year: 需要判断的年份
+    /// - Returns: 判断结果
     public static func isLeapYear(for year: Int) -> Bool {
         let res = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
         return res
