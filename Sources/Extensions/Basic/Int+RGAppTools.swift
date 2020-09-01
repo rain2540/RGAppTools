@@ -67,7 +67,10 @@ extension IntExtension {
     /// 创建 lower - upper 之间的一个随机数
     /// - Parameter lower: 范围下限
     /// - Parameter upper: 范围上限
-    public static func randomNumber(lower: Int = 0, upper: Int = Int(UInt32.max)) -> Int {
+    /// - Returns: 获取到的随机数
+    public static func randomNumber(lower: Int = 0,
+                                    upper: Int = Int(UInt32.max)) -> Int
+    {
         return lower + Int(arc4random_uniform(UInt32(upper - lower)))
     }
 
@@ -84,7 +87,11 @@ extension IntExtension {
     ///   - upper: 范围上限
     ///   - size: 随机数个数
     /// - Returns: 获取到的随机数数组
-    public static func randomNumbers(lower: Int = 0, upper: Int = Int(UInt32.max), size: Int = 10) -> [Int] {
+    public static func randomNumbers(
+        lower: Int = 0,
+        upper: Int = Int(UInt32.max),
+        size: Int = 10) -> [Int]
+    {
         var res: [Int] = []
         for _ in 0 ..< size {
             res.append(randomNumber(lower: lower, upper: upper))
