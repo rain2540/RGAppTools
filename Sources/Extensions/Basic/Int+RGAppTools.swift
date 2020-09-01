@@ -92,11 +92,13 @@ extension IntExtension {
     }
     
     /// 创建 range 范围内的若干个随机数
-    ///
     /// - Parameters:
     ///   - range: 产生随机数的范围
     ///   - size: 随机数个数
-    public static func randomNumbers(range: Range<Int>, size: Int = 10) -> [Int] {
+    /// - Returns: 获取到的随机数数组
+    public static func randomNumbers(range: Range<Int>,
+                                     size: Int = 10) -> [Int]
+    {
         var res: [Int] = []
         for _ in 0 ..< size {
             res.append(randomNumber(range: range))
