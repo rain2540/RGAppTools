@@ -100,6 +100,7 @@ extension DateExtension {
 
 extension DateExtension {
 
+    /// 判断当年是否为闰年
     public var isLeapYear: Bool {
         let res = Date.rat.isLeapYear(for: year)
         return res
