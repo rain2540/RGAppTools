@@ -73,6 +73,7 @@ extension IntExtension {
 
     /// 创建 range 范围内的一个随机数
     /// - Parameter range: 产生随机数的范围
+    /// - Returns: 获取到的随机数
     public static func randomNumber(range: Range<Int>) -> Int {
         return randomNumber(lower: range.lowerBound, upper: range.upperBound)
     }
