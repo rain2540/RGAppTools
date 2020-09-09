@@ -25,6 +25,12 @@ extension RGAppTools where Base: UIViewController {
         }
     }
 
+    public static var topViewControllerOfKeyWindowRoot: UIViewController? {
+        guard let rootVC = UIApplication.shared.keyWindow?.rootViewController else { return nil }
+        let topVC = topViewController(of: rootVC)
+        return topVC
+    }
+
     public static func topViewController(of rootViewController: UIViewController) -> UIViewController? {
         var rootVC = rootViewController
         var topVC: UIViewController? = nil
