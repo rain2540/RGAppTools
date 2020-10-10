@@ -14,7 +14,7 @@ public enum RGLineDirection {
 }
 
 
-// MARK: - 
+// MARK: -
 
 extension RGAppTools where Base: UIView {
 
@@ -50,7 +50,6 @@ extension RGAppTools where Base: UIView {
     }
     
     /// 为视图添加边线
-    ///
     /// - Parameters:
     ///   - width: 边线宽度
     ///   - cornerRadius: 边线圆角半径, 若无圆角则该值为0
@@ -64,6 +63,7 @@ extension RGAppTools where Base: UIView {
 
 
     // MARK: - Interaction
+
     /// 设置视图交互状态
     ///
     /// - Parameter status: 表示交互状态的布尔值
@@ -74,6 +74,7 @@ extension RGAppTools where Base: UIView {
 
 
     // MARK: - Rect
+
     /// 视图横坐标最小值
     public var minX: CGFloat { return base.frame.minX }
     /// 视图中心横坐标值
@@ -110,7 +111,9 @@ extension RGAppTools where Base: UIView {
 
 
 // MARK: -
+
 public class UIViewFrameExtension {
+    
     private var view: UIView
     
     fileprivate init(_ view: UIView) {
@@ -226,11 +229,14 @@ public class UIViewFrameExtension {
             view.rat_right = newValue
         }
     }
+
 }
 
 
 // MARK: -
+
 extension UIView {
+
     public var rat: UIViewFrameExtension {
         return UIViewFrameExtension(self)
     }
@@ -347,4 +353,5 @@ extension UIView {
             self.rat_x = newValue - self.rat_width
         }
     }
+
 }
