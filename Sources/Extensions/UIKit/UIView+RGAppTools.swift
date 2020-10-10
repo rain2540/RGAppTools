@@ -65,7 +65,6 @@ extension RGAppTools where Base: UIView {
     // MARK: - Interaction
 
     /// 设置视图交互状态
-    ///
     /// - Parameter status: 表示交互状态的布尔值
     public func interaction(status: Bool) {
         base.isUserInteractionEnabled = status
