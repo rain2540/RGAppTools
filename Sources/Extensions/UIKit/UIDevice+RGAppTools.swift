@@ -68,86 +68,86 @@ extension RGAppTools where Base: UIDevice {
 public enum DeviceType: String {
     // ***** unknown devices ***** //
     case unknown    =   "unknown",
-    unknownPhone    =   "unknown iPhone",
-    unknownPad      =   "unknown iPad",
-    unknownPod      =   "unknown iPod",
+         unknownPhone    =   "unknown iPhone",
+         unknownPad      =   "unknown iPad",
+         unknownPod      =   "unknown iPod",
 
-    // ***** ***** iPhone ***** ***** //
-    iPhone_2G           =   "iPhone",
-    iPhone_3G           =   "iPhone 3G",
-    iPhone_3GS          =   "iPhone 3GS",
-    iPhone_4            =   "iPhone 4",
-    iPhone_4S           =   "iPhone 4S",
-    iPhone_5            =   "iPhone 5",
-    iPhone_5c           =   "iPhone 5c",
-    iPhone_5s           =   "iPhone 5s",
-    iPhone_6            =   "iPhone 6",
-    iPhone_6_Plus       =   "iPhone 6 Plus",
-    iPhone_6s           =   "iPhone 6s",
-    iPhone_6s_Plus      =   "iPhone 6s Plus",
-    iPhone_SE_1         =   "iPhone SE (1st generation)",
-    iPhone_7            =   "iPhone 7",
-    iPhone_7_Plus       =   "iPhone 7 Plus",
-    iPhone_8            =   "iPhone 8",
-    iPhone_8_Plus       =   "iPhone 8 Plus",
-    iPhone_X            =   "iPhone X",
-    iPhone_XS           =   "iPhone XS",
-    iPhone_XS_Max       =   "iPhone XS Max",
-    iPhone_XR           =   "iPhone XR",
-    iPhone_11           =   "iPhone 11",
-    iPhone_11_Pro       =   "iPhone 11 Pro",
-    iPhone_11_Pro_Max   =   "iPhone 11 Pro Max",
-    iPhone_SE_2         =   "iPhone SE (2nd generation)",
-    iPhone_12_mini      =   "iPhone 12 mini",
-    iPhone_12           =   "iPhone 12",
-    iPhone_12_Pro       =   "iPhone 12 Pro",
-    iPhone_12_Pro_Max   =   "iPhone 12 Pro Max",
+         // ***** ***** iPhone ***** ***** //
+         iPhone_2G           =   "iPhone",
+         iPhone_3G           =   "iPhone 3G",
+         iPhone_3GS          =   "iPhone 3GS",
+         iPhone_4            =   "iPhone 4",
+         iPhone_4S           =   "iPhone 4S",
+         iPhone_5            =   "iPhone 5",
+         iPhone_5c           =   "iPhone 5c",
+         iPhone_5s           =   "iPhone 5s",
+         iPhone_6            =   "iPhone 6",
+         iPhone_6_Plus       =   "iPhone 6 Plus",
+         iPhone_6s           =   "iPhone 6s",
+         iPhone_6s_Plus      =   "iPhone 6s Plus",
+         iPhone_SE_1         =   "iPhone SE (1st generation)",
+         iPhone_7            =   "iPhone 7",
+         iPhone_7_Plus       =   "iPhone 7 Plus",
+         iPhone_8            =   "iPhone 8",
+         iPhone_8_Plus       =   "iPhone 8 Plus",
+         iPhone_X            =   "iPhone X",
+         iPhone_XS           =   "iPhone XS",
+         iPhone_XS_Max       =   "iPhone XS Max",
+         iPhone_XR           =   "iPhone XR",
+         iPhone_11           =   "iPhone 11",
+         iPhone_11_Pro       =   "iPhone 11 Pro",
+         iPhone_11_Pro_Max   =   "iPhone 11 Pro Max",
+         iPhone_SE_2         =   "iPhone SE (2nd generation)",
+         iPhone_12_mini      =   "iPhone 12 mini",
+         iPhone_12           =   "iPhone 12",
+         iPhone_12_Pro       =   "iPhone 12 Pro",
+         iPhone_12_Pro_Max   =   "iPhone 12 Pro Max",
 
-    // ***** ***** iPad ***** ***** //
-    iPad_1          =   "iPad",
-    iPad_2          =   "iPad 2",
-    iPad_3          =   "iPad (3rd generation)",
-    iPad_4          =   "iPad (4th generation)",
-    iPad_5          =   "iPad (5th generation)",
-    iPad_6          =   "iPad (6th generation)",
-    iPad_7          =   "iPad (7th generation)",
-    iPad_8          =   "iPad (8th generation)",
-    // iPad mini
-    iPad_mini_1     =   "iPad mini",
-    iPad_mini_2     =   "iPad mini 2",
-    iPad_mini_3     =   "iPad mini 3",
-    iPad_mini_4     =   "iPad mini 4",
-    iPad_mini_5     =   "iPad mini (5th generation)",
-    // iPad Air
-    iPad_Air_1      =   "iPad Air",
-    iPad_Air_2      =   "iPad Air 2",
-    iPad_Air_3      =   "iPad Air (3rd generation)",
-    iPad_Air_4      =   "iPad Air (4th generation)",
-    // iPad Pro
-    iPad_Pro_129_1  =   "iPad Pro (12.9-inch)",
-    iPad_Pro_97_1   =   "iPad Pro (9.7-inch)",
-    iPad_Pro_129_2  =   "iPad Pro (12.9-inch) (2nd generation)",
-    iPad_Pro_105    =   "iPad Pro (10.5-inch)",
-    iPad_Pro_11_1   =   "iPad Pro (11-inch)",
-    iPad_Pro_129_3  =   "iPad Pro (12.9-inch) (3rd generation)",
-    iPad_Pro_11_2   =   "iPad Pro (11-inch) (2nd generation)",
-    iPad_Pro_129_4  =   "iPad Pro (12.9-inch) (4th generation)",
+         // ***** ***** iPad ***** ***** //
+         iPad_1          =   "iPad",
+         iPad_2          =   "iPad 2",
+         iPad_3          =   "iPad (3rd generation)",
+         iPad_4          =   "iPad (4th generation)",
+         iPad_5          =   "iPad (5th generation)",
+         iPad_6          =   "iPad (6th generation)",
+         iPad_7          =   "iPad (7th generation)",
+         iPad_8          =   "iPad (8th generation)",
+         // iPad Air
+         iPad_Air_1      =   "iPad Air",
+         iPad_Air_2      =   "iPad Air 2",
+         iPad_Air_3      =   "iPad Air (3rd generation)",
+         iPad_Air_4      =   "iPad Air (4th generation)",
+         // iPad Pro
+         iPad_Pro_129_1  =   "iPad Pro (12.9-inch)",
+         iPad_Pro_97_1   =   "iPad Pro (9.7-inch)",
+         iPad_Pro_129_2  =   "iPad Pro (12.9-inch) (2nd generation)",
+         iPad_Pro_105    =   "iPad Pro (10.5-inch)",
+         iPad_Pro_11_1   =   "iPad Pro (11-inch)",
+         iPad_Pro_129_3  =   "iPad Pro (12.9-inch) (3rd generation)",
+         iPad_Pro_11_2   =   "iPad Pro (11-inch) (2nd generation)",
+         iPad_Pro_129_4  =   "iPad Pro (12.9-inch) (4th generation)",
+         // iPad mini
+         iPad_mini_1     =   "iPad mini",
+         iPad_mini_2     =   "iPad mini 2",
+         iPad_mini_3     =   "iPad mini 3",
+         iPad_mini_4     =   "iPad mini 4",
+         iPad_mini_5     =   "iPad mini (5th generation)",
 
-    // ***** ***** iPod touch ***** ***** //
-    iPod_touch_1    =   "iPod touch",
-    iPod_touch_2    =   "iPod touch (2nd generation)",
-    iPod_touch_3    =   "iPod touch (3rd generation)",
-    iPod_touch_4    =   "iPod touch (4th generation)",
-    iPod_touch_5    =   "iPod touch (5th generation)",
-    iPod_touch_6    =   "iPod touch (6th generation)",
-    iPod_touch_7    =   "iPod touch (7th generation)",
+         // ***** ***** iPod touch ***** ***** //
+         iPod_touch_1    =   "iPod touch",
+         iPod_touch_2    =   "iPod touch (2nd generation)",
+         iPod_touch_3    =   "iPod touch (3rd generation)",
+         iPod_touch_4    =   "iPod touch (4th generation)",
+         iPod_touch_5    =   "iPod touch (5th generation)",
+         iPod_touch_6    =   "iPod touch (6th generation)",
+         iPod_touch_7    =   "iPod touch (7th generation)",
 
-    // ***** other devices ***** //
-    //  Apple TV
-    Apple_TV,
-    //  Simulator
-    simulator_32bit,
-    simulator_64bit
+         // ***** other devices ***** //
+         //  Apple TV
+         Apple_TV,
+         //  Simulator
+         simulator_32bit,
+         simulator_64bit
 }
 
 
@@ -156,11 +156,11 @@ extension RGAppTools where Base: UIDevice {
     /// 获取描述设备类型的字符串
     public static var deviceTypeValue: String {
         switch deviceType {
-        case .unknown, .unknownPhone, .unknownPad, .unknownPod:
-            return deviceIdentifier
+            case .unknown, .unknownPhone, .unknownPad, .unknownPod:
+                return deviceIdentifier
 
-        default:
-            return deviceType.rawValue
+            default:
+                return deviceType.rawValue
         }
     }
 
@@ -177,21 +177,21 @@ extension RGAppTools where Base: UIDevice {
         }
 
         switch deviceIdentifier {
-        case "AppleTV5,3":
-            print(DeviceType.Apple_TV.rawValue)
-            return .Apple_TV
+            case "AppleTV5,3":
+                print(DeviceType.Apple_TV.rawValue)
+                return .Apple_TV
 
-        case "i386":
-            print(DeviceType.simulator_32bit.rawValue)
-            return .simulator_32bit
+            case "i386":
+                print(DeviceType.simulator_32bit.rawValue)
+                return .simulator_32bit
 
-        case "x86_64":
-            print(DeviceType.simulator_64bit.rawValue)
-            return .simulator_64bit
+            case "x86_64":
+                print(DeviceType.simulator_64bit.rawValue)
+                return .simulator_64bit
 
-        default:
-            print(deviceIdentifier)
-            return .unknown
+            default:
+                print(deviceIdentifier)
+                return .unknown
         }
     }
 
@@ -323,134 +323,150 @@ extension RGAppTools where Base: UIDevice {
     /// 获取 iPad 类型
     public static var iPadType: DeviceType {
         switch deviceIdentifier {
-        // ***** ***** iPad ***** ***** //
-        case "iPad1,1":
-            print(DeviceType.iPad_1.rawValue)
-            return .iPad_1
+            // ***** ***** iPad ***** ***** //
+            case "iPad1,1":
+                print(DeviceType.iPad_1.rawValue)
+                return .iPad_1
 
-        case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
-            print(DeviceType.iPad_2.rawValue)
-            return .iPad_2
+            case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
+                print(DeviceType.iPad_2.rawValue)
+                return .iPad_2
 
-        case "iPad3,1", "iPad3,2", "iPad3,3":
-            print(DeviceType.iPad_3.rawValue)
-            return .iPad_3
+            case "iPad3,1", "iPad3,2", "iPad3,3":
+                print(DeviceType.iPad_3.rawValue)
+                return .iPad_3
 
-        case "iPad3,4", "iPad3,5", "iPad3,6":
-            print(DeviceType.iPad_4.rawValue)
-            return .iPad_4
+            case "iPad3,4", "iPad3,5", "iPad3,6":
+                print(DeviceType.iPad_4.rawValue)
+                return .iPad_4
 
-        case "iPad6,11", "iPad6,12":
-            print(DeviceType.iPad_5.rawValue)
-            return .iPad_5
+            case "iPad6,11", "iPad6,12":
+                print(DeviceType.iPad_5.rawValue)
+                return .iPad_5
 
-        case "iPad7,5", "iPad7,6":
-            print(DeviceType.iPad_6.rawValue)
-            return .iPad_6
+            case "iPad7,5", "iPad7,6":
+                print(DeviceType.iPad_6.rawValue)
+                return .iPad_6
 
-        case "iPad7,11", "iPad7,12":
-            print(DeviceType.iPad_7.rawValue)
-            return .iPad_7
+            case "iPad7,11", "iPad7,12":
+                print(DeviceType.iPad_7.rawValue)
+                return .iPad_7
 
-        // ***** ***** iPad mini ***** ***** //
-        case "iPad2,5", "iPad2,6", "iPad2,7":
-            print(DeviceType.iPad_mini_1.rawValue)
-            return .iPad_mini_1
+            case "iPad11,6", "iPad11,7":
+                print(DeviceType.iPad_8.rawValue)
+                return .iPad_8
 
-        case "iPad4,4", "iPad4,5", "iPad4,6":
-            print(DeviceType.iPad_mini_2.rawValue)
-            return .iPad_mini_2
+            // ***** ***** iPad Air ***** ***** //
+            case "iPad4,1", "iPad4,2", "iPad4,3":
+                print(DeviceType.iPad_Air_1.rawValue)
+                return .iPad_Air_1
 
-        case "iPad4,7", "iPad4,8", "iPad4,9":
-            print(DeviceType.iPad_mini_3.rawValue)
-            return .iPad_mini_3
+            case "iPad5,3", "iPad5,4":
+                print(DeviceType.iPad_Air_2.rawValue)
+                return .iPad_Air_2
 
-        case "iPad5,1", "iPad5,2":
-            print(DeviceType.iPad_mini_4.rawValue)
-            return .iPad_mini_4
+            case "iPad11,3", "iPad11,4":
+                print(DeviceType.iPad_Air_3.rawValue)
+                return .iPad_Air_3
 
-        case "iPad11,1", "iPad11,2":
-            print(DeviceType.iPad_mini_5.rawValue)
-            return .iPad_mini_5
+            case "iPad13,1", "iPad13,2":
+                print(DeviceType.iPad_Air_4.rawValue)
+                return .iPad_Air_4
 
-        // ***** ***** iPad Air ***** ***** //
-        case "iPad4,1", "iPad4,2", "iPad4,3":
-            print(DeviceType.iPad_Air_1.rawValue)
-            return .iPad_Air_1
+            // ***** ***** iPad Pro ***** ***** //
+            case "iPad6,7", "iPad6,8":
+                print(DeviceType.iPad_Pro_129_1.rawValue)
+                return .iPad_Pro_129_1
 
-        case "iPad5,3", "iPad5,4":
-            print(DeviceType.iPad_Air_2.rawValue)
-            return .iPad_Air_2
+            case "iPad6,3", "iPad6,4":
+                print(DeviceType.iPad_Pro_97_1.rawValue)
+                return .iPad_Pro_97_1
 
-        case "iPad11,3", "iPad11,4":
-            print(DeviceType.iPad_Air_3.rawValue)
-            return .iPad_Air_3
+            case "iPad7,1", "iPad7,2":
+                print(DeviceType.iPad_Pro_129_2.rawValue)
+                return .iPad_Pro_129_2
 
-        // ***** ***** iPad Pro ***** ***** //
-        case "iPad6,7", "iPad6,8":
-            print(DeviceType.iPad_Pro_129_1.rawValue)
-            return .iPad_Pro_129_1
+            case "iPad7,3", "iPad7,4":
+                print(DeviceType.iPad_Pro_105.rawValue)
+                return .iPad_Pro_105
 
-        case "iPad6,3", "iPad6,4":
-            print(DeviceType.iPad_Pro_97_1.rawValue)
-            return .iPad_Pro_97_1
+            case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":
+                print(DeviceType.iPad_Pro_11_1.rawValue)
+                return .iPad_Pro_11_1
 
-        case "iPad7,1", "iPad7,2":
-            print(DeviceType.iPad_Pro_129_2.rawValue)
-            return .iPad_Pro_129_2
+            case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":
+                print(DeviceType.iPad_Pro_129_3.rawValue)
+                return .iPad_Pro_129_3
 
-        case "iPad7,3", "iPad7,4":
-            print(DeviceType.iPad_Pro_105.rawValue)
-            return .iPad_Pro_105
+            case "iPad8,9", "iPad8,10":
+                print(DeviceType.iPad_Pro_11_2.rawValue)
+                return .iPad_Pro_11_2
 
-        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":
-            print(DeviceType.iPad_Pro_129_3.rawValue)
-            return .iPad_Pro_129_3
+            case "iPad8,11", "iPad8,12":
+                print(DeviceType.iPad_Pro_129_4.rawValue)
+                return .iPad_Pro_129_4
 
-        case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":
-            print(DeviceType.iPad_Pro_11_1.rawValue)
-            return .iPad_Pro_11_1
+            // ***** ***** iPad mini ***** ***** //
+            case "iPad2,5", "iPad2,6", "iPad2,7":
+                print(DeviceType.iPad_mini_1.rawValue)
+                return .iPad_mini_1
 
-        default:
-            print(deviceIdentifier)
-            return .unknownPad
+            case "iPad4,4", "iPad4,5", "iPad4,6":
+                print(DeviceType.iPad_mini_2.rawValue)
+                return .iPad_mini_2
+
+            case "iPad4,7", "iPad4,8", "iPad4,9":
+                print(DeviceType.iPad_mini_3.rawValue)
+                return .iPad_mini_3
+
+            case "iPad5,1", "iPad5,2":
+                print(DeviceType.iPad_mini_4.rawValue)
+                return .iPad_mini_4
+
+            case "iPad11,1", "iPad11,2":
+                print(DeviceType.iPad_mini_5.rawValue)
+                return .iPad_mini_5
+
+            default:
+                print(deviceIdentifier)
+                return .unknownPad
         }
     }
 
     /// 获取 iPod 类型
     public static var iPodType: DeviceType {
         switch deviceIdentifier {
-        case "iPod1,1":
-            print(DeviceType.iPod_touch_1.rawValue)
-            return .iPod_touch_1
+            case "iPod1,1":
+                print(DeviceType.iPod_touch_1.rawValue)
+                return .iPod_touch_1
 
-        case "iPod2,1":
-            print(DeviceType.iPod_touch_2.rawValue)
-            return .iPod_touch_2
+            case "iPod2,1":
+                print(DeviceType.iPod_touch_2.rawValue)
+                return .iPod_touch_2
 
-        case "iPod3,1":
-            print(DeviceType.iPod_touch_3.rawValue)
-            return .iPod_touch_3
+            case "iPod3,1":
+                print(DeviceType.iPod_touch_3.rawValue)
+                return .iPod_touch_3
 
-        case "iPod4,1":
-            print(DeviceType.iPod_touch_4.rawValue)
-            return .iPod_touch_4
+            case "iPod4,1":
+                print(DeviceType.iPod_touch_4.rawValue)
+                return .iPod_touch_4
 
-        case "iPod5,1":
-            print(DeviceType.iPod_touch_5.rawValue)
-            return .iPod_touch_5
+            case "iPod5,1":
+                print(DeviceType.iPod_touch_5.rawValue)
+                return .iPod_touch_5
 
-        case "iPod7,1":
-            print(DeviceType.iPod_touch_6.rawValue)
-            return .iPod_touch_6
+            case "iPod7,1":
+                print(DeviceType.iPod_touch_6.rawValue)
+                return .iPod_touch_6
 
-        case "iPod9,1":
-            print(DeviceType.iPod_touch_7.rawValue)
-            return .iPod_touch_7
+            case "iPod9,1":
+                print(DeviceType.iPod_touch_7.rawValue)
+                return .iPod_touch_7
 
-        default:
-            print(deviceIdentifier)
-            return .unknownPod
+            default:
+                print(deviceIdentifier)
+                return .unknownPod
         }
     }
 
