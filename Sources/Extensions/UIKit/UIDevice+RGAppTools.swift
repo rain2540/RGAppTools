@@ -198,105 +198,125 @@ extension RGAppTools where Base: UIDevice {
     /// 获取 iPhone 类型
     public static var iPhoneType: DeviceType {
         switch deviceIdentifier {
-        case "iPhone1,1":
-            print(DeviceType.iPhone_2G.rawValue)
-            return .iPhone_2G
+            case "iPhone1,1":
+                print(DeviceType.iPhone_2G.rawValue)
+                return .iPhone_2G
 
-        case "iPhone1,2":
-            print(DeviceType.iPhone_3G.rawValue)
-            return .iPhone_3G
+            case "iPhone1,2":
+                print(DeviceType.iPhone_3G.rawValue)
+                return .iPhone_3G
 
-        case "iPhone2,1":
-            print(DeviceType.iPhone_3GS.rawValue)
-            return .iPhone_3GS
+            case "iPhone2,1":
+                print(DeviceType.iPhone_3GS.rawValue)
+                return .iPhone_3GS
 
-        case "iPhone3,1", "iPhone3,2", "iPhone3,3":
-            print(DeviceType.iPhone_4.rawValue)
-            return .iPhone_4
+            case "iPhone3,1", "iPhone3,2", "iPhone3,3":
+                print(DeviceType.iPhone_4.rawValue)
+                return .iPhone_4
 
-        case "iPhone4,1":
-            print(DeviceType.iPhone_4S.rawValue)
-            return .iPhone_4S
+            case "iPhone4,1":
+                print(DeviceType.iPhone_4S.rawValue)
+                return .iPhone_4S
 
-        case "iPhone5,1", "iPhone5,2":
-            print(DeviceType.iPhone_5.rawValue)
-            return .iPhone_5
+            case "iPhone5,1", "iPhone5,2":
+                print(DeviceType.iPhone_5.rawValue)
+                return .iPhone_5
 
-        case "iPhone5,3", "iPhone5,4":
-            print(DeviceType.iPhone_5c.rawValue)
-            return .iPhone_5c
+            case "iPhone5,3", "iPhone5,4":
+                print(DeviceType.iPhone_5c.rawValue)
+                return .iPhone_5c
 
-        case "iPhone6,1", "iPhone6,2":
-            print(DeviceType.iPhone_5s.rawValue)
-            return .iPhone_5s
+            case "iPhone6,1", "iPhone6,2":
+                print(DeviceType.iPhone_5s.rawValue)
+                return .iPhone_5s
 
-        case "iPhone7,1":
-            print(DeviceType.iPhone_6_Plus.rawValue)
-            return .iPhone_6_Plus
+            case "iPhone7,1":
+                print(DeviceType.iPhone_6_Plus.rawValue)
+                return .iPhone_6_Plus
 
-        case "iPhone7,2":
-            print(DeviceType.iPhone_6.rawValue)
-            return .iPhone_6
+            case "iPhone7,2":
+                print(DeviceType.iPhone_6.rawValue)
+                return .iPhone_6
 
-        case "iPhone8,1":
-            print(DeviceType.iPhone_6s.rawValue)
-            return .iPhone_6s
+            case "iPhone8,1":
+                print(DeviceType.iPhone_6s.rawValue)
+                return .iPhone_6s
 
-        case "iPhone8,2":
-            print(DeviceType.iPhone_6s_Plus.rawValue)
-            return .iPhone_6s_Plus
+            case "iPhone8,2":
+                print(DeviceType.iPhone_6s_Plus.rawValue)
+                return .iPhone_6s_Plus
 
-        case "iPhone8,4":
-            print(DeviceType.iPhone_SE_1.rawValue)
-            return .iPhone_SE_1
+            case "iPhone8,4":
+                print(DeviceType.iPhone_SE_1.rawValue)
+                return .iPhone_SE_1
 
-        case "iPhone9,1", "iPhone9,3":
-            print(DeviceType.iPhone_7.rawValue)
-            return .iPhone_7
+            case "iPhone9,1", "iPhone9,3":
+                print(DeviceType.iPhone_7.rawValue)
+                return .iPhone_7
 
-        case "iPhone9,2", "iPhone9,4":
-            print(DeviceType.iPhone_7_Plus.rawValue)
-            return .iPhone_7_Plus
+            case "iPhone9,2", "iPhone9,4":
+                print(DeviceType.iPhone_7_Plus.rawValue)
+                return .iPhone_7_Plus
 
-        case "iPhone10,1", "iPhone10,4":
-            print(DeviceType.iPhone_8.rawValue)
-            return .iPhone_8
+            case "iPhone10,1", "iPhone10,4":
+                print(DeviceType.iPhone_8.rawValue)
+                return .iPhone_8
 
-        case "iPhone10,2", "iPhone10,5":
-            print(DeviceType.iPhone_8_Plus.rawValue)
-            return .iPhone_8_Plus
+            case "iPhone10,2", "iPhone10,5":
+                print(DeviceType.iPhone_8_Plus.rawValue)
+                return .iPhone_8_Plus
 
-        case "iPhone10,3", "iPhone10,6":
-            print(DeviceType.iPhone_X.rawValue)
-            return .iPhone_X
+            case "iPhone10,3", "iPhone10,6":
+                print(DeviceType.iPhone_X.rawValue)
+                return .iPhone_X
 
-        case "iPhone11,2":
-            print(DeviceType.iPhone_XS.rawValue)
-            return .iPhone_XS
+            case "iPhone11,2":
+                print(DeviceType.iPhone_XS.rawValue)
+                return .iPhone_XS
 
-        case "iPhone11,4", "iPhone11,6":
-            print(DeviceType.iPhone_XS_Max.rawValue)
-            return .iPhone_XS_Max
+            case "iPhone11,4", "iPhone11,6":
+                print(DeviceType.iPhone_XS_Max.rawValue)
+                return .iPhone_XS_Max
 
-        case "iPhone11,8":
-            print(DeviceType.iPhone_XR.rawValue)
-            return .iPhone_XR
+            case "iPhone11,8":
+                print(DeviceType.iPhone_XR.rawValue)
+                return .iPhone_XR
 
-        case "iPhone12,1":
-            print(DeviceType.iPhone_11.rawValue)
-            return .iPhone_11
+            case "iPhone12,1":
+                print(DeviceType.iPhone_11.rawValue)
+                return .iPhone_11
 
-        case "iPhone12,3":
-            print(DeviceType.iPhone_11_Pro.rawValue)
-            return .iPhone_11_Pro
+            case "iPhone12,3":
+                print(DeviceType.iPhone_11_Pro.rawValue)
+                return .iPhone_11_Pro
 
-        case "iPhone12,5":
-            print(DeviceType.iPhone_11_Pro_Max.rawValue)
-            return .iPhone_11_Pro_Max
+            case "iPhone12,5":
+                print(DeviceType.iPhone_11_Pro_Max.rawValue)
+                return .iPhone_11_Pro_Max
 
-        default:
-            print(deviceIdentifier)
-            return .unknownPhone
+            case "iPhone12,8":
+                print(DeviceType.iPhone_SE_2.rawValue)
+                return .iPhone_SE_2
+
+            case "iPhone13,1":
+                print(DeviceType.iPhone_12_mini.rawValue)
+                return .iPhone_12_mini
+
+            case "iPhone13,2":
+                print(DeviceType.iPhone_12.rawValue)
+                return .iPhone_12
+
+            case "iPhone13,3":
+                print(DeviceType.iPhone_12_Pro.rawValue)
+                return .iPhone_12_Pro
+
+            case "iPhone13,4":
+                print(DeviceType.iPhone_12_Pro_Max.rawValue)
+                return .iPhone_12_Pro_Max
+
+            default:
+                print(deviceIdentifier)
+                return .unknownPhone
         }
     }
 
