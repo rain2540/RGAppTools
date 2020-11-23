@@ -178,15 +178,15 @@ extension RGAppTools where Base: UIDevice {
 
         switch deviceIdentifier {
         case "AppleTV5,3":
-            print("Apple TV")
+            print(DeviceType.Apple_TV.rawValue)
             return .Apple_TV
 
         case "i386":
-            print("Simulator 32 bit")
+            print(DeviceType.simulator_32bit.rawValue)
             return .simulator_32bit
 
         case "x86_64":
-            print("Simulator 64 bit")
+            print(DeviceType.simulator_64bit.rawValue)
             return .simulator_64bit
 
         default:
@@ -199,99 +199,99 @@ extension RGAppTools where Base: UIDevice {
     public static var iPhoneType: DeviceType {
         switch deviceIdentifier {
         case "iPhone1,1":
-            print("iPhone")
+            print(DeviceType.iPhone_2G.rawValue)
             return .iPhone_2G
 
         case "iPhone1,2":
-            print("iPhone 3G")
+            print(DeviceType.iPhone_3G.rawValue)
             return .iPhone_3G
 
         case "iPhone2,1":
-            print("iPhone 3GS")
+            print(DeviceType.iPhone_3GS.rawValue)
             return .iPhone_3GS
 
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":
-            print("iPhone 4")
+            print(DeviceType.iPhone_4.rawValue)
             return .iPhone_4
 
         case "iPhone4,1":
-            print("iPhone 4S")
+            print(DeviceType.iPhone_4S.rawValue)
             return .iPhone_4S
 
         case "iPhone5,1", "iPhone5,2":
-            print("iPhone 5")
+            print(DeviceType.iPhone_5.rawValue)
             return .iPhone_5
 
         case "iPhone5,3", "iPhone5,4":
-            print("iPhone 5c")
+            print(DeviceType.iPhone_5c.rawValue)
             return .iPhone_5c
 
         case "iPhone6,1", "iPhone6,2":
-            print("iPhone 5s")
+            print(DeviceType.iPhone_5s.rawValue)
             return .iPhone_5s
 
         case "iPhone7,1":
-            print("iPhone 6 Plus")
+            print(DeviceType.iPhone_6_Plus.rawValue)
             return .iPhone_6_Plus
 
         case "iPhone7,2":
-            print("iPhone 6")
+            print(DeviceType.iPhone_6.rawValue)
             return .iPhone_6
 
         case "iPhone8,1":
-            print("iPhone 6s")
+            print(DeviceType.iPhone_6s.rawValue)
             return .iPhone_6s
 
         case "iPhone8,2":
-            print("iPhone 6s Plus")
+            print(DeviceType.iPhone_6s_Plus.rawValue)
             return .iPhone_6s_Plus
 
         case "iPhone8,4":
-            print("iPhone SE")
+            print(DeviceType.iPhone_SE_1.rawValue)
             return .iPhone_SE_1
 
         case "iPhone9,1", "iPhone9,3":
-            print("iPhone 7")
+            print(DeviceType.iPhone_7.rawValue)
             return .iPhone_7
 
         case "iPhone9,2", "iPhone9,4":
-            print("iPhone 7 Plus")
+            print(DeviceType.iPhone_7_Plus.rawValue)
             return .iPhone_7_Plus
 
         case "iPhone10,1", "iPhone10,4":
-            print("iPhone 8")
+            print(DeviceType.iPhone_8.rawValue)
             return .iPhone_8
 
         case "iPhone10,2", "iPhone10,5":
-            print("iPhone 8 Pllus")
+            print(DeviceType.iPhone_8_Plus.rawValue)
             return .iPhone_8_Plus
 
         case "iPhone10,3", "iPhone10,6":
-            print("iPhone X")
+            print(DeviceType.iPhone_X.rawValue)
             return .iPhone_X
 
         case "iPhone11,2":
-            print("iPhone XS")
+            print(DeviceType.iPhone_XS.rawValue)
             return .iPhone_XS
 
         case "iPhone11,4", "iPhone11,6":
-            print("iPhone XS Max")
+            print(DeviceType.iPhone_XS_Max.rawValue)
             return .iPhone_XS_Max
 
         case "iPhone11,8":
-            print("iPhone XR")
+            print(DeviceType.iPhone_XR.rawValue)
             return .iPhone_XR
 
         case "iPhone12,1":
-            print("iPhone 11")
+            print(DeviceType.iPhone_11.rawValue)
             return .iPhone_11
 
         case "iPhone12,3":
-            print("iPhone 11 Pro")
+            print(DeviceType.iPhone_11_Pro.rawValue)
             return .iPhone_11_Pro
 
         case "iPhone12,5":
-            print("iPhone 11 Pro Max")
+            print(DeviceType.iPhone_11_Pro_Max.rawValue)
             return .iPhone_11_Pro_Max
 
         default:
@@ -305,90 +305,90 @@ extension RGAppTools where Base: UIDevice {
         switch deviceIdentifier {
         // ***** ***** iPad ***** ***** //
         case "iPad1,1":
-            print("iPad")
+            print(DeviceType.iPad_1.rawValue)
             return .iPad_1
 
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":
-            print("iPad 2")
+            print(DeviceType.iPad_2.rawValue)
             return .iPad_2
 
         case "iPad3,1", "iPad3,2", "iPad3,3":
-            print("iPad (3rd generation)")
+            print(DeviceType.iPad_3.rawValue)
             return .iPad_3
 
         case "iPad3,4", "iPad3,5", "iPad3,6":
-            print("iPad (4th generation)")
+            print(DeviceType.iPad_4.rawValue)
             return .iPad_4
 
         case "iPad6,11", "iPad6,12":
-            print("iPad (5th generation)")
+            print(DeviceType.iPad_5.rawValue)
             return .iPad_5
 
         case "iPad7,5", "iPad7,6":
-            print("iPad (6th generation)")
+            print(DeviceType.iPad_6.rawValue)
             return .iPad_6
 
         case "iPad7,11", "iPad7,12":
-            print("iPad (7th generation)")
+            print(DeviceType.iPad_7.rawValue)
             return .iPad_7
 
         // ***** ***** iPad mini ***** ***** //
         case "iPad2,5", "iPad2,6", "iPad2,7":
-            print("iPad mini")
+            print(DeviceType.iPad_mini_1.rawValue)
             return .iPad_mini_1
 
         case "iPad4,4", "iPad4,5", "iPad4,6":
-            print("iPad mini 2")
+            print(DeviceType.iPad_mini_2.rawValue)
             return .iPad_mini_2
 
         case "iPad4,7", "iPad4,8", "iPad4,9":
-            print("iPad mini 3")
+            print(DeviceType.iPad_mini_3.rawValue)
             return .iPad_mini_3
 
         case "iPad5,1", "iPad5,2":
-            print("iPad mini 4")
+            print(DeviceType.iPad_mini_4.rawValue)
             return .iPad_mini_4
 
         case "iPad11,1", "iPad11,2":
-            print("iPad mini (5th generation)")
+            print(DeviceType.iPad_mini_5.rawValue)
             return .iPad_mini_5
 
         // ***** ***** iPad Air ***** ***** //
         case "iPad4,1", "iPad4,2", "iPad4,3":
-            print("iPad Air")
+            print(DeviceType.iPad_Air_1.rawValue)
             return .iPad_Air_1
 
         case "iPad5,3", "iPad5,4":
-            print("iPad Air 2")
+            print(DeviceType.iPad_Air_2.rawValue)
             return .iPad_Air_2
 
         case "iPad11,3", "iPad11,4":
-            print("iPad Air (3rd generation)")
+            print(DeviceType.iPad_Air_3.rawValue)
             return .iPad_Air_3
 
         // ***** ***** iPad Pro ***** ***** //
         case "iPad6,7", "iPad6,8":
-            print("iPad Pro (12.9-inch)")
+            print(DeviceType.iPad_Pro_129_1.rawValue)
             return .iPad_Pro_129_1
 
         case "iPad6,3", "iPad6,4":
-            print("iPad Pro (9.7-inch)")
+            print(DeviceType.iPad_Pro_97_1.rawValue)
             return .iPad_Pro_97_1
 
         case "iPad7,1", "iPad7,2":
-            print("iPad Pro (12.9-inch) (2nd generation)")
+            print(DeviceType.iPad_Pro_129_2.rawValue)
             return .iPad_Pro_129_2
 
         case "iPad7,3", "iPad7,4":
-            print("iPad Pro (10.5-inch)")
+            print(DeviceType.iPad_Pro_105.rawValue)
             return .iPad_Pro_105
 
         case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":
-            print("iPad Pro (12.9-inch) (3rd generation)")
+            print(DeviceType.iPad_Pro_129_3.rawValue)
             return .iPad_Pro_129_3
 
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":
-            print("iPad Pro (11-inch)")
+            print(DeviceType.iPad_Pro_11_1.rawValue)
             return .iPad_Pro_11_1
 
         default:
@@ -401,31 +401,31 @@ extension RGAppTools where Base: UIDevice {
     public static var iPodType: DeviceType {
         switch deviceIdentifier {
         case "iPod1,1":
-            print("iPod touch")
+            print(DeviceType.iPod_touch_1.rawValue)
             return .iPod_touch_1
 
         case "iPod2,1":
-            print("iPod touch (2nd generation)")
+            print(DeviceType.iPod_touch_2.rawValue)
             return .iPod_touch_2
 
         case "iPod3,1":
-            print("iPod touch (3rd generation)")
+            print(DeviceType.iPod_touch_3.rawValue)
             return .iPod_touch_3
 
         case "iPod4,1":
-            print("iPod touch (4th generation)")
+            print(DeviceType.iPod_touch_4.rawValue)
             return .iPod_touch_4
 
         case "iPod5,1":
-            print("iPod touch (5th generation)")
+            print(DeviceType.iPod_touch_5.rawValue)
             return .iPod_touch_5
 
         case "iPod7,1":
-            print("iPod touch (6th generation)")
+            print(DeviceType.iPod_touch_6.rawValue)
             return .iPod_touch_6
 
         case "iPod9,1":
-            print("iPod touch (7th generation)")
+            print(DeviceType.iPod_touch_7.rawValue)
             return .iPod_touch_7
 
         default:
