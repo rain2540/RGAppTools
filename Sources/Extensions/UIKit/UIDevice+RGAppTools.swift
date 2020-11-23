@@ -85,7 +85,7 @@ public enum DeviceType: String {
     iPhone_6_Plus       =   "iPhone 6 Plus",
     iPhone_6s           =   "iPhone 6s",
     iPhone_6s_Plus      =   "iPhone 6s Plus",
-    iPhone_SE           =   "iPhone SE",
+    iPhone_SE_1         =   "iPhone SE (1st generation)",
     iPhone_7            =   "iPhone 7",
     iPhone_7_Plus       =   "iPhone 7 Plus",
     iPhone_8            =   "iPhone 8",
@@ -97,6 +97,11 @@ public enum DeviceType: String {
     iPhone_11           =   "iPhone 11",
     iPhone_11_Pro       =   "iPhone 11 Pro",
     iPhone_11_Pro_Max   =   "iPhone 11 Pro Max",
+    iPhone_SE_2         =   "iPhone SE (2nd generation)",
+    iPhone_12_mini      =   "iPhone 12 mini",
+    iPhone_12           =   "iPhone 12",
+    iPhone_12_Pro       =   "iPhone 12 Pro",
+    iPhone_12_Pro_Max   =   "iPhone 12 Pro Max",
 
     // ***** ***** iPad ***** ***** //
     iPad_1          =   "iPad",
@@ -243,7 +248,7 @@ extension RGAppTools where Base: UIDevice {
 
         case "iPhone8,4":
             print("iPhone SE")
-            return .iPhone_SE
+            return .iPhone_SE_1
 
         case "iPhone9,1", "iPhone9,3":
             print("iPhone 7")
