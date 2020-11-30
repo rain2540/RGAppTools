@@ -63,19 +63,19 @@ extension RGAppTools where Base: UIColor {
         }
 
         switch (cString.count) {
-        case 3:
-            red   = CGFloat((hexValue & 0xF00) >> 8)       / 15.0
-            green = CGFloat((hexValue & 0x0F0) >> 4)       / 15.0
-            blue  = CGFloat(hexValue & 0x00F)              / 15.0
+            case 3:
+                red   = CGFloat((hexValue & 0xF00) >> 8)        / 15.0
+                green = CGFloat((hexValue & 0x0F0) >> 4)        / 15.0
+                blue  = CGFloat((hexValue & 0x00F) >> 0)        / 15.0
 
-        case 6:
-            red   = CGFloat((hexValue & 0xFF0000) >> 16)   / 255.0
-            green = CGFloat((hexValue & 0x00FF00) >> 8)    / 255.0
-            blue  = CGFloat(hexValue & 0x0000FF)           / 255.0
+            case 6:
+                red   = CGFloat((hexValue & 0xFF0000) >> 16)    / 255.0
+                green = CGFloat((hexValue & 0x00FF00) >> 08)    / 255.0
+                blue  = CGFloat((hexValue & 0x0000FF) >> 00)    / 255.0
 
-        default:
-            red = 0.0; green = 0.0; blue = 1.0
-            NSLog("Invalid RGB hex string, number of characters after '#' or '0x' should be either 3 or 6.")
+            default:
+                red = 0.0; green = 0.0; blue = 1.0
+                NSLog("Invalid RGB hex string, number of characters after '#' or '0x' should be either 3 or 6.")
         }
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
