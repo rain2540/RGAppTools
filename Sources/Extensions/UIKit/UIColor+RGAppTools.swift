@@ -21,6 +21,11 @@ extension RGAppTools where Base: UIColor {
         return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
 
+    /// 通过指定的不透明度 和 一个表示 RGB 分量值的 16 进制数字, 返回一个颜色对象
+    /// - Parameters:
+    ///   - hex: 表示 RGB 分量值的 6 位 16 进制数字
+    ///   - alpha: 不透明度 (0 ~ 1)
+    /// - Returns: 颜色对象
     public static func color(hex: Int, alpha: CGFloat = 1.0) -> UIColor {
         let components = (
             R: CGFloat((hex >> 16) & 0xff) / 255.0,
