@@ -21,6 +21,15 @@ extension RGAppTools where Base: UIColor {
         return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
 
+    public static func color(hex: Int, alpha: CGFloat = 1.0) -> UIColor {
+        let components = (
+            R: CGFloat((hex >> 16) & 0xff) / 255.0,
+            G: CGFloat((hex >> 08) & 0xff) / 255.0,
+            B: CGFloat((hex >> 00) & 0xff) / 255.0
+        )
+        return UIColor(red: components.R, green: components.G, blue: components.B, alpha: alpha)
+    }
+
     /// 通过指定的不透明度 和 一个用16进制数字表示 RGB 分量值的字符串, 返回一个颜色对象
     /// - Parameters:
     ///   - hexString: 以"#"或"0x"开头, 后面跟随6位(或3位)16进制数字 表示RGB分量值的字符串
@@ -65,5 +74,5 @@ extension RGAppTools where Base: UIColor {
         }
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
-    
+
 }
