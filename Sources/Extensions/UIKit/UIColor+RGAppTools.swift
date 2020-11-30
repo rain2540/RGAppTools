@@ -9,8 +9,8 @@
 import UIKit
 
 extension RGAppTools where Base: UIColor {
+
     /// 通过指定的不透明度和 RGB 分量值, 返回一个颜色对象
-    ///
     /// - Parameters:
     ///   - red: 红色分量的值 (0 ~ 255)
     ///   - green: 绿色分量的值 (0 ~ 255)
@@ -22,7 +22,6 @@ extension RGAppTools where Base: UIColor {
     }
 
     /// 通过指定的不透明度 和 一个用16进制数字表示 RGB 分量值的字符串, 返回一个颜色对象
-    ///
     /// - Parameters:
     ///   - hexString: 以"#"或"0x"开头, 后面跟随6位(或3位)16进制数字 表示RGB分量值的字符串
     ///   - alpha: 不透明度 (0 ~ 1)
@@ -66,4 +65,5 @@ extension RGAppTools where Base: UIColor {
         }
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
+    
 }
