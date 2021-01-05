@@ -9,7 +9,7 @@
 import UIKit
 
 extension RGAppTools where Base: UIAlertController {
-    
+
     /// 在视图中显示 Alert
     /// - Parameters:
     ///   - viewController: 展示 Alert 的视图
@@ -24,7 +24,7 @@ extension RGAppTools where Base: UIAlertController {
         let alertView = alert(title: title, message: message, actions: actions)
         viewController.present(alertView, animated: true, completion: nil)
     }
-    
+
     /// create an alert
     /// - Parameters:
     ///   - title: alert title
@@ -37,7 +37,7 @@ extension RGAppTools where Base: UIAlertController {
         let alertView = alert(title: title, message: message, actions: actions)
         return alertView
     }
-    
+
     /// 在视图中显示 ActionSheet
     /// - Parameters:
     ///   - viewController: 展示 ActionSheet 的视图
@@ -65,9 +65,10 @@ extension RGAppTools where Base: UIAlertController {
         let sheet = actionSheet(title: title, message: message, actions: actions)
         return sheet
     }
-    
-    
+
+
     // MARK: - Private
+
     private static func alert(title: String,
                              message: String,
                              actions: [UIAlertAction]) -> UIAlertController
@@ -78,7 +79,7 @@ extension RGAppTools where Base: UIAlertController {
         }
         return alert
     }
-    
+
     private static func actionSheet(title: String,
                                    message: String,
                                    actions: [UIAlertAction]) -> UIAlertController
@@ -89,5 +90,5 @@ extension RGAppTools where Base: UIAlertController {
         }
         return actionSheet
     }
-    
+
 }
