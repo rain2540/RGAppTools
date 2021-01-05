@@ -9,14 +9,13 @@
 import UIKit
 
 extension RGAppTools where Base: UITextField {
-    
+
     /// 默认高度
     public static var defaultHeight: CGFloat {
         return 30.0
     }
     
     /// 为 TextField 添加左侧图片
-    ///
     /// - Parameters:
     ///   - name: 图片名
     ///   - frame: 图片的 frame
@@ -33,9 +32,8 @@ extension RGAppTools where Base: UITextField {
         base.leftViewMode = showMode
         base.leftView = imageView
     }
-    
+
     /// 为 TextField 添加右侧图片
-    ///
     /// - Parameters:
     ///   - name: 图片名
     ///   - frame: 图片的 frame
@@ -52,9 +50,10 @@ extension RGAppTools where Base: UITextField {
         base.rightViewMode = showMode
         base.rightView = imageView
     }
-    
+
 
     // MARK: - Private
+
     private func createImageView(imageNamed name: String,
                                  frame: CGRect,
                                  contentMode: UIView.ContentMode) -> UIImageView
@@ -65,4 +64,5 @@ extension RGAppTools where Base: UITextField {
         imageView.contentMode = contentMode
         return imageView
     }
+
 }
