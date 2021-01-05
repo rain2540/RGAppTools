@@ -9,9 +9,10 @@
 import UIKit
 
 extension RGAppTools where Base: UIToolbar {
-    
+
+    /// default height of UIToolbar
     public static var defaultHeight: CGFloat {
         return 44.0
     }
-    
+
 }
