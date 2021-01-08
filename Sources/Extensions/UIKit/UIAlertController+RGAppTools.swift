@@ -16,10 +16,11 @@ extension RGAppTools where Base: UIAlertController {
     ///   - title: Alert 标题
     ///   - message: Alert 内容
     ///   - actions: 完成的 actions
-    public static func showAlert(in viewController: UIViewController,
-                                 title: String,
-                                 message: String,
-                                 actions: UIAlertAction...)
+    public static func showAlert(
+        in viewController: UIViewController,
+        title: String,
+        message: String,
+        actions: UIAlertAction...)
     {
         let alertView = alert(title: title, message: message, actions: actions)
         viewController.present(alertView, animated: true, completion: nil)
@@ -30,9 +31,10 @@ extension RGAppTools where Base: UIAlertController {
     ///   - title: alert title
     ///   - message: alert message
     ///   - actions: alert button actions
-    public static func alert(title: String,
-                             message: String,
-                             actions: UIAlertAction...) -> UIAlertController
+    public static func alert(
+        title: String,
+        message: String,
+        actions: UIAlertAction...) -> UIAlertController
     {
         let alertView = alert(title: title, message: message, actions: actions)
         return alertView
@@ -44,10 +46,11 @@ extension RGAppTools where Base: UIAlertController {
     ///   - title: ActionSheet 标题
     ///   - message: ActionSheet 内容
     ///   - actions: 完成的 actions
-    public static func showActionSheet(in viewController: UIViewController,
-                                       title: String,
-                                       message: String,
-                                       actions: UIAlertAction...)
+    public static func showActionSheet(
+        in viewController: UIViewController,
+        title: String,
+        message: String,
+        actions: UIAlertAction...)
     {
         let sheet = actionSheet(title: title, message: message, actions: actions)
         viewController.present(sheet, animated: true, completion: nil)
@@ -58,9 +61,10 @@ extension RGAppTools where Base: UIAlertController {
     ///   - title: action sheet title
     ///   - message: action sheet message
     ///   - actions: action sheet button actions
-    public static func actionSheeet(title: String,
-                                    message: String,
-                                    actions: UIAlertAction...) -> UIAlertController
+    public static func actionSheeet(
+        title: String,
+        message: String,
+        actions: UIAlertAction...) -> UIAlertController
     {
         let sheet = actionSheet(title: title, message: message, actions: actions)
         return sheet
@@ -69,9 +73,10 @@ extension RGAppTools where Base: UIAlertController {
 
     // MARK: - Private
 
-    private static func alert(title: String,
-                             message: String,
-                             actions: [UIAlertAction]) -> UIAlertController
+    private static func alert(
+        title: String,
+        message: String,
+        actions: [UIAlertAction]) -> UIAlertController
     {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for action in actions {
@@ -80,9 +85,10 @@ extension RGAppTools where Base: UIAlertController {
         return alert
     }
 
-    private static func actionSheet(title: String,
-                                   message: String,
-                                   actions: [UIAlertAction]) -> UIAlertController
+    private static func actionSheet(
+        title: String,
+        message: String,
+        actions: [UIAlertAction]) -> UIAlertController
     {
         let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         for action in actions {
