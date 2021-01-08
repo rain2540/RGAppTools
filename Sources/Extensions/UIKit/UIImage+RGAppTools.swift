@@ -9,6 +9,7 @@
 import UIKit
 
 extension RGAppTools where Base: UIImage {
+
     /// Image 对应的 data
     public var data: Data? {
         guard let jpegData = base.jpegData(compressionQuality: 1.0) else {
@@ -26,6 +27,7 @@ extension RGAppTools where Base: UIImage {
 
     /// 截取图片的指定区域，并生成新图片
     /// - Parameter rect: 指定的区域
+    /// - Returns: 生成的新图片
     public func cropping(to rect: CGRect) -> UIImage? {
         let scale = UIScreen.main.scale
         let x = rect.origin.x * scale
@@ -40,15 +42,14 @@ extension RGAppTools where Base: UIImage {
         return newImage
     }
 
-     /// 创建矩形图像
-     ///
-     /// - Parameters:
-     ///   - size: 尺寸
-     ///   - backColor: 背景色(默认`white`)
-     ///   - borderColor: 边线颜色(默认`lightGray`)
-     ///   - borderWidth: 边线宽度(默认`1.0`)
-     /// - Returns: 新创建的矩形图像
-     public func createRectImage(size: CGSize?,
+    /// 创建矩形图像
+    /// - Parameters:
+    ///   - size: 尺寸
+    ///   - backColor: 背景色(默认`white`)
+    ///   - borderColor: 边线颜色(默认`lightGray`)
+    ///   - borderWidth: 边线宽度(默认`1.0`)
+    /// - Returns: 新创建的矩形图像
+    public func createRectImage(size: CGSize?,
                                 backColor: UIColor = .white,
                                 borderColor: UIColor = .lightGray,
                                 borderWidth: CGFloat = 1.0) -> UIImage?
@@ -98,7 +99,6 @@ extension RGAppTools where Base: UIImage {
     }
 
     /// 创建圆角图像
-    ///
     /// - Parameters:
     ///   - size: 尺寸
     ///   - backColor: 背景色(默认`white`)
@@ -158,7 +158,6 @@ extension RGAppTools where Base: UIImage {
     }
 
     /// 创建圆角矩形图像
-    ///
     /// - Parameters:
     ///   - size: 尺寸
     ///   - cornerRadius: 圆角半径
@@ -218,4 +217,5 @@ extension RGAppTools where Base: UIImage {
         // 7.返回结果
         return result
     }
+
 }
