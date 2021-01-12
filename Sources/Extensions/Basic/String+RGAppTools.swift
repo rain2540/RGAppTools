@@ -145,7 +145,7 @@ extension String {
 }
 
 
-//  MARK: -
+// MARK: -
 
 public struct StringExtension {
     private var string: String
@@ -289,7 +289,7 @@ extension StringExtension {
 }
 
 
-//  MARK: - Size
+// MARK: - Size
 
 extension StringExtension {
 
@@ -310,7 +310,7 @@ extension StringExtension {
 }
 
 
-//  MARK: - Trans
+// MARK: - Trans
 
 extension StringExtension {
 
@@ -362,6 +362,16 @@ extension StringExtension {
     /// String 对应的 Base64 Data
     public var base64Data: Data? {
         return Data(base64Encoded: string)
+    }
+
+    public func date(format: String = "yyyy-MM-dd",
+                     timeZone: TimeZone? = TimeZone.rat.chinaMainLand) -> Date?
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        dateFormatter.timeZone = timeZone
+        let date = dateFormatter.date(from: string)
+        return date
     }
 
     /// String 对应的 Base64 Image
