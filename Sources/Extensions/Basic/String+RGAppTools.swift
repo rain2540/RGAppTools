@@ -364,6 +364,11 @@ extension StringExtension {
         return Data(base64Encoded: string)
     }
 
+    /// 依据给定的时间格式、时区，将字符串转化为对应的时间
+    /// - Parameters:
+    ///   - format: 时间格式
+    ///   - timeZone: 时区
+    /// - Returns: 转化得到的 Date 对象
     public func date(format: String = "yyyy-MM-dd",
                      timeZone: TimeZone? = TimeZone.rat.chinaMainLand) -> Date?
     {
