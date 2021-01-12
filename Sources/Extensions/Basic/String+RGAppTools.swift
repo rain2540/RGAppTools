@@ -310,7 +310,7 @@ extension StringExtension {
 }
 
 
-// MARK: - Trans
+// MARK: - Trans to Basic Types
 
 extension StringExtension {
 
@@ -359,6 +359,29 @@ extension StringExtension {
         return string.rat.double ?? 0.0
     }
 
+    /// 将字符串转换为 JSON 对象
+    /// - Returns: 转换得到的 JSON 对象
+    public func toObject() -> Any? {
+        let str = string.replacingOccurrences(of: "\0", with: "")
+        guard let data = str.data(using: String.Encoding.utf8) else {
+            print("RGAppTools String to object Error:\n", "Fail to get data")
+            return nil
+        }
+        do {
+            return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        } catch let error as NSError {
+            print("RGAppTools String to object Error:\n", error)
+            return nil
+        }
+    }
+
+}
+
+
+// MARK: - Trans to Foundation Types
+
+extension StringExtension {
+
     /// String 对应的 Base64 Data
     public var base64Data: Data? {
         return Data(base64Encoded: string)
@@ -379,26 +402,17 @@ extension StringExtension {
         return date
     }
 
+}
+
+
+// MARK: - Trans to UIKit Types
+
+extension StringExtension {
+
     /// String 对应的 Base64 Image
     public var base64Image: UIImage? {
         guard let data = base64Data else { return nil }
         return UIImage(data: data)
-    }
-
-    /// 将字符串转换为 JSON 对象
-    /// - Returns: 转换得到的 JSON 对象
-    public func toObject() -> Any? {
-        let str = string.replacingOccurrences(of: "\0", with: "")
-        guard let data = str.data(using: String.Encoding.utf8) else {
-            print("RGAppTools String to object Error:\n", "Fail to get data")
-            return nil
-        }
-        do {
-            return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-        } catch let error as NSError {
-            print("RGAppTools String to object Error:\n", error)
-            return nil
-        }
     }
 
 }
@@ -428,6 +442,8 @@ extension StringExtension {
 
 }
 
+
+// MARK: - Decimal Number
 
 extension StringExtension {
 
