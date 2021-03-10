@@ -14,7 +14,11 @@ Pod::Spec.new do |s|
   * RGBuilds
   DESC
   
-  s.homepage     = "https://github.com/rain2540/RGAppTools"
+  # Home Page of GitHUb
+  # s.homepage     = "https://github.com/rain2540/RGAppTools"
+
+  # Home Page of Gitee
+  s.homepage     = "https://gitee.com/rain2540/RGAppTools"
   
   s.license      = { :type => "MPL-2.0", :file => "LICENSE" }
   
@@ -27,7 +31,11 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "11.0"
   # s.osx.deployment_target = "10.13"
   
-  s.source       = { :git => "https://github.com/rain2540/RGAppTools.git", :tag => s.version }
+  # source of GitHub
+  # s.source       = { :git => "https://github.com/rain2540/RGAppTools.git", :tag => s.version }
+
+  # source of Gitee
+  s.source       = { :git => "https://gitee.com/rain2540/RGAppTools.git", :tag => s.version }
   
   s.default_subspecs = ['Core', 'AppCommons', 'Extensions', 'Protocols', 'RGBuild']
   
