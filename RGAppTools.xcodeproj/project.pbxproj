@@ -14,6 +14,7 @@
 		B716553723FE17BF00984573 /* UIToolBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */; };
 		B72BD7372452DCE200D89A5A /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */; };
 		B75855492574C9AD00B321C3 /* Color+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75855482574C9AD00B321C3 /* Color+RGAppTools.swift */; };
+		B78841F625F8591B006E2CEC /* UITabBarController+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78841F525F8591B006E2CEC /* UITabBarController+RGAppTools.swift */; };
 		B7F6DE5F23EF1C4200E7F484 /* UIButton+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */; };
 		B7FA46552487405F0030B922 /* DictionaryExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */; };
 		B7FA4657248741FD0030B922 /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA4656248741FD0030B922 /* UILabelExtensionTests.swift */; };
@@ -75,6 +76,7 @@
 		B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIToolBar+RGAppTools.swift"; path = "Sources/Extensions/Basic/UIToolBar+RGAppTools.swift"; sourceTree = SOURCE_ROOT; };
 		B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		B75855482574C9AD00B321C3 /* Color+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+RGAppTools.swift"; sourceTree = "<group>"; };
+		B78841F525F8591B006E2CEC /* UITabBarController+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7F6DE5E23EF1C4200E7F484 /* UIButton+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+RGAppTools.swift"; sourceTree = "<group>"; };
 		B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionTests.swift; sourceTree = "<group>"; };
 		B7FA4656248741FD0030B922 /* UILabelExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelExtensionTests.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				B7FB81C023D682F80082E362 /* UINavigationBar+RGAppTools.swift */,
 				B7FB81BC23D682F80082E362 /* UIScrollView+RGAppTools.swift */,
 				B7FB81C223D682F80082E362 /* UITabBar+RGAppTools.swift */,
+				B78841F525F8591B006E2CEC /* UITabBarController+RGAppTools.swift */,
 				B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */,
 				B7FB81BB23D682F80082E362 /* UITextField+RGAppTools.swift */,
 				B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */,
@@ -454,6 +457,7 @@
 				B7FB81E823D682F80082E362 /* UIDevice+RGAppTools.swift in Sources */,
 				B7FB81E723D682F80082E362 /* UINavigationBar+RGAppTools.swift in Sources */,
 				B7FB81E923D682F80082E362 /* UITabBar+RGAppTools.swift in Sources */,
+				B78841F625F8591B006E2CEC /* UITabBarController+RGAppTools.swift in Sources */,
 				B7FB81F723D682F80082E362 /* FileManager+RGAppTools.swift in Sources */,
 				B7FB81EE23D682F80082E362 /* Dictionary+RGAppTools.swift in Sources */,
 				B7FB81E423D682F80082E362 /* UIAlertController+RGAppTools.swift in Sources */,
