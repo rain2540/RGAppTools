@@ -24,6 +24,10 @@ public final class Key<ValueType: Codable> {
 extension RGAppTools where Base: UserDefaults {
 
     /// 检验 UserDefaults 中是否存在某个 key
+    /// ```
+    /// // How to use
+    /// UserDefaults.standard.rat.has(Key<TypeName>("key"))
+    /// ```
     /// - Parameter key: 待检验的 key
     /// - Returns: 检验结果
     public func has<ValueType>(_ key: Key<ValueType>) -> Bool {
@@ -31,6 +35,10 @@ extension RGAppTools where Base: UserDefaults {
     }
 
     /// 获取 key 值对应的内容
+    /// ```
+    /// // How to use
+    /// UserDefaults.standard.rat.value(Key<TypeName>("key"))
+    /// ```
     /// - Parameter key: 标记内容的 key
     /// - Returns: key 对应的内容
     public func value<ValueType>(for key: Key<ValueType>) -> ValueType? {
@@ -46,13 +54,17 @@ extension RGAppTools where Base: UserDefaults {
             return result
         } catch {
             #if DEBUG
-                print(error)
+            print(error)
             #endif
         }
         return nil
     }
 
     /// 将内容存入 UserDefaults, 并用 key 标记
+    /// ```
+    /// // How to use
+    /// UserDefaults.standard.rat.save(value, for: Key<TypeName>("key"))
+    /// ```
     /// - Parameters:
     ///   - value: 将要存入的内容
     ///   - key: 用于标记的 key
@@ -70,12 +82,16 @@ extension RGAppTools where Base: UserDefaults {
             base.synchronize()
         } catch {
             #if DEBUG
-                print(error)
+            print(error)
             #endif
         }
     }
 
     /// 清除 key 值对应内容
+    /// ```
+    /// // How to use
+    /// UserDefaults.standard.rat.clear(Key<TypeName>("key"))
+    /// ```
     /// - Parameter key: 标记内容的 key
     public func clear<ValueType>(for key: Key<ValueType>) {
         base.set(nil, forKey: key.key)
@@ -87,10 +103,10 @@ extension RGAppTools where Base: UserDefaults {
     /// - Returns: 检验结果
     private func isPrimitive<ValueType>(type: ValueType.Type) -> Bool {
         switch type {
-        case is String.Type, is Bool.Type, is Int.Type, is Float.Type, is Double.Type:
-            return true
-        default:
-            return false
+            case is String.Type, is Bool.Type, is Int.Type, is Float.Type, is Double.Type:
+                return true
+            default:
+                return false
         }
     }
 
