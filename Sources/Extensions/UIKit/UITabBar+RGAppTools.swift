@@ -10,6 +10,7 @@ import UIKit
 
 extension RGAppTools where Base: UITabBar {
 
+    /// 默认高度
     public static var defaultHeight: CGFloat {
         return 49.0
     }
