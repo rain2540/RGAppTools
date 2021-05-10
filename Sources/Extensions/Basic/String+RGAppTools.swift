@@ -244,10 +244,12 @@ public struct StringExtension {
 
 extension StringExtension {
 
-    /// 清除 nil 和 NSNull 对象，以及其他需要清除的字符串，并返回字符串
+    /// 清除 nil 和 NSNull 对象，以及其他需要清除的字符串和字符集，并返回字符串
     /// - Parameters:
     ///   - otherStrings: 其他需要清除的字符串
-    ///   - obj: 未经处理的对象
+    ///   - set: 需要清除的字符集，默认为空
+    ///   - item: 未经处理的对象
+    /// - Returns: 处理完成，返回的字符串
     public static func clearNil(
         and otherStrings: String...,
         trimmingCharacters set: CharacterSet = [],
@@ -267,10 +269,12 @@ extension StringExtension {
         }
     }
 
-    /// 清除 nil 和 NSNull 对象，以及其他需要清除的字符串，并返回字符串
+    /// 清除 nil 和 NSNull 对象，以及其他需要清除的字符串和字符集，并返回字符串
     /// - Parameters:
-    ///   - otherStrings: 其他需要清除的字符串
-    ///   - obj: 未经处理的对象
+    ///   - otherStrings: 其他需要清除的字符串数组，默认为空数组
+    ///   - set: 需要清除的字符集，默认为空
+    ///   - item: 未经处理的对象
+    /// - Returns: 处理完成，返回的字符串
     public static func clearNil(
         and otherStrings: [String] = [],
         trimmingCharacters set: CharacterSet = [],
