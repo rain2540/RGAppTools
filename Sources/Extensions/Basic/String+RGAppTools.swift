@@ -301,6 +301,12 @@ extension StringExtension {
 
 extension StringExtension {
 
+    /// 判断对象经设定条件检验后，是否为空
+    /// - Parameters:
+    ///   - checkStrings: 做为检验条件的字符串数组，若与其中某个元素相等，则返回 `true`，默认为空数组
+    ///   - set: 需要清除的字符集，默认为空
+    ///   - item: 等待判断的对象
+    /// - Returns: 判断结果
     public static func isBlank(
         by checkStrings: [String] = [],
         trimmingCharacters set: CharacterSet = [],
