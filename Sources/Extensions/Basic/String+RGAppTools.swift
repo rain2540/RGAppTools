@@ -248,17 +248,17 @@ extension StringExtension {
     /// - Parameters:
     ///   - otherStrings: 其他需要清除的字符串
     ///   - obj: 未经处理的对象
-    public static func clearNil(and otherStrings: String..., for obj: Any?) -> String {
-        guard let obj = obj else { return "" }
+    public static func clearNil(and otherStrings: String..., for item: Any?) -> String {
+        guard let item = item else { return "" }
 
-        if obj is NSNull {
+        if item is NSNull {
             return ""
         } else {
-            let condition = otherStrings.contains("\(obj)")
+            let condition = otherStrings.contains("\(item)")
             if condition {
                 return ""
             } else {
-                return "\(obj)"
+                return "\(item)"
             }
         }
     }
@@ -267,19 +267,35 @@ extension StringExtension {
     /// - Parameters:
     ///   - otherStrings: 其他需要清除的字符串
     ///   - obj: 未经处理的对象
-    public static func clearNil(and otherStrings: [String] = [], for obj: Any?) -> String {
-        guard let obj = obj else { return "" }
+    public static func clearNil(and otherStrings: [String] = [], for item: Any?) -> String {
+        guard let item = item else { return "" }
 
-        if obj is NSNull {
+        if item is NSNull {
             return ""
         } else {
-            let condition = otherStrings.contains("\(obj)")
+            let condition = otherStrings.contains("\(item)")
             if condition {
                 return ""
             } else {
-                return "\(obj)"
+                return "\(item)"
             }
         }
+    }
+
+}
+
+
+// MARK: - Blank
+
+extension StringExtension {
+
+    public static func isBlank(
+        by checkStrings: [String] = [],
+        trimmingCharacters set: CharacterSet = [],
+        for item: Any?) -> Bool
+    {
+        let string = clearNil(and: checkStrings, for: item)
+        return string.trimmingCharacters(in: set).isEmpty
     }
 
 }
