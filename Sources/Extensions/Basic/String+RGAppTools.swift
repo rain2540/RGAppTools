@@ -248,7 +248,11 @@ extension StringExtension {
     /// - Parameters:
     ///   - otherStrings: 其他需要清除的字符串
     ///   - obj: 未经处理的对象
-    public static func clearNil(and otherStrings: String..., for item: Any?) -> String {
+    public static func clearNil(
+        and otherStrings: String...,
+        trimmingCharacters set: CharacterSet = [],
+        for item: Any?) -> String
+    {
         guard let item = item else { return "" }
 
         if item is NSNull {
@@ -258,7 +262,7 @@ extension StringExtension {
             if condition {
                 return ""
             } else {
-                return "\(item)"
+                return "\(item)".trimmingCharacters(in: set)
             }
         }
     }
@@ -267,7 +271,11 @@ extension StringExtension {
     /// - Parameters:
     ///   - otherStrings: 其他需要清除的字符串
     ///   - obj: 未经处理的对象
-    public static func clearNil(and otherStrings: [String] = [], for item: Any?) -> String {
+    public static func clearNil(
+        and otherStrings: [String] = [],
+        trimmingCharacters set: CharacterSet = [],
+        for item: Any?) -> String
+    {
         guard let item = item else { return "" }
 
         if item is NSNull {
@@ -277,7 +285,7 @@ extension StringExtension {
             if condition {
                 return ""
             } else {
-                return "\(item)"
+                return "\(item)".trimmingCharacters(in: set)
             }
         }
     }
