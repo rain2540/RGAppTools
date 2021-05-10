@@ -254,9 +254,7 @@ extension StringExtension {
         if obj is NSNull {
             return ""
         } else {
-            let condition = otherStrings.reduce(false) { (res, conditionItem) -> Bool in
-                res || "\(obj)" == conditionItem
-            }
+            let condition = otherStrings.contains("\(obj)")
             if condition {
                 return ""
             } else {
@@ -275,9 +273,7 @@ extension StringExtension {
         if obj is NSNull {
             return ""
         } else {
-            let condition = otherStrings.reduce(false) { (res, conditionItem) -> Bool in
-                res || "\(obj)" == conditionItem
-            }
+            let condition = otherStrings.contains("\(obj)")
             if condition {
                 return ""
             } else {
