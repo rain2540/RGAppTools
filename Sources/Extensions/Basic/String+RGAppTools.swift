@@ -470,6 +470,18 @@ extension StringExtension {
         return attributedString
     }
 
+    public func attributedString(
+        keyword: String?,
+        attributes attrs: [NSAttributedString.Key: Any] = [:]
+    ) -> NSMutableAttributedString
+    {
+        let attributedString = NSMutableAttributedString(string: string)
+        guard let keyword = keyword else { return attributedString }
+        let keywordRange = (string as NSString).range(of: keyword)
+        attributedString.addAttributes(attrs, range: keywordRange)
+        return attributedString
+    }
+
 }
 
 
