@@ -458,15 +458,17 @@ extension StringExtension {
     ///   - color: keyword 的颜色
     ///   - font: keyword 的字体
     /// - Returns: 完成 keyword 颜色、字体设定的 attributed string
-    public func attributedString(keyword: String?,
-                                 color: UIColor = UIColor.black,
-                                 font: UIFont = UIFont.systemFont(ofSize: 17.0)) -> NSMutableAttributedString
+    public func attributedString(
+        keyword: String?,
+        color: UIColor = UIColor.black,
+        font: UIFont = UIFont.systemFont(ofSize: 17.0)
+    ) -> NSMutableAttributedString
     {
-        let attributedString = NSMutableAttributedString(string: string)
-        guard let keyword = keyword else { return attributedString }
-        let keywordRange = (string as NSString).range(of: keyword)
-        attributedString.addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: keywordRange)
-        attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: keywordRange)
+        let attrs = [
+            NSAttributedString.Key.foregroundColor: color,
+            NSAttributedString.Key.font: font,
+        ]
+        let attributedString = attributedString(keyword: keyword, attributes: attrs)
         return attributedString
     }
     
