@@ -452,12 +452,12 @@ extension StringExtension {
 
 extension StringExtension {
 
-    /// 返回为 keyword 设定颜色、字体的 attributed string
+    /// 返回为 `keyword` 设定颜色、字体的 `attributed string`
     /// - Parameters:
     ///   - keyword: 关键词
-    ///   - color: keyword 的颜色
-    ///   - font: keyword 的字体
-    /// - Returns: 完成 keyword 颜色、字体设定的 attributed string
+    ///   - color: `keyword` 的颜色
+    ///   - font: `keyword` 的字体
+    /// - Returns: 完成 `keyword` 颜色、字体设定的 `attributed string`
     public func attributedString(
         keyword: String?,
         color: UIColor = UIColor.black,
@@ -471,7 +471,12 @@ extension StringExtension {
         let attributedString = attributedString(keyword: keyword, attributes: attrs)
         return attributedString
     }
-    
+
+    /// 返回为  `keyword` 设定属性的 `attributed string`
+    /// - Parameters:
+    ///   - keyword: 关键词
+    ///   - attrs: 配置 `keyword` 属性的字典
+    /// - Returns: 完成属性配置的 `attributed string`
     public func attributedString(
         keyword: String?,
         attributes attrs: [NSAttributedString.Key : Any] = [:]
