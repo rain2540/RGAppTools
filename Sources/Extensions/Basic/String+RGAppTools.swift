@@ -469,8 +469,8 @@ extension StringExtension {
         attributedString.addAttribute(NSAttributedString.Key.font, value: font, range: keywordRange)
         return attributedString
     }
-
-    public func attributedString (
+    
+    public func attributedString(
         keyword: String?,
         attributes attrs: [NSAttributedString.Key : Any] = [:]
     ) -> NSMutableAttributedString
