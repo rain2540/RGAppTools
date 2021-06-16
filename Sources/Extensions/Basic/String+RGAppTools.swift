@@ -468,8 +468,8 @@ extension StringExtension {
             NSAttributedString.Key.foregroundColor: color,
             NSAttributedString.Key.font: font,
         ]
-        let attributedString = attributedString(keyword: keyword, attributes: attrs)
-        return attributedString
+        let attrString = attributedString(keyword: keyword, attributes: attrs)
+        return attrString
     }
 
     /// 返回为  `keyword` 设定属性的 `attributed string`
