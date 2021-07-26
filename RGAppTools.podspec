@@ -51,62 +51,16 @@ Pod::Spec.new do |s|
     sp.dependency 'RGAppTools/Core'
   end
   
-  s.subspec 'Extensions' do |sp|
-    #sp.source_files = ["Sources/Extensions/**/*.swift", "Sources/Extensions/*.swift"]
-    sp.source_files = ["Sources/Extensions/*.swift"]
+ s.subspec 'Extensions' do |sp|
+    sp.source_files = ["Sources/Extensions/**/*.swift", "Sources/Extensions/*.swift"]
     sp.dependency 'RGAppTools/Core'
     sp.dependency 'RGAppTools/AppCommons'
-
-    sp.subspec 'Basic' do |ssp|
-      ssp.source_files = ["Sources/Extensions/Basic/*.swift"]
-      ssp.dependency 'RGAppTools/Core'
-      ssp.dependency 'RGAppTools/AppCommons'
-      ssp.dependency 'RGAppTools/Extensions/Foundation'
-    end
-
-    sp.subspec 'CoreLocation' do |ssp|
-      ssp.source_files = ["Sources/Extensions/CoreLocation/*.swift"]
-      ssp.dependency 'RGAppTools/Core'
-      ssp.dependency 'RGAppTools/AppCommons'
-    end
-
-    sp.subspec 'Dispatch' do |ssp|
-      ssp.source_files = ["Sources/Extensions/Dispatch/*.swift"]
-      ssp.dependency 'RGAppTools/Core'
-      ssp.dependency 'RGAppTools/AppCommons'
-    end
-
-    sp.subspec 'Foundation' do |ssp|
-      ssp.source_files = ["Sources/Extensions/Foundation/*.swift"]
-      ssp.dependency 'RGAppTools/Core'
-      ssp.dependency 'RGAppTools/AppCommons'
-    end
-
-    sp.subspec 'SwiftUI' do |ssp|
-      ssp.source_files = ["Sources/Extensions/SwiftUI/*.swift"]
-      ssp.dependency 'RGAppTools/Core'
-      ssp.dependency 'RGAppTools/AppCommons'
-    end
-
-    sp.subspec 'UIKit' do |ssp|
-      ssp.source_files = ["Sources/Extensions/UIKit/*.swift"]
-      ssp.dependency 'RGAppTools/Core'
-      ssp.dependency 'RGAppTools/AppCommons'
-    end
-
-    sp.subspec 'WebKit' do |ssp|
-      ssp.source_files = ["Sources/Extensions/WebKit/*.swift"]
-      ssp.dependency 'RGAppTools/Core'
-      ssp.dependency 'RGAppTools/AppCommons'
-    end
-
   end
   
   s.subspec 'Protocols' do |sp|
     sp.source_files = ["Sources/Protocols/**/*.swift", "Sources/Protocols/*.swift"]
     sp.dependency 'RGAppTools/Core'
     sp.dependency 'RGAppTools/AppCommons'
-    
   end
   
   s.subspec 'RGBuild' do |sp|
