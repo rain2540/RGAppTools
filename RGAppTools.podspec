@@ -62,8 +62,8 @@ Pod::Spec.new do |s|
       ssp.dependency 'RGAppTools/AppCommons'
     end
 
-    sp.subspec 'Core Location' do |ssp|
-      ssp.source_files = 'Sources/Extensions/Core Location/*.swift'
+    sp.subspec 'CoreLocation' do |ssp|
+      ssp.source_files = 'Sources/Extensions/CoreLocation/*.swift'
       ssp.dependency 'RGAppTools/Core'
       ssp.dependency 'RGAppTools/AppCommons'
     end
