@@ -14,6 +14,7 @@
 		B716553723FE17BF00984573 /* UIToolBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */; };
 		B72A82B226AE8EA600D20E5D /* URLRequest+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A82B126AE8EA600D20E5D /* URLRequest+RGAppTools.swift */; };
 		B72A82B426AE98A700D20E5D /* RATError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A82B326AE98A700D20E5D /* RATError.swift */; };
+		B72A830E26AEA6BE00D20E5D /* WKWebView+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72A830D26AEA6BE00D20E5D /* WKWebView+RGAppTools.swift */; };
 		B72BD7372452DCE200D89A5A /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */; };
 		B75855492574C9AD00B321C3 /* Color+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75855482574C9AD00B321C3 /* Color+RGAppTools.swift */; };
 		B78841F625F8591B006E2CEC /* UITabBarController+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78841F525F8591B006E2CEC /* UITabBarController+RGAppTools.swift */; };
@@ -78,6 +79,7 @@
 		B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIToolBar+RGAppTools.swift"; path = "Sources/Extensions/Basic/UIToolBar+RGAppTools.swift"; sourceTree = SOURCE_ROOT; };
 		B72A82B126AE8EA600D20E5D /* URLRequest+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+RGAppTools.swift"; sourceTree = "<group>"; };
 		B72A82B326AE98A700D20E5D /* RATError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RATError.swift; sourceTree = "<group>"; };
+		B72A830D26AEA6BE00D20E5D /* WKWebView+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+RGAppTools.swift"; sourceTree = "<group>"; };
 		B72BD7362452DCE100D89A5A /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		B75855482574C9AD00B321C3 /* Color+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+RGAppTools.swift"; sourceTree = "<group>"; };
 		B78841F525F8591B006E2CEC /* UITabBarController+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+RGAppTools.swift"; sourceTree = "<group>"; };
@@ -146,6 +148,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B72A830F26AEA72700D20E5D /* WebKit */ = {
+			isa = PBXGroup;
+			children = (
+				B72A830D26AEA6BE00D20E5D /* WKWebView+RGAppTools.swift */,
+			);
+			path = WebKit;
+			sourceTree = "<group>";
+		};
 		B758554C2574CA3E00B321C3 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +251,7 @@
 				B7FB81C523D682F80082E362 /* Dispatch */,
 				B7FB81CE23D682F80082E362 /* Foundation */,
 				B7FB81BA23D682F80082E362 /* UIKit */,
+				B72A830F26AEA72700D20E5D /* WebKit */,
 				B758554C2574CA3E00B321C3 /* SwiftUI */,
 			);
 			path = Extensions;
@@ -465,6 +476,7 @@
 				B7FB81E723D682F80082E362 /* UINavigationBar+RGAppTools.swift in Sources */,
 				B7FB81E923D682F80082E362 /* UITabBar+RGAppTools.swift in Sources */,
 				B78841F625F8591B006E2CEC /* UITabBarController+RGAppTools.swift in Sources */,
+				B72A830E26AEA6BE00D20E5D /* WKWebView+RGAppTools.swift in Sources */,
 				B7FB81F723D682F80082E362 /* FileManager+RGAppTools.swift in Sources */,
 				B72A82B226AE8EA600D20E5D /* URLRequest+RGAppTools.swift in Sources */,
 				B7FB81EE23D682F80082E362 /* Dictionary+RGAppTools.swift in Sources */,
