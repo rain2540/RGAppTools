@@ -237,7 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				B7FB81C723D682F80082E362 /* Basic */,
-				B7FB81D623D682F80082E362 /* Core Location */,
+				B7FB81D623D682F80082E362 /* CoreLocation */,
 				B7FB81C523D682F80082E362 /* Dispatch */,
 				B7FB81CE23D682F80082E362 /* Foundation */,
 				B7FB81BA23D682F80082E362 /* UIKit */,
@@ -306,12 +306,12 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
-		B7FB81D623D682F80082E362 /* Core Location */ = {
+		B7FB81D623D682F80082E362 /* CoreLocation */ = {
 			isa = PBXGroup;
 			children = (
 				B7FB81D723D682F80082E362 /* CLLocation+RGAppTools.swift */,
 			);
-			path = "Core Location";
+			path = CoreLocation;
 			sourceTree = "<group>";
 		};
 		B7FB81D923D682F80082E362 /* Protocols */ = {
