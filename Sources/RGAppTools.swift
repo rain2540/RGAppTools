@@ -43,6 +43,6 @@ extension RGAppToolsCompatible {
 }
 
 
-// MARK: - 
+// MARK: -
 
 extension NSObject: RGAppToolsCompatible { }
