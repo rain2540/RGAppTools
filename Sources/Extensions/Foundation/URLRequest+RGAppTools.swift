@@ -10,4 +10,11 @@ import Foundation
 
 extension URLRequest {
 
+    public init?(rat_urlString string: String) {
+        guard let url = URL(string: string) else {
+            return nil
+        }
+        self.init(url: url)
+    }
+
 }
