@@ -12,10 +12,9 @@ import WebKit
 extension RGAppTools where Base: WKWebView {
 
     public func load(urlString: String) throws {
-        guard let url = URL(string: urlString) else {
+        guard let request = URLRequest(rat_urlString: urlString) else {
             throw RATError.initNil
         }
-        let request = URLRequest(url: url)
         base.load(request)
     }
 
