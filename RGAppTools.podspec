@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   s.default_subspecs = ['Core', 'AppCommons', 'Extensions', 'Protocols', 'RGBuild']
   
   s.requires_arc = true
-  s.frameworks = 'CoreLocation', 'SwiftUI', 'WebKit'
+  s.frameworks = 'CoreLocation', 'WebKit'
   
   s.subspec 'Core' do |sp|
     sp.source_files  = ["Sources/RGAppTools.h", "Sources/RGAppTools.swift", "Sources/RATError.swift"]
