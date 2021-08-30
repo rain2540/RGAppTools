@@ -23,10 +23,10 @@ extension NSDecimalNumberHandler {
     /// 构建Decimal Number Handler
     /// - Parameter numberRoundingMode: 舍入模式，默认为四舍五入
     /// - Parameter scale: 保留小数位数
-    /// - Parameter exact: 精度错误处理
-    /// - Parameter overflow: 上限越界处理
-    /// - Parameter underflow: 下限越界处理
-    /// - Parameter divideByZero: 除以零的处理
+    /// - Parameter exact: 精度错误处理，默认为 `false`
+    /// - Parameter overflow: 上限越界处理，默认为 `false`
+    /// - Parameter underflow: 下限越界处理，默认为 `false`
+    /// - Parameter divideByZero: 除以零的处理，默认为 `false`
     public convenience init(
         numberRoundingMode: NSDecimalNumber.RoundingMode = .plain,
         scale: Int16,
