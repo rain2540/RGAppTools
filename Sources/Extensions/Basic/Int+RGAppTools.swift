@@ -65,11 +65,13 @@ extension IntExtension {
 extension IntExtension {
 
     /// 创建 lower - upper 之间的一个随机数
-    /// - Parameter lower: 范围下限
-    /// - Parameter upper: 范围上限
+    /// - Parameter lower: 范围下限，默认为 0
+    /// - Parameter upper: 范围上限，默认为 UInt32.max
     /// - Returns: 获取到的随机数
-    public static func randomNumber(lower: Int = 0,
-                                    upper: Int = Int(UInt32.max)) -> Int
+    public static func randomNumber(
+        lower: Int = 0,
+        upper: Int = Int(UInt32.max)
+    ) -> Int
     {
         return lower + Int(arc4random_uniform(UInt32(upper - lower)))
     }
@@ -83,14 +85,15 @@ extension IntExtension {
 
     /// 创建 lower - upper 之间的若干个随机数
     /// - Parameters:
-    ///   - lower: 范围下限
-    ///   - upper: 范围上限
-    ///   - size: 随机数个数
+    ///   - lower: 范围下限，默认为 0
+    ///   - upper: 范围上限，默认为 UInt32.max
+    ///   - size: 随机数个数。默认为 10
     /// - Returns: 获取到的随机数数组
     public static func randomNumbers(
         lower: Int = 0,
         upper: Int = Int(UInt32.max),
-        size: Int = 10) -> [Int]
+        size: Int = 10
+    ) -> [Int]
     {
         var res: [Int] = []
         for _ in 0 ..< size {
@@ -102,10 +105,12 @@ extension IntExtension {
     /// 创建 range 范围内的若干个随机数
     /// - Parameters:
     ///   - range: 产生随机数的范围
-    ///   - size: 随机数个数
+    ///   - size: 随机数个数，默认为 10
     /// - Returns: 获取到的随机数数组
-    public static func randomNumbers(range: Range<Int>,
-                                     size: Int = 10) -> [Int]
+    public static func randomNumbers(
+        range: Range<Int>,
+        size: Int = 10
+    ) -> [Int]
     {
         var res: [Int] = []
         for _ in 0 ..< size {
