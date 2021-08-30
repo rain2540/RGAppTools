@@ -85,11 +85,13 @@ extension DateExtension {
 
     /// 依据给定的时间格式、时区，获取某个时间对应的字符串
     /// - Parameters:
-    ///   - format: 时间格式
-    ///   - timeZone: 时区
+    ///   - format: 时间格式，默认为 `yyyy-MM-dd`
+    ///   - timeZone: 时区，默认为东 8 时区（北京时间）
     /// - Returns: 获取的时间字符串
-    public func dateString(format: String = "yyyy-MM-dd",
-                           timeZone: TimeZone? = TimeZone.rat.chinaMainLand) -> String
+    public func dateString(
+        format: String = "yyyy-MM-dd",
+        timeZone: TimeZone? = TimeZone.rat.chinaMainLand
+    ) -> String
     {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
@@ -163,5 +165,5 @@ extension DateExtension {
         let cal = Calendar.current
         return cal.component(unit, from: date)
     }
-    
+
 }
