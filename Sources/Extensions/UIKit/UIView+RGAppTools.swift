@@ -26,7 +26,7 @@ extension RGAppTools where Base: UIView {
     ///   - length: 长度
     ///   - width: 宽度
     ///   - color: 颜色
-    ///   - direction: 方向
+    ///   - direction: 方向。默认为 `.horizontal`
     /// - Returns: 按参数条件添加的线
     @discardableResult
     public func drawLine(
@@ -87,12 +87,12 @@ extension RGAppTools where Base: UIView {
     public var midY: CGFloat { return base.frame.midY }
     /// 视图纵坐标最大值
     public var maxY: CGFloat { return base.frame.maxY }
-    
+
     /// 视图默认间距
     public static var defaultInterval: CGFloat {
         return 8.0
     }
-    
+
     /// Top Layout 的高度
     public static var topLayoutHeight: CGFloat {
         return UIApplication.rat.statusBarHeight + UINavigationBar.rat.defaultHeight
@@ -101,7 +101,7 @@ extension RGAppTools where Base: UIView {
     public static var topLayoutDefaultHeight: CGFloat {
         return UIApplication.rat.statusBarDefaultHeight + UINavigationBar.rat.defaultHeight
     }
-    
+
     public static var homeIndicatorAreaHeight: CGFloat {
         return 34.0
     }
@@ -112,13 +112,13 @@ extension RGAppTools where Base: UIView {
 // MARK: -
 
 public class UIViewFrameExtension {
-    
+
     private var view: UIView
-    
+
     fileprivate init(_ view: UIView) {
         self.view = view
     }
-    
+
     /// 视图左上角横坐标值
     public var x: CGFloat {
         get {
