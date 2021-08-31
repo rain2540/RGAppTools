@@ -57,5 +57,5 @@ extension DoubleExtension {
     public func format(_ fmt: String) -> String {
         return String(format: "%\(fmt)f", double)
     }
-    
+
 }
