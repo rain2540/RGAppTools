@@ -22,6 +22,7 @@ public func methodLog<T>(
     line: Int = #line)
 {
     #if DEBUG
-    print("\((file as NSString).lastPathComponent)[\(line)], \(method): \(message)")
+    print("\((file as NSString).lastPathComponent)[\(line)], \(method): \n")
+    print(message)
     #endif
 }
