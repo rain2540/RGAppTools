@@ -13,7 +13,7 @@ extension Int {
     public var rat: IntExtension {
         return IntExtension(int: self)
     }
-    
+
     public static var rat: IntExtension.Type {
         return IntExtension.self
     }
@@ -101,7 +101,7 @@ extension IntExtension {
         }
         return res
     }
-    
+
     /// 创建 range 范围内的若干个随机数
     /// - Parameters:
     ///   - range: 产生随机数的范围
