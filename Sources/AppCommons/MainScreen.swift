@@ -17,10 +17,12 @@ public struct MainScreen {
 
     /// scale of main screen
     public static var scale: CGFloat { return self.mainScreen.scale }
+
     /// width of main screen
     public static var width: CGFloat { return self.size.width }
     /// height of main screen
     public static var height: CGFloat { return self.size.height }
+
     /// size of main screen
     public static var size: CGSize { return self.bounds.size }
     /// bounds of main screen
@@ -28,6 +30,7 @@ public struct MainScreen {
 
 
     // MARK: - Private
+
     private static let mainScreen = UIScreen.main
 
 }
