@@ -5,11 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "RGAppTools",
+    platforms: [.iOS(.v11)],
     products: [
         // Products define the executables and libraries produced by a package, and make them visible to other packages.
-        .library(
-            name: "RGAppTools",
-            targets: ["RGAppTools"]),
+        .library(name: "RGAppTools", targets: ["RGAppTools"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,10 +20,13 @@ let package = Package(
         .target(
             name: "RGAppTools",
             dependencies: [],
-            path: "Sources"),
-        .testTarget(
-            name: "RGAppToolsTests",
-            dependencies: ["RGAppTools"]),
+            path: "Sources",
+            linkerSettings: [
+                .linkedFramework("CoreLocation", .when(platforms: [.iOS])),
+                .linkedFramework("WebKit", .when(platforms: [.iOS])),
+            ]
+        ),
+        .testTarget(name: "RGAppToolsTests", dependencies: ["RGAppTools"]),
     ],
     swiftLanguageVersions: [.v5]
 )
