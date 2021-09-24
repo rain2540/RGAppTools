@@ -76,6 +76,19 @@ public extension DateExtension {
         return Date(timeIntervalSinceNow: -24 * 60 * 60)
     }
 
+    var oneYearLater: Date {
+        let isLeapYear = Date.rat.isLeapYear(for: year)
+        let nextYearLeap = Date.rat.isLeapYear(for: year + 1)
+
+        // 闰区间：如果下一年是闰年，那么今年 3 月 1 日到下一年 2 月 29 日之间的日子，就是闰区间
+        let isLeapRange = (nextYearLeap && month >= 3) || (isLeapYear && month < 3)
+        let startTimestamp = timestamp
+        // 开始日期在闰区间内，加 (366 - 1) 天，否则加 (365 - 1)天
+        let oneYearLaterTimestamp = startTimestamp + (isLeapRange ? (366 - 1) : (365 - 1)) * 60 * 60 * 24
+        let oneYearLater = Date(timeIntervalSince1970: oneYearLaterTimestamp)
+        return oneYearLater
+    }
+
 }
 
 
@@ -91,8 +104,7 @@ extension DateExtension {
     public func dateString(
         format: String = "yyyy-MM-dd",
         timeZone: TimeZone? = TimeZone.rat.chinaMainLand
-    ) -> String
-    {
+    ) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         dateFormatter.timeZone = timeZone
