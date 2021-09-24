@@ -76,6 +76,7 @@ public extension DateExtension {
         return Date(timeIntervalSinceNow: -24 * 60 * 60)
     }
 
+    /// 当前时间的一年之后
     var oneYearLater: Date {
         let isLeapYear = Date.rat.isLeapYear(for: year)
         let nextYearLeap = Date.rat.isLeapYear(for: year + 1)
