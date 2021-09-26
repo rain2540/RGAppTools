@@ -26,7 +26,7 @@ extension RGAppTools where Base: UIDevice {
         }
         
         if #available(iOS 11.0, *) {
-            if let bottom = UIApplication.shared.delegate?.window??.safeAreaInsets.bottom {
+            if let bottom = UIApplication.shared.keyWindow?.safeAreaInsets.bottom {
                 if bottom > CGFloat(0.0) {
                     iPhoneXSeries = true
                 }
