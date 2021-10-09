@@ -134,6 +134,9 @@ extension DateExtension {
         return res
     }
 
+    /// 判断 已知时间 与 比对时间 是否为同一天
+    /// - Parameter time: 比对时间
+    /// - Returns: 比对结果
     public func isSameDay(compareWith time: Date) -> Bool {
         let year01 = date.rat.year, month01 = date.rat.month, day01 = date.rat.day
         let year02 = time.rat.year, month02 = time.rat.month, day02 = time.rat.day
