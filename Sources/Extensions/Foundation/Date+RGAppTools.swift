@@ -136,13 +136,18 @@ extension DateExtension {
 
     /// 判断 已知时间 与 比对时间 是否为同一天
     /// - Parameter time: 比对时间
-    /// - Returns: 比对结果
+    /// - Returns: 比较结果
     public func isSameDay(compareWith time: Date) -> Bool {
         let year01 = date.rat.year, month01 = date.rat.month, day01 = date.rat.day
         let year02 = time.rat.year, month02 = time.rat.month, day02 = time.rat.day
         return (year01 == year02) && (month01 == month02) && (day01 == day02)
     }
 
+    /// 判断两个时间是否为同一天
+    /// - Parameters:
+    ///   - date01: 需要比较的第 1  个时间
+    ///   - date02: 需要比较的第 2  个时间
+    /// - Returns: 比较结果
     public static func isSameDay(date01: Date, date02: Date) -> Bool {
         let year01 = date01.rat.year, month01 = date01.rat.month, day01 = date01.rat.day
         let year02 = date02.rat.year, month02 = date02.rat.month, day02 = date02.rat.day

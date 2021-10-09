@@ -253,8 +253,8 @@ extension StringExtension {
     public static func clearNil(
         and otherStrings: String...,
         trimmingCharacters set: CharacterSet = [],
-        for item: Any?) -> String
-    {
+        for item: Any?
+    ) -> String {
         guard let item = item else { return "" }
 
         if item is NSNull {
@@ -278,8 +278,8 @@ extension StringExtension {
     public static func clearNil(
         and otherStrings: [String] = [],
         trimmingCharacters set: CharacterSet = [],
-        for item: Any?) -> String
-    {
+        for item: Any?
+    ) -> String {
         guard let item = item else { return "" }
 
         if item is NSNull {
@@ -310,8 +310,8 @@ extension StringExtension {
     public static func isBlank(
         by checkStrings: [String] = [],
         trimmingCharacters set: CharacterSet = [],
-        for item: Any?) -> Bool
-    {
+        for item: Any?
+    ) -> Bool {
         let string = clearNil(and: checkStrings, for: item)
         return string.trimmingCharacters(in: set).isEmpty
     }
@@ -422,9 +422,10 @@ extension StringExtension {
     ///   - format: 时间格式
     ///   - timeZone: 时区
     /// - Returns: 转化得到的 Date 对象
-    public func date(format: String = "yyyy-MM-dd",
-                     timeZone: TimeZone? = TimeZone.rat.chinaMainLand) -> Date?
-    {
+    public func date(
+        format: String = "yyyy-MM-dd",
+        timeZone: TimeZone? = TimeZone.rat.chinaMainLand
+    ) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
         dateFormatter.timeZone = timeZone
@@ -462,8 +463,7 @@ extension StringExtension {
         keyword: String?,
         color: UIColor = UIColor.black,
         font: UIFont = UIFont.systemFont(ofSize: 17.0)
-    ) -> NSMutableAttributedString
-    {
+    ) -> NSMutableAttributedString {
         let attrs = [
             NSAttributedString.Key.foregroundColor: color,
             NSAttributedString.Key.font: font,
@@ -480,8 +480,7 @@ extension StringExtension {
     public func attributedString(
         keyword: String?,
         attributes attrs: [NSAttributedString.Key : Any] = [:]
-    ) -> NSMutableAttributedString
-    {
+    ) -> NSMutableAttributedString {
         let attributedString = NSMutableAttributedString(string: string)
         guard let keyword = keyword else { return attributedString }
         let keywordRange = (string as NSString).range(of: keyword)
