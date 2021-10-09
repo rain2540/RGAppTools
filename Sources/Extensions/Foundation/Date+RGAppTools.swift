@@ -143,6 +143,12 @@ extension DateExtension {
         return (year01 == year02) && (month01 == month02) && (day01 == day02)
     }
 
+    public static func isSameDay(date01: Date, date02: Date) -> Bool {
+        let year01 = date01.rat.year, month01 = date01.rat.month, day01 = date01.rat.day
+        let year02 = date02.rat.year, month02 = date02.rat.month, day02 = date02.rat.day
+        return (year01 == year02) && (month01 == month02) && (day01 == day02)
+    }
+
 }
 
 
