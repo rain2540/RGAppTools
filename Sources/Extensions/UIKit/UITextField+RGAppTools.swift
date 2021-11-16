@@ -21,11 +21,12 @@ extension RGAppTools where Base: UITextField {
     ///   - frame: 图片的 frame
     ///   - contentMode: 图片的 content mode
     ///   - showMode: 图片的显示模式
-    public func addLeftImage(named name: String,
-                             frame: CGRect = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0),
-                             contentMode: UIView.ContentMode = .center,
-                             showMode: UITextField.ViewMode = .always)
-    {
+    public func addLeftImage(
+        named name: String,
+        frame: CGRect = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0),
+        contentMode: UIView.ContentMode = .center,
+        showMode: UITextField.ViewMode = .always
+    ) {
         let imageView = createImageView(imageNamed: name,
                                         frame: frame,
                                         contentMode: contentMode)
@@ -39,11 +40,12 @@ extension RGAppTools where Base: UITextField {
     ///   - frame: 图片的 frame
     ///   - contentMode: 图片的 content mode
     ///   - showMode: 图片的显示模式
-    public func addRightImage(named name: String,
-                              frame: CGRect = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0),
-                              contentMode: UIView.ContentMode = .center,
-                              showMode: UITextField.ViewMode = .always)
-    {
+    public func addRightImage(
+        named name: String,
+        frame: CGRect = CGRect(x: 0.0, y: 0.0, width: 20.0, height: 20.0),
+        contentMode: UIView.ContentMode = .center,
+        showMode: UITextField.ViewMode = .always
+    ) {
         let imageView = createImageView(imageNamed: name,
                                         frame: frame,
                                         contentMode: contentMode)
@@ -54,10 +56,11 @@ extension RGAppTools where Base: UITextField {
 
     // MARK: - Private
 
-    private func createImageView(imageNamed name: String,
-                                 frame: CGRect,
-                                 contentMode: UIView.ContentMode) -> UIImageView
-    {
+    private func createImageView(
+        imageNamed name: String,
+        frame: CGRect,
+        contentMode: UIView.ContentMode
+    ) -> UIImageView {
         let imageView = UIImageView()
         imageView.image = UIImage(named: name)
         imageView.frame = frame
