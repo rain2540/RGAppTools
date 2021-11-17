@@ -17,8 +17,8 @@ extension RGAppTools where Base: UITabBarController {
         selectedImageName: String,
         selectedTitleColor: UIColor,
         normalImageName: String,
-        normalTitleColor: UIColor) -> UITabBarItem
-    {
+        normalTitleColor: UIColor
+    ) -> UITabBarItem {
         let titleFont = UIFont(name: titleFontName, size: titleSize) ?? UIFont.systemFont(ofSize: titleSize)
         // 未选中字体颜色
         let normalAttributes = [
