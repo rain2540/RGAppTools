@@ -41,7 +41,10 @@ extension RGAppTools where Base: UIScrollView {
     ///   - cellClass: Cell 类
     ///   - indexPath: Cell 的索引
     /// - Returns: 分配的 Cell
-    public func dequeueReusableCell(with cellClass: AnyClass, indexPath: IndexPath? = nil) -> Any? {
+    public func dequeueReusableCell(
+        with cellClass: AnyClass,
+        indexPath: IndexPath? = nil
+    ) -> Any? {
         if let nibName = string(from: cellClass)  {
             if let tableView = base as? UITableView {
                 guard let `indexPath` = indexPath else {
