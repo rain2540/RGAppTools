@@ -390,6 +390,7 @@ extension StringExtension {
     }
 
     /// 将字符串转换为 JSON 对象
+    /// - Parameter options: 用于读取 JSON 数据和创建 Foundation 对象的选项
     /// - Returns: 转换得到的 JSON 对象
     public func toObject(options: JSONSerialization.ReadingOptions = .fragmentsAllowed) -> Any? {
         let str = string.replacingOccurrences(of: "\0", with: "")
