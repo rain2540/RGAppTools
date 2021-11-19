@@ -391,28 +391,14 @@ extension StringExtension {
 
     /// 将字符串转换为 JSON 对象
     /// - Returns: 转换得到的 JSON 对象
-    public func toObject() -> Any? {
+    public func toObject(options: JSONSerialization.ReadingOptions = .fragmentsAllowed) -> Any? {
         let str = string.replacingOccurrences(of: "\0", with: "")
         guard let data = str.data(using: String.Encoding.utf8) else {
             print("RGAppTools String to object Error:\n", "Fail to get data")
             return nil
         }
         do {
-            var readingOptions: JSONSerialization.ReadingOptions = [
-                .mutableContainers,
-                .mutableLeaves,
-                .fragmentsAllowed,
-            ]
-            if #available(iOS 15.0, *) {
-                readingOptions = [
-                    .mutableContainers,
-                    .mutableLeaves,
-                    .fragmentsAllowed,
-                    .json5Allowed,
-                    .topLevelDictionaryAssumed,
-                ]
-            }
-            return try JSONSerialization.jsonObject(with: data, options: readingOptions)
+            return try JSONSerialization.jsonObject(with: data, options: options)
         } catch let error as NSError {
             print("RGAppTools String to object Error:\n", error)
             return nil
