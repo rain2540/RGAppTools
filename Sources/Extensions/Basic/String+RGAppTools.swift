@@ -398,7 +398,21 @@ extension StringExtension {
             return nil
         }
         do {
-            return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+            var readingOptions: JSONSerialization.ReadingOptions = [
+                .mutableContainers,
+                .mutableLeaves,
+                .fragmentsAllowed,
+            ]
+            if #available(iOS 15.0, *) {
+                readingOptions = [
+                    .mutableContainers,
+                    .mutableLeaves,
+                    .fragmentsAllowed,
+                    .json5Allowed,
+                    .topLevelDictionaryAssumed,
+                ]
+            }
+            return try JSONSerialization.jsonObject(with: data, options: readingOptions)
         } catch let error as NSError {
             print("RGAppTools String to object Error:\n", error)
             return nil
