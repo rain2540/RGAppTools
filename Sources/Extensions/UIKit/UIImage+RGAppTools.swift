@@ -49,11 +49,12 @@ extension RGAppTools where Base: UIImage {
     ///   - borderColor: 边线颜色(默认`lightGray`)
     ///   - borderWidth: 边线宽度(默认`1.0`)
     /// - Returns: 新创建的矩形图像
-    public func createRectImage(size: CGSize?,
-                                backColor: UIColor = .white,
-                                borderColor: UIColor = .lightGray,
-                                borderWidth: CGFloat = 1.0) -> UIImage?
-    {
+    public func createRectImage(
+        size: CGSize?,
+        backColor: UIColor = .white,
+        borderColor: UIColor = .lightGray,
+        borderWidth: CGFloat = 1.0
+    ) -> UIImage? {
         var size = size
         if size == nil {
             size = base.size
@@ -105,11 +106,12 @@ extension RGAppTools where Base: UIImage {
     ///   - borderColor: 边线颜色(默认`lightGray`)
     ///   - borderWidth: 边线宽度(默认`1.0`)
     /// - Returns: 新创建的圆角图像
-    public func createCircleImage(size: CGSize?,
-                                  backColor: UIColor = .white,
-                                  borderColor: UIColor = .lightGray,
-                                  borderWidth: CGFloat = 1.0) -> UIImage?
-    {
+    public func createCircleImage(
+        size: CGSize?,
+        backColor: UIColor = .white,
+        borderColor: UIColor = .lightGray,
+        borderWidth: CGFloat = 1.0
+    ) -> UIImage? {
         var size = size
         if size == nil {
             size = base.size
@@ -165,12 +167,13 @@ extension RGAppTools where Base: UIImage {
     ///   - borderColor: 边线颜色(默认`lightGray`)
     ///   - borderWidth: 边线宽度(默认`1.0`)
     /// - Returns: 新创建的圆角矩形图像
-    public func createRoundRectImage(size: CGSize?,
-                                     cornerRadius: CGFloat,
-                                     backColor: UIColor = .white,
-                                     borderColor: UIColor = .lightGray,
-                                     borderWidth: CGFloat = 1.0) -> UIImage?
-    {
+    public func createRoundRectImage(
+        size: CGSize?,
+        cornerRadius: CGFloat,
+        backColor: UIColor = .white,
+        borderColor: UIColor = .lightGray,
+        borderWidth: CGFloat = 1.0
+    ) -> UIImage? {
         var size = size
         if size == nil {
             size = base.size
