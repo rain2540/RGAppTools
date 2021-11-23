@@ -17,7 +17,12 @@ extension RGAppTools where Base: UIColor {
     ///   - blue: 蓝色分量的值 (0 ~ 255)
     ///   - alpha: 不透明度的值 (0 ~ 1)
     /// - Returns: 颜色对象
-    public static func color(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1.0) -> UIColor {
+    public static func color(
+        red: CGFloat,
+        green: CGFloat,
+        blue: CGFloat,
+        alpha: CGFloat = 1.0
+    ) -> UIColor {
         return UIColor(red: red / 255.0, green: green / 255.0, blue: blue / 255.0, alpha: alpha)
     }
 
