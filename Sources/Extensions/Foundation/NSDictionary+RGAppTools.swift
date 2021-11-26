@@ -28,7 +28,10 @@ extension NSDictionary {
     /// - Parameters:
     ///   - name: 文件名
     ///   - ext: 文件扩展名
-    public convenience init?(mainBundlePathForResource name: String?, ofType ext: String?) {
+    public convenience init?(
+        mainBundlePathForResource name: String?,
+        ofType ext: String?
+    ) {
         guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
             print("RGApptools: NSDictionary init with main bundle path for resource of type is nil")
             return nil
