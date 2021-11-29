@@ -33,8 +33,8 @@ extension NSDecimalNumberHandler {
         raiseOnExactness exact: Bool = false,
         raiseOnOverflow overflow: Bool = false,
         raiseOnUnderflow underflow: Bool = false,
-        raiseOnDivideByZero divideByZero: Bool = false)
-    {
+        raiseOnDivideByZero divideByZero: Bool = false
+    ) {
         self.init(
             roundingMode: numberRoundingMode,
             scale: scale,
