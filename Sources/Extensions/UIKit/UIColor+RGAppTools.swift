@@ -85,6 +85,11 @@ extension RGAppTools where Base: UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 
+    /// 与用户界面风格（userInterfaceStyle）相适应的颜色
+    /// - Parameters:
+    ///   - dark: 深色模式配置的颜色
+    ///   - light: 浅色模式配置的颜色
+    /// - Returns: 适配用户界面风格后得到的颜色
     public static func adaptive(dark: UIColor, light: UIColor) -> UIColor {
         if #available(iOS 13.0, *) {
             // @available(iOS 13.0, *)
