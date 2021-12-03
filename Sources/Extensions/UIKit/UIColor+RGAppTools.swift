@@ -85,4 +85,14 @@ extension RGAppTools where Base: UIColor {
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
 
+    public static func adaptive(dark: UIColor, light: UIColor) -> UIColor {
+        if #available(iOS 13.0, *) {
+            // @available(iOS 13.0, *)
+            // public init(dynamicProvider: @escaping (UITraitCollection) -> UIColor)
+            return UIColor { $0.userInterfaceStyle == .dark ? dark : light }
+        } else {
+            return light
+        }
+    }
+
 }
