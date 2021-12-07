@@ -66,6 +66,7 @@ extension DateExtension {
 
 public extension DateExtension {
 
+    /// 当前时间在当前时区的值
     static var ofCurrentTimeZone: Date {
         let date = Date()
         let zone = TimeZone.current
