@@ -420,12 +420,12 @@ extension StringExtension {
 
     /// 依据给定的时间格式、时区，将字符串转化为对应的时间
     /// - Parameters:
-    ///   - format: 时间格式
-    ///   - timeZone: 时区
+    ///   - format: 时间格式，默认为 `yyyy-MM-dd`
+    ///   - timeZone: 时区，默认为系统当前使用的时区
     /// - Returns: 转化得到的 Date 对象
     public func date(
         format: String = "yyyy-MM-dd",
-        timeZone: TimeZone? = TimeZone.rat.chinaMainLand
+        timeZone: TimeZone? = TimeZone.current
     ) -> Date? {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = format
