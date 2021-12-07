@@ -66,6 +66,13 @@ extension DateExtension {
 
 public extension DateExtension {
 
+    static var ofCurrentTimeZone: Date {
+        let date = Date()
+        let zone = TimeZone.current
+        let interval = zone.secondsFromGMT(for: date)
+        return date.addingTimeInterval(TimeInterval(interval))
+    }
+
     /// 某个指定日期的前一天
     var yesterday: Date {
         return Date(timeInterval: -24 * 60 * 60, since: date)
