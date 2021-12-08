@@ -81,6 +81,9 @@ public extension DateExtension {
         return date.addingTimeInterval(TimeInterval(interval))
     }
 
+    /// 某个时间点在某个时区的值
+    /// - Parameter timeZone: 时区，默认为系统当前使用的时区
+    /// - Returns: 获取到的某个时间点在某个时区的值
     func date(timeZone: TimeZone = TimeZone.current) -> Date {
         let interval = timeZone.secondsFromGMT(for: date)
         return date.addingTimeInterval(TimeInterval(interval))
