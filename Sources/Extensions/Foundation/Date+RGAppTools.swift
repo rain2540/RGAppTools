@@ -80,15 +80,6 @@ public extension DateExtension {
         return date.addingTimeInterval(TimeInterval(interval))
     }
 
-    /// 当前时间在当前时区的值
-    @available(*, deprecated, renamed: "inCurrentTimeZone")
-    static var ofCurrentTimeZone: Date {
-        let date = Date()
-        let zone = TimeZone.current
-        let interval = zone.secondsFromGMT(for: date)
-        return date.addingTimeInterval(TimeInterval(interval))
-    }
-
     /// 某个时间点在某个时区的值
     /// - Parameter timeZone: 时区，默认为系统当前使用的时区
     /// - Returns: 获取到的某个时间点在某个时区的值
