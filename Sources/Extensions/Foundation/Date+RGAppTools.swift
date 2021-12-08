@@ -88,6 +88,12 @@ public extension DateExtension {
         return date.addingTimeInterval(TimeInterval(interval))
     }
 
+    static func date(timeZone: TimeZone = TimeZone.current) -> Date {
+        let date = Date()
+        let interval = timeZone.secondsFromGMT(for: date)
+        return date.addingTimeInterval(TimeInterval(interval))
+    }
+
     /// 某个指定日期的前一天
     var yesterday: Date {
         return Date(timeInterval: -24 * 60 * 60, since: date)
