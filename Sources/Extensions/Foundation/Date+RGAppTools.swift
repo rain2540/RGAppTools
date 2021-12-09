@@ -74,10 +74,8 @@ public extension DateExtension {
 
     /// 当前时间在当前时区的值
     static var inCurrentTimeZone: Date {
-        let date = Date()
-        let zone = TimeZone.current
-        let interval = zone.secondsFromGMT(for: date)
-        return date.addingTimeInterval(TimeInterval(interval))
+        let dateInCurrentTimeZone = Date.rat.date()
+        return dateInCurrentTimeZone
     }
 
     /// 某个时间点在某个时区的值
