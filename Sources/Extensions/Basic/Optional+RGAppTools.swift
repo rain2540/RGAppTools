@@ -11,11 +11,11 @@ import UIKit
 infix operator ???: NilCoalescingPrecedence
 public func ???<T>(optional: T?, defaultValue: @autoclosure () -> String) -> String {
     switch optional {
-    case let value?:
-        return String(describing: value)
+        case let value?:
+            return String(describing: value)
 
-    case nil:
-        return defaultValue()
+        case nil:
+            return defaultValue()
     }
 }
 
@@ -40,11 +40,11 @@ extension Optional {
     /// 判断可选值是否为空
     public var rat_isNone: Bool {
         switch self {
-        case .none:
-            return true
+            case .none:
+                return true
 
-        case .some:
-            return false
+            case .some:
+                return false
         }
     }
 
@@ -139,7 +139,7 @@ extension Optional {
         guard self != nil else { return nil }
         return optional
     }
-    
+
     /// 解包可选值，当可选值不为空时，执行 `then` 闭包，并返回执行结果
     /// 可以将多个可选项连接在一起
     /// - Parameter then: 可选值不为空时，执行的操作
@@ -149,7 +149,6 @@ extension Optional {
     }
 
     /// 将当前可选值与其他可选值组合在一起。当且仅当两个可选值都不为空时组合成功，否则返回空。
-    ///
     /// - Parameter other: 其他可选值
     public func rat_zip2<T>(with other: Optional<T>) -> (Wrapped, T)? {
         guard let first = self, let second = other else { return nil }
@@ -157,14 +156,13 @@ extension Optional {
     }
 
     /// 将当前可选值与其他可选值组合在一起。当且仅当三个可选值都不为空时组合成功，否则返回空。
-    ///
     /// - Parameters:
     ///   - other: 第二个可选值
     ///   - another: 第三个可选值
     public func rat_zip3<A, B>(with other: Optional<A>, another: Optional<B>) -> (Wrapped, A, B)? {
         guard let first = self,
-            let second = other,
-            let third = another else { return nil }
+              let second = other,
+              let third = another else { return nil }
         return (first, second, third)
     }
 
@@ -174,12 +172,11 @@ extension Optional {
 extension Optional {
 
     /// 当可选值不为空时，执行 `some` 闭包
-    ///
     /// - Parameter some: 可选值不为空时，执行的操作
     public func rat_on(some: () throws -> Void) rethrows {
         if self != nil { try some() }
     }
-    
+
     /// 当可选值为空时，执行 `none` 闭包
     /// - Parameter none: 可选值为空时，执行的操作
     public func rat_on(none: () throws -> Void) rethrows {
@@ -196,11 +193,10 @@ extension Optional {
     /// 可选值不为空且可选值满足 `predicate` 条件才返回，否则返回 `nil`
     /// - Parameter predicate: 判断条件
     public func rat_filter(_ predicate: (Wrapped) -> Bool) -> Wrapped? {
-        guard let unwrapped = self,
-            predicate(unwrapped) else { return nil }
+        guard let unwrapped = self, predicate(unwrapped) else { return nil }
         return self
     }
-    
+
     /// 可选值不为空时返回，否则 crash可选值为空
     /// - Parameter message: 可选值为空时的 crash 信息
     public func rat_expect(_ message: String) -> Wrapped {
