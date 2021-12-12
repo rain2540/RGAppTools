@@ -318,6 +318,22 @@ extension RGAppTools where Base: UIDevice {
                 print(DeviceType.iPhone_12_Pro_Max.rawValue)
                 return .iPhone_12_Pro_Max
 
+            case "iPhone14,2":
+                print(DeviceType.iPhone_13_Pro.rawValue)
+                return .iPhone_13_Pro
+
+            case "iPhone14,3":
+                print(DeviceType.iPhone_13_Pro_Max.rawValue)
+                return .iPhone_13_Pro_Max
+
+            case "iPhone14,4":
+                print(DeviceType.iPhone_13_mini.rawValue)
+                return .iPhone_13_mini
+
+            case "iPhone14,5":
+                print(DeviceType.iPhone_13.rawValue)
+                return .iPhone_13
+
             default:
                 print(deviceIdentifier)
                 return .unknownPhone
