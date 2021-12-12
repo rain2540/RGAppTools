@@ -71,8 +71,7 @@ extension IntExtension {
     public static func randomNumber(
         lower: Int = 0,
         upper: Int = Int(UInt32.max)
-    ) -> Int
-    {
+    ) -> Int {
         return lower + Int(arc4random_uniform(UInt32(upper - lower)))
     }
 
@@ -93,8 +92,7 @@ extension IntExtension {
         lower: Int = 0,
         upper: Int = Int(UInt32.max),
         size: Int = 10
-    ) -> [Int]
-    {
+    ) -> [Int] {
         var res: [Int] = []
         for _ in 0 ..< size {
             res.append(randomNumber(lower: lower, upper: upper))
@@ -110,8 +108,7 @@ extension IntExtension {
     public static func randomNumbers(
         range: Range<Int>,
         size: Int = 10
-    ) -> [Int]
-    {
+    ) -> [Int] {
         var res: [Int] = []
         for _ in 0 ..< size {
             res.append(randomNumber(range: range))
