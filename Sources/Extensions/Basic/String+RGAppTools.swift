@@ -434,6 +434,13 @@ extension StringExtension {
         return base64String
     }
 
+    /// Base64 String 对应的 String
+    public var base64DecodedString: String? {
+        guard let data = base64Data else { return nil }
+        let decodedString = String(data: data, encoding: .utf8)
+        return decodedString
+    }
+
     /// 依据给定的时间格式、时区，将字符串转化为对应的时间
     /// - Parameters:
     ///   - format: 时间格式，默认为 `yyyy-MM-dd`
