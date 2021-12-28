@@ -415,7 +415,14 @@ extension StringExtension {
 
     /// String 对应的 Base64 Data
     public var base64Data: Data? {
-        return Data(base64Encoded: string)
+        let data = Data(base64Encoded: string)
+        return data
+    }
+
+    public var base64EncodedString: String? {
+        let data = string.data(using: .utf8)
+        let base64String = data?.base64EncodedString()
+        return base64String
     }
 
     /// 依据给定的时间格式、时区，将字符串转化为对应的时间
