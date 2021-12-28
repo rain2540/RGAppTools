@@ -415,7 +415,15 @@ extension StringExtension {
 
     /// String 对应的 Base64 Data
     public var base64Data: Data? {
-        let data = Data(base64Encoded: string)
+        let data = base64Data()
+        return data
+    }
+
+    /// String 对应的 Base64 Data
+    /// - Parameter options: The options to use for the decoding. Default value is [].
+    /// - Returns: String 对应的 Base64 Data
+    public func base64Data(options: Data.Base64DecodingOptions = []) -> Data? {
+        let data = Data(base64Encoded: string, options: options)
         return data
     }
 
