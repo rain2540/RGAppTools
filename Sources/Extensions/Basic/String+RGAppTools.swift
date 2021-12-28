@@ -421,8 +421,16 @@ extension StringExtension {
 
     /// String 对应的 Base64 String
     public var base64EncodedString: String? {
+        let base64String = base64EncodedString()
+        return base64String
+    }
+
+    /// String 对应的 Base64 String
+    /// - Parameter options: The options to use for the encoding. Default value is [].
+    /// - Returns: String 对应的 Base64 String
+    public func base64EncodedString(options: Data.Base64EncodingOptions = []) -> String? {
         let data = string.data(using: .utf8)
-        let base64String = data?.base64EncodedString()
+        let base64String = data?.base64EncodedString(options: options)
         return base64String
     }
 
