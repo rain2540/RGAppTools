@@ -419,6 +419,7 @@ extension StringExtension {
         return data
     }
 
+    /// String 对应的 Base64 String
     public var base64EncodedString: String? {
         let data = string.data(using: .utf8)
         let base64String = data?.base64EncodedString()
