@@ -50,7 +50,12 @@ extension RGAppTools where Base: UIViewController {
         return topVC
     }
 
-    func pop(to targetVC: UIViewController.Type, animated: Bool = true) -> Bool {
+    /// 返回到指定页面
+    /// - Parameters:
+    ///   - targetVC: 指定的页面
+    ///   - animated: 是否开启动画
+    /// - Returns: 能否返回
+    public func pop(to targetVC: UIViewController.Type, animated: Bool = true) -> Bool {
         var isSuccess = false
         if let navigationController = base.navigationController {
             for controller in navigationController.viewControllers where controller.isKind(of: targetVC) {
