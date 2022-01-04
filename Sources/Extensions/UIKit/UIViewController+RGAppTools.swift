@@ -50,4 +50,16 @@ extension RGAppTools where Base: UIViewController {
         return topVC
     }
 
+    func pop(to targetVC: UIViewController.Type, animated: Bool = true) -> Bool {
+        var isSuccess = false
+        if let navigationController = base.navigationController {
+            for controller in navigationController.viewControllers where controller.isKind(of: targetVC) {
+                navigationController.popToViewController(controller, animated: animated)
+                isSuccess = true
+                break
+            }
+        }
+        return isSuccess
+    }
+
 }
