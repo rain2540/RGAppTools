@@ -67,6 +67,10 @@ extension RGAppTools where Base: UIViewController {
         return isSuccess
     }
 
+    /// 返回到上一个页面 或 根视图
+    /// - Parameters:
+    ///   - isPopToRoot: 是否返回根视图
+    ///   - animated: 是否开启动画
     public func popViewController(isPopToRoot: Bool = false, animated: Bool = true) {
         if isPopToRoot {
             base.navigationController?.popToRootViewController(animated: animated)
