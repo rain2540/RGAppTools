@@ -67,4 +67,12 @@ extension RGAppTools where Base: UIViewController {
         return isSuccess
     }
 
+    public func popViewController(isPopToRoot: Bool = false, animated: Bool = true) {
+        if isPopToRoot {
+            base.navigationController?.popToRootViewController(animated: animated)
+        } else {
+            base.navigationController?.popViewController(animated: animated)
+        }
+    }
+
 }
