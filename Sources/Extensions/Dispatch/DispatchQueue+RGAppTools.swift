@@ -21,6 +21,8 @@ extension RGAppTools where Base: DispatchQueue {
         base.asyncAfter(deadline: .now() + delay, execute: execute)
     }
 
+    /// 切换到主队列异步执行 (如果已在主线程，则直接执行)
+    /// - Parameter execute: 在主队列异步执行的代码块
     public static func mainAsync(execute: @escaping () -> Void) {
         if Thread.current.isMainThread {
             execute()
