@@ -16,9 +16,9 @@ extension RGAppTools where Base: DispatchQueue {
     ///   - closure: 延迟执行的代码块
     public func after(
         _ delay: TimeInterval,
-        execute closure: @escaping () -> Void
+        execute: @escaping () -> Void
     ) {
-        base.asyncAfter(deadline: .now() + delay, execute: closure)
+        base.asyncAfter(deadline: .now() + delay, execute: execute)
     }
 
     public static func mainAsync(execute: @escaping () -> Void) {
