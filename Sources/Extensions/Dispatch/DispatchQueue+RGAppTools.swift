@@ -10,27 +10,6 @@ import Foundation
 
 extension RGAppTools where Base: DispatchQueue {
 
-    /// 代码延迟执行
-    /// - Parameters:
-    ///   - delay: 延迟时间 (单位: 秒)
-    ///   - closure: 延迟执行的代码块
-    public func after(
-        _ delay: TimeInterval,
-        execute: @escaping () -> Void
-    ) {
-        base.asyncAfter(deadline: .now() + delay, execute: execute)
-    }
-
-    /// 切换到主队列异步执行 (如果已在主线程，则直接执行)
-    /// - Parameter execute: 在主队列异步执行的代码块
-    public static func mainAsync(execute: @escaping () -> Void) {
-        if Thread.current.isMainThread {
-            execute()
-        } else {
-            Base.main.async { execute() }
-        }
-    }
-
     /// 只执行一次与唯一 Token 相关的代码块。代码是线程安全的, 即使在存在多线程调用的情况下, 也只会执行一次代码。
     /// - Parameters:
     ///   - token: 唯一 token 的名称, 采用反向 DNS 风格, 如: com.apple
@@ -50,8 +29,34 @@ extension RGAppTools where Base: DispatchQueue {
         task()
     }
 
+    /// 切换到主队列异步执行 (如果已在主线程，则直接执行)
+    /// - Parameter execute: 在主队列异步执行的代码块
+    public static func mainAsync(execute: @escaping () -> Void) {
+        if Thread.current.isMainThread {
+            execute()
+        } else {
+            Base.main.async { execute() }
+        }
+    }
+
+    /// 代码延迟执行
+    /// - Parameters:
+    ///   - delay: 延迟时间 (单位: 秒)
+    ///   - closure: 延迟执行的代码块
+    public func after(
+        _ delay: TimeInterval,
+        execute: @escaping () -> Void
+    ) {
+        base.asyncAfter(deadline: .now() + delay, execute: execute)
+    }
+
 }
 
+
+// MARK: -
+
 public extension DispatchQueue {
+
     fileprivate static var onceToken: [String] = []
+
 }
