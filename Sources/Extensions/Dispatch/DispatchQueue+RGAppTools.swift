@@ -29,7 +29,7 @@ extension RGAppTools where Base: DispatchQueue {
         task()
     }
 
-    /// 切换到主队列异步执行 (如果已在主线程，则直接执行)
+    /// 切换到主队列异步执行 (如果已在主线程，则不切换，直接执行)
     /// - Parameter execute: 在主队列异步执行的代码块
     public static func mainAsync(execute: @escaping () -> Void) {
         if Thread.current.isMainThread {
@@ -39,6 +39,10 @@ extension RGAppTools where Base: DispatchQueue {
         }
     }
 
+    /// 切换到主队列延迟执行 (如果已在主线程，则不切换，直接延迟执行)
+    /// - Parameters:
+    ///   - delay: 延迟时间 (单位: 秒)
+    ///   - execute: 延迟执行的代码块
     public static func mainAsyncAfter(
         _ delay: TimeInterval,
         execute: @escaping () -> Void
