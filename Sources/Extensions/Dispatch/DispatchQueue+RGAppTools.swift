@@ -39,6 +39,18 @@ extension RGAppTools where Base: DispatchQueue {
         }
     }
 
+    public static func mainAsyncAfter(
+        _ delay: TimeInterval,
+        execute: @escaping () -> Void
+    ) {
+        if Thread.current.isMainThread {
+            Thread.sleep(forTimeInterval: delay)
+            execute()
+        } else {
+            Base.main.asyncAfter(deadline: .now() + delay) { execute() }
+        }
+    }
+
     /// 代码延迟执行
     /// - Parameters:
     ///   - delay: 延迟时间 (单位: 秒)
@@ -47,7 +59,7 @@ extension RGAppTools where Base: DispatchQueue {
         _ delay: TimeInterval,
         execute: @escaping () -> Void
     ) {
-        base.asyncAfter(deadline: .now() + delay, execute: execute)
+        base.asyncAfter(deadline: .now() + delay) { execute() }
     }
 
 }
