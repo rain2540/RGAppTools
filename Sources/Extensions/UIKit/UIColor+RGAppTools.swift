@@ -80,7 +80,7 @@ extension RGAppTools where Base: UIColor {
 
             default:
                 red = 0.0; green = 0.0; blue = 1.0
-                NSLog("Invalid RGB hex string, number of characters after '#' or '0x' should be either 3 or 6.")
+                print("Invalid RGB hex string, number of characters after '#' or '0x' should be either 3 or 6.")
         }
         return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
