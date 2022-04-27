@@ -400,7 +400,7 @@ extension StringExtension {
         }
         do {
             return try JSONSerialization.jsonObject(with: data, options: options)
-        } catch let error as NSError {
+        } catch {
             print("RGAppTools String to object Error:\n", error)
             return nil
         }
