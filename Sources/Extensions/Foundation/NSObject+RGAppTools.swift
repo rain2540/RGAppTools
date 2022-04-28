@@ -15,7 +15,7 @@ extension RGAppTools where Base: NSObject {
         do {
             let data = try JSONSerialization.data(withJSONObject: base, options: .sortedKeys)
             return String(data: data, encoding: String.Encoding.utf8)
-        } catch let error as NSError {
+        } catch {
             print("RGAppTools NSObject to JSON string Error:\n", error)
             return nil
         }
