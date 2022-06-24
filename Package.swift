@@ -21,6 +21,7 @@ let package = Package(
             name: "RGAppTools",
             dependencies: [],
             path: "Sources",
+            exclude: ["Info.plist"],
             linkerSettings: [
                 .linkedFramework("CoreLocation", .when(platforms: [.iOS])),
                 .linkedFramework("WebKit", .when(platforms: [.iOS])),
