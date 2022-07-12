@@ -60,5 +60,10 @@ extension Array {
             }
         }
     }
-    
+
+  public subscript(guarded idx: Int) -> Element? {
+    guard (startIndex ..< endIndex).contains(idx) else { return nil }
+    return self[idx]
+  }
+
 }
