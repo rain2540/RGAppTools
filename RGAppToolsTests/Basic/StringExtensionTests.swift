@@ -11,9 +11,9 @@ import XCTest
 
 class StringExtensionTests: XCTestCase {
 
-    func testStringTrans() {
-        let s = "5"
-        XCTAssertEqual(s.rat.intValue, 5)
-    }
+  func testStringTrans() {
+    let s = "5"
+    XCTAssertEqual(s.rat.intValue, 5)
+  }
 
 }
