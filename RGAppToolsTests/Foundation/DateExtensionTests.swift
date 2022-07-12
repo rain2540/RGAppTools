@@ -11,14 +11,11 @@ import XCTest
 
 class DateExtensionTests: XCTestCase {
 
-    func testIsLeapYear() {
-        XCTAssertEqual(Date.rat.isLeapYear(for: 2019), false)
-        XCTAssertEqual(Date.rat.isLeapYear(for: 2020), true)
-        XCTAssertEqual(Date.rat.isLeapYear(for: 1900), false)
-        XCTAssertEqual(Date.rat.isLeapYear(for: 2000), true)
-
-        let date = Date()
-        XCTAssertEqual(date.rat.isLeapYear, true)
-    }
+  func testIsLeapYear() {
+    XCTAssertEqual(Date.rat.isLeapYear(for: 2019), false)
+    XCTAssertEqual(Date.rat.isLeapYear(for: 2020), true)
+    XCTAssertEqual(Date.rat.isLeapYear(for: 1900), false)
+    XCTAssertEqual(Date.rat.isLeapYear(for: 2000), true)
+  }
 
 }
