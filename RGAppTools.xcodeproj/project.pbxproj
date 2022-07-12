@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B7065BE524EBC47F00C23D08 /* TimeZone+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7065BE424EBC47F00C23D08 /* TimeZone+RGAppTools.swift */; };
 		B706DAF223D6E80B00197988 /* UIApplication+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B706DAF123D6E80B00197988 /* UIApplication+RGAppTools.swift */; };
+		B714AE94287D017B00614368 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B714AE93287D017B00614368 /* ArrayExtensionTests.swift */; };
 		B71654AF23F854F700984573 /* UILabel+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */; };
 		B71654B123FA257100984573 /* UITableViewCell+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */; };
 		B716553723FE17BF00984573 /* UIToolBar+RGAppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */; };
@@ -74,6 +75,7 @@
 /* Begin PBXFileReference section */
 		B7065BE424EBC47F00C23D08 /* TimeZone+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeZone+RGAppTools.swift"; sourceTree = "<group>"; };
 		B706DAF123D6E80B00197988 /* UIApplication+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+RGAppTools.swift"; sourceTree = "<group>"; };
+		B714AE93287D017B00614368 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		B71654AE23F854F700984573 /* UILabel+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+RGAppTools.swift"; sourceTree = "<group>"; };
 		B71654B023FA257100984573 /* UITableViewCell+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+RGAppTools.swift"; sourceTree = "<group>"; };
 		B716553623FE17BE00984573 /* UIToolBar+RGAppTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIToolBar+RGAppTools.swift"; path = "Sources/Extensions/Basic/UIToolBar+RGAppTools.swift"; sourceTree = SOURCE_ROOT; };
@@ -167,6 +169,7 @@
 		B7FA465A248744A30030B922 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
+				B714AE93287D017B00614368 /* ArrayExtensionTests.swift */,
 				B7FA46542487405F0030B922 /* DictionaryExtensionTests.swift */,
 				B7FB825723D6C3DE0082E362 /* StringExtensionTests.swift */,
 			);
@@ -519,6 +522,7 @@
 				B7FB81AA23D681E60082E362 /* RGAppToolsTests.swift in Sources */,
 				B7FA46552487405F0030B922 /* DictionaryExtensionTests.swift in Sources */,
 				B7FA4659248743340030B922 /* UIButtonExtensionTests.swift in Sources */,
+				B714AE94287D017B00614368 /* ArrayExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
