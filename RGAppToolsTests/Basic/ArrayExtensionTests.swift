@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import RGAppTools
 
 class ArrayExtensionTests: XCTestCase {
 
@@ -24,6 +25,18 @@ class ArrayExtensionTests: XCTestCase {
     // Any test you write for XCTest can be annotated as throws and async.
     // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
     // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    var array = [0, 1, 2, 3, 4,]
+
+    print(array[0, 1, 3])
+    print(array[guarded: 4] ??? "can not get array[guarded: 4]")
+    print(array[guarded: 5] ??? "the value of array[guarded: 5] is nil")
+
+    XCTAssertEqual(array[0, 1, 3], [0, 1, 3])
+    XCTAssertEqual(array[guarded: 4], 4)
+    XCTAssertEqual(array[guarded: 5], nil)
+
+    array[0, 2, 4] = [5, 6, 7]
+    print(array)
   }
 
   func testPerformanceExample() throws {
