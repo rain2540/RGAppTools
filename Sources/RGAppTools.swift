@@ -10,12 +10,12 @@ import Foundation
 
 public struct RGAppTools<Base> {
 
-    public let base: Base
+  public let base: Base
 
-    public init(_ base: Base) {
-        self.base = base
-    }
-
+  public init(_ base: Base) {
+    self.base = base
+  }
+  
 }
 
 
@@ -23,23 +23,23 @@ public struct RGAppTools<Base> {
 
 public protocol RGAppToolsCompatible {
 
-    associatedtype RATCompatibleType
+  associatedtype RATCompatibleType
 
-    var rat: RATCompatibleType { get }
-    static var rat: RATCompatibleType.Type { get }
+  var rat: RATCompatibleType { get }
+  static var rat: RATCompatibleType.Type { get }
 
 }
 
 
 extension RGAppToolsCompatible {
 
-    public var rat: RGAppTools<Self> {
-        return RGAppTools(self)
-    }
+  public var rat: RGAppTools<Self> {
+    return RGAppTools(self)
+  }
 
-    public static var rat: RGAppTools<Self>.Type {
-        return RGAppTools.self
-    }
+  public static var rat: RGAppTools<Self>.Type {
+    return RGAppTools.self
+  }
 
 }
 

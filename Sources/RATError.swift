@@ -10,6 +10,6 @@ import Foundation
 
 public enum RATError: Error {
 
-    case initNil
+  case initNil
 
 }
