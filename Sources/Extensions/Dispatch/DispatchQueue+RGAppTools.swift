@@ -45,8 +45,8 @@ extension RGAppTools where Base: DispatchQueue {
   ///   - execute: 延迟执行的代码块
   public static func mainAsyncAfter(
     _ delay: TimeInterval,
-    execute: @escaping () -> Void
-  ) {
+    execute: @escaping () -> Void)
+  {
     if Thread.current.isMainThread {
       Timer.scheduledTimer(withTimeInterval: delay, repeats: false) { _ in execute() }
     } else {
@@ -60,8 +60,8 @@ extension RGAppTools where Base: DispatchQueue {
   ///   - closure: 延迟执行的代码块
   public func after(
     _ delay: TimeInterval,
-    execute: @escaping () -> Void
-  ) {
+    execute: @escaping () -> Void)
+  {
     base.asyncAfter(deadline: .now() + delay) { execute() }
   }
 
