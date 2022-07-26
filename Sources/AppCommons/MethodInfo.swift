@@ -16,13 +16,13 @@ import Foundation
 ///   - method: 方法名
 ///   - line: 代码行数
 public func methodLog<T>(
-    _ message: T,
-    file: String = #file,
-    method: String = #function,
-    line: Int = #line
-) {
-    #if DEBUG
-    print("\(URL(fileURLWithPath: file).lastPathComponent)[\(line)], \(method): \n")
-    print(message)
-    #endif
+  _ message: T,
+  file: String = #file,
+  method: String = #function,
+  line: Int = #line)
+{
+#if DEBUG
+  print("\(URL(fileURLWithPath: file).lastPathComponent)[\(line)], \(method): \n")
+  print(message)
+#endif
 }

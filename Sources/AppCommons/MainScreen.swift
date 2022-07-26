@@ -9,28 +9,28 @@
 import UIKit
 
 public struct MainScreen {
-
-    /// pixel width of main screen
-    public static var pixelWidth: CGFloat { return width * scale }
-    /// pixel height of main screen
-    public static var pixelHeight: CGFloat { return height * scale }
-
-    /// scale of main screen
-    public static var scale: CGFloat { return self.mainScreen.scale }
-
-    /// width of main screen
-    public static var width: CGFloat { return self.size.width }
-    /// height of main screen
-    public static var height: CGFloat { return self.size.height }
-
-    /// size of main screen
-    public static var size: CGSize { return self.bounds.size }
-    /// bounds of main screen
-    public static var bounds: CGRect { return self.mainScreen.bounds }
-
-
-    // MARK: - Private
-
-    private static let mainScreen = UIScreen.main
-
+  
+  /// pixel width of main screen
+  public static var pixelWidth: CGFloat { return width * scale }
+  /// pixel height of main screen
+  public static var pixelHeight: CGFloat { return height * scale }
+  
+  /// scale of main screen
+  public static var scale: CGFloat { return self.mainScreen.scale }
+  
+  /// width of main screen
+  public static var width: CGFloat { return self.size.width }
+  /// height of main screen
+  public static var height: CGFloat { return self.size.height }
+  
+  /// size of main screen
+  public static var size: CGSize { return self.bounds.size }
+  /// bounds of main screen
+  public static var bounds: CGRect { return self.mainScreen.bounds }
+  
+  
+  // MARK: - Private
+  
+  private static let mainScreen = UIScreen.main
+  
 }
