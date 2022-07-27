@@ -10,9 +10,9 @@ import Foundation
 
 extension Double {
 
-    public var rat: DoubleExtension {
-        return DoubleExtension(double: self)
-    }
+  public var rat: DoubleExtension {
+    return DoubleExtension(double: self)
+  }
 
 }
 
@@ -20,12 +20,12 @@ extension Double {
 // MARK: -
 
 public struct DoubleExtension {
-    
-    private var double: Double
 
-    fileprivate init(double: Double) {
-        self.double = double
-    }
+  private var double: Double
+
+  fileprivate init(double: Double) {
+    self.double = double
+  }
 
 }
 
@@ -34,15 +34,15 @@ public struct DoubleExtension {
 
 extension DoubleExtension {
 
-    /// 角度转化为弧度
-    public var radian: Double {
-        return (Double.pi * double) / 180.0
-    }
+  /// 角度转化为弧度
+  public var radian: Double {
+    return (Double.pi * double) / 180.0
+  }
 
-    /// 弧度转化为角度
-    public var angle: Double {
-        return (180.0 * double) / Double.pi
-    }
+  /// 弧度转化为角度
+  public var angle: Double {
+    return (180.0 * double) / Double.pi
+  }
 
 }
 
@@ -51,11 +51,11 @@ extension DoubleExtension {
 
 extension DoubleExtension {
 
-    /// 格式化输出
-    /// - Parameter fmt: 以字符串形式表示的输出格式
-    /// - Returns: 格式化输出结果
-    public func format(_ fmt: String) -> String {
-        return String(format: "%\(fmt)f", double)
-    }
+  /// 格式化输出
+  /// - Parameter fmt: 以字符串形式表示的输出格式
+  /// - Returns: 格式化输出结果
+  public func format(_ fmt: String) -> String {
+    return String(format: "%\(fmt)f", double)
+  }
 
 }
