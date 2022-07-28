@@ -72,8 +72,17 @@ extension RGAppTools where Base: DispatchQueue {
       flags: flags,
       execute: execute)
   }
+  public func after(
+    wallTime: TimeInterval,
+    qos: DispatchQoS = .unspecified,
+    flags: DispatchWorkItemFlags = [],
     execute: @escaping () -> Void)
   {
+    base.asyncAfter(
+      wallDeadline: .now() + wallTime,
+      qos: qos,
+      flags: flags,
+      execute: execute)
   }
 
 }
