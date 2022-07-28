@@ -10,12 +10,12 @@ import Foundation
 
 extension RGAppTools where Base: NSDictionary {
 
-    /// 检验 NSDictionary 中是否存在某个 key
-    /// - Parameter key: 待检验的 key
-    /// - Returns: 检验结果的布尔值
-    public func isHave(key: String) -> Bool {
-       return base.value(forKey: key) != nil
-    }
+  /// 检验 NSDictionary 中是否存在某个 key
+  /// - Parameter key: 待检验的 key
+  /// - Returns: 检验结果的布尔值
+  public func isHave(key: String) -> Bool {
+    return base.value(forKey: key) != nil
+  }
 
 }
 
@@ -24,20 +24,20 @@ extension RGAppTools where Base: NSDictionary {
 
 extension NSDictionary {
 
-    /// 获取 Main Bundle 中某个文件的内容, 创建为 NSDictionary
-    /// - Parameters:
-    ///   - name: 文件名
-    ///   - ext: 文件扩展名
-    public convenience init?(
-        mainBundlePathForResource name: String?,
-        ofType ext: String?
-    ) {
-        guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
-            print("RGApptools: NSDictionary init with main bundle path for resource of type is nil")
-            return nil
-        }
-        self.init(contentsOfFile: path)
+  /// 获取 Main Bundle 中某个文件的内容, 创建为 NSDictionary
+  /// - Parameters:
+  ///   - name: 文件名
+  ///   - ext: 文件扩展名
+  public convenience init?(
+    mainBundlePathForResource name: String?,
+    ofType ext: String?)
+  {
+    guard let path = Bundle.main.path(forResource: name, ofType: ext) else {
+      print("RGApptools: NSDictionary init with main bundle path for resource of type is nil")
+      return nil
     }
+    self.init(contentsOfFile: path)
+  }
 
 }
 
@@ -46,18 +46,18 @@ extension NSDictionary {
 
 extension NSDictionary {
 
-    /// 检验 NSDictionary 中是否存在某个 key
-    /// - Parameter key: 待检验的 key
-    /// - Returns: 检验结果的布尔值
-    @available(*, deprecated, message: "Extensions directly on NSDictionary are deprecated. Use `NSDictionary.rat.isHave(key:)` instead.", renamed: "rat.isHave(key:)")
-    func rat_isHaveKey(_ key: String) -> Bool {
-        let keys = self.allKeys as! [String]
-        for aKey: String in keys {
-            if key == aKey {
-                return true
-            }
-        }
-        return false
+  /// 检验 NSDictionary 中是否存在某个 key
+  /// - Parameter key: 待检验的 key
+  /// - Returns: 检验结果的布尔值
+  @available(*, deprecated, message: "Extensions directly on NSDictionary are deprecated. Use `NSDictionary.rat.isHave(key:)` instead.", renamed: "rat.isHave(key:)")
+  func rat_isHaveKey(_ key: String) -> Bool {
+    let keys = self.allKeys as! [String]
+    for aKey: String in keys {
+      if key == aKey {
+        return true
+      }
     }
+    return false
+  }
 
 }

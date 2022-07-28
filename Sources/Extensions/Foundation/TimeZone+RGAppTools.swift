@@ -10,13 +10,13 @@ import Foundation
 
 extension TimeZone {
 
-    public var rat: TimeZoneExtension {
-        return TimeZoneExtension(timeZone: self)
-    }
+  public var rat: TimeZoneExtension {
+    return TimeZoneExtension(timeZone: self)
+  }
 
-    public static var rat: TimeZoneExtension.Type {
-        return TimeZoneExtension.self
-    }
+  public static var rat: TimeZoneExtension.Type {
+    return TimeZoneExtension.self
+  }
 
 }
 
@@ -25,11 +25,11 @@ extension TimeZone {
 
 public struct TimeZoneExtension {
 
-    private var timeZone: TimeZone
-
-    fileprivate init(timeZone: TimeZone) {
-        self.timeZone = timeZone
-    }
+  private var timeZone: TimeZone
+  
+  fileprivate init(timeZone: TimeZone) {
+    self.timeZone = timeZone
+  }
 
 }
 
@@ -38,8 +38,8 @@ public struct TimeZoneExtension {
 
 public extension TimeZoneExtension {
 
-    static var chinaMainLand: TimeZone? {
-        return TimeZone(secondsFromGMT: 60 * 60 * 8)
-    }
+  static var chinaMainLand: TimeZone? {
+    return TimeZone(secondsFromGMT: 60 * 60 * 8)
+  }
 
 }

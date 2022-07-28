@@ -9,16 +9,16 @@
 import Foundation
 
 extension RGAppTools where Base: NSObject {
-
-    /// Object 对应的 JSON 字符串
-    public var jsonString: String? {
-        do {
-            let data = try JSONSerialization.data(withJSONObject: base, options: .sortedKeys)
-            return String(data: data, encoding: String.Encoding.utf8)
-        } catch {
-            print("RGAppTools NSObject to JSON string Error:\n", error)
-            return nil
-        }
+  
+  /// Object 对应的 JSON 字符串
+  public var jsonString: String? {
+    do {
+      let data = try JSONSerialization.data(withJSONObject: base, options: .sortedKeys)
+      return String(data: data, encoding: String.Encoding.utf8)
+    } catch {
+      print("RGAppTools NSObject to JSON string Error:\n", error)
+      return nil
     }
-
+  }
+  
 }
