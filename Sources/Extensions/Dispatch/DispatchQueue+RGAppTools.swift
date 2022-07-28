@@ -72,6 +72,13 @@ extension RGAppTools where Base: DispatchQueue {
       flags: flags,
       execute: execute)
   }
+
+  /// 在指定时间后将工作项提交到调度队列以异步执行。
+  /// - Parameters:
+  ///   - wallTime: 从当前时间为起点，应该执行工作项的时间间隔（ 单位：秒），以 `DispatchWallTime` 的形式给出。
+  ///   - qos: 应该执行工作项的 QoS。默认为“DispatchQoS.unspecified”。
+  ///   - flags: 控制工作项执行环境的标志。
+  ///   - execute: 要在队列中调用的工作项。
   public func after(
     wallTime: TimeInterval,
     qos: DispatchQoS = .unspecified,
