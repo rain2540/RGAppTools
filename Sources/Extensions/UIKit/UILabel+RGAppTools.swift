@@ -9,10 +9,10 @@
 import UIKit
 
 extension RGAppTools where Base: UILabel {
-
-    /// default height of UILabel
-    public static var defaultHeight: CGFloat {
-        return 21.0
-    }
-
+  
+  /// default height of UILabel
+  public static var defaultHeight: CGFloat {
+    return 21.0
+  }
+  
 }
