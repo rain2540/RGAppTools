@@ -54,10 +54,12 @@ extension RGAppTools where Base: DispatchQueue {
     }
   }
 
-  /// 代码延迟执行
+  /// 在指定时间后将工作项提交到调度队列以异步执行。
   /// - Parameters:
-  ///   - delay: 延迟时间 (单位: 秒)
-  ///   - closure: 延迟执行的代码块
+  ///   - delay: 从当前时间为起点，应该执行工作项的时间间隔（ 单位：秒），以`DispatchTime`的形式给出。
+  ///   - qos: 应该执行工作项的 QoS。默认为“DispatchQoS.unspecified”。
+  ///   - flags: 控制工作项执行环境的标志。
+  ///   - execute: 要在队列中调用的工作项。
   public func after(
     _ delay: TimeInterval,
     qos: DispatchQoS = .unspecified,
