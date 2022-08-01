@@ -34,8 +34,7 @@ extension RGAppTools where Base: UIAlertController {
   public static func alert(
     title: String,
     message: String,
-    actions: UIAlertAction...)
-  -> UIAlertController
+    actions: UIAlertAction...) -> UIAlertController
   {
     let alertView = alert(title: title, message: message, actions: actions)
     return alertView
@@ -65,8 +64,7 @@ extension RGAppTools where Base: UIAlertController {
   public static func actionSheeet(
     title: String,
     message: String,
-    actions: UIAlertAction...)
-  -> UIAlertController
+    actions: UIAlertAction...) -> UIAlertController
   {
     let sheet = actionSheet(title: title, message: message, actions: actions)
     return sheet
@@ -78,8 +76,7 @@ extension RGAppTools where Base: UIAlertController {
   private static func alert(
     title: String,
     message: String,
-    actions: [UIAlertAction])
-  -> UIAlertController
+    actions: [UIAlertAction]) -> UIAlertController
   {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
     for action in actions {
@@ -91,8 +88,7 @@ extension RGAppTools where Base: UIAlertController {
   private static func actionSheet(
     title: String,
     message: String,
-    actions: [UIAlertAction])
-  -> UIAlertController
+    actions: [UIAlertAction]) -> UIAlertController
   {
     let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
     for action in actions {

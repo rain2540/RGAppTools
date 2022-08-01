@@ -61,8 +61,7 @@ extension RGAppTools where Base: UITextField {
   private func createImageView(
     imageNamed name: String,
     frame: CGRect,
-    contentMode: UIView.ContentMode)
-  -> UIImageView
+    contentMode: UIView.ContentMode) -> UIImageView
   {
     let imageView = UIImageView()
     imageView.image = UIImage(named: name)

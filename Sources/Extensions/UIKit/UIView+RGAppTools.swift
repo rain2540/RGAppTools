@@ -34,8 +34,7 @@ extension RGAppTools where Base: UIView {
     length: CGFloat,
     width: CGFloat,
     color: UIColor,
-    direction: RGLineDirection = .horizontal)
-  -> UIView
+    direction: RGLineDirection = .horizontal) -> UIView
   {
     let line = UIView()
     switch direction {

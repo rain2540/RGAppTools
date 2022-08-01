@@ -53,8 +53,7 @@ extension RGAppTools where Base: UIImage {
     size: CGSize?,
     backColor: UIColor = .white,
     borderColor: UIColor = .lightGray,
-    borderWidth: CGFloat = 1.0)
-  -> UIImage?
+    borderWidth: CGFloat = 1.0) -> UIImage?
   {
     var size = size
     if size == nil {
@@ -111,8 +110,7 @@ extension RGAppTools where Base: UIImage {
     size: CGSize?,
     backColor: UIColor = .white,
     borderColor: UIColor = .lightGray,
-    borderWidth: CGFloat = 1.0)
-  -> UIImage?
+    borderWidth: CGFloat = 1.0) -> UIImage?
   {
     var size = size
     if size == nil {
@@ -174,8 +172,7 @@ extension RGAppTools where Base: UIImage {
     cornerRadius: CGFloat,
     backColor: UIColor = .white,
     borderColor: UIColor = .lightGray,
-    borderWidth: CGFloat = 1.0)
-  -> UIImage?
+    borderWidth: CGFloat = 1.0) -> UIImage?
   {
     var size = size
     if size == nil {
