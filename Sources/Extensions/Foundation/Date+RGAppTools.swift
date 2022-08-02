@@ -133,8 +133,8 @@ extension DateExtension {
   /// - Returns: 获取的时间字符串
   public func dateString(
     format: String = "yyyy-MM-dd",
-    timeZone: TimeZone? = TimeZone.current
-  ) -> String {
+    timeZone: TimeZone? = TimeZone.current) -> String
+  {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
     dateFormatter.timeZone = timeZone

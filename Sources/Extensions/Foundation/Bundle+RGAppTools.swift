@@ -99,8 +99,7 @@ extension RGAppTools where Base: Bundle {
   /// - Returns: Main Bundle 中文件的路径
   public static func path(
     forResourceInMainBundle name: String?,
-    ofType ext: String?)
-  -> String?
+    ofType ext: String?) -> String?
   {
     return Bundle.main.path(forResource: name, ofType: ext)
   }
@@ -112,8 +111,7 @@ extension RGAppTools where Base: Bundle {
   /// - Returns: Main Bundle 中文件内的字符串
   public static func string(
     pathForResourceInMainBundle name: String?,
-    ofType ext: String?)
-  -> String?
+    ofType ext: String?) -> String?
   {
     return Bundle.main.rat.string(forResource: name, ofType: ext)
   }
@@ -157,8 +155,7 @@ extension RGAppTools where Base: Bundle {
   /// - Returns: Bundle 中文件内的字符串
   public func string(
     forResource name: String?,
-    ofType ext: String?)
-  -> String?
+    ofType ext: String?) -> String?
   {
     guard let path = base.path(forResource: name, ofType: ext) else {
       print("RGAppTools String init with path for resource in bundle error: \n", "path is nil")
@@ -179,8 +176,7 @@ extension RGAppTools where Base: Bundle {
   /// - Returns: Bundle 中的图片路径
   public func imagePath(
     forResource name: String?,
-    ofType ext: String?)
-  -> String?
+    ofType ext: String?) -> String?
   {
     guard let name = name else { return nil }
     guard let ext = ext else { return nil }
