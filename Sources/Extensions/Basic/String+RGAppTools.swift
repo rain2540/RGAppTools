@@ -459,8 +459,7 @@ extension StringExtension {
   /// - Returns: 转化得到的 Date 对象
   public func date(
     format: String = "yyyy-MM-dd",
-    timeZone: TimeZone? = TimeZone.current)
-  -> Date?
+    timeZone: TimeZone? = TimeZone.current) -> Date?
   {
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = format
@@ -498,8 +497,7 @@ extension StringExtension {
   public func attributedString(
     keyword: String?,
     color: UIColor = UIColor.black,
-    font: UIFont = UIFont.systemFont(ofSize: 17.0))
-  -> NSMutableAttributedString
+    font: UIFont = UIFont.systemFont(ofSize: 17.0)) -> NSMutableAttributedString
   {
     let attrs = [
       NSAttributedString.Key.foregroundColor: color,
@@ -516,8 +514,7 @@ extension StringExtension {
   /// - Returns: 完成属性配置的 `attributed string`
   public func attributedString(
     keyword: String?,
-    attributes attrs: [NSAttributedString.Key : Any] = [:])
-  -> NSMutableAttributedString
+    attributes attrs: [NSAttributedString.Key : Any] = [:]) -> NSMutableAttributedString
   {
     let attributedString = NSMutableAttributedString(string: string)
     guard let keyword = keyword else { return attributedString }
