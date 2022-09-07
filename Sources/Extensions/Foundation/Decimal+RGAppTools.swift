@@ -10,6 +10,10 @@ import Foundation
 
 extension Decimal {
 
+  public var rat: DecimalExtension {
+    return DecimalExtension(decimal: self)
+  }
+
 }
 
 
