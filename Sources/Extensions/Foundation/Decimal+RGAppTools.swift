@@ -11,3 +11,17 @@ import Foundation
 extension Decimal {
 
 }
+
+
+// MARK: -
+
+public struct DecimalExtension {
+
+  private var decimal: Decimal
+
+  fileprivate init(decimal: Decimal) {
+    self.decimal = decimal
+  }
+
+}
+}
