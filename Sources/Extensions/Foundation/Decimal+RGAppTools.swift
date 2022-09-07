@@ -28,4 +28,15 @@ public struct DecimalExtension {
   }
 
 }
+
+
+// MARK: - Formatted Output
+
+extension DecimalExtension {
+
+  public func string(format: String) -> String {
+    let doubleValue = Double(truncating: decimal as NSNumber)
+    return String(format: "%\(format)f", doubleValue)
+  }
+
 }
