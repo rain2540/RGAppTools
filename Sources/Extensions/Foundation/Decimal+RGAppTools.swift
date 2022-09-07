@@ -34,6 +34,9 @@ public struct DecimalExtension {
 
 extension DecimalExtension {
 
+  /// 格式化输出字符串
+  /// - Parameter format: 以字符串形式表示的输出格式
+  /// - Returns: 格式化输出结果
   public func string(format: String) -> String {
     let doubleValue = Double(truncating: decimal as NSNumber)
     return String(format: "%\(format)f", doubleValue)
