@@ -14,6 +14,10 @@ extension Decimal {
     return DecimalExtension(decimal: self)
   }
 
+  public static var rat: DecimalExtension.Type {
+    return DecimalExtension.self
+  }
+
 }
 
 
