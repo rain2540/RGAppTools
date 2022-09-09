@@ -14,6 +14,10 @@ extension Double {
     return DoubleExtension(double: self)
   }
 
+  public static var rat: DoubleExtension.Type {
+    return DoubleExtension.self
+  }
+
 }
 
 
