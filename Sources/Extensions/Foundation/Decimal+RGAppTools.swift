@@ -34,6 +34,32 @@ public struct DecimalExtension {
 }
 
 
+// MARK: - Create
+
+extension DecimalExtension {
+
+  public static func value(
+    string: String,
+    scale: Int = 2,
+    defaultValue: Double = 0.0) -> Decimal
+  {
+    var valueString = string
+    if let pointIndex = string.firstIndex(of: ".") {
+      let edge = string.index(before: string.endIndex)
+      let end = string.index(
+        string.startIndex,
+        offsetBy: pointIndex.utf16Offset(in: string) + scale,
+        limitedBy: edge
+      ) ?? edge
+      valueString = String(string.prefix(through: end))
+    }
+    let value = Decimal(string: valueString) ?? Decimal(string: "\(defaultValue)")!
+    return value
+  }
+
+}
+
+
 // MARK: - Formatted Output
 
 extension DecimalExtension {
