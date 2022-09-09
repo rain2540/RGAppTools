@@ -38,6 +38,10 @@ public struct IntExtension {
 
 extension IntExtension {
 
+  public func string(format: String) -> String {
+    return String(format: "%\(format)d", int)
+  }
+
   /// 格式化输出
   /// - Parameter fmt: 以字符串形式表示的输出格式
   /// - Returns: 格式化输出结果
