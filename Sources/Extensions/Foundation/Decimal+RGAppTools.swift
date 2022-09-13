@@ -41,6 +41,14 @@ extension DecimalExtension {
   /// 依据给出的字符串，创建 Decimal 值
   /// - Parameters:
   ///   - string: 将要转换为 Decimal 值的字符串
+  public static func create(
+    string: String,
+    defaultValue: Double = 0.0) -> Decimal
+  {
+    let value = Decimal(string: string) ?? Decimal(string: "\(defaultValue)")!
+    return value
+  }
+
   ///   - scale: 保留的小数位数，默认为 2
   ///   - defaultValue: 如果创建失败，给定的默认值，默认为 0
   /// - Returns: 依据字符串创建的 Decimal 值
