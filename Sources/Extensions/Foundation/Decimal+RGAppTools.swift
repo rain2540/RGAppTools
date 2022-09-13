@@ -49,6 +49,9 @@ extension DecimalExtension {
     return value
   }
 
+  /// 依据给出的字符串，及小数截取位数，创建 Decimal 值
+  /// - Parameters:
+  ///   - string: 将要转换为 Decimal 值的字符串
   ///   - scale: 保留的小数位数，默认为 2
   ///   - defaultValue: 如果创建失败，给定的默认值，默认为 0
   /// - Returns: 依据字符串创建的 Decimal 值
