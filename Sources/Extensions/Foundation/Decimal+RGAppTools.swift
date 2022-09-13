@@ -70,7 +70,7 @@ extension DecimalExtension {
       ) ?? edge
       valueString = String(string.prefix(through: end))
     }
-    let value = Decimal(string: valueString) ?? Decimal(string: "\(defaultValue)")!
+    let value = create(string: valueString, defaultValue: defaultValue)
     return value
   }
 
