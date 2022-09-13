@@ -39,9 +39,11 @@ extension String {
 
   /// 获取指定范围字符串
   public subscript(subRange: Range<Int>) -> String {
-    guard let startIndex = rat_validStartIndex(original: subRange.lowerBound),
-          let endIndex = rat_validEndIndex(original: subRange.upperBound),
-          startIndex < endIndex else {
+    guard
+      let startIndex = rat_validStartIndex(original: subRange.lowerBound),
+      let endIndex = rat_validEndIndex(original: subRange.upperBound),
+      startIndex < endIndex
+    else {
       print("\(#function): sub-range '\(subRange)' out of range")
       return ""
     }
@@ -137,9 +139,14 @@ extension String {
   /// - Returns: 经过检验的有效索引值
   private func rat_validIndex(original: Int) -> String.Index {
     switch original {
-    case ...startIndex.utf16Offset(in: self)    :   return startIndex
-    case endIndex.utf16Offset(in: self)...      :   return endIndex
-    default                                     :   return index(startIndex, offsetBy: original)
+    case ...startIndex.utf16Offset(in: self):
+      return startIndex
+
+    case endIndex.utf16Offset(in: self)...:
+      return endIndex
+
+    default:
+      return index(startIndex, offsetBy: original)
     }
   }
 }
@@ -199,9 +206,11 @@ public struct StringExtension {
   /// - Parameter range: 指定的范围
   /// - Returns: 截取到的字符串
   public func substring(with range: Range<Int>) -> String {
-    guard let startIndex = string.rat_validStartIndex(original: range.lowerBound),
-          let endIndex = string.rat_validEndIndex(original: range.upperBound),
-          startIndex < endIndex else {
+    guard
+      let startIndex = string.rat_validStartIndex(original: range.lowerBound),
+      let endIndex = string.rat_validEndIndex(original: range.upperBound),
+      startIndex < endIndex
+    else {
       print("\(#function): sub-range '\(range)' out of range")
       return ""
     }
