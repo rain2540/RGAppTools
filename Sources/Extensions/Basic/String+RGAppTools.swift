@@ -253,8 +253,7 @@ extension StringExtension {
   public static func clearNil(
     and otherStrings: String...,
     trimmingCharacters set: CharacterSet = [],
-    for item: Any?)
-  -> String
+    for item: Any?) -> String
   {
     guard let item = item else { return "" }
 
@@ -279,8 +278,7 @@ extension StringExtension {
   public static func clearNil(
     and otherStrings: [String] = [],
     trimmingCharacters set: CharacterSet = [],
-    for item: Any?)
-  -> String
+    for item: Any?) -> String
   {
     guard let item = item else { return "" }
 
@@ -312,8 +310,7 @@ extension StringExtension {
   public static func isBlank(
     by checkStrings: [String] = [],
     trimmingCharacters set: CharacterSet = [],
-    for item: Any?)
-  -> Bool
+    for item: Any?) -> Bool
   {
     let string = clearNil(and: checkStrings, for: item)
     return string.trimmingCharacters(in: set).isEmpty
