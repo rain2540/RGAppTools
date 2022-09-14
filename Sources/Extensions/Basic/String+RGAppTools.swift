@@ -403,6 +403,7 @@ extension StringExtension {
     return Decimal(string: string)
   }
 
+  /// String 对应的 Decimal 值
   public var decimalValue: Decimal {
     return Decimal.rat.create(string: string)
   }
