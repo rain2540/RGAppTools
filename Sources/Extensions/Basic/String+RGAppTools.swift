@@ -402,6 +402,10 @@ extension StringExtension {
     return Decimal(string: string)
   }
 
+  public var decimalValue: Decimal {
+    return Decimal.rat.create(string: string)
+  }
+
   /// 将字符串转换为 JSON 对象
   /// - Parameter options: 用于读取 JSON 数据和创建 Foundation 对象的选项
   /// - Returns: 转换得到的 JSON 对象
