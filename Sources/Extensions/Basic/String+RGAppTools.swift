@@ -398,6 +398,7 @@ extension StringExtension {
     return string.rat.double ?? 0.0
   }
 
+  /// String 对应的 Decimal? 值
   public var decimal: Decimal? {
     return Decimal(string: string)
   }
