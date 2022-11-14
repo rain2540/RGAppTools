@@ -86,8 +86,8 @@ extension RGAppTools where Base: UIAlertController {
   }
 
   private static func actionSheet(
-    title: String,
-    message: String,
+    title: String?,
+    message: String?,
     actions: [UIAlertAction]) -> UIAlertController
   {
     let actionSheet = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
