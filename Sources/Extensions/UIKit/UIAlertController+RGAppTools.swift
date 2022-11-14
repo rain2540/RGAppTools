@@ -48,8 +48,8 @@ extension RGAppTools where Base: UIAlertController {
   ///   - actions: 完成的 actions
   public static func showActionSheet(
     in viewController: UIViewController,
-    title: String,
-    message: String,
+    title: String?,
+    message: String?,
     actions: UIAlertAction...)
   {
     let sheet = actionSheet(title: title, message: message, actions: actions)
