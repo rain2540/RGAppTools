@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   
   s.name         = "RGAppTools"
   
-  s.version      = "0.2.17"
+  s.version      = "0.2.18"
   
   s.summary      = "App development support tools by Swift programming language."
   
