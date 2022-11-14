@@ -32,8 +32,8 @@ extension RGAppTools where Base: UIAlertController {
   ///   - message: alert message
   ///   - actions: alert button actions
   public static func alert(
-    title: String,
-    message: String,
+    title: String?,
+    message: String?,
     actions: UIAlertAction...) -> UIAlertController
   {
     let alertView = alert(title: title, message: message, actions: actions)
