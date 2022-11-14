@@ -18,8 +18,8 @@ extension RGAppTools where Base: UIAlertController {
   ///   - actions: 完成的 actions
   public static func showAlert(
     in viewController: UIViewController,
-    title: String,
-    message: String,
+    title: String?,
+    message: String?,
     actions: UIAlertAction...)
   {
     let alertView = alert(title: title, message: message, actions: actions)
