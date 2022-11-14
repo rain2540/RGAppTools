@@ -74,8 +74,8 @@ extension RGAppTools where Base: UIAlertController {
   // MARK: - Private
 
   private static func alert(
-    title: String,
-    message: String,
+    title: String?,
+    message: String?,
     actions: [UIAlertAction]) -> UIAlertController
   {
     let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
