@@ -159,8 +159,12 @@ extension DateExtension {
   /// - Parameter year: 需要判断的年份
   /// - Returns: 判断结果
   public static func isLeapYear(for year: Int) -> Bool {
-    let res = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
-    return res
+    switch (year % 400, year % 100, year % 4) {
+    case (0, _, _): return true
+    case (_, 0, _): return false
+    case (_, _, 0): return true
+    default:        return false
+    }
   }
 
   /// 判断 已知时间 与 比对时间 是否为同一天
