@@ -16,6 +16,27 @@ private let ee: Double = 0.00669342162296594323
 
 extension RGAppTools where Base: CLLocation {
 
+  public static func locationGCJ(fromWGS wgsCoordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+    let deltaLongitude00 = wgsCoordinate.longitude - 105.0
+    let deltaLatitude00 = wgsCoordinate.latitude - 35.0
+
+    let deltaLongitude01 = deltaLongitude4WGS2GCJBy(deltaLon: deltaLongitude00, deltaLat: deltaLatitude00)
+    let deltaLatotude01 = deltaLatitude4WGS2GCJBy(deltaLon: deltaLongitude00, deltaLat: deltaLatitude00)
+
+    let B_WGS = wgsCoordinate.latitude * PI / 180.0
+    let sinRad = sin(B_WGS)
+    let powW = 1 - ee * sinRad * sinRad
+    let factorW = sqrt(powW)
+    let factorN = factorN(by: factorW)
+
+    let deltaLongitude02 = (deltaLongitude01 * 180.0) / (PI * factorN * cos(B_WGS))
+    let deltaLatitude02 = (180.0 * deltaLatotude01 * powW) / (PI * factorN * (1 - ee))
+    let coordinate = CLLocationCoordinate2D(
+      latitude: wgsCoordinate.latitude + deltaLatitude02,
+      longitude: wgsCoordinate.longitude + deltaLongitude02)
+    return coordinate
+  }
+
   private static func deltaLongitude4WGS2GCJBy(
     deltaLon: CLLocationDegrees,
     deltaLat: CLLocationDegrees) -> CLLocationDegrees
