@@ -16,6 +16,21 @@ private let ee: Double = 0.00669342162296594323
 
 extension RGAppTools where Base: CLLocation {
 
+  private static func deltaLongitude4WGS2GCJBy(
+    deltaLon: CLLocationDegrees,
+    deltaLat: CLLocationDegrees) -> CLLocationDegrees
+  {
+    var lon = 300.0 + deltaLon + 2.0 * deltaLat + 0.1 * deltaLon * deltaLon + 0.1 * deltaLon * deltaLat
+    lon +=  0.1 * sqrt(fabs(deltaLon))
+    lon += (20.0 * sin(6.0 * deltaLon * PI)) * 2.0 / 3.0
+    lon += (20.0 * sin(2.0 * deltaLon * PI)) * 2.0 / 3.0
+    lon += (20.0 * sin(deltaLon * PI)) * 2.0 / 3.0
+    lon += (40.0 * sin(deltaLon / 3.0 * PI)) * 2.0 / 3.0
+    lon += (150.0 * sin(deltaLon / 12.0 * PI)) * 2.0 / 3.0
+    lon += (300.0 * sin(deltaLon / 30.0 * PI)) * 2.0 / 3.0
+    return lon
+  }
+
   /// 百度坐标 ---> 火星坐标
   ///
   /// - Parameter baiduCoordinate: 记录百度坐标经纬度的结构体
