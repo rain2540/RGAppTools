@@ -8,7 +8,11 @@
 
 import CoreLocation
 
+private let PI: CLLocationDegrees = .pi
 private let TransPI: CLLocationDegrees = .pi * 3000.0 / 180.0
+/// 长半轴
+private let SemimajorAxis: Double = 6378245.0
+private let ee: Double = 0.00669342162296594323
 
 extension RGAppTools where Base: CLLocation {
 
