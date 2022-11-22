@@ -31,6 +31,21 @@ extension RGAppTools where Base: CLLocation {
     return lon
   }
 
+  private static func deltaLatitude4WGS2GCJBy(
+    deltaLon: CLLocationDegrees,
+    deltaLat: CLLocationDegrees) -> CLLocationDegrees
+  {
+    var lat = -100.0 + 2.0 * deltaLon + 3.0 * deltaLat + 0.2 * deltaLat * deltaLat + 0.1 * deltaLon * deltaLat
+    lat += 0.2 * sqrt(fabs(deltaLon))
+    lat += (20.0 * sin(6.0 * deltaLon * PI)) * 2.0 / 3.0
+    lat += (20.0 * sin(2.0 * deltaLon * PI)) * 2.0 / 3.0
+    lat += (20.0 * sin(deltaLat * PI)) * 2.0 / 3.0
+    lat += (40.0 * sin(deltaLat / 3.0 * PI)) * 2.0 / 3.0
+    lat += (160.0 * sin(deltaLat / 12.0 * PI)) * 2.0 / 3.0
+    lat += (320.0 * sin(deltaLat * PI / 30.0)) * 2.0 / 3.0
+    return lat
+  }
+
   /// 百度坐标 ---> 火星坐标
   ///
   /// - Parameter baiduCoordinate: 记录百度坐标经纬度的结构体
