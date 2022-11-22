@@ -46,6 +46,11 @@ extension RGAppTools where Base: CLLocation {
     return lat
   }
 
+  private static func factorN(by source: Double) -> Double {
+    let res = SemimajorAxis / source
+    return res
+  }
+
   /// 百度坐标 ---> 火星坐标
   ///
   /// - Parameter baiduCoordinate: 记录百度坐标经纬度的结构体
