@@ -73,7 +73,7 @@ extension RGAppTools where Base: CLLocation {
   }
 
   /// 百度坐标 ---> 火星坐标
-  ///
+  /// - BD-09 ---> GCJ-02
   /// - Parameter baiduCoordinate: 记录百度坐标经纬度的结构体
   /// - Returns: 记录火星坐标经纬度的结构体
   public static func locationMars(fromBaidu baiduCoordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
