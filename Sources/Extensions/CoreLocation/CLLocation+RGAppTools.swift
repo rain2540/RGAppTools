@@ -16,6 +16,9 @@ private let ee: Double = 0.00669342162296594323
 
 extension RGAppTools where Base: CLLocation {
 
+  /// WGS-84 ---> GCJ-02
+  /// - Parameter wgsCoordinate: 记录 WGS-84 坐标经纬度的结构体
+  /// - Returns: 记录 GCJ-02 坐标经纬度的结构体
   public static func locationGCJ(fromWGS wgsCoordinate: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
     let deltaLongitude00 = wgsCoordinate.longitude - 105.0
     let deltaLatitude00 = wgsCoordinate.latitude - 35.0
@@ -31,6 +34,7 @@ extension RGAppTools where Base: CLLocation {
 
     let deltaLongitude02 = (deltaLongitude01 * 180.0) / (PI * factorN * cos(B_WGS))
     let deltaLatitude02 = (180.0 * deltaLatotude01 * powW) / (PI * factorN * (1 - ee))
+
     let coordinate = CLLocationCoordinate2D(
       latitude: wgsCoordinate.latitude + deltaLatitude02,
       longitude: wgsCoordinate.longitude + deltaLongitude02)
