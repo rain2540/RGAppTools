@@ -16,6 +16,12 @@ private let ee: Double = 0.00669342162296594323
 
 extension RGAppTools where Base: CLLocation {
 
+  /**
+   * WGS-84 坐标系 - 地球坐标系，国际通用坐标系
+   * GCJ-02 坐标系 - 火星坐标系，WGS-84 坐标系加密后的坐标系；Google 国内地图、高德、QQ地图 使用
+   * BD-09 坐标系 - 百度坐标系，GCJ-02 坐标系加密后的坐标系；百度地图使用
+   */
+
   /// WGS-84 ---> GCJ-02
   /// - Parameter wgsCoordinate: 记录 WGS-84 坐标经纬度的结构体
   /// - Returns: 记录 GCJ-02 坐标经纬度的结构体
