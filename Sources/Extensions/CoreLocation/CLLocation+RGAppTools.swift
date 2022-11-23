@@ -75,6 +75,9 @@ extension RGAppTools where Base: CLLocation {
     return lat
   }
 
+  /// 参与 WGS-84 ---> GCJ-02 计算的 N 因子
+  /// - Parameter factorW: 参与 WGS-84 ---> GCJ-02 计算的 W 因子
+  /// - Returns: N 因子的值
   private static func factorN(by factorW: Double) -> Double {
     let res = SemimajorAxis / factorW
     return res
