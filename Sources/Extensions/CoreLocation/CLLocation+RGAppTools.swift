@@ -67,8 +67,8 @@ extension RGAppTools where Base: CLLocation {
     return lat
   }
 
-  private static func factorN(by source: Double) -> Double {
-    let res = SemimajorAxis / source
+  private static func factorN(by factorW: Double) -> Double {
+    let res = SemimajorAxis / factorW
     return res
   }
 
