@@ -41,6 +41,8 @@ extension RGAppTools where Base: CLLocation {
     return coordinate
   }
 
+  /// 经度变换
+  /// - 用于 WGS-84 ---> GCJ-02
   private static func deltaLongitude4WGS2GCJBy(
     deltaLon: CLLocationDegrees,
     deltaLat: CLLocationDegrees) -> CLLocationDegrees
